@@ -1,0 +1,565 @@
+ERROR - 2022-12-15 06:02:41 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it.
+ in D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('localhost', 'root', '', 'khdtk', 3306, '', 0)
+#1 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2391): CodeIgniter\Database\BaseConnection->query('DELETE FROM `pe...', Array, false)
+#4 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\Model.php(401): CodeIgniter\Database\BaseBuilder->delete()
+#5 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\BaseModel.php(984): CodeIgniter\Model->doDelete(Array, false)
+#6 D:\XAMPP\htdocs\KHDTK\app\Controllers\OrganisasiKawasan.php(114): CodeIgniter\BaseModel->delete(Array)
+#7 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\OrganisasiKawasan->deletepk('71')
+#8 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrganisasiKawasan))
+#9 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\XAMPP\htdocs\KHDTK\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('D:\\XAMPP\\htdocs...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it.
+ in D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2391): CodeIgniter\Database\BaseConnection->query('DELETE FROM `pe...', Array, false)
+#3 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\Model.php(401): CodeIgniter\Database\BaseBuilder->delete()
+#4 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\BaseModel.php(984): CodeIgniter\Model->doDelete(Array, false)
+#5 D:\XAMPP\htdocs\KHDTK\app\Controllers\OrganisasiKawasan.php(114): CodeIgniter\BaseModel->delete(Array)
+#6 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\OrganisasiKawasan->deletepk('71')
+#7 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrganisasiKawasan))
+#8 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\XAMPP\htdocs\KHDTK\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('D:\\XAMPP\\htdocs...')
+#11 {main}
+CRITICAL - 2022-12-15 06:02:41 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it.
+
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(2391): CodeIgniter\Database\BaseConnection->query('DELETE FROM `penataankawasan`
+WHERE `id` IN :id:', [...], false)
+ 3 SYSTEMPATH\Model.php(401): CodeIgniter\Database\BaseBuilder->delete()
+ 4 SYSTEMPATH\BaseModel.php(984): CodeIgniter\Model->doDelete([...], false)
+ 5 APPPATH\Controllers\OrganisasiKawasan.php(114): CodeIgniter\BaseModel->delete([...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\OrganisasiKawasan->deletepk('71')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrganisasiKawasan))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-15 06:29:48 --> Undefined variable: title
+in APPPATH\Views\apps\organisasi_kawasan.php on line 8.
+ 1 APPPATH\Views\apps\organisasi_kawasan.php(8): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: title', 'APPPATH\\Views\\apps\\organisasi_kawasan.php', 8, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\apps\\organisasi_kawasan.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/organisasi_kawasan', [], true)
+ 5 APPPATH\Controllers\OrganisasiKawasan.php(65): view('apps/organisasi_kawasan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\OrganisasiKawasan->importpk()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrganisasiKawasan))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-15 06:31:31 --> Undefined variable: penataankawasan
+in APPPATH\Views\apps\organisasi_kawasan.php on line 445.
+ 1 APPPATH\Views\apps\organisasi_kawasan.php(445): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: penataankawasan', 'APPPATH\\Views\\apps\\organisasi_kawasan.php', 445, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\apps\\organisasi_kawasan.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/organisasi_kawasan', [], true)
+ 5 APPPATH\Controllers\OrganisasiKawasan.php(64): view('apps/organisasi_kawasan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\OrganisasiKawasan->importpk()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrganisasiKawasan))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-15 06:36:38 --> Undefined variable: title
+in APPPATH\Views\apps\organisasi_kawasan.php on line 8.
+ 1 APPPATH\Views\apps\organisasi_kawasan.php(8): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: title', 'APPPATH\\Views\\apps\\organisasi_kawasan.php', 8, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\apps\\organisasi_kawasan.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/organisasi_kawasan', [], true)
+ 5 APPPATH\Controllers\OrganisasiKawasan.php(66): view('apps/organisasi_kawasan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\OrganisasiKawasan->importpk()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrganisasiKawasan))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-15 06:36:47 --> Undefined variable: title
+in APPPATH\Views\apps\organisasi_kawasan.php on line 8.
+ 1 APPPATH\Views\apps\organisasi_kawasan.php(8): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: title', 'APPPATH\\Views\\apps\\organisasi_kawasan.php', 8, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\apps\\organisasi_kawasan.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/organisasi_kawasan', [], true)
+ 5 APPPATH\Controllers\OrganisasiKawasan.php(66): view('apps/organisasi_kawasan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\OrganisasiKawasan->importpk()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrganisasiKawasan))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-15 06:36:57 --> Undefined variable: title
+in APPPATH\Views\apps\organisasi_kawasan.php on line 8.
+ 1 APPPATH\Views\apps\organisasi_kawasan.php(8): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: title', 'APPPATH\\Views\\apps\\organisasi_kawasan.php', 8, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\apps\\organisasi_kawasan.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/organisasi_kawasan', [], true)
+ 5 APPPATH\Controllers\OrganisasiKawasan.php(66): view('apps/organisasi_kawasan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\OrganisasiKawasan->importpk()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrganisasiKawasan))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-15 06:38:00 --> Undefined variable: title
+in APPPATH\Views\apps\organisasi_kawasan.php on line 8.
+ 1 APPPATH\Views\apps\organisasi_kawasan.php(8): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: title', 'APPPATH\\Views\\apps\\organisasi_kawasan.php', 8, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\apps\\organisasi_kawasan.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/organisasi_kawasan', [], true)
+ 5 APPPATH\Controllers\OrganisasiKawasan.php(66): view('apps/organisasi_kawasan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\OrganisasiKawasan->importpk()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrganisasiKawasan))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-15 07:34:21 --> Undefined variable: title
+in APPPATH\Views\apps\organisasi_kawasan.php on line 8.
+ 1 APPPATH\Views\apps\organisasi_kawasan.php(8): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: title', 'APPPATH\\Views\\apps\\organisasi_kawasan.php', 8, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\apps\\organisasi_kawasan.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/organisasi_kawasan', [], true)
+ 5 APPPATH\Controllers\OrganisasiKawasan.php(66): view('apps/organisasi_kawasan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\OrganisasiKawasan->importpk()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrganisasiKawasan))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-15 07:36:48 --> Undefined variable: title
+in APPPATH\Views\apps\organisasi_kawasan.php on line 8.
+ 1 APPPATH\Views\apps\organisasi_kawasan.php(8): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: title', 'APPPATH\\Views\\apps\\organisasi_kawasan.php', 8, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\apps\\organisasi_kawasan.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/organisasi_kawasan', [], true)
+ 5 APPPATH\Controllers\OrganisasiKawasan.php(66): view('apps/organisasi_kawasan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\OrganisasiKawasan->importpk()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrganisasiKawasan))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-15 07:40:37 --> Undefined variable: title
+in APPPATH\Views\apps\organisasi_kawasan.php on line 8.
+ 1 APPPATH\Views\apps\organisasi_kawasan.php(8): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: title', 'APPPATH\\Views\\apps\\organisasi_kawasan.php', 8, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\apps\\organisasi_kawasan.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/organisasi_kawasan', [], true)
+ 5 APPPATH\Controllers\OrganisasiKawasan.php(66): view('apps/organisasi_kawasan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\OrganisasiKawasan->importpk()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrganisasiKawasan))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-15 17:56:11 --> Invalid file: database/organisasi_kawasan.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('database/organisasi_kawasan.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('database/organisasi_kawasan', [], true)
+ 3 APPPATH\Controllers\OrganisasiKawasan.php(42): view('database/organisasi_kawasan', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\OrganisasiKawasan->organisasi_kawasan()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrganisasiKawasan))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-15 18:01:18 --> Invalid file: database/organisasi_kawasan.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('database/organisasi_kawasan.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('database/organisasi_kawasan', [], true)
+ 3 APPPATH\Controllers\OrganisasiKawasan.php(42): view('database/organisasi_kawasan', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\OrganisasiKawasan->organisasi_kawasan()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrganisasiKawasan))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-15 18:01:24 --> Invalid file: database/organisasi_kawasan.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('database/organisasi_kawasan.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('database/organisasi_kawasan', [], true)
+ 3 APPPATH\Controllers\OrganisasiKawasan.php(42): view('database/organisasi_kawasan', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\OrganisasiKawasan->organisasi_kawasan()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrganisasiKawasan))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-15 18:01:34 --> Invalid file: database/organisasi_kawasan.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('database/organisasi_kawasan.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('database/organisasi_kawasan', [], true)
+ 3 APPPATH\Controllers\OrganisasiKawasan.php(42): view('database/organisasi_kawasan', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\OrganisasiKawasan->organisasi_kawasan()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrganisasiKawasan))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-15 18:02:46 --> Invalid file: database/organisasi_kawasan.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('database/organisasi_kawasan.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('database/organisasi_kawasan', [], true)
+ 3 APPPATH\Controllers\OrganisasiKawasan.php(42): view('database/organisasi_kawasan', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\OrganisasiKawasan->organisasi_kawasan()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrganisasiKawasan))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-15 18:05:55 --> Invalid file: database/organisasi_kawasan.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('database/organisasi_kawasan.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('database/organisasi_kawasan', [], true)
+ 3 APPPATH\Controllers\OrganisasiKawasan.php(41): view('database/organisasi_kawasan', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\OrganisasiKawasan->organisasi_kawasan()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrganisasiKawasan))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-15 18:13:24 --> Invalid file: database/organisasi_kawasan.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('database/organisasi_kawasan.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('database/organisasi_kawasan', [], true)
+ 3 APPPATH\Controllers\OrganisasiKawasan.php(41): view('database/organisasi_kawasan', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\OrganisasiKawasan->organisasi_kawasan()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrganisasiKawasan))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-15 18:13:25 --> Invalid file: database/organisasi_kawasan.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('database/organisasi_kawasan.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('database/organisasi_kawasan', [], true)
+ 3 APPPATH\Controllers\OrganisasiKawasan.php(41): view('database/organisasi_kawasan', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\OrganisasiKawasan->organisasi_kawasan()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrganisasiKawasan))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-15 18:13:26 --> Invalid file: database/organisasi_kawasan.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('database/organisasi_kawasan.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('database/organisasi_kawasan', [], true)
+ 3 APPPATH\Controllers\OrganisasiKawasan.php(41): view('database/organisasi_kawasan', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\OrganisasiKawasan->organisasi_kawasan()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrganisasiKawasan))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-15 18:13:27 --> Invalid file: database/organisasi_kawasan.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('database/organisasi_kawasan.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('database/organisasi_kawasan', [], true)
+ 3 APPPATH\Controllers\OrganisasiKawasan.php(41): view('database/organisasi_kawasan', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\OrganisasiKawasan->organisasi_kawasan()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrganisasiKawasan))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-15 18:13:28 --> Invalid file: database/organisasi_kawasan.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('database/organisasi_kawasan.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('database/organisasi_kawasan', [], true)
+ 3 APPPATH\Controllers\OrganisasiKawasan.php(41): view('database/organisasi_kawasan', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\OrganisasiKawasan->organisasi_kawasan()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrganisasiKawasan))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-15 18:14:08 --> Invalid file: database/organisasi_kawasan.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('database/organisasi_kawasan.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('database/organisasi_kawasan', [], true)
+ 3 APPPATH\Controllers\OrganisasiKawasan.php(41): view('database/organisasi_kawasan', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\OrganisasiKawasan->organisasi_kawasan()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrganisasiKawasan))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-15 18:14:10 --> Invalid file: database/organisasi_kawasan.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('database/organisasi_kawasan.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('database/organisasi_kawasan', [], true)
+ 3 APPPATH\Controllers\OrganisasiKawasan.php(41): view('database/organisasi_kawasan', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\OrganisasiKawasan->organisasi_kawasan()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrganisasiKawasan))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-15 18:14:14 --> Invalid file: database/organisasi_kawasan.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('database/organisasi_kawasan.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('database/organisasi_kawasan', [], true)
+ 3 APPPATH\Controllers\OrganisasiKawasan.php(41): view('database/organisasi_kawasan', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\OrganisasiKawasan->organisasi_kawasan()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrganisasiKawasan))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-15 18:14:15 --> Invalid file: database/organisasi_kawasan.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('database/organisasi_kawasan.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('database/organisasi_kawasan', [], true)
+ 3 APPPATH\Controllers\OrganisasiKawasan.php(41): view('database/organisasi_kawasan', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\OrganisasiKawasan->organisasi_kawasan()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrganisasiKawasan))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-15 18:14:16 --> Invalid file: database/organisasi_kawasan.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('database/organisasi_kawasan.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('database/organisasi_kawasan', [], true)
+ 3 APPPATH\Controllers\OrganisasiKawasan.php(41): view('database/organisasi_kawasan', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\OrganisasiKawasan->organisasi_kawasan()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrganisasiKawasan))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-15 18:14:16 --> Invalid file: database/organisasi_kawasan.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('database/organisasi_kawasan.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('database/organisasi_kawasan', [], true)
+ 3 APPPATH\Controllers\OrganisasiKawasan.php(41): view('database/organisasi_kawasan', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\OrganisasiKawasan->organisasi_kawasan()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrganisasiKawasan))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-15 18:14:16 --> Invalid file: database/organisasi_kawasan.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('database/organisasi_kawasan.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('database/organisasi_kawasan', [], true)
+ 3 APPPATH\Controllers\OrganisasiKawasan.php(41): view('database/organisasi_kawasan', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\OrganisasiKawasan->organisasi_kawasan()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrganisasiKawasan))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-15 18:14:16 --> Invalid file: database/organisasi_kawasan.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('database/organisasi_kawasan.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('database/organisasi_kawasan', [], true)
+ 3 APPPATH\Controllers\OrganisasiKawasan.php(41): view('database/organisasi_kawasan', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\OrganisasiKawasan->organisasi_kawasan()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrganisasiKawasan))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-15 18:14:17 --> Invalid file: database/organisasi_kawasan.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('database/organisasi_kawasan.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('database/organisasi_kawasan', [], true)
+ 3 APPPATH\Controllers\OrganisasiKawasan.php(41): view('database/organisasi_kawasan', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\OrganisasiKawasan->organisasi_kawasan()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrganisasiKawasan))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-15 18:14:17 --> Invalid file: database/organisasi_kawasan.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('database/organisasi_kawasan.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('database/organisasi_kawasan', [], true)
+ 3 APPPATH\Controllers\OrganisasiKawasan.php(41): view('database/organisasi_kawasan', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\OrganisasiKawasan->organisasi_kawasan()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrganisasiKawasan))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-15 18:14:17 --> Invalid file: database/organisasi_kawasan.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('database/organisasi_kawasan.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('database/organisasi_kawasan', [], true)
+ 3 APPPATH\Controllers\OrganisasiKawasan.php(41): view('database/organisasi_kawasan', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\OrganisasiKawasan->organisasi_kawasan()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrganisasiKawasan))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-15 18:14:17 --> Invalid file: database/organisasi_kawasan.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('database/organisasi_kawasan.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('database/organisasi_kawasan', [], true)
+ 3 APPPATH\Controllers\OrganisasiKawasan.php(41): view('database/organisasi_kawasan', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\OrganisasiKawasan->organisasi_kawasan()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrganisasiKawasan))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-15 18:14:17 --> Invalid file: database/organisasi_kawasan.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('database/organisasi_kawasan.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('database/organisasi_kawasan', [], true)
+ 3 APPPATH\Controllers\OrganisasiKawasan.php(41): view('database/organisasi_kawasan', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\OrganisasiKawasan->organisasi_kawasan()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrganisasiKawasan))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-15 18:14:18 --> Invalid file: database/organisasi_kawasan.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('database/organisasi_kawasan.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('database/organisasi_kawasan', [], true)
+ 3 APPPATH\Controllers\OrganisasiKawasan.php(41): view('database/organisasi_kawasan', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\OrganisasiKawasan->organisasi_kawasan()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrganisasiKawasan))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-15 18:14:18 --> Invalid file: database/organisasi_kawasan.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('database/organisasi_kawasan.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('database/organisasi_kawasan', [], true)
+ 3 APPPATH\Controllers\OrganisasiKawasan.php(41): view('database/organisasi_kawasan', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\OrganisasiKawasan->organisasi_kawasan()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrganisasiKawasan))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-15 18:14:19 --> Invalid file: database/organisasi_kawasan.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('database/organisasi_kawasan.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('database/organisasi_kawasan', [], true)
+ 3 APPPATH\Controllers\OrganisasiKawasan.php(41): view('database/organisasi_kawasan', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\OrganisasiKawasan->organisasi_kawasan()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrganisasiKawasan))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-15 18:14:19 --> Invalid file: database/organisasi_kawasan.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('database/organisasi_kawasan.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('database/organisasi_kawasan', [], true)
+ 3 APPPATH\Controllers\OrganisasiKawasan.php(41): view('database/organisasi_kawasan', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\OrganisasiKawasan->organisasi_kawasan()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrganisasiKawasan))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-15 18:15:36 --> Invalid file: database/organisasi_kawasan.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('database/organisasi_kawasan.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('database/organisasi_kawasan', [], true)
+ 3 APPPATH\Controllers\OrganisasiKawasan.php(41): view('database/organisasi_kawasan', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\OrganisasiKawasan->organisasi_kawasan()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrganisasiKawasan))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-15 19:10:33 --> Undefined variable: title
+in APPPATH\Views\apps\organisasi_kawasan.php on line 8.
+ 1 APPPATH\Views\apps\organisasi_kawasan.php(8): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: title', 'APPPATH\\Views\\apps\\organisasi_kawasan.php', 8, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\apps\\organisasi_kawasan.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/organisasi_kawasan', [], true)
+ 5 APPPATH\Controllers\OrganisasiKawasan.php(154): view('apps/organisasi_kawasan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\OrganisasiKawasan->importumt()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrganisasiKawasan))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-15 19:12:42 --> Invalid file: database/organisasi_kawasan.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('database/organisasi_kawasan.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('database/organisasi_kawasan', [], true)
+ 3 APPPATH\Controllers\OrganisasiKawasan.php(154): view('database/organisasi_kawasan', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\OrganisasiKawasan->importumt()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrganisasiKawasan))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-15 19:16:09 --> Invalid file: database/organisasi_kawasan.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('database/organisasi_kawasan.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('database/organisasi_kawasan', [], true)
+ 3 APPPATH\Controllers\OrganisasiKawasan.php(154): view('database/organisasi_kawasan', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\OrganisasiKawasan->importumt()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrganisasiKawasan))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-15 19:18:34 --> Invalid file: database/organisasi_kawasan.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('database/organisasi_kawasan.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('database/organisasi_kawasan', [], true)
+ 3 APPPATH\Controllers\OrganisasiKawasan.php(154): view('database/organisasi_kawasan', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\OrganisasiKawasan->importumt()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrganisasiKawasan))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-15 19:19:14 --> Invalid file: database/organisasi_kawasan.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('database/organisasi_kawasan.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('database/organisasi_kawasan', [], true)
+ 3 APPPATH\Controllers\OrganisasiKawasan.php(154): view('database/organisasi_kawasan', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\OrganisasiKawasan->importumt()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrganisasiKawasan))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-15 19:21:26 --> Undefined variable: title
+in APPPATH\Views\apps\organisasi_kawasan.php on line 8.
+ 1 APPPATH\Views\apps\organisasi_kawasan.php(8): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: title', 'APPPATH\\Views\\apps\\organisasi_kawasan.php', 8, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\apps\\organisasi_kawasan.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/organisasi_kawasan', [], true)
+ 5 APPPATH\Controllers\OrganisasiKawasan.php(66): view('apps/organisasi_kawasan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\OrganisasiKawasan->importpk()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrganisasiKawasan))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-15 19:23:34 --> Undefined variable: title
+in APPPATH\Views\apps\organisasi_kawasan.php on line 8.
+ 1 APPPATH\Views\apps\organisasi_kawasan.php(8): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: title', 'APPPATH\\Views\\apps\\organisasi_kawasan.php', 8, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\apps\\organisasi_kawasan.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/organisasi_kawasan', [], true)
+ 5 APPPATH\Controllers\OrganisasiKawasan.php(66): view('apps/organisasi_kawasan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\OrganisasiKawasan->importpk()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrganisasiKawasan))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-15 23:29:51 --> Undefined variable: title
+in APPPATH\Views\apps\organisasi_kawasan.php on line 8.
+ 1 APPPATH\Views\apps\organisasi_kawasan.php(8): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: title', 'APPPATH\\Views\\apps\\organisasi_kawasan.php', 8, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\apps\\organisasi_kawasan.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/organisasi_kawasan', [], true)
+ 5 APPPATH\Controllers\OrganisasiKawasan.php(66): view('apps/organisasi_kawasan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\OrganisasiKawasan->importpk()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrganisasiKawasan))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-15 23:31:00 --> Invalid file: database/organisasi_kawasan.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('database/organisasi_kawasan.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('database/organisasi_kawasan', [], true)
+ 3 APPPATH\Controllers\OrganisasiKawasan.php(66): view('database/organisasi_kawasan', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\OrganisasiKawasan->importpk()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrganisasiKawasan))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-15 23:45:02 --> Invalid file: database/organisasi_kawasan.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('database/organisasi_kawasan.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('database/organisasi_kawasan', [], true)
+ 3 APPPATH\Controllers\OrganisasiKawasan.php(154): view('database/organisasi_kawasan', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\OrganisasiKawasan->importumt()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrganisasiKawasan))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-15 23:45:34 --> Undefined variable: title
+in APPPATH\Views\apps\organisasi_kawasan.php on line 8.
+ 1 APPPATH\Views\apps\organisasi_kawasan.php(8): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: title', 'APPPATH\\Views\\apps\\organisasi_kawasan.php', 8, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\apps\\organisasi_kawasan.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/organisasi_kawasan', [], true)
+ 5 APPPATH\Controllers\OrganisasiKawasan.php(154): view('apps/organisasi_kawasan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\OrganisasiKawasan->importumt()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrganisasiKawasan))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')

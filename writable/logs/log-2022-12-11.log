@@ -1,0 +1,438 @@
+ERROR - 2022-12-11 02:51:04 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`khdtk`.`inventarisasi`, CONSTRAINT `inventarisasi_ibfk_1` FOREIGN KEY (`Kode_Rencana_Tahunan_Kegiatan`) REFERENCES `rttahunankegiatan` (`Kode_Rencana_Tahunan Kegiatan`) ON DELETE NO ACTION ON) in D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('DELETE FROM `pe...', 0)
+#1 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `pe...')
+#2 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `pe...')
+#3 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2391): CodeIgniter\Database\BaseConnection->query('DELETE FROM `pe...', Array, false)
+#4 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\Model.php(401): CodeIgniter\Database\BaseBuilder->delete()
+#5 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\BaseModel.php(984): CodeIgniter\Model->doDelete(Array, false)
+#6 D:\XAMPP\htdocs\KHDTK\app\Controllers\OrganisasiKawasan.php(57): CodeIgniter\BaseModel->delete(Array)
+#7 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\OrganisasiKawasan->deletepk('4')
+#8 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrganisasiKawasan))
+#9 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\XAMPP\htdocs\KHDTK\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('D:\\XAMPP\\htdocs...')
+#12 {main}
+CRITICAL - 2022-12-11 02:51:04 --> Cannot delete or update a parent row: a foreign key constraint fails (`khdtk`.`inventarisasi`, CONSTRAINT `inventarisasi_ibfk_1` FOREIGN KEY (`Kode_Rencana_Tahunan_Kegiatan`) REFERENCES `rttahunankegiatan` (`Kode_Rencana_Tahunan Kegiatan`) ON DELETE NO ACTION ON)
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('DELETE FROM `penataankawasan`
+WHERE `id` IN (\'4\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `penataankawasan`
+WHERE `id` IN (\'4\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `penataankawasan`
+WHERE `id` IN (\'4\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2391): CodeIgniter\Database\BaseConnection->query('DELETE FROM `penataankawasan`
+WHERE `id` IN :id:', [...], false)
+ 5 SYSTEMPATH\Model.php(401): CodeIgniter\Database\BaseBuilder->delete()
+ 6 SYSTEMPATH\BaseModel.php(984): CodeIgniter\Model->doDelete([...], false)
+ 7 APPPATH\Controllers\OrganisasiKawasan.php(57): CodeIgniter\BaseModel->delete([...])
+ 8 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\OrganisasiKawasan->deletepk('4')
+ 9 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrganisasiKawasan))
+10 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-11 02:52:32 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`khdtk`.`umt_cucupetak`, CONSTRAINT `umt_cucupetak_ibfk_2` FOREIGN KEY (`Kode_Zonasi_LMU`) REFERENCES `zonasi_lmu` (`Kode_Zonasi_LMU`) ON DELETE NO ACTION ON UPDATE NO ACTION) in D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('DELETE FROM `pe...', 0)
+#1 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `pe...')
+#2 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `pe...')
+#3 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2391): CodeIgniter\Database\BaseConnection->query('DELETE FROM `pe...', Array, false)
+#4 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\Model.php(401): CodeIgniter\Database\BaseBuilder->delete()
+#5 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\BaseModel.php(984): CodeIgniter\Model->doDelete(Array, false)
+#6 D:\XAMPP\htdocs\KHDTK\app\Controllers\OrganisasiKawasan.php(57): CodeIgniter\BaseModel->delete(Array)
+#7 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\OrganisasiKawasan->deletepk('4')
+#8 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrganisasiKawasan))
+#9 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\XAMPP\htdocs\KHDTK\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('D:\\XAMPP\\htdocs...')
+#12 {main}
+CRITICAL - 2022-12-11 02:52:32 --> Cannot delete or update a parent row: a foreign key constraint fails (`khdtk`.`umt_cucupetak`, CONSTRAINT `umt_cucupetak_ibfk_2` FOREIGN KEY (`Kode_Zonasi_LMU`) REFERENCES `zonasi_lmu` (`Kode_Zonasi_LMU`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('DELETE FROM `penataankawasan`
+WHERE `id` IN (\'4\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM `penataankawasan`
+WHERE `id` IN (\'4\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM `penataankawasan`
+WHERE `id` IN (\'4\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2391): CodeIgniter\Database\BaseConnection->query('DELETE FROM `penataankawasan`
+WHERE `id` IN :id:', [...], false)
+ 5 SYSTEMPATH\Model.php(401): CodeIgniter\Database\BaseBuilder->delete()
+ 6 SYSTEMPATH\BaseModel.php(984): CodeIgniter\Model->doDelete([...], false)
+ 7 APPPATH\Controllers\OrganisasiKawasan.php(57): CodeIgniter\BaseModel->delete([...])
+ 8 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\OrganisasiKawasan->deletepk('4')
+ 9 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrganisasiKawasan))
+10 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-11 09:33:39 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it.
+ in D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('localhost', 'root', '', 'khdtk', 3306, '', 0)
+#1 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\XAMPP\htdocs\KHDTK\app\Models\PenataanKawasanModel.php(14): CodeIgniter\BaseModel->findAll()
+#7 D:\XAMPP\htdocs\KHDTK\app\Controllers\OrganisasiKawasan.php(25): App\Models\PenataanKawasanModel->getPenataanKawasan()
+#8 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\OrganisasiKawasan->organisasi_kawasan()
+#9 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrganisasiKawasan))
+#10 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\XAMPP\htdocs\KHDTK\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('D:\\XAMPP\\htdocs...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it.
+ in D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+#5 D:\XAMPP\htdocs\KHDTK\app\Models\PenataanKawasanModel.php(14): CodeIgniter\BaseModel->findAll()
+#6 D:\XAMPP\htdocs\KHDTK\app\Controllers\OrganisasiKawasan.php(25): App\Models\PenataanKawasanModel->getPenataanKawasan()
+#7 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\OrganisasiKawasan->organisasi_kawasan()
+#8 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrganisasiKawasan))
+#9 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\XAMPP\htdocs\KHDTK\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('D:\\XAMPP\\htdocs...')
+#12 {main}
+CRITICAL - 2022-12-11 09:33:39 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it.
+
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `penataankawasan`', [], false)
+ 3 SYSTEMPATH\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Models\PenataanKawasanModel.php(14): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH\Controllers\OrganisasiKawasan.php(25): App\Models\PenataanKawasanModel->getPenataanKawasan()
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\OrganisasiKawasan->organisasi_kawasan()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrganisasiKawasan))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-11 09:33:52 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it.
+ in D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('localhost', 'root', '', 'khdtk', 3306, '', 0)
+#1 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\XAMPP\htdocs\KHDTK\app\Models\PenataanKawasanModel.php(14): CodeIgniter\BaseModel->findAll()
+#7 D:\XAMPP\htdocs\KHDTK\app\Controllers\OrganisasiKawasan.php(25): App\Models\PenataanKawasanModel->getPenataanKawasan()
+#8 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\OrganisasiKawasan->organisasi_kawasan()
+#9 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrganisasiKawasan))
+#10 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\XAMPP\htdocs\KHDTK\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('D:\\XAMPP\\htdocs...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it.
+ in D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+#5 D:\XAMPP\htdocs\KHDTK\app\Models\PenataanKawasanModel.php(14): CodeIgniter\BaseModel->findAll()
+#6 D:\XAMPP\htdocs\KHDTK\app\Controllers\OrganisasiKawasan.php(25): App\Models\PenataanKawasanModel->getPenataanKawasan()
+#7 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\OrganisasiKawasan->organisasi_kawasan()
+#8 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrganisasiKawasan))
+#9 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\XAMPP\htdocs\KHDTK\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('D:\\XAMPP\\htdocs...')
+#12 {main}
+CRITICAL - 2022-12-11 09:33:52 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it.
+
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `penataankawasan`', [], false)
+ 3 SYSTEMPATH\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Models\PenataanKawasanModel.php(14): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH\Controllers\OrganisasiKawasan.php(25): App\Models\PenataanKawasanModel->getPenataanKawasan()
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\OrganisasiKawasan->organisasi_kawasan()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrganisasiKawasan))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-11 09:34:05 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it.
+ in D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('localhost', 'root', '', 'khdtk', 3306, '', 0)
+#1 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\XAMPP\htdocs\KHDTK\app\Models\PenataanKawasanModel.php(14): CodeIgniter\BaseModel->findAll()
+#7 D:\XAMPP\htdocs\KHDTK\app\Controllers\OrganisasiKawasan.php(25): App\Models\PenataanKawasanModel->getPenataanKawasan()
+#8 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\OrganisasiKawasan->organisasi_kawasan()
+#9 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrganisasiKawasan))
+#10 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\XAMPP\htdocs\KHDTK\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('D:\\XAMPP\\htdocs...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it.
+ in D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+#5 D:\XAMPP\htdocs\KHDTK\app\Models\PenataanKawasanModel.php(14): CodeIgniter\BaseModel->findAll()
+#6 D:\XAMPP\htdocs\KHDTK\app\Controllers\OrganisasiKawasan.php(25): App\Models\PenataanKawasanModel->getPenataanKawasan()
+#7 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\OrganisasiKawasan->organisasi_kawasan()
+#8 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrganisasiKawasan))
+#9 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\XAMPP\htdocs\KHDTK\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('D:\\XAMPP\\htdocs...')
+#12 {main}
+CRITICAL - 2022-12-11 09:34:05 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it.
+
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `penataankawasan`', [], false)
+ 3 SYSTEMPATH\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Models\PenataanKawasanModel.php(14): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH\Controllers\OrganisasiKawasan.php(25): App\Models\PenataanKawasanModel->getPenataanKawasan()
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\OrganisasiKawasan->organisasi_kawasan()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrganisasiKawasan))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-11 09:37:42 --> Maximum execution time of 60 seconds exceeded
+in SYSTEMPATH\Debug\Exceptions.php on line 153.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+ERROR - 2022-12-11 09:37:46 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it.
+ in D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('localhost', 'root', '', 'khdtk', 3306, '', 0)
+#1 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\XAMPP\htdocs\KHDTK\app\Models\PenataanKawasanModel.php(14): CodeIgniter\BaseModel->findAll()
+#7 D:\XAMPP\htdocs\KHDTK\app\Controllers\OrganisasiKawasan.php(25): App\Models\PenataanKawasanModel->getPenataanKawasan()
+#8 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\OrganisasiKawasan->organisasi_kawasan()
+#9 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrganisasiKawasan))
+#10 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\XAMPP\htdocs\KHDTK\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('D:\\XAMPP\\htdocs...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it.
+ in D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+#5 D:\XAMPP\htdocs\KHDTK\app\Models\PenataanKawasanModel.php(14): CodeIgniter\BaseModel->findAll()
+#6 D:\XAMPP\htdocs\KHDTK\app\Controllers\OrganisasiKawasan.php(25): App\Models\PenataanKawasanModel->getPenataanKawasan()
+#7 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\OrganisasiKawasan->organisasi_kawasan()
+#8 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrganisasiKawasan))
+#9 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\XAMPP\htdocs\KHDTK\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('D:\\XAMPP\\htdocs...')
+#12 {main}
+CRITICAL - 2022-12-11 09:37:46 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it.
+
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `penataankawasan`', [], false)
+ 3 SYSTEMPATH\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Models\PenataanKawasanModel.php(14): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH\Controllers\OrganisasiKawasan.php(25): App\Models\PenataanKawasanModel->getPenataanKawasan()
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\OrganisasiKawasan->organisasi_kawasan()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrganisasiKawasan))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-11 09:38:46 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it.
+ in D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('localhost', 'root', '', 'khdtk', 3306, '', 0)
+#1 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\XAMPP\htdocs\KHDTK\app\Models\PenataanKawasanModel.php(14): CodeIgniter\BaseModel->findAll()
+#7 D:\XAMPP\htdocs\KHDTK\app\Controllers\OrganisasiKawasan.php(25): App\Models\PenataanKawasanModel->getPenataanKawasan()
+#8 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\OrganisasiKawasan->organisasi_kawasan()
+#9 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrganisasiKawasan))
+#10 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\XAMPP\htdocs\KHDTK\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('D:\\XAMPP\\htdocs...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it.
+ in D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+#5 D:\XAMPP\htdocs\KHDTK\app\Models\PenataanKawasanModel.php(14): CodeIgniter\BaseModel->findAll()
+#6 D:\XAMPP\htdocs\KHDTK\app\Controllers\OrganisasiKawasan.php(25): App\Models\PenataanKawasanModel->getPenataanKawasan()
+#7 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\OrganisasiKawasan->organisasi_kawasan()
+#8 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrganisasiKawasan))
+#9 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\XAMPP\htdocs\KHDTK\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('D:\\XAMPP\\htdocs...')
+#12 {main}
+CRITICAL - 2022-12-11 09:38:46 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it.
+
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `penataankawasan`', [], false)
+ 3 SYSTEMPATH\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Models\PenataanKawasanModel.php(14): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH\Controllers\OrganisasiKawasan.php(25): App\Models\PenataanKawasanModel->getPenataanKawasan()
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\OrganisasiKawasan->organisasi_kawasan()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrganisasiKawasan))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-11 09:56:38 --> mysqli_sql_exception: Table 'khdtk.penataankawasan' doesn't exist in engine in D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\XAMPP\htdocs\KHDTK\app\Models\PenataanKawasanModel.php(14): CodeIgniter\BaseModel->findAll()
+#7 D:\XAMPP\htdocs\KHDTK\app\Controllers\OrganisasiKawasan.php(25): App\Models\PenataanKawasanModel->getPenataanKawasan()
+#8 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\OrganisasiKawasan->organisasi_kawasan()
+#9 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrganisasiKawasan))
+#10 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\XAMPP\htdocs\KHDTK\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 D:\XAMPP\htdocs\KHDTK\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('D:\\XAMPP\\htdocs...')
+#13 {main}
+CRITICAL - 2022-12-11 09:56:38 --> Table 'khdtk.penataankawasan' doesn't exist in engine
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `penataankawasan`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `penataankawasan`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `penataankawasan`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `penataankawasan`', [], false)
+ 5 SYSTEMPATH\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Models\PenataanKawasanModel.php(14): CodeIgniter\BaseModel->findAll()
+ 8 APPPATH\Controllers\OrganisasiKawasan.php(25): App\Models\PenataanKawasanModel->getPenataanKawasan()
+ 9 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\OrganisasiKawasan->organisasi_kawasan()
+10 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrganisasiKawasan))
+11 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-11 10:53:58 --> Undefined index: Kode_Penataan_Kawasan
+in APPPATH\Views\apps\organisasi_kawasan.php on line 590.
+ 1 APPPATH\Views\apps\organisasi_kawasan.php(590): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: Kode_Penataan_Kawasan', 'APPPATH\\Views\\apps\\organisasi_kawasan.php', 590, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\apps\\organisasi_kawasan.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/organisasi_kawasan', [], true)
+ 5 APPPATH\Controllers\OrganisasiKawasan.php(40): view('apps/organisasi_kawasan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\OrganisasiKawasan->organisasi_kawasan()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrganisasiKawasan))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-11 10:55:35 --> Undefined index: kode_umt
+in APPPATH\Views\apps\organisasi_kawasan.php on line 1226.
+ 1 APPPATH\Views\apps\organisasi_kawasan.php(1226): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: kode_umt', 'APPPATH\\Views\\apps\\organisasi_kawasan.php', 1226, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\apps\\organisasi_kawasan.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/organisasi_kawasan', [], true)
+ 5 APPPATH\Controllers\OrganisasiKawasan.php(40): view('apps/organisasi_kawasan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\OrganisasiKawasan->organisasi_kawasan()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrganisasiKawasan))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-11 10:58:32 --> Undefined index: kode_umt
+in APPPATH\Views\apps\organisasi_kawasan.php on line 1226.
+ 1 APPPATH\Views\apps\organisasi_kawasan.php(1226): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: kode_umt', 'APPPATH\\Views\\apps\\organisasi_kawasan.php', 1226, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\apps\\organisasi_kawasan.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/organisasi_kawasan', [], true)
+ 5 APPPATH\Controllers\OrganisasiKawasan.php(40): view('apps/organisasi_kawasan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\OrganisasiKawasan->organisasi_kawasan()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrganisasiKawasan))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-11 10:58:36 --> Undefined index: kode_umt
+in APPPATH\Views\apps\organisasi_kawasan.php on line 1226.
+ 1 APPPATH\Views\apps\organisasi_kawasan.php(1226): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: kode_umt', 'APPPATH\\Views\\apps\\organisasi_kawasan.php', 1226, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\apps\\organisasi_kawasan.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/organisasi_kawasan', [], true)
+ 5 APPPATH\Controllers\OrganisasiKawasan.php(40): view('apps/organisasi_kawasan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\OrganisasiKawasan->organisasi_kawasan()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrganisasiKawasan))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-11 11:05:46 --> Undefined index: skzonasi
+in APPPATH\Views\apps\organisasi_kawasan.php on line 1236.
+ 1 APPPATH\Views\apps\organisasi_kawasan.php(1236): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: skzonasi', 'APPPATH\\Views\\apps\\organisasi_kawasan.php', 1236, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\apps\\organisasi_kawasan.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/organisasi_kawasan', [], true)
+ 5 APPPATH\Controllers\OrganisasiKawasan.php(40): view('apps/organisasi_kawasan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\OrganisasiKawasan->organisasi_kawasan()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrganisasiKawasan))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-11 11:06:03 --> Undefined index: landuse
+in APPPATH\Views\apps\organisasi_kawasan.php on line 1246.
+ 1 APPPATH\Views\apps\organisasi_kawasan.php(1246): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: landuse', 'APPPATH\\Views\\apps\\organisasi_kawasan.php', 1246, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\apps\\organisasi_kawasan.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/organisasi_kawasan', [], true)
+ 5 APPPATH\Controllers\OrganisasiKawasan.php(40): view('apps/organisasi_kawasan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\OrganisasiKawasan->organisasi_kawasan()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrganisasiKawasan))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-11 11:43:10 --> Undefined index: kode_zonasi
+in APPPATH\Views\apps\organisasi_kawasan.php on line 1423.
+ 1 APPPATH\Views\apps\organisasi_kawasan.php(1423): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: kode_zonasi', 'APPPATH\\Views\\apps\\organisasi_kawasan.php', 1423, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\apps\\organisasi_kawasan.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/organisasi_kawasan', [], true)
+ 5 APPPATH\Controllers\OrganisasiKawasan.php(40): view('apps/organisasi_kawasan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\OrganisasiKawasan->organisasi_kawasan()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrganisasiKawasan))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')

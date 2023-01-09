@@ -1,0 +1,23 @@
+CRITICAL - 2022-11-23 05:06:51 --> include(function.php): failed to open stream: No such file or directory
+in APPPATH\Views\app\main.php on line 2.
+ 1 APPPATH\Views\app\main.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(function.php): failed to open stream: No such file or directory', 'APPPATH\\Views\\app\\main.php', 2, [])
+ 2 APPPATH\Views\app\main.php(2): include()
+ 3 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\app\\main.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('app/main', [], true)
+ 6 APPPATH\Controllers\Main.php(9): view('app/main')
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Main->index()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Main))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-23 05:33:32 --> Invalid file: map/main_maps.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('map/main_maps.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('map/main_maps', [], true)
+ 3 APPPATH\Controllers\Maps.php(9): view('map/main_maps')
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Maps->index()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maps))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')

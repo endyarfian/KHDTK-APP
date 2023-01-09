@@ -1,0 +1,1506 @@
+ERROR - 2022-12-30 00:33:43 --> mysqli_sql_exception: Unknown column 'kodecupet' in 'on clause' in D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `umt_ana...', 0)
+#1 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `umt_ana...')
+#2 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `umt_ana...')
+#3 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `umt_ana...', Array, false)
+#4 D:\XAMPP\htdocs\KHDTK - experimental\app\Controllers\Maps.php(32): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Maps->index()
+#6 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maps))
+#7 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\XAMPP\htdocs\KHDTK - experimental\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('D:\\XAMPP\\htdocs...')
+#10 {main}
+CRITICAL - 2022-12-30 00:33:43 --> Unknown column 'kodecupet' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `umt_anakpetak`.`kode_anak_petak` as `kodeap`, `anak_petak`, `kode_inven_pu`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `kodecupet` = `umt_cucupetak`.`kode_cucu_petak`
+JOIN `inventarisasi_umt` ON `kodetnm` = `umt_cupet_tnm`.`kode_cupet_tnm`
+JOIN `inventarisasi_pu` ON `kodeinvenumt` = `inventarisasi_umt`.`kode_inven_umt`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `umt_anakpetak`.`kode_anak_petak` as `kodeap`, `anak_petak`, `kode_inven_pu`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `kodecupet` = `umt_cucupetak`.`kode_cucu_petak`
+JOIN `inventarisasi_umt` ON `kodetnm` = `umt_cupet_tnm`.`kode_cupet_tnm`
+JOIN `inventarisasi_pu` ON `kodeinvenumt` = `inventarisasi_umt`.`kode_inven_umt`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `umt_anakpetak`.`kode_anak_petak` as `kodeap`, `anak_petak`, `kode_inven_pu`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `kodecupet` = `umt_cucupetak`.`kode_cucu_petak`
+JOIN `inventarisasi_umt` ON `kodetnm` = `umt_cupet_tnm`.`kode_cupet_tnm`
+JOIN `inventarisasi_pu` ON `kodeinvenumt` = `inventarisasi_umt`.`kode_inven_umt`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `umt_anakpetak`.`kode_anak_petak` as `kodeap`, `anak_petak`, `kode_inven_pu`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `kodecupet` = `umt_cucupetak`.`kode_cucu_petak`
+JOIN `inventarisasi_umt` ON `kodetnm` = `umt_cupet_tnm`.`kode_cupet_tnm`
+JOIN `inventarisasi_pu` ON `kodeinvenumt` = `inventarisasi_umt`.`kode_inven_umt`', [], false)
+ 5 APPPATH\Controllers\Maps.php(32): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Maps->index()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-30 00:37:37 --> mysqli_sql_exception: Column 'koordinat_x' in field list is ambiguous in D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `umt_ana...', 0)
+#1 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `umt_ana...')
+#2 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `umt_ana...')
+#3 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `umt_ana...', Array, false)
+#4 D:\XAMPP\htdocs\KHDTK - experimental\app\Controllers\Maps.php(32): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Maps->index()
+#6 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maps))
+#7 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\XAMPP\htdocs\KHDTK - experimental\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('D:\\XAMPP\\htdocs...')
+#10 {main}
+CRITICAL - 2022-12-30 00:37:37 --> Column 'koordinat_x' in field list is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `umt_anakpetak`.`kode_anak_petak` as `kodeap`, `anak_petak`, `kode_inven_pu`, `luas_pu`, `bentuk_pu`, `koordinat_x`, `koordinat_y`, `ndvi`, `msavi`, `c`, `d`, `n`, `jenis_tanah`, `kelerengan`, `altitude`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `umt_cupet_tnm`.`kode_cucu_petak` = `umt_cucupetak`.`kode_cucu_petak`
+JOIN `inventarisasi_umt` ON `inventarisasi_umt`.`kode_cupet_tnm`  = `umt_cupet_tnm`.`kode_cupet_tnm`
+JOIN `inventarisasi_pu` ON `inventarisasi_pu`.`kode_inven_umt`  = `inventarisasi_umt`.`kode_inven_umt`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `umt_anakpetak`.`kode_anak_petak` as `kodeap`, `anak_petak`, `kode_inven_pu`, `luas_pu`, `bentuk_pu`, `koordinat_x`, `koordinat_y`, `ndvi`, `msavi`, `c`, `d`, `n`, `jenis_tanah`, `kelerengan`, `altitude`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `umt_cupet_tnm`.`kode_cucu_petak` = `umt_cucupetak`.`kode_cucu_petak`
+JOIN `inventarisasi_umt` ON `inventarisasi_umt`.`kode_cupet_tnm`  = `umt_cupet_tnm`.`kode_cupet_tnm`
+JOIN `inventarisasi_pu` ON `inventarisasi_pu`.`kode_inven_umt`  = `inventarisasi_umt`.`kode_inven_umt`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `umt_anakpetak`.`kode_anak_petak` as `kodeap`, `anak_petak`, `kode_inven_pu`, `luas_pu`, `bentuk_pu`, `koordinat_x`, `koordinat_y`, `ndvi`, `msavi`, `c`, `d`, `n`, `jenis_tanah`, `kelerengan`, `altitude`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `umt_cupet_tnm`.`kode_cucu_petak` = `umt_cucupetak`.`kode_cucu_petak`
+JOIN `inventarisasi_umt` ON `inventarisasi_umt`.`kode_cupet_tnm`  = `umt_cupet_tnm`.`kode_cupet_tnm`
+JOIN `inventarisasi_pu` ON `inventarisasi_pu`.`kode_inven_umt`  = `inventarisasi_umt`.`kode_inven_umt`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `umt_anakpetak`.`kode_anak_petak` as `kodeap`, `anak_petak`, `kode_inven_pu`, `luas_pu`, `bentuk_pu`, `koordinat_x`, `koordinat_y`, `ndvi`, `msavi`, `c`, `d`, `n`, `jenis_tanah`, `kelerengan`, `altitude`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `umt_cupet_tnm`.`kode_cucu_petak` = `umt_cucupetak`.`kode_cucu_petak`
+JOIN `inventarisasi_umt` ON `inventarisasi_umt`.`kode_cupet_tnm`  = `umt_cupet_tnm`.`kode_cupet_tnm`
+JOIN `inventarisasi_pu` ON `inventarisasi_pu`.`kode_inven_umt`  = `inventarisasi_umt`.`kode_inven_umt`', [], false)
+ 5 APPPATH\Controllers\Maps.php(32): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Maps->index()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-30 00:45:35 --> Trying to get property 'kode_umt' of non-object
+in APPPATH\Controllers\Maps.php on line 21.
+ 1 APPPATH\Controllers\Maps.php(21): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'kode_umt\' of non-object', 'APPPATH\\Controllers\\Maps.php', 21, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Maps->index()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maps))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-30 00:46:33 --> Undefined property: stdClass::$kode_umt
+in APPPATH\Controllers\Maps.php on line 21.
+ 1 APPPATH\Controllers\Maps.php(21): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: stdClass::$kode_umt', 'APPPATH\\Controllers\\Maps.php', 21, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Maps->index()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maps))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-30 01:03:56 --> Trying to get property 'kode' of non-object
+in APPPATH\Controllers\Maps.php on line 21.
+ 1 APPPATH\Controllers\Maps.php(21): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'kode\' of non-object', 'APPPATH\\Controllers\\Maps.php', 21, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Maps->index()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maps))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-30 01:05:56 --> Trying to get property 'kode_umt' of non-object
+in APPPATH\Controllers\Maps.php on line 21.
+ 1 APPPATH\Controllers\Maps.php(21): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'kode_umt\' of non-object', 'APPPATH\\Controllers\\Maps.php', 21, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Maps->index()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maps))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-30 01:57:05 --> mysqli_sql_exception: Column 'kode_cucu_petak' in field list is ambiguous in D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `umt_ana...', 0)
+#1 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `umt_ana...')
+#2 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `umt_ana...')
+#3 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `umt_ana...', Array, false)
+#4 D:\XAMPP\htdocs\KHDTK - experimental\app\Controllers\Maps.php(18): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Maps->index()
+#6 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maps))
+#7 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\XAMPP\htdocs\KHDTK - experimental\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('D:\\XAMPP\\htdocs...')
+#10 {main}
+CRITICAL - 2022-12-30 01:57:05 --> Column 'kode_cucu_petak' in field list is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `umt_anakpetak`.`kode_anak_petak` as `kodeap`, `kode_cucu_petak`, `kode_inven_umt`, `kode_inven_pu`, `luas_pu`, `bentuk_pu`, `ndvi`, `msavi`, `c`, `d`, `n`, `jenis_tanah`, `kelerengan`, `altitude`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `umt_cupet_tnm`.`kode_cucu_petak` = `umt_cucupetak`.`kode_cucu_petak`
+JOIN `inventarisasi_umt` ON `inventarisasi_umt`.`kode_cupet_tnm`  = `umt_cupet_tnm`.`kode_cupet_tnm`
+JOIN `inventarisasi_pu` ON `inventarisasi_pu`.`kode_inven_umt`  = `inventarisasi_umt`.`kode_inven_umt`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `umt_anakpetak`.`kode_anak_petak` as `kodeap`, `kode_cucu_petak`, `kode_inven_umt`, `kode_inven_pu`, `luas_pu`, `bentuk_pu`, `ndvi`, `msavi`, `c`, `d`, `n`, `jenis_tanah`, `kelerengan`, `altitude`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `umt_cupet_tnm`.`kode_cucu_petak` = `umt_cucupetak`.`kode_cucu_petak`
+JOIN `inventarisasi_umt` ON `inventarisasi_umt`.`kode_cupet_tnm`  = `umt_cupet_tnm`.`kode_cupet_tnm`
+JOIN `inventarisasi_pu` ON `inventarisasi_pu`.`kode_inven_umt`  = `inventarisasi_umt`.`kode_inven_umt`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `umt_anakpetak`.`kode_anak_petak` as `kodeap`, `kode_cucu_petak`, `kode_inven_umt`, `kode_inven_pu`, `luas_pu`, `bentuk_pu`, `ndvi`, `msavi`, `c`, `d`, `n`, `jenis_tanah`, `kelerengan`, `altitude`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `umt_cupet_tnm`.`kode_cucu_petak` = `umt_cucupetak`.`kode_cucu_petak`
+JOIN `inventarisasi_umt` ON `inventarisasi_umt`.`kode_cupet_tnm`  = `umt_cupet_tnm`.`kode_cupet_tnm`
+JOIN `inventarisasi_pu` ON `inventarisasi_pu`.`kode_inven_umt`  = `inventarisasi_umt`.`kode_inven_umt`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `umt_anakpetak`.`kode_anak_petak` as `kodeap`, `kode_cucu_petak`, `kode_inven_umt`, `kode_inven_pu`, `luas_pu`, `bentuk_pu`, `ndvi`, `msavi`, `c`, `d`, `n`, `jenis_tanah`, `kelerengan`, `altitude`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `umt_cupet_tnm`.`kode_cucu_petak` = `umt_cucupetak`.`kode_cucu_petak`
+JOIN `inventarisasi_umt` ON `inventarisasi_umt`.`kode_cupet_tnm`  = `umt_cupet_tnm`.`kode_cupet_tnm`
+JOIN `inventarisasi_pu` ON `inventarisasi_pu`.`kode_inven_umt`  = `inventarisasi_umt`.`kode_inven_umt`', [], false)
+ 5 APPPATH\Controllers\Maps.php(18): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Maps->index()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-30 01:57:50 --> mysqli_sql_exception: Column 'kode_cucu_petak' in field list is ambiguous in D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `umt_ana...', 0)
+#1 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `umt_ana...')
+#2 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `umt_ana...')
+#3 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `umt_ana...', Array, false)
+#4 D:\XAMPP\htdocs\KHDTK - experimental\app\Controllers\Maps.php(18): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Maps->index()
+#6 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maps))
+#7 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\XAMPP\htdocs\KHDTK - experimental\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('D:\\XAMPP\\htdocs...')
+#10 {main}
+CRITICAL - 2022-12-30 01:57:50 --> Column 'kode_cucu_petak' in field list is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `umt_anakpetak`.`kode_anak_petak` as `kodeanakpetak`, `kode_cucu_petak` as `kodecupet`, `kode_inven_umt`, `kode_inven_pu`, `luas_pu`, `bentuk_pu`, `ndvi`, `msavi`, `c`, `d`, `n`, `jenis_tanah`, `kelerengan`, `altitude`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `umt_cupet_tnm`.`kode_cucu_petak` = `umt_cucupetak`.`kode_cucu_petak`
+JOIN `inventarisasi_umt` ON `inventarisasi_umt`.`kode_cupet_tnm`  = `umt_cupet_tnm`.`kode_cupet_tnm`
+JOIN `inventarisasi_pu` ON `inventarisasi_pu`.`kode_inven_umt`  = `inventarisasi_umt`.`kode_inven_umt`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `umt_anakpetak`.`kode_anak_petak` as `kodeanakpetak`, `kode_cucu_petak` as `kodecupet`, `kode_inven_umt`, `kode_inven_pu`, `luas_pu`, `bentuk_pu`, `ndvi`, `msavi`, `c`, `d`, `n`, `jenis_tanah`, `kelerengan`, `altitude`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `umt_cupet_tnm`.`kode_cucu_petak` = `umt_cucupetak`.`kode_cucu_petak`
+JOIN `inventarisasi_umt` ON `inventarisasi_umt`.`kode_cupet_tnm`  = `umt_cupet_tnm`.`kode_cupet_tnm`
+JOIN `inventarisasi_pu` ON `inventarisasi_pu`.`kode_inven_umt`  = `inventarisasi_umt`.`kode_inven_umt`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `umt_anakpetak`.`kode_anak_petak` as `kodeanakpetak`, `kode_cucu_petak` as `kodecupet`, `kode_inven_umt`, `kode_inven_pu`, `luas_pu`, `bentuk_pu`, `ndvi`, `msavi`, `c`, `d`, `n`, `jenis_tanah`, `kelerengan`, `altitude`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `umt_cupet_tnm`.`kode_cucu_petak` = `umt_cucupetak`.`kode_cucu_petak`
+JOIN `inventarisasi_umt` ON `inventarisasi_umt`.`kode_cupet_tnm`  = `umt_cupet_tnm`.`kode_cupet_tnm`
+JOIN `inventarisasi_pu` ON `inventarisasi_pu`.`kode_inven_umt`  = `inventarisasi_umt`.`kode_inven_umt`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `umt_anakpetak`.`kode_anak_petak` as `kodeanakpetak`, `kode_cucu_petak` as `kodecupet`, `kode_inven_umt`, `kode_inven_pu`, `luas_pu`, `bentuk_pu`, `ndvi`, `msavi`, `c`, `d`, `n`, `jenis_tanah`, `kelerengan`, `altitude`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `umt_cupet_tnm`.`kode_cucu_petak` = `umt_cucupetak`.`kode_cucu_petak`
+JOIN `inventarisasi_umt` ON `inventarisasi_umt`.`kode_cupet_tnm`  = `umt_cupet_tnm`.`kode_cupet_tnm`
+JOIN `inventarisasi_pu` ON `inventarisasi_pu`.`kode_inven_umt`  = `inventarisasi_umt`.`kode_inven_umt`', [], false)
+ 5 APPPATH\Controllers\Maps.php(18): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Maps->index()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-30 01:58:59 --> mysqli_sql_exception: Unknown column 'kodecupet' in 'field list' in D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `umt_ana...', 0)
+#1 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `umt_ana...')
+#2 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `umt_ana...')
+#3 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `umt_ana...', Array, false)
+#4 D:\XAMPP\htdocs\KHDTK - experimental\app\Controllers\Maps.php(18): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Maps->index()
+#6 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maps))
+#7 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\XAMPP\htdocs\KHDTK - experimental\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('D:\\XAMPP\\htdocs...')
+#10 {main}
+CRITICAL - 2022-12-30 01:58:59 --> Unknown column 'kodecupet' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `umt_anakpetak`.`kode_anak_petak` as `kodeanakpetak`, `kodecupet`, `kode_inven_umt`, `kode_inven_pu`, `luas_pu`, `bentuk_pu`, `ndvi`, `msavi`, `c`, `d`, `n`, `jenis_tanah`, `kelerengan`, `altitude`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `kodecupet`= `umt_cucupetak`.`kode_cucu_petak`
+JOIN `inventarisasi_umt` ON `inventarisasi_umt`.`kode_cupet_tnm`  = `umt_cupet_tnm`.`kode_cupet_tnm`
+JOIN `inventarisasi_pu` ON `inventarisasi_pu`.`kode_inven_umt`  = `inventarisasi_umt`.`kode_inven_umt`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `umt_anakpetak`.`kode_anak_petak` as `kodeanakpetak`, `kodecupet`, `kode_inven_umt`, `kode_inven_pu`, `luas_pu`, `bentuk_pu`, `ndvi`, `msavi`, `c`, `d`, `n`, `jenis_tanah`, `kelerengan`, `altitude`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `kodecupet`= `umt_cucupetak`.`kode_cucu_petak`
+JOIN `inventarisasi_umt` ON `inventarisasi_umt`.`kode_cupet_tnm`  = `umt_cupet_tnm`.`kode_cupet_tnm`
+JOIN `inventarisasi_pu` ON `inventarisasi_pu`.`kode_inven_umt`  = `inventarisasi_umt`.`kode_inven_umt`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `umt_anakpetak`.`kode_anak_petak` as `kodeanakpetak`, `kodecupet`, `kode_inven_umt`, `kode_inven_pu`, `luas_pu`, `bentuk_pu`, `ndvi`, `msavi`, `c`, `d`, `n`, `jenis_tanah`, `kelerengan`, `altitude`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `kodecupet`= `umt_cucupetak`.`kode_cucu_petak`
+JOIN `inventarisasi_umt` ON `inventarisasi_umt`.`kode_cupet_tnm`  = `umt_cupet_tnm`.`kode_cupet_tnm`
+JOIN `inventarisasi_pu` ON `inventarisasi_pu`.`kode_inven_umt`  = `inventarisasi_umt`.`kode_inven_umt`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `umt_anakpetak`.`kode_anak_petak` as `kodeanakpetak`, `kodecupet`, `kode_inven_umt`, `kode_inven_pu`, `luas_pu`, `bentuk_pu`, `ndvi`, `msavi`, `c`, `d`, `n`, `jenis_tanah`, `kelerengan`, `altitude`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `kodecupet`= `umt_cucupetak`.`kode_cucu_petak`
+JOIN `inventarisasi_umt` ON `inventarisasi_umt`.`kode_cupet_tnm`  = `umt_cupet_tnm`.`kode_cupet_tnm`
+JOIN `inventarisasi_pu` ON `inventarisasi_pu`.`kode_inven_umt`  = `inventarisasi_umt`.`kode_inven_umt`', [], false)
+ 5 APPPATH\Controllers\Maps.php(18): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Maps->index()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-30 01:59:34 --> mysqli_sql_exception: Column 'kode_inven_umt' in field list is ambiguous in D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `umt_ana...', 0)
+#1 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `umt_ana...')
+#2 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `umt_ana...')
+#3 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `umt_ana...', Array, false)
+#4 D:\XAMPP\htdocs\KHDTK - experimental\app\Controllers\Maps.php(18): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Maps->index()
+#6 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maps))
+#7 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\XAMPP\htdocs\KHDTK - experimental\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('D:\\XAMPP\\htdocs...')
+#10 {main}
+CRITICAL - 2022-12-30 01:59:34 --> Column 'kode_inven_umt' in field list is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `umt_anakpetak`.`kode_anak_petak` as `kodeanakpetak`, `umt_cucupetak`.`kode_cucu_petak` as `kodecupet`, `kode_inven_umt`, `kode_inven_pu`, `luas_pu`, `bentuk_pu`, `ndvi`, `msavi`, `c`, `d`, `n`, `jenis_tanah`, `kelerengan`, `altitude`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `as` = `umt_cucupetak`.`kode_cucu_petak`
+JOIN `inventarisasi_umt` ON `inventarisasi_umt`.`kode_cupet_tnm`  = `umt_cupet_tnm`.`kode_cupet_tnm`
+JOIN `inventarisasi_pu` ON `inventarisasi_pu`.`kode_inven_umt`  = `inventarisasi_umt`.`kode_inven_umt`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `umt_anakpetak`.`kode_anak_petak` as `kodeanakpetak`, `umt_cucupetak`.`kode_cucu_petak` as `kodecupet`, `kode_inven_umt`, `kode_inven_pu`, `luas_pu`, `bentuk_pu`, `ndvi`, `msavi`, `c`, `d`, `n`, `jenis_tanah`, `kelerengan`, `altitude`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `as` = `umt_cucupetak`.`kode_cucu_petak`
+JOIN `inventarisasi_umt` ON `inventarisasi_umt`.`kode_cupet_tnm`  = `umt_cupet_tnm`.`kode_cupet_tnm`
+JOIN `inventarisasi_pu` ON `inventarisasi_pu`.`kode_inven_umt`  = `inventarisasi_umt`.`kode_inven_umt`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `umt_anakpetak`.`kode_anak_petak` as `kodeanakpetak`, `umt_cucupetak`.`kode_cucu_petak` as `kodecupet`, `kode_inven_umt`, `kode_inven_pu`, `luas_pu`, `bentuk_pu`, `ndvi`, `msavi`, `c`, `d`, `n`, `jenis_tanah`, `kelerengan`, `altitude`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `as` = `umt_cucupetak`.`kode_cucu_petak`
+JOIN `inventarisasi_umt` ON `inventarisasi_umt`.`kode_cupet_tnm`  = `umt_cupet_tnm`.`kode_cupet_tnm`
+JOIN `inventarisasi_pu` ON `inventarisasi_pu`.`kode_inven_umt`  = `inventarisasi_umt`.`kode_inven_umt`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `umt_anakpetak`.`kode_anak_petak` as `kodeanakpetak`, `umt_cucupetak`.`kode_cucu_petak` as `kodecupet`, `kode_inven_umt`, `kode_inven_pu`, `luas_pu`, `bentuk_pu`, `ndvi`, `msavi`, `c`, `d`, `n`, `jenis_tanah`, `kelerengan`, `altitude`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `as` = `umt_cucupetak`.`kode_cucu_petak`
+JOIN `inventarisasi_umt` ON `inventarisasi_umt`.`kode_cupet_tnm`  = `umt_cupet_tnm`.`kode_cupet_tnm`
+JOIN `inventarisasi_pu` ON `inventarisasi_pu`.`kode_inven_umt`  = `inventarisasi_umt`.`kode_inven_umt`', [], false)
+ 5 APPPATH\Controllers\Maps.php(18): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Maps->index()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-30 02:01:08 --> mysqli_sql_exception: Unknown column 'as' in 'on clause' in D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `umt_ana...', 0)
+#1 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `umt_ana...')
+#2 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `umt_ana...')
+#3 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `umt_ana...', Array, false)
+#4 D:\XAMPP\htdocs\KHDTK - experimental\app\Controllers\Maps.php(18): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Maps->index()
+#6 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maps))
+#7 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\XAMPP\htdocs\KHDTK - experimental\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('D:\\XAMPP\\htdocs...')
+#10 {main}
+CRITICAL - 2022-12-30 02:01:08 --> Unknown column 'as' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `umt_anakpetak`.`kode_anak_petak` as `kodeanakpetak`, `umt_cucupetak`.`kode_cucu_petak` as `kodecupet`, `umt_cupet_tnm`.`kode_cupet_tnm` as `kodecupettnm`, `inventarisasi_umt`.`kode_inven_umt` as `kodeinvenumt`, `kode_inven_pu`, `luas_pu`, `bentuk_pu`, `ndvi`, `msavi`, `c`, `d`, `n`, `jenis_tanah`, `kelerengan`, `altitude`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `as` = `umt_cucupetak`.`kode_cucu_petak`
+JOIN `inventarisasi_umt` ON `inventarisasi_umt`.`kode_cupet_tnm`  = `umt_cupet_tnm`.`kode_cupet_tnm`
+JOIN `inventarisasi_pu` ON `inventarisasi_pu`.`kode_inven_umt`  = `inventarisasi_umt`.`kode_inven_umt`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `umt_anakpetak`.`kode_anak_petak` as `kodeanakpetak`, `umt_cucupetak`.`kode_cucu_petak` as `kodecupet`, `umt_cupet_tnm`.`kode_cupet_tnm` as `kodecupettnm`, `inventarisasi_umt`.`kode_inven_umt` as `kodeinvenumt`, `kode_inven_pu`, `luas_pu`, `bentuk_pu`, `ndvi`, `msavi`, `c`, `d`, `n`, `jenis_tanah`, `kelerengan`, `altitude`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `as` = `umt_cucupetak`.`kode_cucu_petak`
+JOIN `inventarisasi_umt` ON `inventarisasi_umt`.`kode_cupet_tnm`  = `umt_cupet_tnm`.`kode_cupet_tnm`
+JOIN `inventarisasi_pu` ON `inventarisasi_pu`.`kode_inven_umt`  = `inventarisasi_umt`.`kode_inven_umt`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `umt_anakpetak`.`kode_anak_petak` as `kodeanakpetak`, `umt_cucupetak`.`kode_cucu_petak` as `kodecupet`, `umt_cupet_tnm`.`kode_cupet_tnm` as `kodecupettnm`, `inventarisasi_umt`.`kode_inven_umt` as `kodeinvenumt`, `kode_inven_pu`, `luas_pu`, `bentuk_pu`, `ndvi`, `msavi`, `c`, `d`, `n`, `jenis_tanah`, `kelerengan`, `altitude`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `as` = `umt_cucupetak`.`kode_cucu_petak`
+JOIN `inventarisasi_umt` ON `inventarisasi_umt`.`kode_cupet_tnm`  = `umt_cupet_tnm`.`kode_cupet_tnm`
+JOIN `inventarisasi_pu` ON `inventarisasi_pu`.`kode_inven_umt`  = `inventarisasi_umt`.`kode_inven_umt`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `umt_anakpetak`.`kode_anak_petak` as `kodeanakpetak`, `umt_cucupetak`.`kode_cucu_petak` as `kodecupet`, `umt_cupet_tnm`.`kode_cupet_tnm` as `kodecupettnm`, `inventarisasi_umt`.`kode_inven_umt` as `kodeinvenumt`, `kode_inven_pu`, `luas_pu`, `bentuk_pu`, `ndvi`, `msavi`, `c`, `d`, `n`, `jenis_tanah`, `kelerengan`, `altitude`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `as` = `umt_cucupetak`.`kode_cucu_petak`
+JOIN `inventarisasi_umt` ON `inventarisasi_umt`.`kode_cupet_tnm`  = `umt_cupet_tnm`.`kode_cupet_tnm`
+JOIN `inventarisasi_pu` ON `inventarisasi_pu`.`kode_inven_umt`  = `inventarisasi_umt`.`kode_inven_umt`', [], false)
+ 5 APPPATH\Controllers\Maps.php(18): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Maps->index()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-30 06:22:05 --> Trying to get property 'kode_umt' of non-object
+in APPPATH\Controllers\Maps.php on line 34.
+ 1 APPPATH\Controllers\Maps.php(34): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'kode_umt\' of non-object', 'APPPATH\\Controllers\\Maps.php', 34, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Maps->index()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maps))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-30 06:23:18 --> Trying to get property 'kodeumt' of non-object
+in APPPATH\Controllers\Maps.php on line 34.
+ 1 APPPATH\Controllers\Maps.php(34): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'kodeumt\' of non-object', 'APPPATH\\Controllers\\Maps.php', 34, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Maps->index()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maps))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-30 06:25:18 --> Undefined variable: petak
+in APPPATH\Views\apps\maps.php on line 699.
+ 1 APPPATH\Views\apps\maps.php(699): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: petak', 'APPPATH\\Views\\apps\\maps.php', 699, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\apps\\maps.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/maps', [], true)
+ 5 APPPATH\Controllers\Maps.php(44): view('apps/maps', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Maps->index()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-30 06:29:55 --> Undefined variable: data
+in APPPATH\Views\apps\maps.php on line 775.
+ 1 APPPATH\Views\apps\maps.php(775): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: data', 'APPPATH\\Views\\apps\\maps.php', 775, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\apps\\maps.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/maps', [], true)
+ 5 APPPATH\Controllers\Maps.php(44): view('apps/maps', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Maps->index()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-30 06:37:44 --> Undefined variable: data
+in APPPATH\Views\apps\maps.php on line 775.
+ 1 APPPATH\Views\apps\maps.php(775): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: data', 'APPPATH\\Views\\apps\\maps.php', 775, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\apps\\maps.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/maps', [], true)
+ 5 APPPATH\Controllers\Maps.php(45): view('apps/maps', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Maps->index()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-30 09:13:42 --> A non well formed numeric value encountered
+in SYSTEMPATH\Database\BaseBuilder.php on line 1706.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1706): CodeIgniter\Debug\Exceptions->errorHandler(8, 'A non well formed numeric value encountered', 'SYSTEMPATH\\Database\\BaseBuilder.php', 1706, [...])
+ 2 APPPATH\Controllers\Maps.php(31): CodeIgniter\Database\BaseBuilder->getWhere('kode_anak_petak', '160-C')
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Maps->index()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maps))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-30 09:14:57 --> Cannot use object of type CodeIgniter\Database\MySQLi\Result as array
+in APPPATH\Controllers\Maps.php on line 34.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Maps->index()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maps))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-30 09:15:17 --> Cannot use object of type CodeIgniter\Database\MySQLi\Result as array
+in APPPATH\Controllers\Maps.php on line 34.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Maps->index()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maps))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-30 09:15:51 --> Undefined property: CodeIgniter\Database\MySQLi\Result::$cupet
+in APPPATH\Controllers\Maps.php on line 34.
+ 1 APPPATH\Controllers\Maps.php(34): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: CodeIgniter\\Database\\MySQLi\\Result::$cupet', 'APPPATH\\Controllers\\Maps.php', 34, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Maps->index()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maps))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-30 09:21:52 --> mysqli_sql_exception: Unknown column 'kodeanakpetak' in 'where clause' in D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Model.php(250): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\BaseModel.php(623): CodeIgniter\Model->doFirst()
+#6 D:\XAMPP\htdocs\KHDTK - experimental\app\Controllers\Maps.php(31): CodeIgniter\BaseModel->first()
+#7 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Maps->index()
+#8 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maps))
+#9 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\XAMPP\htdocs\KHDTK - experimental\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('D:\\XAMPP\\htdocs...')
+#12 {main}
+CRITICAL - 2022-12-30 09:21:52 --> Unknown column 'kodeanakpetak' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `umt_anakpetak`
+WHERE `kodeanakpetak` = \'160-C\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `umt_anakpetak`
+WHERE `kodeanakpetak` = \'160-C\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `umt_anakpetak`
+WHERE `kodeanakpetak` = \'160-C\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `umt_anakpetak`
+WHERE `kodeanakpetak` = :kodeanakpetak:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Model.php(250): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(623): CodeIgniter\Model->doFirst()
+ 7 APPPATH\Controllers\Maps.php(31): CodeIgniter\BaseModel->first()
+ 8 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Maps->index()
+ 9 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maps))
+10 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-30 10:00:40 --> Too few arguments to function App\Controllers\DetailMaps::index(), 0 passed in D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php on line 927 and exactly 1 expected
+in APPPATH\Controllers\DetailMaps.php on line 7.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-30 10:03:05 --> Undefined variable: penataankawasan
+in APPPATH\Views\apps\maps_detail.php on line 535.
+ 1 APPPATH\Views\apps\maps_detail.php(535): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: penataankawasan', 'APPPATH\\Views\\apps\\maps_detail.php', 535, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\apps\\maps_detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/maps_detail', [], true)
+ 5 APPPATH\Controllers\DetailMaps.php(29): view('apps/maps_detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('2361')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-30 10:16:11 --> Trying to get property 'kodeanakpetak' of non-object
+in APPPATH\Views\apps\maps_detail.php on line 536.
+ 1 APPPATH\Views\apps\maps_detail.php(536): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'kodeanakpetak\' of non-object', 'APPPATH\\Views\\apps\\maps_detail.php', 536, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\apps\\maps_detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/maps_detail', [], true)
+ 5 APPPATH\Controllers\DetailMaps.php(29): view('apps/maps_detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('2361')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-30 10:28:22 --> syntax error, unexpected '{', expecting '('
+in APPPATH\Controllers\DetailMaps.php on line 16.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(259): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\DetailMaps.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(237): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\DetailMaps')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\DetailMaps')
+ 4 [internal function]: spl_autoload_call('App\\Controllers\\DetailMaps')
+ 5 SYSTEMPATH\CodeIgniter.php(877): class_exists('\\App\\Controllers\\DetailMaps', true)
+ 6 SYSTEMPATH\CodeIgniter.php(469): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-30 10:28:51 --> syntax error, unexpected '{', expecting '('
+in APPPATH\Controllers\DetailMaps.php on line 16.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(259): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\DetailMaps.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(237): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\DetailMaps')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\DetailMaps')
+ 4 [internal function]: spl_autoload_call('App\\Controllers\\DetailMaps')
+ 5 SYSTEMPATH\CodeIgniter.php(877): class_exists('\\App\\Controllers\\DetailMaps', true)
+ 6 SYSTEMPATH\CodeIgniter.php(469): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-30 10:31:47 --> Trying to get property 'kodeanakpetak' of non-object
+in APPPATH\Views\apps\maps_detail.php on line 536.
+ 1 APPPATH\Views\apps\maps_detail.php(536): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'kodeanakpetak\' of non-object', 'APPPATH\\Views\\apps\\maps_detail.php', 536, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\apps\\maps_detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/maps_detail', [], true)
+ 5 APPPATH\Controllers\DetailMaps.php(33): view('apps/maps_detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('2361')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-30 10:33:46 --> Undefined index: kodeanakpetak
+in APPPATH\Views\apps\maps_detail.php on line 536.
+ 1 APPPATH\Views\apps\maps_detail.php(536): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: kodeanakpetak', 'APPPATH\\Views\\apps\\maps_detail.php', 536, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\apps\\maps_detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/maps_detail', [], true)
+ 5 APPPATH\Controllers\DetailMaps.php(33): view('apps/maps_detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('2361')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-30 10:34:34 --> Undefined index: kode_anak_petak
+in APPPATH\Views\apps\maps_detail.php on line 536.
+ 1 APPPATH\Views\apps\maps_detail.php(536): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: kode_anak_petak', 'APPPATH\\Views\\apps\\maps_detail.php', 536, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\apps\\maps_detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/maps_detail', [], true)
+ 5 APPPATH\Controllers\DetailMaps.php(33): view('apps/maps_detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('2361')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-30 10:36:36 --> Trying to get property 'kodeanakpetak' of non-object
+in APPPATH\Views\apps\maps_detail.php on line 535.
+ 1 APPPATH\Views\apps\maps_detail.php(535): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'kodeanakpetak\' of non-object', 'APPPATH\\Views\\apps\\maps_detail.php', 535, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\apps\\maps_detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/maps_detail', [], true)
+ 5 APPPATH\Controllers\DetailMaps.php(33): view('apps/maps_detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('2361')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-30 10:36:38 --> Trying to get property 'kodeanakpetak' of non-object
+in APPPATH\Views\apps\maps_detail.php on line 535.
+ 1 APPPATH\Views\apps\maps_detail.php(535): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'kodeanakpetak\' of non-object', 'APPPATH\\Views\\apps\\maps_detail.php', 535, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\apps\\maps_detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/maps_detail', [], true)
+ 5 APPPATH\Controllers\DetailMaps.php(33): view('apps/maps_detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('2361')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-30 10:40:40 --> Trying to get property 'kodeanakpetak' of non-object
+in APPPATH\Views\apps\maps_detail.php on line 535.
+ 1 APPPATH\Views\apps\maps_detail.php(535): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'kodeanakpetak\' of non-object', 'APPPATH\\Views\\apps\\maps_detail.php', 535, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\apps\\maps_detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/maps_detail', [], true)
+ 5 APPPATH\Controllers\DetailMaps.php(29): view('apps/maps_detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('2361')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-30 10:41:34 --> Undefined variable: invenpu
+in APPPATH\Views\apps\maps_detail.php on line 535.
+ 1 APPPATH\Views\apps\maps_detail.php(535): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: invenpu', 'APPPATH\\Views\\apps\\maps_detail.php', 535, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\apps\\maps_detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/maps_detail', [], true)
+ 5 APPPATH\Controllers\DetailMaps.php(28): view('apps/maps_detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('2361')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-30 10:43:42 --> Undefined variable: umt_anakpetak
+in APPPATH\Views\apps\maps_detail.php on line 535.
+ 1 APPPATH\Views\apps\maps_detail.php(535): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: umt_anakpetak', 'APPPATH\\Views\\apps\\maps_detail.php', 535, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\apps\\maps_detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/maps_detail', [], true)
+ 5 APPPATH\Controllers\DetailMaps.php(28): view('apps/maps_detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('2361')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-30 10:45:55 --> Trying to get property 'kodeanakpetak' of non-object
+in APPPATH\Views\apps\maps_detail.php on line 535.
+ 1 APPPATH\Views\apps\maps_detail.php(535): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'kodeanakpetak\' of non-object', 'APPPATH\\Views\\apps\\maps_detail.php', 535, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\apps\\maps_detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/maps_detail', [], true)
+ 5 APPPATH\Controllers\DetailMaps.php(29): view('apps/maps_detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('2361')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-30 10:49:17 --> mysqli_sql_exception: Unknown column 'umt_cucupetak.kode_cucu_petak' in 'field list' in D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `umt_ana...', 0)
+#1 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `umt_ana...')
+#2 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `umt_ana...')
+#3 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `umt_ana...', Array, false)
+#4 D:\XAMPP\htdocs\KHDTK - experimental\app\Controllers\DetailMaps.php(18): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\DetailMaps->index('2361')
+#6 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+#7 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\XAMPP\htdocs\KHDTK - experimental\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('D:\\XAMPP\\htdocs...')
+#10 {main}
+CRITICAL - 2022-12-30 10:49:17 --> Unknown column 'umt_cucupetak.kode_cucu_petak' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `umt_anakpetak`.`kode_anak_petak` as `kodeanakpetak`, `umt_cucupetak`.`kode_cucu_petak` as `kodecupet`, `umt_cupet_tnm`.`kode_cupet_tnm` as `kodecupettnm`, `inventarisasi_umt`.`kode_inven_umt` as `kodeinvenumt`, `kode_inven_pu`, `luas_pu`, `bentuk_pu`, `ndvi`, `msavi`, `c`, `d`, `n`, `jenis_tanah`, `kelerengan`, `altitude`
+FROM `umt_anakpetak`
+WHERE `umt_anakpetak`.`id` = \'2361\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `umt_anakpetak`.`kode_anak_petak` as `kodeanakpetak`, `umt_cucupetak`.`kode_cucu_petak` as `kodecupet`, `umt_cupet_tnm`.`kode_cupet_tnm` as `kodecupettnm`, `inventarisasi_umt`.`kode_inven_umt` as `kodeinvenumt`, `kode_inven_pu`, `luas_pu`, `bentuk_pu`, `ndvi`, `msavi`, `c`, `d`, `n`, `jenis_tanah`, `kelerengan`, `altitude`
+FROM `umt_anakpetak`
+WHERE `umt_anakpetak`.`id` = \'2361\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `umt_anakpetak`.`kode_anak_petak` as `kodeanakpetak`, `umt_cucupetak`.`kode_cucu_petak` as `kodecupet`, `umt_cupet_tnm`.`kode_cupet_tnm` as `kodecupettnm`, `inventarisasi_umt`.`kode_inven_umt` as `kodeinvenumt`, `kode_inven_pu`, `luas_pu`, `bentuk_pu`, `ndvi`, `msavi`, `c`, `d`, `n`, `jenis_tanah`, `kelerengan`, `altitude`
+FROM `umt_anakpetak`
+WHERE `umt_anakpetak`.`id` = \'2361\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `umt_anakpetak`.`kode_anak_petak` as `kodeanakpetak`, `umt_cucupetak`.`kode_cucu_petak` as `kodecupet`, `umt_cupet_tnm`.`kode_cupet_tnm` as `kodecupettnm`, `inventarisasi_umt`.`kode_inven_umt` as `kodeinvenumt`, `kode_inven_pu`, `luas_pu`, `bentuk_pu`, `ndvi`, `msavi`, `c`, `d`, `n`, `jenis_tanah`, `kelerengan`, `altitude`
+FROM `umt_anakpetak`
+WHERE `umt_anakpetak`.`id` = :umt_anakpetak.id:', [...], false)
+ 5 APPPATH\Controllers\DetailMaps.php(18): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('2361')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-30 10:52:01 --> mysqli_sql_exception: Column 'kode_cucu_petak' in field list is ambiguous in D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `umt_ana...', 0)
+#1 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `umt_ana...')
+#2 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `umt_ana...')
+#3 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `umt_ana...', Array, false)
+#4 D:\XAMPP\htdocs\KHDTK - experimental\app\Controllers\DetailMaps.php(18): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\DetailMaps->index('2361')
+#6 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+#7 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\XAMPP\htdocs\KHDTK - experimental\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('D:\\XAMPP\\htdocs...')
+#10 {main}
+CRITICAL - 2022-12-30 10:52:01 --> Column 'kode_cucu_petak' in field list is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `umt_anakpetak`.`kode_anak_petak` as `kodeanakpetak`, `kode_cucu_petak`, `kode_cupet_tnm`, `kode_inven_umt`, `kode_inven_pu`, `luas_pu`, `bentuk_pu`, `ndvi`, `msavi`, `c`, `d`, `n`, `jenis_tanah`, `kelerengan`, `altitude`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `umt_cupet_tnm`.`kode_cucu_petak` = `umt_cucupetak`.`kode_cucu_petak`
+JOIN `inventarisasi_umt` ON `inventarisasi_umt`.`kode_cupet_tnm`  = `umt_cupet_tnm`.`kode_cupet_tnm`
+JOIN `inventarisasi_pu` ON `inventarisasi_pu`.`kode_inven_umt`  = `inventarisasi_umt`.`kode_inven_umt`
+WHERE `umt_anakpetak`.`id` = \'2361\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `umt_anakpetak`.`kode_anak_petak` as `kodeanakpetak`, `kode_cucu_petak`, `kode_cupet_tnm`, `kode_inven_umt`, `kode_inven_pu`, `luas_pu`, `bentuk_pu`, `ndvi`, `msavi`, `c`, `d`, `n`, `jenis_tanah`, `kelerengan`, `altitude`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `umt_cupet_tnm`.`kode_cucu_petak` = `umt_cucupetak`.`kode_cucu_petak`
+JOIN `inventarisasi_umt` ON `inventarisasi_umt`.`kode_cupet_tnm`  = `umt_cupet_tnm`.`kode_cupet_tnm`
+JOIN `inventarisasi_pu` ON `inventarisasi_pu`.`kode_inven_umt`  = `inventarisasi_umt`.`kode_inven_umt`
+WHERE `umt_anakpetak`.`id` = \'2361\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `umt_anakpetak`.`kode_anak_petak` as `kodeanakpetak`, `kode_cucu_petak`, `kode_cupet_tnm`, `kode_inven_umt`, `kode_inven_pu`, `luas_pu`, `bentuk_pu`, `ndvi`, `msavi`, `c`, `d`, `n`, `jenis_tanah`, `kelerengan`, `altitude`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `umt_cupet_tnm`.`kode_cucu_petak` = `umt_cucupetak`.`kode_cucu_petak`
+JOIN `inventarisasi_umt` ON `inventarisasi_umt`.`kode_cupet_tnm`  = `umt_cupet_tnm`.`kode_cupet_tnm`
+JOIN `inventarisasi_pu` ON `inventarisasi_pu`.`kode_inven_umt`  = `inventarisasi_umt`.`kode_inven_umt`
+WHERE `umt_anakpetak`.`id` = \'2361\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `umt_anakpetak`.`kode_anak_petak` as `kodeanakpetak`, `kode_cucu_petak`, `kode_cupet_tnm`, `kode_inven_umt`, `kode_inven_pu`, `luas_pu`, `bentuk_pu`, `ndvi`, `msavi`, `c`, `d`, `n`, `jenis_tanah`, `kelerengan`, `altitude`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `umt_cupet_tnm`.`kode_cucu_petak` = `umt_cucupetak`.`kode_cucu_petak`
+JOIN `inventarisasi_umt` ON `inventarisasi_umt`.`kode_cupet_tnm`  = `umt_cupet_tnm`.`kode_cupet_tnm`
+JOIN `inventarisasi_pu` ON `inventarisasi_pu`.`kode_inven_umt`  = `inventarisasi_umt`.`kode_inven_umt`
+WHERE `umt_anakpetak`.`id` = :umt_anakpetak.id:', [...], false)
+ 5 APPPATH\Controllers\DetailMaps.php(18): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('2361')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-30 10:52:31 --> mysqli_sql_exception: Column 'kode_cucu_petak' in field list is ambiguous in D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `umt_ana...', 0)
+#1 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `umt_ana...')
+#2 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `umt_ana...')
+#3 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `umt_ana...', Array, false)
+#4 D:\XAMPP\htdocs\KHDTK - experimental\app\Controllers\DetailMaps.php(18): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\DetailMaps->index('2361')
+#6 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+#7 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\XAMPP\htdocs\KHDTK - experimental\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('D:\\XAMPP\\htdocs...')
+#10 {main}
+CRITICAL - 2022-12-30 10:52:31 --> Column 'kode_cucu_petak' in field list is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `umt_anakpetak`.`kode_anak_petak` as `kodeanakpetak`, `kode_cucu_petak`, `kode_cupet_tnm`, `kode_inven_umt`, `kode_inven_pu`, `luas_pu`, `bentuk_pu`, `ndvi`, `msavi`, `c`, `d`, `n`, `jenis_tanah`, `kelerengan`, `altitude`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `kodecupet` = `umt_cucupetak`.`kode_cucu_petak`
+JOIN `inventarisasi_umt` ON `inventarisasi_umt`.`kode_cupet_tnm`  = `umt_cupet_tnm`.`kode_cupet_tnm`
+JOIN `inventarisasi_pu` ON `inventarisasi_pu`.`kode_inven_umt`  = `inventarisasi_umt`.`kode_inven_umt`
+WHERE `umt_anakpetak`.`id` = \'2361\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `umt_anakpetak`.`kode_anak_petak` as `kodeanakpetak`, `kode_cucu_petak`, `kode_cupet_tnm`, `kode_inven_umt`, `kode_inven_pu`, `luas_pu`, `bentuk_pu`, `ndvi`, `msavi`, `c`, `d`, `n`, `jenis_tanah`, `kelerengan`, `altitude`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `kodecupet` = `umt_cucupetak`.`kode_cucu_petak`
+JOIN `inventarisasi_umt` ON `inventarisasi_umt`.`kode_cupet_tnm`  = `umt_cupet_tnm`.`kode_cupet_tnm`
+JOIN `inventarisasi_pu` ON `inventarisasi_pu`.`kode_inven_umt`  = `inventarisasi_umt`.`kode_inven_umt`
+WHERE `umt_anakpetak`.`id` = \'2361\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `umt_anakpetak`.`kode_anak_petak` as `kodeanakpetak`, `kode_cucu_petak`, `kode_cupet_tnm`, `kode_inven_umt`, `kode_inven_pu`, `luas_pu`, `bentuk_pu`, `ndvi`, `msavi`, `c`, `d`, `n`, `jenis_tanah`, `kelerengan`, `altitude`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `kodecupet` = `umt_cucupetak`.`kode_cucu_petak`
+JOIN `inventarisasi_umt` ON `inventarisasi_umt`.`kode_cupet_tnm`  = `umt_cupet_tnm`.`kode_cupet_tnm`
+JOIN `inventarisasi_pu` ON `inventarisasi_pu`.`kode_inven_umt`  = `inventarisasi_umt`.`kode_inven_umt`
+WHERE `umt_anakpetak`.`id` = \'2361\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `umt_anakpetak`.`kode_anak_petak` as `kodeanakpetak`, `kode_cucu_petak`, `kode_cupet_tnm`, `kode_inven_umt`, `kode_inven_pu`, `luas_pu`, `bentuk_pu`, `ndvi`, `msavi`, `c`, `d`, `n`, `jenis_tanah`, `kelerengan`, `altitude`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `kodecupet` = `umt_cucupetak`.`kode_cucu_petak`
+JOIN `inventarisasi_umt` ON `inventarisasi_umt`.`kode_cupet_tnm`  = `umt_cupet_tnm`.`kode_cupet_tnm`
+JOIN `inventarisasi_pu` ON `inventarisasi_pu`.`kode_inven_umt`  = `inventarisasi_umt`.`kode_inven_umt`
+WHERE `umt_anakpetak`.`id` = :umt_anakpetak.id:', [...], false)
+ 5 APPPATH\Controllers\DetailMaps.php(18): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('2361')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-30 10:52:33 --> mysqli_sql_exception: Column 'kode_cucu_petak' in field list is ambiguous in D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `umt_ana...', 0)
+#1 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `umt_ana...')
+#2 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `umt_ana...')
+#3 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `umt_ana...', Array, false)
+#4 D:\XAMPP\htdocs\KHDTK - experimental\app\Controllers\DetailMaps.php(18): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\DetailMaps->index('2361')
+#6 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+#7 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\XAMPP\htdocs\KHDTK - experimental\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('D:\\XAMPP\\htdocs...')
+#10 {main}
+CRITICAL - 2022-12-30 10:52:33 --> Column 'kode_cucu_petak' in field list is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `umt_anakpetak`.`kode_anak_petak` as `kodeanakpetak`, `kode_cucu_petak`, `kode_cupet_tnm`, `kode_inven_umt`, `kode_inven_pu`, `luas_pu`, `bentuk_pu`, `ndvi`, `msavi`, `c`, `d`, `n`, `jenis_tanah`, `kelerengan`, `altitude`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `kodecupet` = `umt_cucupetak`.`kode_cucu_petak`
+JOIN `inventarisasi_umt` ON `inventarisasi_umt`.`kode_cupet_tnm`  = `umt_cupet_tnm`.`kode_cupet_tnm`
+JOIN `inventarisasi_pu` ON `inventarisasi_pu`.`kode_inven_umt`  = `inventarisasi_umt`.`kode_inven_umt`
+WHERE `umt_anakpetak`.`id` = \'2361\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `umt_anakpetak`.`kode_anak_petak` as `kodeanakpetak`, `kode_cucu_petak`, `kode_cupet_tnm`, `kode_inven_umt`, `kode_inven_pu`, `luas_pu`, `bentuk_pu`, `ndvi`, `msavi`, `c`, `d`, `n`, `jenis_tanah`, `kelerengan`, `altitude`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `kodecupet` = `umt_cucupetak`.`kode_cucu_petak`
+JOIN `inventarisasi_umt` ON `inventarisasi_umt`.`kode_cupet_tnm`  = `umt_cupet_tnm`.`kode_cupet_tnm`
+JOIN `inventarisasi_pu` ON `inventarisasi_pu`.`kode_inven_umt`  = `inventarisasi_umt`.`kode_inven_umt`
+WHERE `umt_anakpetak`.`id` = \'2361\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `umt_anakpetak`.`kode_anak_petak` as `kodeanakpetak`, `kode_cucu_petak`, `kode_cupet_tnm`, `kode_inven_umt`, `kode_inven_pu`, `luas_pu`, `bentuk_pu`, `ndvi`, `msavi`, `c`, `d`, `n`, `jenis_tanah`, `kelerengan`, `altitude`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `kodecupet` = `umt_cucupetak`.`kode_cucu_petak`
+JOIN `inventarisasi_umt` ON `inventarisasi_umt`.`kode_cupet_tnm`  = `umt_cupet_tnm`.`kode_cupet_tnm`
+JOIN `inventarisasi_pu` ON `inventarisasi_pu`.`kode_inven_umt`  = `inventarisasi_umt`.`kode_inven_umt`
+WHERE `umt_anakpetak`.`id` = \'2361\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `umt_anakpetak`.`kode_anak_petak` as `kodeanakpetak`, `kode_cucu_petak`, `kode_cupet_tnm`, `kode_inven_umt`, `kode_inven_pu`, `luas_pu`, `bentuk_pu`, `ndvi`, `msavi`, `c`, `d`, `n`, `jenis_tanah`, `kelerengan`, `altitude`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `kodecupet` = `umt_cucupetak`.`kode_cucu_petak`
+JOIN `inventarisasi_umt` ON `inventarisasi_umt`.`kode_cupet_tnm`  = `umt_cupet_tnm`.`kode_cupet_tnm`
+JOIN `inventarisasi_pu` ON `inventarisasi_pu`.`kode_inven_umt`  = `inventarisasi_umt`.`kode_inven_umt`
+WHERE `umt_anakpetak`.`id` = :umt_anakpetak.id:', [...], false)
+ 5 APPPATH\Controllers\DetailMaps.php(18): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('2361')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-30 10:52:48 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'as `kodecupet`
+JOIN `inventarisasi_umt` ON `inventarisasi_umt`.`kode_cupet_tn...' at line 4 in D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `umt_ana...', 0)
+#1 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `umt_ana...')
+#2 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `umt_ana...')
+#3 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `umt_ana...', Array, false)
+#4 D:\XAMPP\htdocs\KHDTK - experimental\app\Controllers\DetailMaps.php(18): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\DetailMaps->index('2361')
+#6 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+#7 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\XAMPP\htdocs\KHDTK - experimental\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('D:\\XAMPP\\htdocs...')
+#10 {main}
+CRITICAL - 2022-12-30 10:52:48 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'as `kodecupet`
+JOIN `inventarisasi_umt` ON `inventarisasi_umt`.`kode_cupet_tn...' at line 4
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `umt_anakpetak`.`kode_anak_petak` as `kodeanakpetak`, `kode_cucu_petak`, `kode_cupet_tnm`, `kode_inven_umt`, `kode_inven_pu`, `luas_pu`, `bentuk_pu`, `ndvi`, `msavi`, `c`, `d`, `n`, `jenis_tanah`, `kelerengan`, `altitude`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `umt_cupet_tnm`.`kode_cucu_petak` = `umt_cucupetak`.`kode_cucu_petak` as `kodecupet`
+JOIN `inventarisasi_umt` ON `inventarisasi_umt`.`kode_cupet_tnm`  = `umt_cupet_tnm`.`kode_cupet_tnm`
+JOIN `inventarisasi_pu` ON `inventarisasi_pu`.`kode_inven_umt`  = `inventarisasi_umt`.`kode_inven_umt`
+WHERE `umt_anakpetak`.`id` = \'2361\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `umt_anakpetak`.`kode_anak_petak` as `kodeanakpetak`, `kode_cucu_petak`, `kode_cupet_tnm`, `kode_inven_umt`, `kode_inven_pu`, `luas_pu`, `bentuk_pu`, `ndvi`, `msavi`, `c`, `d`, `n`, `jenis_tanah`, `kelerengan`, `altitude`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `umt_cupet_tnm`.`kode_cucu_petak` = `umt_cucupetak`.`kode_cucu_petak` as `kodecupet`
+JOIN `inventarisasi_umt` ON `inventarisasi_umt`.`kode_cupet_tnm`  = `umt_cupet_tnm`.`kode_cupet_tnm`
+JOIN `inventarisasi_pu` ON `inventarisasi_pu`.`kode_inven_umt`  = `inventarisasi_umt`.`kode_inven_umt`
+WHERE `umt_anakpetak`.`id` = \'2361\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `umt_anakpetak`.`kode_anak_petak` as `kodeanakpetak`, `kode_cucu_petak`, `kode_cupet_tnm`, `kode_inven_umt`, `kode_inven_pu`, `luas_pu`, `bentuk_pu`, `ndvi`, `msavi`, `c`, `d`, `n`, `jenis_tanah`, `kelerengan`, `altitude`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `umt_cupet_tnm`.`kode_cucu_petak` = `umt_cucupetak`.`kode_cucu_petak` as `kodecupet`
+JOIN `inventarisasi_umt` ON `inventarisasi_umt`.`kode_cupet_tnm`  = `umt_cupet_tnm`.`kode_cupet_tnm`
+JOIN `inventarisasi_pu` ON `inventarisasi_pu`.`kode_inven_umt`  = `inventarisasi_umt`.`kode_inven_umt`
+WHERE `umt_anakpetak`.`id` = \'2361\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `umt_anakpetak`.`kode_anak_petak` as `kodeanakpetak`, `kode_cucu_petak`, `kode_cupet_tnm`, `kode_inven_umt`, `kode_inven_pu`, `luas_pu`, `bentuk_pu`, `ndvi`, `msavi`, `c`, `d`, `n`, `jenis_tanah`, `kelerengan`, `altitude`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `umt_cupet_tnm`.`kode_cucu_petak` = `umt_cucupetak`.`kode_cucu_petak` as `kodecupet`
+JOIN `inventarisasi_umt` ON `inventarisasi_umt`.`kode_cupet_tnm`  = `umt_cupet_tnm`.`kode_cupet_tnm`
+JOIN `inventarisasi_pu` ON `inventarisasi_pu`.`kode_inven_umt`  = `inventarisasi_umt`.`kode_inven_umt`
+WHERE `umt_anakpetak`.`id` = :umt_anakpetak.id:', [...], false)
+ 5 APPPATH\Controllers\DetailMaps.php(18): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('2361')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-30 10:57:16 --> mysqli_sql_exception: Unknown column 'umt_cupet_tnm.kode_cucu_petak' in 'field list' in D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `umt_ana...', 0)
+#1 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `umt_ana...')
+#2 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `umt_ana...')
+#3 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `umt_ana...', Array, false)
+#4 D:\XAMPP\htdocs\KHDTK - experimental\app\Controllers\DetailMaps.php(18): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\DetailMaps->index('2361')
+#6 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+#7 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\XAMPP\htdocs\KHDTK - experimental\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('D:\\XAMPP\\htdocs...')
+#10 {main}
+CRITICAL - 2022-12-30 10:57:16 --> Unknown column 'umt_cupet_tnm.kode_cucu_petak' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `umt_anakpetak`.`kode_anak_petak` as `kodeanakpetak`, `umt_cupet_tnm`.`kode_cucu_petak` as `kodecupet`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+WHERE `umt_anakpetak`.`id` = \'2361\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `umt_anakpetak`.`kode_anak_petak` as `kodeanakpetak`, `umt_cupet_tnm`.`kode_cucu_petak` as `kodecupet`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+WHERE `umt_anakpetak`.`id` = \'2361\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `umt_anakpetak`.`kode_anak_petak` as `kodeanakpetak`, `umt_cupet_tnm`.`kode_cucu_petak` as `kodecupet`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+WHERE `umt_anakpetak`.`id` = \'2361\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `umt_anakpetak`.`kode_anak_petak` as `kodeanakpetak`, `umt_cupet_tnm`.`kode_cucu_petak` as `kodecupet`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+WHERE `umt_anakpetak`.`id` = :umt_anakpetak.id:', [...], false)
+ 5 APPPATH\Controllers\DetailMaps.php(18): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('2361')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-30 10:58:25 --> mysqli_sql_exception: Column 'kode_cucu_petak' in field list is ambiguous in D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `umt_ana...', 0)
+#1 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `umt_ana...')
+#2 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `umt_ana...')
+#3 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `umt_ana...', Array, false)
+#4 D:\XAMPP\htdocs\KHDTK - experimental\app\Controllers\DetailMaps.php(18): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\DetailMaps->index('2361')
+#6 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+#7 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\XAMPP\htdocs\KHDTK - experimental\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('D:\\XAMPP\\htdocs...')
+#10 {main}
+CRITICAL - 2022-12-30 10:58:25 --> Column 'kode_cucu_petak' in field list is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `umt_anakpetak`.`kode_anak_petak` as `kodeanakpetak`, `kode_cucu_petak`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `umt_cupet_tnm`.`kode_cucu_petak` = `umt_cucupetak`.`kode_cucu_petak`
+WHERE `umt_anakpetak`.`id` = \'2361\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `umt_anakpetak`.`kode_anak_petak` as `kodeanakpetak`, `kode_cucu_petak`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `umt_cupet_tnm`.`kode_cucu_petak` = `umt_cucupetak`.`kode_cucu_petak`
+WHERE `umt_anakpetak`.`id` = \'2361\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `umt_anakpetak`.`kode_anak_petak` as `kodeanakpetak`, `kode_cucu_petak`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `umt_cupet_tnm`.`kode_cucu_petak` = `umt_cucupetak`.`kode_cucu_petak`
+WHERE `umt_anakpetak`.`id` = \'2361\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `umt_anakpetak`.`kode_anak_petak` as `kodeanakpetak`, `kode_cucu_petak`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `umt_cupet_tnm`.`kode_cucu_petak` = `umt_cucupetak`.`kode_cucu_petak`
+WHERE `umt_anakpetak`.`id` = :umt_anakpetak.id:', [...], false)
+ 5 APPPATH\Controllers\DetailMaps.php(18): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('2361')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-30 10:58:45 --> mysqli_sql_exception: Column 'kode_cucu_petak' in field list is ambiguous in D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `umt_ana...', 0)
+#1 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `umt_ana...')
+#2 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `umt_ana...')
+#3 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `umt_ana...', Array, false)
+#4 D:\XAMPP\htdocs\KHDTK - experimental\app\Controllers\DetailMaps.php(18): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\DetailMaps->index('2361')
+#6 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+#7 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\XAMPP\htdocs\KHDTK - experimental\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('D:\\XAMPP\\htdocs...')
+#10 {main}
+CRITICAL - 2022-12-30 10:58:45 --> Column 'kode_cucu_petak' in field list is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `umt_anakpetak`.`kode_anak_petak` as `kodeanakpetak`, `kode_cucu_petak`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `cucupetak` = `umt_cucupetak`.`kode_cucu_petak`
+WHERE `umt_anakpetak`.`id` = \'2361\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `umt_anakpetak`.`kode_anak_petak` as `kodeanakpetak`, `kode_cucu_petak`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `cucupetak` = `umt_cucupetak`.`kode_cucu_petak`
+WHERE `umt_anakpetak`.`id` = \'2361\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `umt_anakpetak`.`kode_anak_petak` as `kodeanakpetak`, `kode_cucu_petak`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `cucupetak` = `umt_cucupetak`.`kode_cucu_petak`
+WHERE `umt_anakpetak`.`id` = \'2361\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `umt_anakpetak`.`kode_anak_petak` as `kodeanakpetak`, `kode_cucu_petak`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `cucupetak` = `umt_cucupetak`.`kode_cucu_petak`
+WHERE `umt_anakpetak`.`id` = :umt_anakpetak.id:', [...], false)
+ 5 APPPATH\Controllers\DetailMaps.php(18): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('2361')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-30 10:58:47 --> mysqli_sql_exception: Column 'kode_cucu_petak' in field list is ambiguous in D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `umt_ana...', 0)
+#1 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `umt_ana...')
+#2 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `umt_ana...')
+#3 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `umt_ana...', Array, false)
+#4 D:\XAMPP\htdocs\KHDTK - experimental\app\Controllers\DetailMaps.php(18): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\DetailMaps->index('2361')
+#6 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+#7 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\XAMPP\htdocs\KHDTK - experimental\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('D:\\XAMPP\\htdocs...')
+#10 {main}
+CRITICAL - 2022-12-30 10:58:47 --> Column 'kode_cucu_petak' in field list is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `umt_anakpetak`.`kode_anak_petak` as `kodeanakpetak`, `kode_cucu_petak`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `cucupetak` = `umt_cucupetak`.`kode_cucu_petak`
+WHERE `umt_anakpetak`.`id` = \'2361\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `umt_anakpetak`.`kode_anak_petak` as `kodeanakpetak`, `kode_cucu_petak`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `cucupetak` = `umt_cucupetak`.`kode_cucu_petak`
+WHERE `umt_anakpetak`.`id` = \'2361\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `umt_anakpetak`.`kode_anak_petak` as `kodeanakpetak`, `kode_cucu_petak`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `cucupetak` = `umt_cucupetak`.`kode_cucu_petak`
+WHERE `umt_anakpetak`.`id` = \'2361\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `umt_anakpetak`.`kode_anak_petak` as `kodeanakpetak`, `kode_cucu_petak`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `cucupetak` = `umt_cucupetak`.`kode_cucu_petak`
+WHERE `umt_anakpetak`.`id` = :umt_anakpetak.id:', [...], false)
+ 5 APPPATH\Controllers\DetailMaps.php(18): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('2361')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-30 10:58:47 --> mysqli_sql_exception: Column 'kode_cucu_petak' in field list is ambiguous in D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `umt_ana...', 0)
+#1 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `umt_ana...')
+#2 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `umt_ana...')
+#3 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `umt_ana...', Array, false)
+#4 D:\XAMPP\htdocs\KHDTK - experimental\app\Controllers\DetailMaps.php(18): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\DetailMaps->index('2361')
+#6 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+#7 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\XAMPP\htdocs\KHDTK - experimental\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('D:\\XAMPP\\htdocs...')
+#10 {main}
+CRITICAL - 2022-12-30 10:58:47 --> Column 'kode_cucu_petak' in field list is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `umt_anakpetak`.`kode_anak_petak` as `kodeanakpetak`, `kode_cucu_petak`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `cucupetak` = `umt_cucupetak`.`kode_cucu_petak`
+WHERE `umt_anakpetak`.`id` = \'2361\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `umt_anakpetak`.`kode_anak_petak` as `kodeanakpetak`, `kode_cucu_petak`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `cucupetak` = `umt_cucupetak`.`kode_cucu_petak`
+WHERE `umt_anakpetak`.`id` = \'2361\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `umt_anakpetak`.`kode_anak_petak` as `kodeanakpetak`, `kode_cucu_petak`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `cucupetak` = `umt_cucupetak`.`kode_cucu_petak`
+WHERE `umt_anakpetak`.`id` = \'2361\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `umt_anakpetak`.`kode_anak_petak` as `kodeanakpetak`, `kode_cucu_petak`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `cucupetak` = `umt_cucupetak`.`kode_cucu_petak`
+WHERE `umt_anakpetak`.`id` = :umt_anakpetak.id:', [...], false)
+ 5 APPPATH\Controllers\DetailMaps.php(18): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('2361')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-30 10:58:48 --> mysqli_sql_exception: Column 'kode_cucu_petak' in field list is ambiguous in D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `umt_ana...', 0)
+#1 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `umt_ana...')
+#2 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `umt_ana...')
+#3 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `umt_ana...', Array, false)
+#4 D:\XAMPP\htdocs\KHDTK - experimental\app\Controllers\DetailMaps.php(18): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\DetailMaps->index('2361')
+#6 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+#7 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\XAMPP\htdocs\KHDTK - experimental\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('D:\\XAMPP\\htdocs...')
+#10 {main}
+CRITICAL - 2022-12-30 10:58:48 --> Column 'kode_cucu_petak' in field list is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `umt_anakpetak`.`kode_anak_petak` as `kodeanakpetak`, `kode_cucu_petak`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `cucupetak` = `umt_cucupetak`.`kode_cucu_petak`
+WHERE `umt_anakpetak`.`id` = \'2361\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `umt_anakpetak`.`kode_anak_petak` as `kodeanakpetak`, `kode_cucu_petak`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `cucupetak` = `umt_cucupetak`.`kode_cucu_petak`
+WHERE `umt_anakpetak`.`id` = \'2361\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `umt_anakpetak`.`kode_anak_petak` as `kodeanakpetak`, `kode_cucu_petak`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `cucupetak` = `umt_cucupetak`.`kode_cucu_petak`
+WHERE `umt_anakpetak`.`id` = \'2361\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `umt_anakpetak`.`kode_anak_petak` as `kodeanakpetak`, `kode_cucu_petak`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `cucupetak` = `umt_cucupetak`.`kode_cucu_petak`
+WHERE `umt_anakpetak`.`id` = :umt_anakpetak.id:', [...], false)
+ 5 APPPATH\Controllers\DetailMaps.php(18): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('2361')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-30 10:58:48 --> mysqli_sql_exception: Column 'kode_cucu_petak' in field list is ambiguous in D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `umt_ana...', 0)
+#1 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `umt_ana...')
+#2 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `umt_ana...')
+#3 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `umt_ana...', Array, false)
+#4 D:\XAMPP\htdocs\KHDTK - experimental\app\Controllers\DetailMaps.php(18): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\DetailMaps->index('2361')
+#6 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+#7 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\XAMPP\htdocs\KHDTK - experimental\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('D:\\XAMPP\\htdocs...')
+#10 {main}
+CRITICAL - 2022-12-30 10:58:48 --> Column 'kode_cucu_petak' in field list is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `umt_anakpetak`.`kode_anak_petak` as `kodeanakpetak`, `kode_cucu_petak`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `cucupetak` = `umt_cucupetak`.`kode_cucu_petak`
+WHERE `umt_anakpetak`.`id` = \'2361\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `umt_anakpetak`.`kode_anak_petak` as `kodeanakpetak`, `kode_cucu_petak`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `cucupetak` = `umt_cucupetak`.`kode_cucu_petak`
+WHERE `umt_anakpetak`.`id` = \'2361\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `umt_anakpetak`.`kode_anak_petak` as `kodeanakpetak`, `kode_cucu_petak`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `cucupetak` = `umt_cucupetak`.`kode_cucu_petak`
+WHERE `umt_anakpetak`.`id` = \'2361\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `umt_anakpetak`.`kode_anak_petak` as `kodeanakpetak`, `kode_cucu_petak`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `cucupetak` = `umt_cucupetak`.`kode_cucu_petak`
+WHERE `umt_anakpetak`.`id` = :umt_anakpetak.id:', [...], false)
+ 5 APPPATH\Controllers\DetailMaps.php(18): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('2361')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-30 10:58:49 --> mysqli_sql_exception: Column 'kode_cucu_petak' in field list is ambiguous in D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `umt_ana...', 0)
+#1 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `umt_ana...')
+#2 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `umt_ana...')
+#3 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `umt_ana...', Array, false)
+#4 D:\XAMPP\htdocs\KHDTK - experimental\app\Controllers\DetailMaps.php(18): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\DetailMaps->index('2361')
+#6 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+#7 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\XAMPP\htdocs\KHDTK - experimental\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('D:\\XAMPP\\htdocs...')
+#10 {main}
+CRITICAL - 2022-12-30 10:58:49 --> Column 'kode_cucu_petak' in field list is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `umt_anakpetak`.`kode_anak_petak` as `kodeanakpetak`, `kode_cucu_petak`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `cucupetak` = `umt_cucupetak`.`kode_cucu_petak`
+WHERE `umt_anakpetak`.`id` = \'2361\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `umt_anakpetak`.`kode_anak_petak` as `kodeanakpetak`, `kode_cucu_petak`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `cucupetak` = `umt_cucupetak`.`kode_cucu_petak`
+WHERE `umt_anakpetak`.`id` = \'2361\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `umt_anakpetak`.`kode_anak_petak` as `kodeanakpetak`, `kode_cucu_petak`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `cucupetak` = `umt_cucupetak`.`kode_cucu_petak`
+WHERE `umt_anakpetak`.`id` = \'2361\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `umt_anakpetak`.`kode_anak_petak` as `kodeanakpetak`, `kode_cucu_petak`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `cucupetak` = `umt_cucupetak`.`kode_cucu_petak`
+WHERE `umt_anakpetak`.`id` = :umt_anakpetak.id:', [...], false)
+ 5 APPPATH\Controllers\DetailMaps.php(18): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('2361')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-30 10:58:49 --> mysqli_sql_exception: Column 'kode_cucu_petak' in field list is ambiguous in D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `umt_ana...', 0)
+#1 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `umt_ana...')
+#2 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `umt_ana...')
+#3 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `umt_ana...', Array, false)
+#4 D:\XAMPP\htdocs\KHDTK - experimental\app\Controllers\DetailMaps.php(18): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\DetailMaps->index('2361')
+#6 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+#7 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\XAMPP\htdocs\KHDTK - experimental\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('D:\\XAMPP\\htdocs...')
+#10 {main}
+CRITICAL - 2022-12-30 10:58:49 --> Column 'kode_cucu_petak' in field list is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `umt_anakpetak`.`kode_anak_petak` as `kodeanakpetak`, `kode_cucu_petak`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `cucupetak` = `umt_cucupetak`.`kode_cucu_petak`
+WHERE `umt_anakpetak`.`id` = \'2361\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `umt_anakpetak`.`kode_anak_petak` as `kodeanakpetak`, `kode_cucu_petak`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `cucupetak` = `umt_cucupetak`.`kode_cucu_petak`
+WHERE `umt_anakpetak`.`id` = \'2361\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `umt_anakpetak`.`kode_anak_petak` as `kodeanakpetak`, `kode_cucu_petak`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `cucupetak` = `umt_cucupetak`.`kode_cucu_petak`
+WHERE `umt_anakpetak`.`id` = \'2361\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `umt_anakpetak`.`kode_anak_petak` as `kodeanakpetak`, `kode_cucu_petak`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `cucupetak` = `umt_cucupetak`.`kode_cucu_petak`
+WHERE `umt_anakpetak`.`id` = :umt_anakpetak.id:', [...], false)
+ 5 APPPATH\Controllers\DetailMaps.php(18): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('2361')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-30 10:58:49 --> mysqli_sql_exception: Column 'kode_cucu_petak' in field list is ambiguous in D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `umt_ana...', 0)
+#1 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `umt_ana...')
+#2 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `umt_ana...')
+#3 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `umt_ana...', Array, false)
+#4 D:\XAMPP\htdocs\KHDTK - experimental\app\Controllers\DetailMaps.php(18): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\DetailMaps->index('2361')
+#6 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+#7 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\XAMPP\htdocs\KHDTK - experimental\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('D:\\XAMPP\\htdocs...')
+#10 {main}
+CRITICAL - 2022-12-30 10:58:49 --> Column 'kode_cucu_petak' in field list is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `umt_anakpetak`.`kode_anak_petak` as `kodeanakpetak`, `kode_cucu_petak`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `cucupetak` = `umt_cucupetak`.`kode_cucu_petak`
+WHERE `umt_anakpetak`.`id` = \'2361\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `umt_anakpetak`.`kode_anak_petak` as `kodeanakpetak`, `kode_cucu_petak`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `cucupetak` = `umt_cucupetak`.`kode_cucu_petak`
+WHERE `umt_anakpetak`.`id` = \'2361\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `umt_anakpetak`.`kode_anak_petak` as `kodeanakpetak`, `kode_cucu_petak`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `cucupetak` = `umt_cucupetak`.`kode_cucu_petak`
+WHERE `umt_anakpetak`.`id` = \'2361\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `umt_anakpetak`.`kode_anak_petak` as `kodeanakpetak`, `kode_cucu_petak`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `cucupetak` = `umt_cucupetak`.`kode_cucu_petak`
+WHERE `umt_anakpetak`.`id` = :umt_anakpetak.id:', [...], false)
+ 5 APPPATH\Controllers\DetailMaps.php(18): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('2361')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-30 10:59:24 --> mysqli_sql_exception: Unknown column 'kodecupet' in 'on clause' in D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `umt_ana...', 0)
+#1 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `umt_ana...')
+#2 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `umt_ana...')
+#3 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `umt_ana...', Array, false)
+#4 D:\XAMPP\htdocs\KHDTK - experimental\app\Controllers\DetailMaps.php(18): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\DetailMaps->index('2361')
+#6 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+#7 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\XAMPP\htdocs\KHDTK - experimental\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('D:\\XAMPP\\htdocs...')
+#10 {main}
+CRITICAL - 2022-12-30 10:59:24 --> Unknown column 'kodecupet' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `umt_anakpetak`.`kode_anak_petak` as `kodeanakpetak`, `umt_cupet_tnm`.`kode_cucu_petak` as `kodecupet`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `kodecupet` = `umt_cucupetak`.`kode_cucu_petak`
+WHERE `umt_anakpetak`.`id` = \'2361\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `umt_anakpetak`.`kode_anak_petak` as `kodeanakpetak`, `umt_cupet_tnm`.`kode_cucu_petak` as `kodecupet`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `kodecupet` = `umt_cucupetak`.`kode_cucu_petak`
+WHERE `umt_anakpetak`.`id` = \'2361\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `umt_anakpetak`.`kode_anak_petak` as `kodeanakpetak`, `umt_cupet_tnm`.`kode_cucu_petak` as `kodecupet`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `kodecupet` = `umt_cucupetak`.`kode_cucu_petak`
+WHERE `umt_anakpetak`.`id` = \'2361\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `umt_anakpetak`.`kode_anak_petak` as `kodeanakpetak`, `umt_cupet_tnm`.`kode_cucu_petak` as `kodecupet`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `kodecupet` = `umt_cucupetak`.`kode_cucu_petak`
+WHERE `umt_anakpetak`.`id` = :umt_anakpetak.id:', [...], false)
+ 5 APPPATH\Controllers\DetailMaps.php(18): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('2361')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-30 10:59:43 --> mysqli_sql_exception: Unknown column 'umt_cupet_tnm.kodecupet' in 'on clause' in D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `umt_ana...', 0)
+#1 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `umt_ana...')
+#2 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `umt_ana...')
+#3 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `umt_ana...', Array, false)
+#4 D:\XAMPP\htdocs\KHDTK - experimental\app\Controllers\DetailMaps.php(18): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\DetailMaps->index('2361')
+#6 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+#7 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\XAMPP\htdocs\KHDTK - experimental\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('D:\\XAMPP\\htdocs...')
+#10 {main}
+CRITICAL - 2022-12-30 10:59:43 --> Unknown column 'umt_cupet_tnm.kodecupet' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `umt_anakpetak`.`kode_anak_petak` as `kodeanakpetak`, `umt_cupet_tnm`.`kode_cucu_petak` as `kodecupet`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `umt_cupet_tnm`.`kodecupet` = `umt_cucupetak`.`kode_cucu_petak`
+WHERE `umt_anakpetak`.`id` = \'2361\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `umt_anakpetak`.`kode_anak_petak` as `kodeanakpetak`, `umt_cupet_tnm`.`kode_cucu_petak` as `kodecupet`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `umt_cupet_tnm`.`kodecupet` = `umt_cucupetak`.`kode_cucu_petak`
+WHERE `umt_anakpetak`.`id` = \'2361\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `umt_anakpetak`.`kode_anak_petak` as `kodeanakpetak`, `umt_cupet_tnm`.`kode_cucu_petak` as `kodecupet`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `umt_cupet_tnm`.`kodecupet` = `umt_cucupetak`.`kode_cucu_petak`
+WHERE `umt_anakpetak`.`id` = \'2361\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `umt_anakpetak`.`kode_anak_petak` as `kodeanakpetak`, `umt_cupet_tnm`.`kode_cucu_petak` as `kodecupet`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `umt_cupet_tnm`.`kodecupet` = `umt_cucupetak`.`kode_cucu_petak`
+WHERE `umt_anakpetak`.`id` = :umt_anakpetak.id:', [...], false)
+ 5 APPPATH\Controllers\DetailMaps.php(18): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('2361')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-30 11:00:54 --> mysqli_sql_exception: Column 'kode_cucu_petak' in field list is ambiguous in D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `umt_ana...', 0)
+#1 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `umt_ana...')
+#2 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `umt_ana...')
+#3 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `umt_ana...', Array, false)
+#4 D:\XAMPP\htdocs\KHDTK - experimental\app\Controllers\DetailMaps.php(18): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\DetailMaps->index('2361')
+#6 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+#7 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\XAMPP\htdocs\KHDTK - experimental\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('D:\\XAMPP\\htdocs...')
+#10 {main}
+CRITICAL - 2022-12-30 11:00:54 --> Column 'kode_cucu_petak' in field list is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `umt_anakpetak`.`kode_anak_petak` as `kodeanakpetak`, `kode_cucu_petak`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `umt_cupet_tnm`.`kode_cucu_petak` = `umt_cucupetak`.`kode_cucu_petak`
+WHERE `umt_anakpetak`.`id` = \'2361\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `umt_anakpetak`.`kode_anak_petak` as `kodeanakpetak`, `kode_cucu_petak`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `umt_cupet_tnm`.`kode_cucu_petak` = `umt_cucupetak`.`kode_cucu_petak`
+WHERE `umt_anakpetak`.`id` = \'2361\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `umt_anakpetak`.`kode_anak_petak` as `kodeanakpetak`, `kode_cucu_petak`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `umt_cupet_tnm`.`kode_cucu_petak` = `umt_cucupetak`.`kode_cucu_petak`
+WHERE `umt_anakpetak`.`id` = \'2361\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `umt_anakpetak`.`kode_anak_petak` as `kodeanakpetak`, `kode_cucu_petak`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `umt_cupet_tnm`.`kode_cucu_petak` = `umt_cucupetak`.`kode_cucu_petak`
+WHERE `umt_anakpetak`.`id` = :umt_anakpetak.id:', [...], false)
+ 5 APPPATH\Controllers\DetailMaps.php(18): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('2361')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-30 11:11:05 --> mysqli_sql_exception: Column 'kode_cucu_petak' in field list is ambiguous in D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `umt_ana...', 0)
+#1 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `umt_ana...')
+#2 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `umt_ana...')
+#3 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `umt_ana...', Array, false)
+#4 D:\XAMPP\htdocs\KHDTK - experimental\app\Controllers\DetailMaps.php(18): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\DetailMaps->index('2361')
+#6 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+#7 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\XAMPP\htdocs\KHDTK - experimental\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('D:\\XAMPP\\htdocs...')
+#10 {main}
+CRITICAL - 2022-12-30 11:11:05 --> Column 'kode_cucu_petak' in field list is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `umt_anakpetak`.`kode_anak_petak` as `kodeanakpetak`, `kode_cucu_petak`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `umt_cupet_tnm`.`kode_cucu_petak` = `umt_cucupetak`.`kode_cucu_petak`
+WHERE `umt_anakpetak`.`id` = \'2361\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `umt_anakpetak`.`kode_anak_petak` as `kodeanakpetak`, `kode_cucu_petak`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `umt_cupet_tnm`.`kode_cucu_petak` = `umt_cucupetak`.`kode_cucu_petak`
+WHERE `umt_anakpetak`.`id` = \'2361\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `umt_anakpetak`.`kode_anak_petak` as `kodeanakpetak`, `kode_cucu_petak`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `umt_cupet_tnm`.`kode_cucu_petak` = `umt_cucupetak`.`kode_cucu_petak`
+WHERE `umt_anakpetak`.`id` = \'2361\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `umt_anakpetak`.`kode_anak_petak` as `kodeanakpetak`, `kode_cucu_petak`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `umt_cupet_tnm`.`kode_cucu_petak` = `umt_cucupetak`.`kode_cucu_petak`
+WHERE `umt_anakpetak`.`id` = :umt_anakpetak.id:', [...], false)
+ 5 APPPATH\Controllers\DetailMaps.php(18): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('2361')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-30 11:11:39 --> Trying to get property 'kodeanakpetak' of non-object
+in APPPATH\Controllers\DetailMaps.php on line 22.
+ 1 APPPATH\Controllers\DetailMaps.php(22): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'kodeanakpetak\' of non-object', 'APPPATH\\Controllers\\DetailMaps.php', 22, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('2361')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-30 11:12:11 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\DetailMaps.php on line 22.
+ 1 APPPATH\Controllers\DetailMaps.php(22): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\DetailMaps.php', 22, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('2361')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-30 11:12:26 --> Trying to access array offset on value of type null
+in APPPATH\Controllers\DetailMaps.php on line 22.
+ 1 APPPATH\Controllers\DetailMaps.php(22): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', 'APPPATH\\Controllers\\DetailMaps.php', 22, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('2361')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-30 11:19:35 --> Undefined variable: kodeanakpetak
+in APPPATH\Views\apps\maps_detail.php on line 535.
+ 1 APPPATH\Views\apps\maps_detail.php(535): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: kodeanakpetak', 'APPPATH\\Views\\apps\\maps_detail.php', 535, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\apps\\maps_detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/maps_detail', [], true)
+ 5 APPPATH\Controllers\DetailMaps.php(28): view('apps/maps_detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('2361')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-30 11:21:01 --> Undefined variable: var
+in APPPATH\Views\apps\maps_detail.php on line 535.
+ 1 APPPATH\Views\apps\maps_detail.php(535): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: var', 'APPPATH\\Views\\apps\\maps_detail.php', 535, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\apps\\maps_detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/maps_detail', [], true)
+ 5 APPPATH\Controllers\DetailMaps.php(27): view('apps/maps_detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('2361')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-30 11:22:00 --> Trying to get property 'kodeanakpetak' of non-object
+in APPPATH\Views\apps\maps_detail.php on line 535.
+ 1 APPPATH\Views\apps\maps_detail.php(535): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'kodeanakpetak\' of non-object', 'APPPATH\\Views\\apps\\maps_detail.php', 535, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\apps\\maps_detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/maps_detail', [], true)
+ 5 APPPATH\Controllers\DetailMaps.php(22): view('apps/maps_detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('2361')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-30 11:23:32 --> Undefined variable: title
+in APPPATH\Views\template\user-database.php on line 8.
+ 1 APPPATH\Views\template\user-database.php(8): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: title', 'APPPATH\\Views\\template\\user-database.php', 8, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\template\\user-database.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('template/user-database', [], true)
+ 5 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/maps_detail', [], true)
+ 6 APPPATH\Controllers\DetailMaps.php(22): view('apps/maps_detail', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('2361')
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')

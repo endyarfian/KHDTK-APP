@@ -1,0 +1,795 @@
+ERROR - 2023-01-03 03:10:03 --> mysqli_sql_exception: Table 'khdtk.kode_cucu_petak' doesn't exist in D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `umt_ana...', 0)
+#1 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `umt_ana...')
+#2 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `umt_ana...')
+#3 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `umt_ana...', Array, false)
+#4 D:\XAMPP\htdocs\KHDTK - experimental\app\Controllers\Test.php(20): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Test->index()
+#6 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Test))
+#7 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\XAMPP\htdocs\KHDTK - experimental\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('D:\\XAMPP\\htdocs...')
+#10 {main}
+CRITICAL - 2023-01-03 03:10:03 --> Table 'khdtk.kode_cucu_petak' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `umt_anakpetak`.`kode_anak_petak` as `anakpetak`, `umt_cucupetak`.`kode_cucu_petak` as `cupet`
+FROM `kode_cucu_petak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `umt_anakpetak`.`kode_anak_petak` as `anakpetak`, `umt_cucupetak`.`kode_cucu_petak` as `cupet`
+FROM `kode_cucu_petak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `umt_anakpetak`.`kode_anak_petak` as `anakpetak`, `umt_cucupetak`.`kode_cucu_petak` as `cupet`
+FROM `kode_cucu_petak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `umt_anakpetak`.`kode_anak_petak` as `anakpetak`, `umt_cucupetak`.`kode_cucu_petak` as `cupet`
+FROM `kode_cucu_petak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`', [], false)
+ 5 APPPATH\Controllers\Test.php(20): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Test->index()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Test))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-01-03 03:10:20 --> mysqli_sql_exception: Not unique table/alias: 'umt_cucupetak' in D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `umt_ana...', 0)
+#1 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `umt_ana...')
+#2 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `umt_ana...')
+#3 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `umt_ana...', Array, false)
+#4 D:\XAMPP\htdocs\KHDTK - experimental\app\Controllers\Test.php(20): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Test->index()
+#6 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Test))
+#7 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\XAMPP\htdocs\KHDTK - experimental\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('D:\\XAMPP\\htdocs...')
+#10 {main}
+CRITICAL - 2023-01-03 03:10:20 --> Not unique table/alias: 'umt_cucupetak'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `umt_anakpetak`.`kode_anak_petak` as `anakpetak`, `umt_cucupetak`.`kode_cucu_petak` as `cupet`
+FROM `umt_cucupetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `umt_anakpetak`.`kode_anak_petak` as `anakpetak`, `umt_cucupetak`.`kode_cucu_petak` as `cupet`
+FROM `umt_cucupetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `umt_anakpetak`.`kode_anak_petak` as `anakpetak`, `umt_cucupetak`.`kode_cucu_petak` as `cupet`
+FROM `umt_cucupetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `umt_anakpetak`.`kode_anak_petak` as `anakpetak`, `umt_cucupetak`.`kode_cucu_petak` as `cupet`
+FROM `umt_cucupetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`', [], false)
+ 5 APPPATH\Controllers\Test.php(20): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Test->index()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Test))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-01-03 04:04:09 --> mysqli_sql_exception: Not unique table/alias: 'umt_cucupetak' in D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `umt_ana...', 0)
+#1 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `umt_ana...')
+#2 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `umt_ana...')
+#3 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `umt_ana...', Array, false)
+#4 D:\XAMPP\htdocs\KHDTK - experimental\app\Controllers\Test.php(20): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Test->index()
+#6 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Test))
+#7 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\XAMPP\htdocs\KHDTK - experimental\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('D:\\XAMPP\\htdocs...')
+#10 {main}
+CRITICAL - 2023-01-03 04:04:09 --> Not unique table/alias: 'umt_cucupetak'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `umt_anakpetak`.`kode_anak_petak` as `anakpetak`, `umt_cucupetak`.`kode_cucu_petak` as `cupet`
+FROM `umt_cucupetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `umt_anakpetak`.`kode_anak_petak` as `anakpetak`, `umt_cucupetak`.`kode_cucu_petak` as `cupet`
+FROM `umt_cucupetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `umt_anakpetak`.`kode_anak_petak` as `anakpetak`, `umt_cucupetak`.`kode_cucu_petak` as `cupet`
+FROM `umt_cucupetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `umt_anakpetak`.`kode_anak_petak` as `anakpetak`, `umt_cucupetak`.`kode_cucu_petak` as `cupet`
+FROM `umt_cucupetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`', [], false)
+ 5 APPPATH\Controllers\Test.php(20): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Test->index()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Test))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-01-03 04:04:24 --> mysqli_sql_exception: Not unique table/alias: 'umt_cucupetak' in D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `umt_ana...', 0)
+#1 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `umt_ana...')
+#2 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `umt_ana...')
+#3 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `umt_ana...', Array, false)
+#4 D:\XAMPP\htdocs\KHDTK - experimental\app\Controllers\Test.php(20): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Test->index()
+#6 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Test))
+#7 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\XAMPP\htdocs\KHDTK - experimental\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('D:\\XAMPP\\htdocs...')
+#10 {main}
+CRITICAL - 2023-01-03 04:04:24 --> Not unique table/alias: 'umt_cucupetak'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `umt_anakpetak`.`kode_anak_petak` as `anakpetak`, `umt_cucupetak`.`kode_cucu_petak` as `cupet`
+FROM `umt_cucupetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `umt_anakpetak`.`kode_anak_petak` as `anakpetak`, `umt_cucupetak`.`kode_cucu_petak` as `cupet`
+FROM `umt_cucupetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `umt_anakpetak`.`kode_anak_petak` as `anakpetak`, `umt_cucupetak`.`kode_cucu_petak` as `cupet`
+FROM `umt_cucupetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `umt_anakpetak`.`kode_anak_petak` as `anakpetak`, `umt_cucupetak`.`kode_cucu_petak` as `cupet`
+FROM `umt_cucupetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`', [], false)
+ 5 APPPATH\Controllers\Test.php(20): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Test->index()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Test))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-03 04:05:30 --> syntax error, unexpected '$query' (T_VARIABLE)
+in APPPATH\Controllers\Test.php on line 20.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(259): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Test.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(237): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Test')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Test')
+ 4 [internal function]: spl_autoload_call('App\\Controllers\\Test')
+ 5 SYSTEMPATH\CodeIgniter.php(877): class_exists('\\App\\Controllers\\Test', true)
+ 6 SYSTEMPATH\CodeIgniter.php(469): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-01-03 04:07:37 --> mysqli_sql_exception: Not unique table/alias: 'umt_cucupetak' in D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `umt_ana...', 0)
+#1 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `umt_ana...')
+#2 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `umt_ana...')
+#3 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `umt_ana...', Array, false)
+#4 D:\XAMPP\htdocs\KHDTK - experimental\app\Controllers\Test.php(20): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Test->index()
+#6 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Test))
+#7 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\XAMPP\htdocs\KHDTK - experimental\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('D:\\XAMPP\\htdocs...')
+#10 {main}
+CRITICAL - 2023-01-03 04:07:37 --> Not unique table/alias: 'umt_cucupetak'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `umt_anakpetak`.`kode_anak_petak` as `anakpetak`, `umt_cucupetak`.`kode_cucu_petak` as `cupet`
+FROM `umt_cucupetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `umt_anakpetak`.`kode_anak_petak` as `anakpetak`, `umt_cucupetak`.`kode_cucu_petak` as `cupet`
+FROM `umt_cucupetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `umt_anakpetak`.`kode_anak_petak` as `anakpetak`, `umt_cucupetak`.`kode_cucu_petak` as `cupet`
+FROM `umt_cucupetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `umt_anakpetak`.`kode_anak_petak` as `anakpetak`, `umt_cucupetak`.`kode_cucu_petak` as `cupet`
+FROM `umt_cucupetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`', [], false)
+ 5 APPPATH\Controllers\Test.php(20): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Test->index()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Test))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-03 05:38:08 --> Undefined variable: data
+in APPPATH\Views\apps\maps_detail.php on line 540.
+ 1 APPPATH\Views\apps\maps_detail.php(540): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: data', 'APPPATH\\Views\\apps\\maps_detail.php', 540, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\apps\\maps_detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/maps_detail', [], true)
+ 5 APPPATH\Controllers\DetailMaps.php(30): view('apps/maps_detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('3458')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-01-03 07:53:04 --> mysqli_sql_exception: Column 'kode_inven_pu' in field list is ambiguous in D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `umt_ana...', 0)
+#1 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `umt_ana...')
+#2 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `umt_ana...')
+#3 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `umt_ana...', Array, false)
+#4 D:\XAMPP\htdocs\KHDTK - experimental\app\Controllers\Test.php(23): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Test->index('3458')
+#6 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Test))
+#7 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\XAMPP\htdocs\KHDTK - experimental\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('D:\\XAMPP\\htdocs...')
+#10 {main}
+CRITICAL - 2023-01-03 07:53:04 --> Column 'kode_inven_pu' in field list is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `umt_anakpetak`.`kode_anak_petak` as `anakpetak`, `umt_cucupetak`.`kode_cucu_petak` as `cupet`, `umt_cupet_tnm`.`kode_cupet_tnm` as `cupettnm`, `inventarisasi_umt`.`kode_inven_umt` as `invenumt`, `kode_inven_pu` as `kode invenpu`, `luas_pu`, `bentuk_pu`, `ndvi`, `msavi`, `kelerengan`, `altitude`, `no_pohon`, `kode_inven_pu`, `jenis_pohon`, `dbh`, `tinggi`, `fungsi`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `umt_cupet_tnm`.`kode_cucu_petak` = `umt_cucupetak`.`kode_cucu_petak`
+JOIN `inventarisasi_umt` ON `inventarisasi_umt`.`kode_cupet_tnm`  = `umt_cupet_tnm`.`kode_cupet_tnm`
+JOIN `inventarisasi_pu` ON `inventarisasi_pu`.`kode_inven_umt`  = `inventarisasi_umt`.`kode_inven_umt`
+JOIN `inventarisasi_umt_ukurkayu` ON `inventarisasi_umt_ukurkayu`.`kode_inven_pu`  = `inventarisasi_pu`.`kode_inven_pu`
+WHERE `umt_anakpetak`.`id` = \'3458\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `umt_anakpetak`.`kode_anak_petak` as `anakpetak`, `umt_cucupetak`.`kode_cucu_petak` as `cupet`, `umt_cupet_tnm`.`kode_cupet_tnm` as `cupettnm`, `inventarisasi_umt`.`kode_inven_umt` as `invenumt`, `kode_inven_pu` as `kode invenpu`, `luas_pu`, `bentuk_pu`, `ndvi`, `msavi`, `kelerengan`, `altitude`, `no_pohon`, `kode_inven_pu`, `jenis_pohon`, `dbh`, `tinggi`, `fungsi`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `umt_cupet_tnm`.`kode_cucu_petak` = `umt_cucupetak`.`kode_cucu_petak`
+JOIN `inventarisasi_umt` ON `inventarisasi_umt`.`kode_cupet_tnm`  = `umt_cupet_tnm`.`kode_cupet_tnm`
+JOIN `inventarisasi_pu` ON `inventarisasi_pu`.`kode_inven_umt`  = `inventarisasi_umt`.`kode_inven_umt`
+JOIN `inventarisasi_umt_ukurkayu` ON `inventarisasi_umt_ukurkayu`.`kode_inven_pu`  = `inventarisasi_pu`.`kode_inven_pu`
+WHERE `umt_anakpetak`.`id` = \'3458\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `umt_anakpetak`.`kode_anak_petak` as `anakpetak`, `umt_cucupetak`.`kode_cucu_petak` as `cupet`, `umt_cupet_tnm`.`kode_cupet_tnm` as `cupettnm`, `inventarisasi_umt`.`kode_inven_umt` as `invenumt`, `kode_inven_pu` as `kode invenpu`, `luas_pu`, `bentuk_pu`, `ndvi`, `msavi`, `kelerengan`, `altitude`, `no_pohon`, `kode_inven_pu`, `jenis_pohon`, `dbh`, `tinggi`, `fungsi`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `umt_cupet_tnm`.`kode_cucu_petak` = `umt_cucupetak`.`kode_cucu_petak`
+JOIN `inventarisasi_umt` ON `inventarisasi_umt`.`kode_cupet_tnm`  = `umt_cupet_tnm`.`kode_cupet_tnm`
+JOIN `inventarisasi_pu` ON `inventarisasi_pu`.`kode_inven_umt`  = `inventarisasi_umt`.`kode_inven_umt`
+JOIN `inventarisasi_umt_ukurkayu` ON `inventarisasi_umt_ukurkayu`.`kode_inven_pu`  = `inventarisasi_pu`.`kode_inven_pu`
+WHERE `umt_anakpetak`.`id` = \'3458\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `umt_anakpetak`.`kode_anak_petak` as `anakpetak`, `umt_cucupetak`.`kode_cucu_petak` as `cupet`, `umt_cupet_tnm`.`kode_cupet_tnm` as `cupettnm`, `inventarisasi_umt`.`kode_inven_umt` as `invenumt`, `kode_inven_pu` as `kode invenpu`, `luas_pu`, `bentuk_pu`, `ndvi`, `msavi`, `kelerengan`, `altitude`, `no_pohon`, `kode_inven_pu`, `jenis_pohon`, `dbh`, `tinggi`, `fungsi`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `umt_cupet_tnm`.`kode_cucu_petak` = `umt_cucupetak`.`kode_cucu_petak`
+JOIN `inventarisasi_umt` ON `inventarisasi_umt`.`kode_cupet_tnm`  = `umt_cupet_tnm`.`kode_cupet_tnm`
+JOIN `inventarisasi_pu` ON `inventarisasi_pu`.`kode_inven_umt`  = `inventarisasi_umt`.`kode_inven_umt`
+JOIN `inventarisasi_umt_ukurkayu` ON `inventarisasi_umt_ukurkayu`.`kode_inven_pu`  = `inventarisasi_pu`.`kode_inven_pu`
+WHERE `umt_anakpetak`.`id` = :umt_anakpetak.id:', [...], false)
+ 5 APPPATH\Controllers\Test.php(23): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Test->index('3458')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Test))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-01-03 07:53:28 --> mysqli_sql_exception: Column 'kode_inven_pu' in field list is ambiguous in D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `umt_ana...', 0)
+#1 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `umt_ana...')
+#2 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `umt_ana...')
+#3 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `umt_ana...', Array, false)
+#4 D:\XAMPP\htdocs\KHDTK - experimental\app\Controllers\Test.php(23): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Test->index('3458')
+#6 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Test))
+#7 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\XAMPP\htdocs\KHDTK - experimental\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('D:\\XAMPP\\htdocs...')
+#10 {main}
+CRITICAL - 2023-01-03 07:53:28 --> Column 'kode_inven_pu' in field list is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `umt_anakpetak`.`kode_anak_petak` as `anakpetak`, `umt_cucupetak`.`kode_cucu_petak` as `cupet`, `umt_cupet_tnm`.`kode_cupet_tnm` as `cupettnm`, `inventarisasi_umt`.`kode_inven_umt` as `invenumt`, `inventarisasi_pu`.`kode_inven_pu` as `kode invenpu`, `luas_pu`, `bentuk_pu`, `ndvi`, `msavi`, `kelerengan`, `altitude`, `no_pohon`, `kode_inven_pu`, `jenis_pohon`, `dbh`, `tinggi`, `fungsi`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `umt_cupet_tnm`.`kode_cucu_petak` = `umt_cucupetak`.`kode_cucu_petak`
+JOIN `inventarisasi_umt` ON `inventarisasi_umt`.`kode_cupet_tnm`  = `umt_cupet_tnm`.`kode_cupet_tnm`
+JOIN `inventarisasi_pu` ON `inventarisasi_pu`.`kode_inven_umt`  = `inventarisasi_umt`.`kode_inven_umt`
+JOIN `inventarisasi_umt_ukurkayu` ON `inventarisasi_umt_ukurkayu`.`kode_inven_pu`  = `inventarisasi_pu`.`kode_inven_pu`
+WHERE `umt_anakpetak`.`id` = \'3458\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `umt_anakpetak`.`kode_anak_petak` as `anakpetak`, `umt_cucupetak`.`kode_cucu_petak` as `cupet`, `umt_cupet_tnm`.`kode_cupet_tnm` as `cupettnm`, `inventarisasi_umt`.`kode_inven_umt` as `invenumt`, `inventarisasi_pu`.`kode_inven_pu` as `kode invenpu`, `luas_pu`, `bentuk_pu`, `ndvi`, `msavi`, `kelerengan`, `altitude`, `no_pohon`, `kode_inven_pu`, `jenis_pohon`, `dbh`, `tinggi`, `fungsi`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `umt_cupet_tnm`.`kode_cucu_petak` = `umt_cucupetak`.`kode_cucu_petak`
+JOIN `inventarisasi_umt` ON `inventarisasi_umt`.`kode_cupet_tnm`  = `umt_cupet_tnm`.`kode_cupet_tnm`
+JOIN `inventarisasi_pu` ON `inventarisasi_pu`.`kode_inven_umt`  = `inventarisasi_umt`.`kode_inven_umt`
+JOIN `inventarisasi_umt_ukurkayu` ON `inventarisasi_umt_ukurkayu`.`kode_inven_pu`  = `inventarisasi_pu`.`kode_inven_pu`
+WHERE `umt_anakpetak`.`id` = \'3458\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `umt_anakpetak`.`kode_anak_petak` as `anakpetak`, `umt_cucupetak`.`kode_cucu_petak` as `cupet`, `umt_cupet_tnm`.`kode_cupet_tnm` as `cupettnm`, `inventarisasi_umt`.`kode_inven_umt` as `invenumt`, `inventarisasi_pu`.`kode_inven_pu` as `kode invenpu`, `luas_pu`, `bentuk_pu`, `ndvi`, `msavi`, `kelerengan`, `altitude`, `no_pohon`, `kode_inven_pu`, `jenis_pohon`, `dbh`, `tinggi`, `fungsi`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `umt_cupet_tnm`.`kode_cucu_petak` = `umt_cucupetak`.`kode_cucu_petak`
+JOIN `inventarisasi_umt` ON `inventarisasi_umt`.`kode_cupet_tnm`  = `umt_cupet_tnm`.`kode_cupet_tnm`
+JOIN `inventarisasi_pu` ON `inventarisasi_pu`.`kode_inven_umt`  = `inventarisasi_umt`.`kode_inven_umt`
+JOIN `inventarisasi_umt_ukurkayu` ON `inventarisasi_umt_ukurkayu`.`kode_inven_pu`  = `inventarisasi_pu`.`kode_inven_pu`
+WHERE `umt_anakpetak`.`id` = \'3458\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `umt_anakpetak`.`kode_anak_petak` as `anakpetak`, `umt_cucupetak`.`kode_cucu_petak` as `cupet`, `umt_cupet_tnm`.`kode_cupet_tnm` as `cupettnm`, `inventarisasi_umt`.`kode_inven_umt` as `invenumt`, `inventarisasi_pu`.`kode_inven_pu` as `kode invenpu`, `luas_pu`, `bentuk_pu`, `ndvi`, `msavi`, `kelerengan`, `altitude`, `no_pohon`, `kode_inven_pu`, `jenis_pohon`, `dbh`, `tinggi`, `fungsi`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `umt_cupet_tnm`.`kode_cucu_petak` = `umt_cucupetak`.`kode_cucu_petak`
+JOIN `inventarisasi_umt` ON `inventarisasi_umt`.`kode_cupet_tnm`  = `umt_cupet_tnm`.`kode_cupet_tnm`
+JOIN `inventarisasi_pu` ON `inventarisasi_pu`.`kode_inven_umt`  = `inventarisasi_umt`.`kode_inven_umt`
+JOIN `inventarisasi_umt_ukurkayu` ON `inventarisasi_umt_ukurkayu`.`kode_inven_pu`  = `inventarisasi_pu`.`kode_inven_pu`
+WHERE `umt_anakpetak`.`id` = :umt_anakpetak.id:', [...], false)
+ 5 APPPATH\Controllers\Test.php(23): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Test->index('3458')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Test))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-01-03 07:53:32 --> mysqli_sql_exception: Column 'kode_inven_pu' in field list is ambiguous in D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `umt_ana...', 0)
+#1 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `umt_ana...')
+#2 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `umt_ana...')
+#3 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `umt_ana...', Array, false)
+#4 D:\XAMPP\htdocs\KHDTK - experimental\app\Controllers\Test.php(23): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Test->index('3458')
+#6 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Test))
+#7 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\XAMPP\htdocs\KHDTK - experimental\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('D:\\XAMPP\\htdocs...')
+#10 {main}
+CRITICAL - 2023-01-03 07:53:32 --> Column 'kode_inven_pu' in field list is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `umt_anakpetak`.`kode_anak_petak` as `anakpetak`, `umt_cucupetak`.`kode_cucu_petak` as `cupet`, `umt_cupet_tnm`.`kode_cupet_tnm` as `cupettnm`, `inventarisasi_umt`.`kode_inven_umt` as `invenumt`, `inventarisasi_pu`.`kode_inven_pu` as `kode invenpu`, `luas_pu`, `bentuk_pu`, `ndvi`, `msavi`, `kelerengan`, `altitude`, `no_pohon`, `kode_inven_pu`, `jenis_pohon`, `dbh`, `tinggi`, `fungsi`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `umt_cupet_tnm`.`kode_cucu_petak` = `umt_cucupetak`.`kode_cucu_petak`
+JOIN `inventarisasi_umt` ON `inventarisasi_umt`.`kode_cupet_tnm`  = `umt_cupet_tnm`.`kode_cupet_tnm`
+JOIN `inventarisasi_pu` ON `inventarisasi_pu`.`kode_inven_umt`  = `inventarisasi_umt`.`kode_inven_umt`
+JOIN `inventarisasi_umt_ukurkayu` ON `inventarisasi_umt_ukurkayu`.`kode_inven_pu`  = `inventarisasi_pu`.`kode_inven_pu`
+WHERE `umt_anakpetak`.`id` = \'3458\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `umt_anakpetak`.`kode_anak_petak` as `anakpetak`, `umt_cucupetak`.`kode_cucu_petak` as `cupet`, `umt_cupet_tnm`.`kode_cupet_tnm` as `cupettnm`, `inventarisasi_umt`.`kode_inven_umt` as `invenumt`, `inventarisasi_pu`.`kode_inven_pu` as `kode invenpu`, `luas_pu`, `bentuk_pu`, `ndvi`, `msavi`, `kelerengan`, `altitude`, `no_pohon`, `kode_inven_pu`, `jenis_pohon`, `dbh`, `tinggi`, `fungsi`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `umt_cupet_tnm`.`kode_cucu_petak` = `umt_cucupetak`.`kode_cucu_petak`
+JOIN `inventarisasi_umt` ON `inventarisasi_umt`.`kode_cupet_tnm`  = `umt_cupet_tnm`.`kode_cupet_tnm`
+JOIN `inventarisasi_pu` ON `inventarisasi_pu`.`kode_inven_umt`  = `inventarisasi_umt`.`kode_inven_umt`
+JOIN `inventarisasi_umt_ukurkayu` ON `inventarisasi_umt_ukurkayu`.`kode_inven_pu`  = `inventarisasi_pu`.`kode_inven_pu`
+WHERE `umt_anakpetak`.`id` = \'3458\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `umt_anakpetak`.`kode_anak_petak` as `anakpetak`, `umt_cucupetak`.`kode_cucu_petak` as `cupet`, `umt_cupet_tnm`.`kode_cupet_tnm` as `cupettnm`, `inventarisasi_umt`.`kode_inven_umt` as `invenumt`, `inventarisasi_pu`.`kode_inven_pu` as `kode invenpu`, `luas_pu`, `bentuk_pu`, `ndvi`, `msavi`, `kelerengan`, `altitude`, `no_pohon`, `kode_inven_pu`, `jenis_pohon`, `dbh`, `tinggi`, `fungsi`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `umt_cupet_tnm`.`kode_cucu_petak` = `umt_cucupetak`.`kode_cucu_petak`
+JOIN `inventarisasi_umt` ON `inventarisasi_umt`.`kode_cupet_tnm`  = `umt_cupet_tnm`.`kode_cupet_tnm`
+JOIN `inventarisasi_pu` ON `inventarisasi_pu`.`kode_inven_umt`  = `inventarisasi_umt`.`kode_inven_umt`
+JOIN `inventarisasi_umt_ukurkayu` ON `inventarisasi_umt_ukurkayu`.`kode_inven_pu`  = `inventarisasi_pu`.`kode_inven_pu`
+WHERE `umt_anakpetak`.`id` = \'3458\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `umt_anakpetak`.`kode_anak_petak` as `anakpetak`, `umt_cucupetak`.`kode_cucu_petak` as `cupet`, `umt_cupet_tnm`.`kode_cupet_tnm` as `cupettnm`, `inventarisasi_umt`.`kode_inven_umt` as `invenumt`, `inventarisasi_pu`.`kode_inven_pu` as `kode invenpu`, `luas_pu`, `bentuk_pu`, `ndvi`, `msavi`, `kelerengan`, `altitude`, `no_pohon`, `kode_inven_pu`, `jenis_pohon`, `dbh`, `tinggi`, `fungsi`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `umt_cupet_tnm`.`kode_cucu_petak` = `umt_cucupetak`.`kode_cucu_petak`
+JOIN `inventarisasi_umt` ON `inventarisasi_umt`.`kode_cupet_tnm`  = `umt_cupet_tnm`.`kode_cupet_tnm`
+JOIN `inventarisasi_pu` ON `inventarisasi_pu`.`kode_inven_umt`  = `inventarisasi_umt`.`kode_inven_umt`
+JOIN `inventarisasi_umt_ukurkayu` ON `inventarisasi_umt_ukurkayu`.`kode_inven_pu`  = `inventarisasi_pu`.`kode_inven_pu`
+WHERE `umt_anakpetak`.`id` = :umt_anakpetak.id:', [...], false)
+ 5 APPPATH\Controllers\Test.php(23): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Test->index('3458')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Test))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-01-03 07:53:50 --> mysqli_sql_exception: Column 'kode_inven_pu' in field list is ambiguous in D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `umt_ana...', 0)
+#1 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `umt_ana...')
+#2 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `umt_ana...')
+#3 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `umt_ana...', Array, false)
+#4 D:\XAMPP\htdocs\KHDTK - experimental\app\Controllers\Test.php(23): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Test->index('3458')
+#6 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Test))
+#7 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\XAMPP\htdocs\KHDTK - experimental\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('D:\\XAMPP\\htdocs...')
+#10 {main}
+CRITICAL - 2023-01-03 07:53:50 --> Column 'kode_inven_pu' in field list is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `umt_anakpetak`.`kode_anak_petak` as `anakpetak`, `umt_cucupetak`.`kode_cucu_petak` as `cupet`, `umt_cupet_tnm`.`kode_cupet_tnm` as `cupettnm`, `inventarisasi_umt`.`kode_inven_umt` as `invenumt`, `inventarisasi_pu`.`kode_inven_pu` as `kodeinvenpu`, `luas_pu`, `bentuk_pu`, `ndvi`, `msavi`, `kelerengan`, `altitude`, `no_pohon`, `kode_inven_pu`, `jenis_pohon`, `dbh`, `tinggi`, `fungsi`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `umt_cupet_tnm`.`kode_cucu_petak` = `umt_cucupetak`.`kode_cucu_petak`
+JOIN `inventarisasi_umt` ON `inventarisasi_umt`.`kode_cupet_tnm`  = `umt_cupet_tnm`.`kode_cupet_tnm`
+JOIN `inventarisasi_pu` ON `inventarisasi_pu`.`kode_inven_umt`  = `inventarisasi_umt`.`kode_inven_umt`
+JOIN `inventarisasi_umt_ukurkayu` ON `inventarisasi_umt_ukurkayu`.`kode_inven_pu`  = `inventarisasi_pu`.`kode_inven_pu`
+WHERE `umt_anakpetak`.`id` = \'3458\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `umt_anakpetak`.`kode_anak_petak` as `anakpetak`, `umt_cucupetak`.`kode_cucu_petak` as `cupet`, `umt_cupet_tnm`.`kode_cupet_tnm` as `cupettnm`, `inventarisasi_umt`.`kode_inven_umt` as `invenumt`, `inventarisasi_pu`.`kode_inven_pu` as `kodeinvenpu`, `luas_pu`, `bentuk_pu`, `ndvi`, `msavi`, `kelerengan`, `altitude`, `no_pohon`, `kode_inven_pu`, `jenis_pohon`, `dbh`, `tinggi`, `fungsi`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `umt_cupet_tnm`.`kode_cucu_petak` = `umt_cucupetak`.`kode_cucu_petak`
+JOIN `inventarisasi_umt` ON `inventarisasi_umt`.`kode_cupet_tnm`  = `umt_cupet_tnm`.`kode_cupet_tnm`
+JOIN `inventarisasi_pu` ON `inventarisasi_pu`.`kode_inven_umt`  = `inventarisasi_umt`.`kode_inven_umt`
+JOIN `inventarisasi_umt_ukurkayu` ON `inventarisasi_umt_ukurkayu`.`kode_inven_pu`  = `inventarisasi_pu`.`kode_inven_pu`
+WHERE `umt_anakpetak`.`id` = \'3458\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `umt_anakpetak`.`kode_anak_petak` as `anakpetak`, `umt_cucupetak`.`kode_cucu_petak` as `cupet`, `umt_cupet_tnm`.`kode_cupet_tnm` as `cupettnm`, `inventarisasi_umt`.`kode_inven_umt` as `invenumt`, `inventarisasi_pu`.`kode_inven_pu` as `kodeinvenpu`, `luas_pu`, `bentuk_pu`, `ndvi`, `msavi`, `kelerengan`, `altitude`, `no_pohon`, `kode_inven_pu`, `jenis_pohon`, `dbh`, `tinggi`, `fungsi`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `umt_cupet_tnm`.`kode_cucu_petak` = `umt_cucupetak`.`kode_cucu_petak`
+JOIN `inventarisasi_umt` ON `inventarisasi_umt`.`kode_cupet_tnm`  = `umt_cupet_tnm`.`kode_cupet_tnm`
+JOIN `inventarisasi_pu` ON `inventarisasi_pu`.`kode_inven_umt`  = `inventarisasi_umt`.`kode_inven_umt`
+JOIN `inventarisasi_umt_ukurkayu` ON `inventarisasi_umt_ukurkayu`.`kode_inven_pu`  = `inventarisasi_pu`.`kode_inven_pu`
+WHERE `umt_anakpetak`.`id` = \'3458\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `umt_anakpetak`.`kode_anak_petak` as `anakpetak`, `umt_cucupetak`.`kode_cucu_petak` as `cupet`, `umt_cupet_tnm`.`kode_cupet_tnm` as `cupettnm`, `inventarisasi_umt`.`kode_inven_umt` as `invenumt`, `inventarisasi_pu`.`kode_inven_pu` as `kodeinvenpu`, `luas_pu`, `bentuk_pu`, `ndvi`, `msavi`, `kelerengan`, `altitude`, `no_pohon`, `kode_inven_pu`, `jenis_pohon`, `dbh`, `tinggi`, `fungsi`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `umt_cupet_tnm`.`kode_cucu_petak` = `umt_cucupetak`.`kode_cucu_petak`
+JOIN `inventarisasi_umt` ON `inventarisasi_umt`.`kode_cupet_tnm`  = `umt_cupet_tnm`.`kode_cupet_tnm`
+JOIN `inventarisasi_pu` ON `inventarisasi_pu`.`kode_inven_umt`  = `inventarisasi_umt`.`kode_inven_umt`
+JOIN `inventarisasi_umt_ukurkayu` ON `inventarisasi_umt_ukurkayu`.`kode_inven_pu`  = `inventarisasi_pu`.`kode_inven_pu`
+WHERE `umt_anakpetak`.`id` = :umt_anakpetak.id:', [...], false)
+ 5 APPPATH\Controllers\Test.php(23): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Test->index('3458')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Test))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-01-03 07:53:51 --> mysqli_sql_exception: Column 'kode_inven_pu' in field list is ambiguous in D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `umt_ana...', 0)
+#1 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `umt_ana...')
+#2 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `umt_ana...')
+#3 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `umt_ana...', Array, false)
+#4 D:\XAMPP\htdocs\KHDTK - experimental\app\Controllers\Test.php(23): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Test->index('3458')
+#6 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Test))
+#7 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\XAMPP\htdocs\KHDTK - experimental\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('D:\\XAMPP\\htdocs...')
+#10 {main}
+CRITICAL - 2023-01-03 07:53:51 --> Column 'kode_inven_pu' in field list is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `umt_anakpetak`.`kode_anak_petak` as `anakpetak`, `umt_cucupetak`.`kode_cucu_petak` as `cupet`, `umt_cupet_tnm`.`kode_cupet_tnm` as `cupettnm`, `inventarisasi_umt`.`kode_inven_umt` as `invenumt`, `inventarisasi_pu`.`kode_inven_pu` as `kodeinvenpu`, `luas_pu`, `bentuk_pu`, `ndvi`, `msavi`, `kelerengan`, `altitude`, `no_pohon`, `kode_inven_pu`, `jenis_pohon`, `dbh`, `tinggi`, `fungsi`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `umt_cupet_tnm`.`kode_cucu_petak` = `umt_cucupetak`.`kode_cucu_petak`
+JOIN `inventarisasi_umt` ON `inventarisasi_umt`.`kode_cupet_tnm`  = `umt_cupet_tnm`.`kode_cupet_tnm`
+JOIN `inventarisasi_pu` ON `inventarisasi_pu`.`kode_inven_umt`  = `inventarisasi_umt`.`kode_inven_umt`
+JOIN `inventarisasi_umt_ukurkayu` ON `inventarisasi_umt_ukurkayu`.`kode_inven_pu`  = `inventarisasi_pu`.`kode_inven_pu`
+WHERE `umt_anakpetak`.`id` = \'3458\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `umt_anakpetak`.`kode_anak_petak` as `anakpetak`, `umt_cucupetak`.`kode_cucu_petak` as `cupet`, `umt_cupet_tnm`.`kode_cupet_tnm` as `cupettnm`, `inventarisasi_umt`.`kode_inven_umt` as `invenumt`, `inventarisasi_pu`.`kode_inven_pu` as `kodeinvenpu`, `luas_pu`, `bentuk_pu`, `ndvi`, `msavi`, `kelerengan`, `altitude`, `no_pohon`, `kode_inven_pu`, `jenis_pohon`, `dbh`, `tinggi`, `fungsi`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `umt_cupet_tnm`.`kode_cucu_petak` = `umt_cucupetak`.`kode_cucu_petak`
+JOIN `inventarisasi_umt` ON `inventarisasi_umt`.`kode_cupet_tnm`  = `umt_cupet_tnm`.`kode_cupet_tnm`
+JOIN `inventarisasi_pu` ON `inventarisasi_pu`.`kode_inven_umt`  = `inventarisasi_umt`.`kode_inven_umt`
+JOIN `inventarisasi_umt_ukurkayu` ON `inventarisasi_umt_ukurkayu`.`kode_inven_pu`  = `inventarisasi_pu`.`kode_inven_pu`
+WHERE `umt_anakpetak`.`id` = \'3458\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `umt_anakpetak`.`kode_anak_petak` as `anakpetak`, `umt_cucupetak`.`kode_cucu_petak` as `cupet`, `umt_cupet_tnm`.`kode_cupet_tnm` as `cupettnm`, `inventarisasi_umt`.`kode_inven_umt` as `invenumt`, `inventarisasi_pu`.`kode_inven_pu` as `kodeinvenpu`, `luas_pu`, `bentuk_pu`, `ndvi`, `msavi`, `kelerengan`, `altitude`, `no_pohon`, `kode_inven_pu`, `jenis_pohon`, `dbh`, `tinggi`, `fungsi`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `umt_cupet_tnm`.`kode_cucu_petak` = `umt_cucupetak`.`kode_cucu_petak`
+JOIN `inventarisasi_umt` ON `inventarisasi_umt`.`kode_cupet_tnm`  = `umt_cupet_tnm`.`kode_cupet_tnm`
+JOIN `inventarisasi_pu` ON `inventarisasi_pu`.`kode_inven_umt`  = `inventarisasi_umt`.`kode_inven_umt`
+JOIN `inventarisasi_umt_ukurkayu` ON `inventarisasi_umt_ukurkayu`.`kode_inven_pu`  = `inventarisasi_pu`.`kode_inven_pu`
+WHERE `umt_anakpetak`.`id` = \'3458\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `umt_anakpetak`.`kode_anak_petak` as `anakpetak`, `umt_cucupetak`.`kode_cucu_petak` as `cupet`, `umt_cupet_tnm`.`kode_cupet_tnm` as `cupettnm`, `inventarisasi_umt`.`kode_inven_umt` as `invenumt`, `inventarisasi_pu`.`kode_inven_pu` as `kodeinvenpu`, `luas_pu`, `bentuk_pu`, `ndvi`, `msavi`, `kelerengan`, `altitude`, `no_pohon`, `kode_inven_pu`, `jenis_pohon`, `dbh`, `tinggi`, `fungsi`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `umt_cupet_tnm`.`kode_cucu_petak` = `umt_cucupetak`.`kode_cucu_petak`
+JOIN `inventarisasi_umt` ON `inventarisasi_umt`.`kode_cupet_tnm`  = `umt_cupet_tnm`.`kode_cupet_tnm`
+JOIN `inventarisasi_pu` ON `inventarisasi_pu`.`kode_inven_umt`  = `inventarisasi_umt`.`kode_inven_umt`
+JOIN `inventarisasi_umt_ukurkayu` ON `inventarisasi_umt_ukurkayu`.`kode_inven_pu`  = `inventarisasi_pu`.`kode_inven_pu`
+WHERE `umt_anakpetak`.`id` = :umt_anakpetak.id:', [...], false)
+ 5 APPPATH\Controllers\Test.php(23): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Test->index('3458')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Test))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-01-03 07:53:51 --> mysqli_sql_exception: Column 'kode_inven_pu' in field list is ambiguous in D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `umt_ana...', 0)
+#1 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `umt_ana...')
+#2 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `umt_ana...')
+#3 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `umt_ana...', Array, false)
+#4 D:\XAMPP\htdocs\KHDTK - experimental\app\Controllers\Test.php(23): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Test->index('3458')
+#6 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Test))
+#7 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\XAMPP\htdocs\KHDTK - experimental\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('D:\\XAMPP\\htdocs...')
+#10 {main}
+CRITICAL - 2023-01-03 07:53:51 --> Column 'kode_inven_pu' in field list is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `umt_anakpetak`.`kode_anak_petak` as `anakpetak`, `umt_cucupetak`.`kode_cucu_petak` as `cupet`, `umt_cupet_tnm`.`kode_cupet_tnm` as `cupettnm`, `inventarisasi_umt`.`kode_inven_umt` as `invenumt`, `inventarisasi_pu`.`kode_inven_pu` as `kodeinvenpu`, `luas_pu`, `bentuk_pu`, `ndvi`, `msavi`, `kelerengan`, `altitude`, `no_pohon`, `kode_inven_pu`, `jenis_pohon`, `dbh`, `tinggi`, `fungsi`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `umt_cupet_tnm`.`kode_cucu_petak` = `umt_cucupetak`.`kode_cucu_petak`
+JOIN `inventarisasi_umt` ON `inventarisasi_umt`.`kode_cupet_tnm`  = `umt_cupet_tnm`.`kode_cupet_tnm`
+JOIN `inventarisasi_pu` ON `inventarisasi_pu`.`kode_inven_umt`  = `inventarisasi_umt`.`kode_inven_umt`
+JOIN `inventarisasi_umt_ukurkayu` ON `inventarisasi_umt_ukurkayu`.`kode_inven_pu`  = `inventarisasi_pu`.`kode_inven_pu`
+WHERE `umt_anakpetak`.`id` = \'3458\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `umt_anakpetak`.`kode_anak_petak` as `anakpetak`, `umt_cucupetak`.`kode_cucu_petak` as `cupet`, `umt_cupet_tnm`.`kode_cupet_tnm` as `cupettnm`, `inventarisasi_umt`.`kode_inven_umt` as `invenumt`, `inventarisasi_pu`.`kode_inven_pu` as `kodeinvenpu`, `luas_pu`, `bentuk_pu`, `ndvi`, `msavi`, `kelerengan`, `altitude`, `no_pohon`, `kode_inven_pu`, `jenis_pohon`, `dbh`, `tinggi`, `fungsi`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `umt_cupet_tnm`.`kode_cucu_petak` = `umt_cucupetak`.`kode_cucu_petak`
+JOIN `inventarisasi_umt` ON `inventarisasi_umt`.`kode_cupet_tnm`  = `umt_cupet_tnm`.`kode_cupet_tnm`
+JOIN `inventarisasi_pu` ON `inventarisasi_pu`.`kode_inven_umt`  = `inventarisasi_umt`.`kode_inven_umt`
+JOIN `inventarisasi_umt_ukurkayu` ON `inventarisasi_umt_ukurkayu`.`kode_inven_pu`  = `inventarisasi_pu`.`kode_inven_pu`
+WHERE `umt_anakpetak`.`id` = \'3458\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `umt_anakpetak`.`kode_anak_petak` as `anakpetak`, `umt_cucupetak`.`kode_cucu_petak` as `cupet`, `umt_cupet_tnm`.`kode_cupet_tnm` as `cupettnm`, `inventarisasi_umt`.`kode_inven_umt` as `invenumt`, `inventarisasi_pu`.`kode_inven_pu` as `kodeinvenpu`, `luas_pu`, `bentuk_pu`, `ndvi`, `msavi`, `kelerengan`, `altitude`, `no_pohon`, `kode_inven_pu`, `jenis_pohon`, `dbh`, `tinggi`, `fungsi`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `umt_cupet_tnm`.`kode_cucu_petak` = `umt_cucupetak`.`kode_cucu_petak`
+JOIN `inventarisasi_umt` ON `inventarisasi_umt`.`kode_cupet_tnm`  = `umt_cupet_tnm`.`kode_cupet_tnm`
+JOIN `inventarisasi_pu` ON `inventarisasi_pu`.`kode_inven_umt`  = `inventarisasi_umt`.`kode_inven_umt`
+JOIN `inventarisasi_umt_ukurkayu` ON `inventarisasi_umt_ukurkayu`.`kode_inven_pu`  = `inventarisasi_pu`.`kode_inven_pu`
+WHERE `umt_anakpetak`.`id` = \'3458\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `umt_anakpetak`.`kode_anak_petak` as `anakpetak`, `umt_cucupetak`.`kode_cucu_petak` as `cupet`, `umt_cupet_tnm`.`kode_cupet_tnm` as `cupettnm`, `inventarisasi_umt`.`kode_inven_umt` as `invenumt`, `inventarisasi_pu`.`kode_inven_pu` as `kodeinvenpu`, `luas_pu`, `bentuk_pu`, `ndvi`, `msavi`, `kelerengan`, `altitude`, `no_pohon`, `kode_inven_pu`, `jenis_pohon`, `dbh`, `tinggi`, `fungsi`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `umt_cupet_tnm`.`kode_cucu_petak` = `umt_cucupetak`.`kode_cucu_petak`
+JOIN `inventarisasi_umt` ON `inventarisasi_umt`.`kode_cupet_tnm`  = `umt_cupet_tnm`.`kode_cupet_tnm`
+JOIN `inventarisasi_pu` ON `inventarisasi_pu`.`kode_inven_umt`  = `inventarisasi_umt`.`kode_inven_umt`
+JOIN `inventarisasi_umt_ukurkayu` ON `inventarisasi_umt_ukurkayu`.`kode_inven_pu`  = `inventarisasi_pu`.`kode_inven_pu`
+WHERE `umt_anakpetak`.`id` = :umt_anakpetak.id:', [...], false)
+ 5 APPPATH\Controllers\Test.php(23): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Test->index('3458')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Test))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-01-03 07:53:52 --> mysqli_sql_exception: Column 'kode_inven_pu' in field list is ambiguous in D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `umt_ana...', 0)
+#1 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `umt_ana...')
+#2 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `umt_ana...')
+#3 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `umt_ana...', Array, false)
+#4 D:\XAMPP\htdocs\KHDTK - experimental\app\Controllers\Test.php(23): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Test->index('3458')
+#6 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Test))
+#7 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\XAMPP\htdocs\KHDTK - experimental\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('D:\\XAMPP\\htdocs...')
+#10 {main}
+CRITICAL - 2023-01-03 07:53:52 --> Column 'kode_inven_pu' in field list is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `umt_anakpetak`.`kode_anak_petak` as `anakpetak`, `umt_cucupetak`.`kode_cucu_petak` as `cupet`, `umt_cupet_tnm`.`kode_cupet_tnm` as `cupettnm`, `inventarisasi_umt`.`kode_inven_umt` as `invenumt`, `inventarisasi_pu`.`kode_inven_pu` as `kodeinvenpu`, `luas_pu`, `bentuk_pu`, `ndvi`, `msavi`, `kelerengan`, `altitude`, `no_pohon`, `kode_inven_pu`, `jenis_pohon`, `dbh`, `tinggi`, `fungsi`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `umt_cupet_tnm`.`kode_cucu_petak` = `umt_cucupetak`.`kode_cucu_petak`
+JOIN `inventarisasi_umt` ON `inventarisasi_umt`.`kode_cupet_tnm`  = `umt_cupet_tnm`.`kode_cupet_tnm`
+JOIN `inventarisasi_pu` ON `inventarisasi_pu`.`kode_inven_umt`  = `inventarisasi_umt`.`kode_inven_umt`
+JOIN `inventarisasi_umt_ukurkayu` ON `inventarisasi_umt_ukurkayu`.`kode_inven_pu`  = `inventarisasi_pu`.`kode_inven_pu`
+WHERE `umt_anakpetak`.`id` = \'3458\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `umt_anakpetak`.`kode_anak_petak` as `anakpetak`, `umt_cucupetak`.`kode_cucu_petak` as `cupet`, `umt_cupet_tnm`.`kode_cupet_tnm` as `cupettnm`, `inventarisasi_umt`.`kode_inven_umt` as `invenumt`, `inventarisasi_pu`.`kode_inven_pu` as `kodeinvenpu`, `luas_pu`, `bentuk_pu`, `ndvi`, `msavi`, `kelerengan`, `altitude`, `no_pohon`, `kode_inven_pu`, `jenis_pohon`, `dbh`, `tinggi`, `fungsi`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `umt_cupet_tnm`.`kode_cucu_petak` = `umt_cucupetak`.`kode_cucu_petak`
+JOIN `inventarisasi_umt` ON `inventarisasi_umt`.`kode_cupet_tnm`  = `umt_cupet_tnm`.`kode_cupet_tnm`
+JOIN `inventarisasi_pu` ON `inventarisasi_pu`.`kode_inven_umt`  = `inventarisasi_umt`.`kode_inven_umt`
+JOIN `inventarisasi_umt_ukurkayu` ON `inventarisasi_umt_ukurkayu`.`kode_inven_pu`  = `inventarisasi_pu`.`kode_inven_pu`
+WHERE `umt_anakpetak`.`id` = \'3458\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `umt_anakpetak`.`kode_anak_petak` as `anakpetak`, `umt_cucupetak`.`kode_cucu_petak` as `cupet`, `umt_cupet_tnm`.`kode_cupet_tnm` as `cupettnm`, `inventarisasi_umt`.`kode_inven_umt` as `invenumt`, `inventarisasi_pu`.`kode_inven_pu` as `kodeinvenpu`, `luas_pu`, `bentuk_pu`, `ndvi`, `msavi`, `kelerengan`, `altitude`, `no_pohon`, `kode_inven_pu`, `jenis_pohon`, `dbh`, `tinggi`, `fungsi`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `umt_cupet_tnm`.`kode_cucu_petak` = `umt_cucupetak`.`kode_cucu_petak`
+JOIN `inventarisasi_umt` ON `inventarisasi_umt`.`kode_cupet_tnm`  = `umt_cupet_tnm`.`kode_cupet_tnm`
+JOIN `inventarisasi_pu` ON `inventarisasi_pu`.`kode_inven_umt`  = `inventarisasi_umt`.`kode_inven_umt`
+JOIN `inventarisasi_umt_ukurkayu` ON `inventarisasi_umt_ukurkayu`.`kode_inven_pu`  = `inventarisasi_pu`.`kode_inven_pu`
+WHERE `umt_anakpetak`.`id` = \'3458\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `umt_anakpetak`.`kode_anak_petak` as `anakpetak`, `umt_cucupetak`.`kode_cucu_petak` as `cupet`, `umt_cupet_tnm`.`kode_cupet_tnm` as `cupettnm`, `inventarisasi_umt`.`kode_inven_umt` as `invenumt`, `inventarisasi_pu`.`kode_inven_pu` as `kodeinvenpu`, `luas_pu`, `bentuk_pu`, `ndvi`, `msavi`, `kelerengan`, `altitude`, `no_pohon`, `kode_inven_pu`, `jenis_pohon`, `dbh`, `tinggi`, `fungsi`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `umt_cupet_tnm`.`kode_cucu_petak` = `umt_cucupetak`.`kode_cucu_petak`
+JOIN `inventarisasi_umt` ON `inventarisasi_umt`.`kode_cupet_tnm`  = `umt_cupet_tnm`.`kode_cupet_tnm`
+JOIN `inventarisasi_pu` ON `inventarisasi_pu`.`kode_inven_umt`  = `inventarisasi_umt`.`kode_inven_umt`
+JOIN `inventarisasi_umt_ukurkayu` ON `inventarisasi_umt_ukurkayu`.`kode_inven_pu`  = `inventarisasi_pu`.`kode_inven_pu`
+WHERE `umt_anakpetak`.`id` = :umt_anakpetak.id:', [...], false)
+ 5 APPPATH\Controllers\Test.php(23): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Test->index('3458')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Test))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-01-03 07:53:53 --> mysqli_sql_exception: Column 'kode_inven_pu' in field list is ambiguous in D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `umt_ana...', 0)
+#1 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `umt_ana...')
+#2 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `umt_ana...')
+#3 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `umt_ana...', Array, false)
+#4 D:\XAMPP\htdocs\KHDTK - experimental\app\Controllers\Test.php(23): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Test->index('3458')
+#6 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Test))
+#7 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\XAMPP\htdocs\KHDTK - experimental\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('D:\\XAMPP\\htdocs...')
+#10 {main}
+CRITICAL - 2023-01-03 07:53:53 --> Column 'kode_inven_pu' in field list is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `umt_anakpetak`.`kode_anak_petak` as `anakpetak`, `umt_cucupetak`.`kode_cucu_petak` as `cupet`, `umt_cupet_tnm`.`kode_cupet_tnm` as `cupettnm`, `inventarisasi_umt`.`kode_inven_umt` as `invenumt`, `inventarisasi_pu`.`kode_inven_pu` as `kodeinvenpu`, `luas_pu`, `bentuk_pu`, `ndvi`, `msavi`, `kelerengan`, `altitude`, `no_pohon`, `kode_inven_pu`, `jenis_pohon`, `dbh`, `tinggi`, `fungsi`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `umt_cupet_tnm`.`kode_cucu_petak` = `umt_cucupetak`.`kode_cucu_petak`
+JOIN `inventarisasi_umt` ON `inventarisasi_umt`.`kode_cupet_tnm`  = `umt_cupet_tnm`.`kode_cupet_tnm`
+JOIN `inventarisasi_pu` ON `inventarisasi_pu`.`kode_inven_umt`  = `inventarisasi_umt`.`kode_inven_umt`
+JOIN `inventarisasi_umt_ukurkayu` ON `inventarisasi_umt_ukurkayu`.`kode_inven_pu`  = `inventarisasi_pu`.`kode_inven_pu`
+WHERE `umt_anakpetak`.`id` = \'3458\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `umt_anakpetak`.`kode_anak_petak` as `anakpetak`, `umt_cucupetak`.`kode_cucu_petak` as `cupet`, `umt_cupet_tnm`.`kode_cupet_tnm` as `cupettnm`, `inventarisasi_umt`.`kode_inven_umt` as `invenumt`, `inventarisasi_pu`.`kode_inven_pu` as `kodeinvenpu`, `luas_pu`, `bentuk_pu`, `ndvi`, `msavi`, `kelerengan`, `altitude`, `no_pohon`, `kode_inven_pu`, `jenis_pohon`, `dbh`, `tinggi`, `fungsi`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `umt_cupet_tnm`.`kode_cucu_petak` = `umt_cucupetak`.`kode_cucu_petak`
+JOIN `inventarisasi_umt` ON `inventarisasi_umt`.`kode_cupet_tnm`  = `umt_cupet_tnm`.`kode_cupet_tnm`
+JOIN `inventarisasi_pu` ON `inventarisasi_pu`.`kode_inven_umt`  = `inventarisasi_umt`.`kode_inven_umt`
+JOIN `inventarisasi_umt_ukurkayu` ON `inventarisasi_umt_ukurkayu`.`kode_inven_pu`  = `inventarisasi_pu`.`kode_inven_pu`
+WHERE `umt_anakpetak`.`id` = \'3458\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `umt_anakpetak`.`kode_anak_petak` as `anakpetak`, `umt_cucupetak`.`kode_cucu_petak` as `cupet`, `umt_cupet_tnm`.`kode_cupet_tnm` as `cupettnm`, `inventarisasi_umt`.`kode_inven_umt` as `invenumt`, `inventarisasi_pu`.`kode_inven_pu` as `kodeinvenpu`, `luas_pu`, `bentuk_pu`, `ndvi`, `msavi`, `kelerengan`, `altitude`, `no_pohon`, `kode_inven_pu`, `jenis_pohon`, `dbh`, `tinggi`, `fungsi`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `umt_cupet_tnm`.`kode_cucu_petak` = `umt_cucupetak`.`kode_cucu_petak`
+JOIN `inventarisasi_umt` ON `inventarisasi_umt`.`kode_cupet_tnm`  = `umt_cupet_tnm`.`kode_cupet_tnm`
+JOIN `inventarisasi_pu` ON `inventarisasi_pu`.`kode_inven_umt`  = `inventarisasi_umt`.`kode_inven_umt`
+JOIN `inventarisasi_umt_ukurkayu` ON `inventarisasi_umt_ukurkayu`.`kode_inven_pu`  = `inventarisasi_pu`.`kode_inven_pu`
+WHERE `umt_anakpetak`.`id` = \'3458\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `umt_anakpetak`.`kode_anak_petak` as `anakpetak`, `umt_cucupetak`.`kode_cucu_petak` as `cupet`, `umt_cupet_tnm`.`kode_cupet_tnm` as `cupettnm`, `inventarisasi_umt`.`kode_inven_umt` as `invenumt`, `inventarisasi_pu`.`kode_inven_pu` as `kodeinvenpu`, `luas_pu`, `bentuk_pu`, `ndvi`, `msavi`, `kelerengan`, `altitude`, `no_pohon`, `kode_inven_pu`, `jenis_pohon`, `dbh`, `tinggi`, `fungsi`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `umt_cupet_tnm`.`kode_cucu_petak` = `umt_cucupetak`.`kode_cucu_petak`
+JOIN `inventarisasi_umt` ON `inventarisasi_umt`.`kode_cupet_tnm`  = `umt_cupet_tnm`.`kode_cupet_tnm`
+JOIN `inventarisasi_pu` ON `inventarisasi_pu`.`kode_inven_umt`  = `inventarisasi_umt`.`kode_inven_umt`
+JOIN `inventarisasi_umt_ukurkayu` ON `inventarisasi_umt_ukurkayu`.`kode_inven_pu`  = `inventarisasi_pu`.`kode_inven_pu`
+WHERE `umt_anakpetak`.`id` = :umt_anakpetak.id:', [...], false)
+ 5 APPPATH\Controllers\Test.php(23): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Test->index('3458')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Test))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-01-03 07:53:54 --> mysqli_sql_exception: Column 'kode_inven_pu' in field list is ambiguous in D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `umt_ana...', 0)
+#1 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `umt_ana...')
+#2 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `umt_ana...')
+#3 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `umt_ana...', Array, false)
+#4 D:\XAMPP\htdocs\KHDTK - experimental\app\Controllers\Test.php(23): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Test->index('3458')
+#6 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Test))
+#7 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\XAMPP\htdocs\KHDTK - experimental\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('D:\\XAMPP\\htdocs...')
+#10 {main}
+CRITICAL - 2023-01-03 07:53:54 --> Column 'kode_inven_pu' in field list is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `umt_anakpetak`.`kode_anak_petak` as `anakpetak`, `umt_cucupetak`.`kode_cucu_petak` as `cupet`, `umt_cupet_tnm`.`kode_cupet_tnm` as `cupettnm`, `inventarisasi_umt`.`kode_inven_umt` as `invenumt`, `inventarisasi_pu`.`kode_inven_pu` as `kodeinvenpu`, `luas_pu`, `bentuk_pu`, `ndvi`, `msavi`, `kelerengan`, `altitude`, `no_pohon`, `kode_inven_pu`, `jenis_pohon`, `dbh`, `tinggi`, `fungsi`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `umt_cupet_tnm`.`kode_cucu_petak` = `umt_cucupetak`.`kode_cucu_petak`
+JOIN `inventarisasi_umt` ON `inventarisasi_umt`.`kode_cupet_tnm`  = `umt_cupet_tnm`.`kode_cupet_tnm`
+JOIN `inventarisasi_pu` ON `inventarisasi_pu`.`kode_inven_umt`  = `inventarisasi_umt`.`kode_inven_umt`
+JOIN `inventarisasi_umt_ukurkayu` ON `inventarisasi_umt_ukurkayu`.`kode_inven_pu`  = `inventarisasi_pu`.`kode_inven_pu`
+WHERE `umt_anakpetak`.`id` = \'3458\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `umt_anakpetak`.`kode_anak_petak` as `anakpetak`, `umt_cucupetak`.`kode_cucu_petak` as `cupet`, `umt_cupet_tnm`.`kode_cupet_tnm` as `cupettnm`, `inventarisasi_umt`.`kode_inven_umt` as `invenumt`, `inventarisasi_pu`.`kode_inven_pu` as `kodeinvenpu`, `luas_pu`, `bentuk_pu`, `ndvi`, `msavi`, `kelerengan`, `altitude`, `no_pohon`, `kode_inven_pu`, `jenis_pohon`, `dbh`, `tinggi`, `fungsi`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `umt_cupet_tnm`.`kode_cucu_petak` = `umt_cucupetak`.`kode_cucu_petak`
+JOIN `inventarisasi_umt` ON `inventarisasi_umt`.`kode_cupet_tnm`  = `umt_cupet_tnm`.`kode_cupet_tnm`
+JOIN `inventarisasi_pu` ON `inventarisasi_pu`.`kode_inven_umt`  = `inventarisasi_umt`.`kode_inven_umt`
+JOIN `inventarisasi_umt_ukurkayu` ON `inventarisasi_umt_ukurkayu`.`kode_inven_pu`  = `inventarisasi_pu`.`kode_inven_pu`
+WHERE `umt_anakpetak`.`id` = \'3458\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `umt_anakpetak`.`kode_anak_petak` as `anakpetak`, `umt_cucupetak`.`kode_cucu_petak` as `cupet`, `umt_cupet_tnm`.`kode_cupet_tnm` as `cupettnm`, `inventarisasi_umt`.`kode_inven_umt` as `invenumt`, `inventarisasi_pu`.`kode_inven_pu` as `kodeinvenpu`, `luas_pu`, `bentuk_pu`, `ndvi`, `msavi`, `kelerengan`, `altitude`, `no_pohon`, `kode_inven_pu`, `jenis_pohon`, `dbh`, `tinggi`, `fungsi`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `umt_cupet_tnm`.`kode_cucu_petak` = `umt_cucupetak`.`kode_cucu_petak`
+JOIN `inventarisasi_umt` ON `inventarisasi_umt`.`kode_cupet_tnm`  = `umt_cupet_tnm`.`kode_cupet_tnm`
+JOIN `inventarisasi_pu` ON `inventarisasi_pu`.`kode_inven_umt`  = `inventarisasi_umt`.`kode_inven_umt`
+JOIN `inventarisasi_umt_ukurkayu` ON `inventarisasi_umt_ukurkayu`.`kode_inven_pu`  = `inventarisasi_pu`.`kode_inven_pu`
+WHERE `umt_anakpetak`.`id` = \'3458\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `umt_anakpetak`.`kode_anak_petak` as `anakpetak`, `umt_cucupetak`.`kode_cucu_petak` as `cupet`, `umt_cupet_tnm`.`kode_cupet_tnm` as `cupettnm`, `inventarisasi_umt`.`kode_inven_umt` as `invenumt`, `inventarisasi_pu`.`kode_inven_pu` as `kodeinvenpu`, `luas_pu`, `bentuk_pu`, `ndvi`, `msavi`, `kelerengan`, `altitude`, `no_pohon`, `kode_inven_pu`, `jenis_pohon`, `dbh`, `tinggi`, `fungsi`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `umt_cupet_tnm`.`kode_cucu_petak` = `umt_cucupetak`.`kode_cucu_petak`
+JOIN `inventarisasi_umt` ON `inventarisasi_umt`.`kode_cupet_tnm`  = `umt_cupet_tnm`.`kode_cupet_tnm`
+JOIN `inventarisasi_pu` ON `inventarisasi_pu`.`kode_inven_umt`  = `inventarisasi_umt`.`kode_inven_umt`
+JOIN `inventarisasi_umt_ukurkayu` ON `inventarisasi_umt_ukurkayu`.`kode_inven_pu`  = `inventarisasi_pu`.`kode_inven_pu`
+WHERE `umt_anakpetak`.`id` = :umt_anakpetak.id:', [...], false)
+ 5 APPPATH\Controllers\Test.php(23): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Test->index('3458')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Test))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-01-03 07:53:54 --> mysqli_sql_exception: Column 'kode_inven_pu' in field list is ambiguous in D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `umt_ana...', 0)
+#1 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `umt_ana...')
+#2 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `umt_ana...')
+#3 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `umt_ana...', Array, false)
+#4 D:\XAMPP\htdocs\KHDTK - experimental\app\Controllers\Test.php(23): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Test->index('3458')
+#6 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Test))
+#7 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\XAMPP\htdocs\KHDTK - experimental\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('D:\\XAMPP\\htdocs...')
+#10 {main}
+CRITICAL - 2023-01-03 07:53:54 --> Column 'kode_inven_pu' in field list is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `umt_anakpetak`.`kode_anak_petak` as `anakpetak`, `umt_cucupetak`.`kode_cucu_petak` as `cupet`, `umt_cupet_tnm`.`kode_cupet_tnm` as `cupettnm`, `inventarisasi_umt`.`kode_inven_umt` as `invenumt`, `inventarisasi_pu`.`kode_inven_pu` as `kodeinvenpu`, `luas_pu`, `bentuk_pu`, `ndvi`, `msavi`, `kelerengan`, `altitude`, `no_pohon`, `kode_inven_pu`, `jenis_pohon`, `dbh`, `tinggi`, `fungsi`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `umt_cupet_tnm`.`kode_cucu_petak` = `umt_cucupetak`.`kode_cucu_petak`
+JOIN `inventarisasi_umt` ON `inventarisasi_umt`.`kode_cupet_tnm`  = `umt_cupet_tnm`.`kode_cupet_tnm`
+JOIN `inventarisasi_pu` ON `inventarisasi_pu`.`kode_inven_umt`  = `inventarisasi_umt`.`kode_inven_umt`
+JOIN `inventarisasi_umt_ukurkayu` ON `inventarisasi_umt_ukurkayu`.`kode_inven_pu`  = `inventarisasi_pu`.`kode_inven_pu`
+WHERE `umt_anakpetak`.`id` = \'3458\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `umt_anakpetak`.`kode_anak_petak` as `anakpetak`, `umt_cucupetak`.`kode_cucu_petak` as `cupet`, `umt_cupet_tnm`.`kode_cupet_tnm` as `cupettnm`, `inventarisasi_umt`.`kode_inven_umt` as `invenumt`, `inventarisasi_pu`.`kode_inven_pu` as `kodeinvenpu`, `luas_pu`, `bentuk_pu`, `ndvi`, `msavi`, `kelerengan`, `altitude`, `no_pohon`, `kode_inven_pu`, `jenis_pohon`, `dbh`, `tinggi`, `fungsi`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `umt_cupet_tnm`.`kode_cucu_petak` = `umt_cucupetak`.`kode_cucu_petak`
+JOIN `inventarisasi_umt` ON `inventarisasi_umt`.`kode_cupet_tnm`  = `umt_cupet_tnm`.`kode_cupet_tnm`
+JOIN `inventarisasi_pu` ON `inventarisasi_pu`.`kode_inven_umt`  = `inventarisasi_umt`.`kode_inven_umt`
+JOIN `inventarisasi_umt_ukurkayu` ON `inventarisasi_umt_ukurkayu`.`kode_inven_pu`  = `inventarisasi_pu`.`kode_inven_pu`
+WHERE `umt_anakpetak`.`id` = \'3458\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `umt_anakpetak`.`kode_anak_petak` as `anakpetak`, `umt_cucupetak`.`kode_cucu_petak` as `cupet`, `umt_cupet_tnm`.`kode_cupet_tnm` as `cupettnm`, `inventarisasi_umt`.`kode_inven_umt` as `invenumt`, `inventarisasi_pu`.`kode_inven_pu` as `kodeinvenpu`, `luas_pu`, `bentuk_pu`, `ndvi`, `msavi`, `kelerengan`, `altitude`, `no_pohon`, `kode_inven_pu`, `jenis_pohon`, `dbh`, `tinggi`, `fungsi`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `umt_cupet_tnm`.`kode_cucu_petak` = `umt_cucupetak`.`kode_cucu_petak`
+JOIN `inventarisasi_umt` ON `inventarisasi_umt`.`kode_cupet_tnm`  = `umt_cupet_tnm`.`kode_cupet_tnm`
+JOIN `inventarisasi_pu` ON `inventarisasi_pu`.`kode_inven_umt`  = `inventarisasi_umt`.`kode_inven_umt`
+JOIN `inventarisasi_umt_ukurkayu` ON `inventarisasi_umt_ukurkayu`.`kode_inven_pu`  = `inventarisasi_pu`.`kode_inven_pu`
+WHERE `umt_anakpetak`.`id` = \'3458\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `umt_anakpetak`.`kode_anak_petak` as `anakpetak`, `umt_cucupetak`.`kode_cucu_petak` as `cupet`, `umt_cupet_tnm`.`kode_cupet_tnm` as `cupettnm`, `inventarisasi_umt`.`kode_inven_umt` as `invenumt`, `inventarisasi_pu`.`kode_inven_pu` as `kodeinvenpu`, `luas_pu`, `bentuk_pu`, `ndvi`, `msavi`, `kelerengan`, `altitude`, `no_pohon`, `kode_inven_pu`, `jenis_pohon`, `dbh`, `tinggi`, `fungsi`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `umt_cupet_tnm`.`kode_cucu_petak` = `umt_cucupetak`.`kode_cucu_petak`
+JOIN `inventarisasi_umt` ON `inventarisasi_umt`.`kode_cupet_tnm`  = `umt_cupet_tnm`.`kode_cupet_tnm`
+JOIN `inventarisasi_pu` ON `inventarisasi_pu`.`kode_inven_umt`  = `inventarisasi_umt`.`kode_inven_umt`
+JOIN `inventarisasi_umt_ukurkayu` ON `inventarisasi_umt_ukurkayu`.`kode_inven_pu`  = `inventarisasi_pu`.`kode_inven_pu`
+WHERE `umt_anakpetak`.`id` = :umt_anakpetak.id:', [...], false)
+ 5 APPPATH\Controllers\Test.php(23): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Test->index('3458')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Test))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-01-03 07:55:14 --> mysqli_sql_exception: Column 'kode_inven_pu' in field list is ambiguous in D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `umt_ana...', 0)
+#1 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `umt_ana...')
+#2 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `umt_ana...')
+#3 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `umt_ana...', Array, false)
+#4 D:\XAMPP\htdocs\KHDTK - experimental\app\Controllers\Test.php(23): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Test->index('3458')
+#6 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Test))
+#7 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\XAMPP\htdocs\KHDTK - experimental\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('D:\\XAMPP\\htdocs...')
+#10 {main}
+CRITICAL - 2023-01-03 07:55:14 --> Column 'kode_inven_pu' in field list is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `umt_anakpetak`.`kode_anak_petak` as `anakpetak`, `umt_cucupetak`.`kode_cucu_petak` as `cupet`, `umt_cupet_tnm`.`kode_cupet_tnm` as `cupettnm`, `inventarisasi_umt`.`kode_inven_umt` as `invenumt`, `inventarisasi_pu`.`kode_inven_pu` as `kodeinvenpu`, `luas_pu`, `bentuk_pu`, `ndvi`, `msavi`, `kelerengan`, `altitude`, `no_pohon`, `kode_inven_pu`, `jenis_pohon`, `dbh`, `tinggi`, `fungsi`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `umt_cupet_tnm`.`kode_cucu_petak` = `umt_cucupetak`.`kode_cucu_petak`
+JOIN `inventarisasi_umt` ON `inventarisasi_umt`.`kode_cupet_tnm`  = `umt_cupet_tnm`.`kode_cupet_tnm`
+JOIN `inventarisasi_pu` ON `inventarisasi_pu`.`kode_inven_umt`  = `inventarisasi_umt`.`kode_inven_umt`
+JOIN `inventarisasi_umt_ukurkayu` ON `inventarisasi_umt_ukurkayu`.`kode_inven_pu`  = `inventarisasi_pu`.`kode_inven_pu`
+WHERE `umt_anakpetak`.`id` = \'3458\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `umt_anakpetak`.`kode_anak_petak` as `anakpetak`, `umt_cucupetak`.`kode_cucu_petak` as `cupet`, `umt_cupet_tnm`.`kode_cupet_tnm` as `cupettnm`, `inventarisasi_umt`.`kode_inven_umt` as `invenumt`, `inventarisasi_pu`.`kode_inven_pu` as `kodeinvenpu`, `luas_pu`, `bentuk_pu`, `ndvi`, `msavi`, `kelerengan`, `altitude`, `no_pohon`, `kode_inven_pu`, `jenis_pohon`, `dbh`, `tinggi`, `fungsi`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `umt_cupet_tnm`.`kode_cucu_petak` = `umt_cucupetak`.`kode_cucu_petak`
+JOIN `inventarisasi_umt` ON `inventarisasi_umt`.`kode_cupet_tnm`  = `umt_cupet_tnm`.`kode_cupet_tnm`
+JOIN `inventarisasi_pu` ON `inventarisasi_pu`.`kode_inven_umt`  = `inventarisasi_umt`.`kode_inven_umt`
+JOIN `inventarisasi_umt_ukurkayu` ON `inventarisasi_umt_ukurkayu`.`kode_inven_pu`  = `inventarisasi_pu`.`kode_inven_pu`
+WHERE `umt_anakpetak`.`id` = \'3458\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `umt_anakpetak`.`kode_anak_petak` as `anakpetak`, `umt_cucupetak`.`kode_cucu_petak` as `cupet`, `umt_cupet_tnm`.`kode_cupet_tnm` as `cupettnm`, `inventarisasi_umt`.`kode_inven_umt` as `invenumt`, `inventarisasi_pu`.`kode_inven_pu` as `kodeinvenpu`, `luas_pu`, `bentuk_pu`, `ndvi`, `msavi`, `kelerengan`, `altitude`, `no_pohon`, `kode_inven_pu`, `jenis_pohon`, `dbh`, `tinggi`, `fungsi`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `umt_cupet_tnm`.`kode_cucu_petak` = `umt_cucupetak`.`kode_cucu_petak`
+JOIN `inventarisasi_umt` ON `inventarisasi_umt`.`kode_cupet_tnm`  = `umt_cupet_tnm`.`kode_cupet_tnm`
+JOIN `inventarisasi_pu` ON `inventarisasi_pu`.`kode_inven_umt`  = `inventarisasi_umt`.`kode_inven_umt`
+JOIN `inventarisasi_umt_ukurkayu` ON `inventarisasi_umt_ukurkayu`.`kode_inven_pu`  = `inventarisasi_pu`.`kode_inven_pu`
+WHERE `umt_anakpetak`.`id` = \'3458\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `umt_anakpetak`.`kode_anak_petak` as `anakpetak`, `umt_cucupetak`.`kode_cucu_petak` as `cupet`, `umt_cupet_tnm`.`kode_cupet_tnm` as `cupettnm`, `inventarisasi_umt`.`kode_inven_umt` as `invenumt`, `inventarisasi_pu`.`kode_inven_pu` as `kodeinvenpu`, `luas_pu`, `bentuk_pu`, `ndvi`, `msavi`, `kelerengan`, `altitude`, `no_pohon`, `kode_inven_pu`, `jenis_pohon`, `dbh`, `tinggi`, `fungsi`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `umt_cupet_tnm`.`kode_cucu_petak` = `umt_cucupetak`.`kode_cucu_petak`
+JOIN `inventarisasi_umt` ON `inventarisasi_umt`.`kode_cupet_tnm`  = `umt_cupet_tnm`.`kode_cupet_tnm`
+JOIN `inventarisasi_pu` ON `inventarisasi_pu`.`kode_inven_umt`  = `inventarisasi_umt`.`kode_inven_umt`
+JOIN `inventarisasi_umt_ukurkayu` ON `inventarisasi_umt_ukurkayu`.`kode_inven_pu`  = `inventarisasi_pu`.`kode_inven_pu`
+WHERE `umt_anakpetak`.`id` = :umt_anakpetak.id:', [...], false)
+ 5 APPPATH\Controllers\Test.php(23): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Test->index('3458')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Test))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-03 08:00:51 --> Undefined index: kode_inven_pu
+in APPPATH\Views\apps\maps_detail.php on line 547.
+ 1 APPPATH\Views\apps\maps_detail.php(547): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: kode_inven_pu', 'APPPATH\\Views\\apps\\maps_detail.php', 547, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\apps\\maps_detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/maps_detail', [], true)
+ 5 APPPATH\Controllers\DetailMaps.php(31): view('apps/maps_detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('3458')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-03 08:05:17 --> Undefined index: anak_petak
+in APPPATH\Views\apps\maps_detail.php on line 570.
+ 1 APPPATH\Views\apps\maps_detail.php(570): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: anak_petak', 'APPPATH\\Views\\apps\\maps_detail.php', 570, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\apps\\maps_detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/maps_detail', [], true)
+ 5 APPPATH\Controllers\DetailMaps.php(31): view('apps/maps_detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('3458')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')

@@ -1,0 +1,16 @@
+CRITICAL - 2022-12-16 00:08:36 --> Undefined property: App\Controllers\Umt::$UmtModel
+in APPPATH\Controllers\Umt.php on line 12.
+ 1 APPPATH\Controllers\Umt.php(12): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: App\\Controllers\\Umt::$UmtModel', 'APPPATH\\Controllers\\Umt.php', 12, [])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Umt->saveumt()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Umt))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-16 00:27:17 --> Undefined index: kode_penataan_kawasan
+in APPPATH\Controllers\Umt.php on line 61.
+ 1 APPPATH\Controllers\Umt.php(61): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: kode_penataan_kawasan', 'APPPATH\\Controllers\\Umt.php', 61, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Umt->importumt()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Umt))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')

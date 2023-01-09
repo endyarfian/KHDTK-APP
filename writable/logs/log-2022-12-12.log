@@ -1,0 +1,12 @@
+CRITICAL - 2022-12-12 01:27:33 --> Undefined index: kode_zonasi
+in APPPATH\Views\apps\organisasi_kawasan.php on line 1423.
+ 1 APPPATH\Views\apps\organisasi_kawasan.php(1423): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: kode_zonasi', 'APPPATH\\Views\\apps\\organisasi_kawasan.php', 1423, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\apps\\organisasi_kawasan.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/organisasi_kawasan', [], true)
+ 5 APPPATH\Controllers\OrganisasiKawasan.php(40): view('apps/organisasi_kawasan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\OrganisasiKawasan->organisasi_kawasan()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrganisasiKawasan))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')

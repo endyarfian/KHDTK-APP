@@ -1,0 +1,133 @@
+CRITICAL - 2022-11-30 07:08:39 --> Undefined variable: base_url
+in APPPATH\Views\apps\main.php on line 65.
+ 1 APPPATH\Views\apps\main.php(65): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: base_url', 'APPPATH\\Views\\apps\\main.php', 65, [])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\apps\\main.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/main', [], true)
+ 5 APPPATH\Controllers\Main.php(9): view('apps/main')
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Main->index()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Main))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-30 12:38:23 --> Undefined variable: title
+in APPPATH\Views\apps\kawasan_umt.php on line 8.
+ 1 APPPATH\Views\apps\kawasan_umt.php(8): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: title', 'APPPATH\\Views\\apps\\kawasan_umt.php', 8, [])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\apps\\kawasan_umt.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/kawasan_umt', [], true)
+ 5 APPPATH\Controllers\Main.php(31): view('apps/kawasan_umt')
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Main->kawasan_umt()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Main))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-30 13:01:05 --> Invalid file: apps/kawasan_umt.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('apps/kawasan_umt.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/kawasan_umt', [], true)
+ 3 APPPATH\Controllers\Main.php(31): view('apps/kawasan_umt')
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Main->kawasan_umt()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Main))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-30 16:09:55 --> Class 'App\Models\PenataanKawasanModel' not found
+in APPPATH\Controllers\Main.php on line 15.
+ 1 SYSTEMPATH\CodeIgniter.php(889): App\Controllers\Main->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-30 16:13:47 --> Class 'App\Models\PenataanKawasanModel' not found
+in APPPATH\Controllers\Main.php on line 15.
+ 1 SYSTEMPATH\CodeIgniter.php(889): App\Controllers\Main->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-30 16:21:58 --> Class 'App\Models\UmtModel' not found
+in APPPATH\Controllers\Main.php on line 15.
+ 1 SYSTEMPATH\CodeIgniter.php(889): App\Controllers\Main->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-30 16:26:15 --> Class 'App\Models\Penataan\A\PenataanKawasanModel' not found
+in APPPATH\Controllers\Main.php on line 15.
+ 1 SYSTEMPATH\CodeIgniter.php(889): App\Controllers\Main->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-30 16:44:28 --> Class 'App\Models\PenataanKawasanModel' not found
+in APPPATH\Controllers\Main.php on line 15.
+ 1 SYSTEMPATH\CodeIgniter.php(889): App\Controllers\Main->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-30 16:44:29 --> Class 'App\Models\PenataanKawasanModel' not found
+in APPPATH\Controllers\Main.php on line 15.
+ 1 SYSTEMPATH\CodeIgniter.php(889): App\Controllers\Main->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-30 16:44:30 --> Class 'App\Models\PenataanKawasanModel' not found
+in APPPATH\Controllers\Main.php on line 15.
+ 1 SYSTEMPATH\CodeIgniter.php(889): App\Controllers\Main->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-30 16:44:30 --> Class 'App\Models\PenataanKawasanModel' not found
+in APPPATH\Controllers\Main.php on line 15.
+ 1 SYSTEMPATH\CodeIgniter.php(889): App\Controllers\Main->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-30 16:44:30 --> Class 'App\Models\PenataanKawasanModel' not found
+in APPPATH\Controllers\Main.php on line 15.
+ 1 SYSTEMPATH\CodeIgniter.php(889): App\Controllers\Main->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-30 16:44:30 --> Class 'App\Models\PenataanKawasanModel' not found
+in APPPATH\Controllers\Main.php on line 15.
+ 1 SYSTEMPATH\CodeIgniter.php(889): App\Controllers\Main->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-30 16:44:30 --> Class 'App\Models\PenataanKawasanModel' not found
+in APPPATH\Controllers\Main.php on line 15.
+ 1 SYSTEMPATH\CodeIgniter.php(889): App\Controllers\Main->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-30 16:44:31 --> Class 'App\Models\PenataanKawasanModel' not found
+in APPPATH\Controllers\Main.php on line 15.
+ 1 SYSTEMPATH\CodeIgniter.php(889): App\Controllers\Main->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-30 16:44:31 --> Class 'App\Models\PenataanKawasanModel' not found
+in APPPATH\Controllers\Main.php on line 15.
+ 1 SYSTEMPATH\CodeIgniter.php(889): App\Controllers\Main->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-11-30 17:16:09 --> Undefined property: App\Controllers\OrganisasiKawasan::$UmtModel
+in APPPATH\Controllers\OrganisasiKawasan.php on line 17.
+ 1 APPPATH\Controllers\OrganisasiKawasan.php(17): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: App\\Controllers\\OrganisasiKawasan::$UmtModel', 'APPPATH\\Controllers\\OrganisasiKawasan.php', 17, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\OrganisasiKawasan->organisasi_kawasan()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\OrganisasiKawasan))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')

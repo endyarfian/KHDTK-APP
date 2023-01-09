@@ -1,0 +1,465 @@
+CRITICAL - 2022-12-29 02:29:14 --> Undefined variable: rtk
+in APPPATH\Views\user-database\rencana_tahunan.php on line 673.
+ 1 APPPATH\Views\user-database\rencana_tahunan.php(673): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: rtk', 'APPPATH\\Views\\user-database\\rencana_tahunan.php', 673, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user-database\\rencana_tahunan.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user-database/rencana_tahunan', [], true)
+ 5 APPPATH\Controllers\UserRencanaTahunan.php(44): view('user-database/rencana_tahunan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\UserRencanaTahunan->index()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserRencanaTahunan))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-29 03:23:22 --> Undefined index: laporan
+in APPPATH\Views\database\alokasi_realisasi.php on line 1068.
+ 1 APPPATH\Views\database\alokasi_realisasi.php(1068): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: laporan', 'APPPATH\\Views\\database\\alokasi_realisasi.php', 1068, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\database\\alokasi_realisasi.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('database/alokasi_realisasi', [], true)
+ 5 APPPATH\Controllers\AlokasiRealisasi.php(43): view('database/alokasi_realisasi', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\AlokasiRealisasi->alokasi_realisasi()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AlokasiRealisasi))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-29 10:43:47 --> Maximum execution time of 60 seconds exceeded
+in SYSTEMPATH\Debug\Exceptions.php on line 153.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2022-12-29 10:44:49 --> Maximum execution time of 60 seconds exceeded
+in SYSTEMPATH\Debug\Exceptions.php on line 153.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2022-12-29 10:45:49 --> Maximum execution time of 60 seconds exceeded
+in SYSTEMPATH\Debug\Exceptions.php on line 153.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2022-12-29 10:49:29 --> Maximum execution time of 60 seconds exceeded
+in SYSTEMPATH\Debug\Exceptions.php on line 153.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2022-12-29 11:11:16 --> Maximum execution time of 60 seconds exceeded
+in SYSTEMPATH\Debug\Exceptions.php on line 153.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2022-12-29 11:14:34 --> Maximum execution time of 60 seconds exceeded
+in SYSTEMPATH\Debug\Exceptions.php on line 153.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2022-12-29 11:16:49 --> Maximum execution time of 60 seconds exceeded
+in SYSTEMPATH\Debug\Exceptions.php on line 153.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2022-12-29 11:22:09 --> Maximum execution time of 60 seconds exceeded
+in SYSTEMPATH\Debug\Exceptions.php on line 153.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2022-12-29 11:24:47 --> Maximum execution time of 60 seconds exceeded
+in SYSTEMPATH\Debug\Exceptions.php on line 153.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2022-12-29 11:34:41 --> Maximum execution time of 60 seconds exceeded
+in SYSTEMPATH\Debug\Exceptions.php on line 153.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2022-12-29 11:38:48 --> Maximum execution time of 60 seconds exceeded
+in SYSTEMPATH\Debug\Exceptions.php on line 153.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2022-12-29 11:39:48 --> Maximum execution time of 60 seconds exceeded
+in SYSTEMPATH\Debug\Exceptions.php on line 153.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2022-12-29 11:40:48 --> Maximum execution time of 60 seconds exceeded
+in SYSTEMPATH\Debug\Exceptions.php on line 153.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2022-12-29 11:59:20 --> Maximum execution time of 60 seconds exceeded
+in SYSTEMPATH\Debug\Exceptions.php on line 153.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+ERROR - 2022-12-29 12:50:19 --> mysqli_sql_exception: Unknown column 'kap' in 'field list' in D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `kap` as...', 0)
+#1 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `kap` as...')
+#2 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `kap` as...')
+#3 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `kap` as...', Array, false)
+#4 D:\XAMPP\htdocs\KHDTK - experimental\app\Controllers\Maps.php(13): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Maps->index()
+#6 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maps))
+#7 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\XAMPP\htdocs\KHDTK - experimental\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('D:\\XAMPP\\htdocs...')
+#10 {main}
+CRITICAL - 2022-12-29 12:50:19 --> Unknown column 'kap' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `kap` as `kode_anak_petak`, `anak_petak`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `kap`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `kap` as `kode_anak_petak`, `anak_petak`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `kap`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `kap` as `kode_anak_petak`, `anak_petak`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `kap`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `kap` as `kode_anak_petak`, `anak_petak`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `kap`', [], false)
+ 5 APPPATH\Controllers\Maps.php(13): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Maps->index()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-29 12:51:44 --> mysqli_sql_exception: Column 'kode_anak_petak' in field list is ambiguous in D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `kode_an...', 0)
+#1 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `kode_an...')
+#2 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `kode_an...')
+#3 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `kode_an...', Array, false)
+#4 D:\XAMPP\htdocs\KHDTK - experimental\app\Controllers\Maps.php(13): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Maps->index()
+#6 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maps))
+#7 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\XAMPP\htdocs\KHDTK - experimental\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('D:\\XAMPP\\htdocs...')
+#10 {main}
+CRITICAL - 2022-12-29 12:51:44 --> Column 'kode_anak_petak' in field list is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `kode_anak_petak` as `kap`, `anak_petak`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `kap`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `kode_anak_petak` as `kap`, `anak_petak`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `kap`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `kode_anak_petak` as `kap`, `anak_petak`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `kap`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `kode_anak_petak` as `kap`, `anak_petak`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `kap`', [], false)
+ 5 APPPATH\Controllers\Maps.php(13): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Maps->index()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-29 12:54:26 --> syntax error, unexpected '$data' (T_VARIABLE)
+in APPPATH\Controllers\Maps.php on line 17.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(259): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Maps.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(237): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Maps')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Maps')
+ 4 [internal function]: spl_autoload_call('App\\Controllers\\Maps')
+ 5 SYSTEMPATH\CodeIgniter.php(877): class_exists('\\App\\Controllers\\Maps', true)
+ 6 SYSTEMPATH\CodeIgniter.php(469): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-29 13:03:23 --> Maximum execution time of 60 seconds exceeded
+in SYSTEMPATH\Debug\Exceptions.php on line 153.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2022-12-29 13:05:04 --> Maximum execution time of 60 seconds exceeded
+in SYSTEMPATH\Debug\Exceptions.php on line 153.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2022-12-29 13:42:47 --> Maximum execution time of 60 seconds exceeded
+in SYSTEMPATH\Debug\Exceptions.php on line 153.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2022-12-29 13:44:03 --> Maximum execution time of 60 seconds exceeded
+in SYSTEMPATH\Debug\Exceptions.php on line 153.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2022-12-29 13:45:59 --> Maximum execution time of 60 seconds exceeded
+in SYSTEMPATH\Debug\Exceptions.php on line 153.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2022-12-29 13:49:36 --> Maximum execution time of 60 seconds exceeded
+in SYSTEMPATH\Debug\Exceptions.php on line 153.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2022-12-29 13:50:36 --> Maximum execution time of 60 seconds exceeded
+in SYSTEMPATH\Debug\Exceptions.php on line 153.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2022-12-29 15:31:07 --> Trying to get property 'kode_umt' of non-object
+in APPPATH\Controllers\Maps.php on line 21.
+ 1 APPPATH\Controllers\Maps.php(21): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'kode_umt\' of non-object', 'APPPATH\\Controllers\\Maps.php', 21, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Maps->index()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maps))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-29 15:32:04 --> mysqli_sql_exception: Unknown column 'anak_petak' in 'where clause' in D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Model.php(250): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\BaseModel.php(623): CodeIgniter\Model->doFirst()
+#6 D:\XAMPP\htdocs\KHDTK - experimental\app\Controllers\Maps.php(18): CodeIgniter\BaseModel->first()
+#7 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Maps->index()
+#8 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maps))
+#9 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\XAMPP\htdocs\KHDTK - experimental\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('D:\\XAMPP\\htdocs...')
+#12 {main}
+CRITICAL - 2022-12-29 15:32:04 --> Unknown column 'anak_petak' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `umt_cucupetak`
+WHERE `anak_petak` = \'160B\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `umt_cucupetak`
+WHERE `anak_petak` = \'160B\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `umt_cucupetak`
+WHERE `anak_petak` = \'160B\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `umt_cucupetak`
+WHERE `anak_petak` = :anak_petak:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Model.php(250): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(623): CodeIgniter\Model->doFirst()
+ 7 APPPATH\Controllers\Maps.php(18): CodeIgniter\BaseModel->first()
+ 8 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Maps->index()
+ 9 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maps))
+10 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-29 15:32:49 --> mysqli_sql_exception: Unknown column 'anak_petak' in 'where clause' in D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Model.php(250): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\BaseModel.php(623): CodeIgniter\Model->doFirst()
+#6 D:\XAMPP\htdocs\KHDTK - experimental\app\Controllers\Maps.php(18): CodeIgniter\BaseModel->first()
+#7 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Maps->index()
+#8 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maps))
+#9 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\XAMPP\htdocs\KHDTK - experimental\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('D:\\XAMPP\\htdocs...')
+#12 {main}
+CRITICAL - 2022-12-29 15:32:49 --> Unknown column 'anak_petak' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `umt_cucupetak`
+WHERE `anak_petak` = \'160B\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `umt_cucupetak`
+WHERE `anak_petak` = \'160B\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `umt_cucupetak`
+WHERE `anak_petak` = \'160B\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `umt_cucupetak`
+WHERE `anak_petak` = :anak_petak:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Model.php(250): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(623): CodeIgniter\Model->doFirst()
+ 7 APPPATH\Controllers\Maps.php(18): CodeIgniter\BaseModel->first()
+ 8 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Maps->index()
+ 9 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maps))
+10 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-29 15:33:18 --> Trying to get property 'anak_petak' of non-object
+in APPPATH\Controllers\Maps.php on line 21.
+ 1 APPPATH\Controllers\Maps.php(21): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'anak_petak\' of non-object', 'APPPATH\\Controllers\\Maps.php', 21, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Maps->index()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maps))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-29 15:36:03 --> Trying to get property 'anak_petak' of non-object
+in APPPATH\Controllers\Maps.php on line 21.
+ 1 APPPATH\Controllers\Maps.php(21): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'anak_petak\' of non-object', 'APPPATH\\Controllers\\Maps.php', 21, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Maps->index()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maps))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-29 15:36:37 --> Trying to get property 'petak' of non-object
+in APPPATH\Controllers\Maps.php on line 21.
+ 1 APPPATH\Controllers\Maps.php(21): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'petak\' of non-object', 'APPPATH\\Controllers\\Maps.php', 21, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Maps->index()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maps))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-29 15:38:26 --> Trying to get property 'anak_petak' of non-object
+in APPPATH\Controllers\Maps.php on line 21.
+ 1 APPPATH\Controllers\Maps.php(21): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'anak_petak\' of non-object', 'APPPATH\\Controllers\\Maps.php', 21, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Maps->index()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maps))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-29 15:47:14 --> Call to a member function where() on array
+in APPPATH\Controllers\Maps.php on line 21.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Maps->index()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maps))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-29 15:49:17 --> Call to a member function select() on array
+in APPPATH\Controllers\Maps.php on line 21.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Maps->index()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maps))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-29 15:49:44 --> Trying to get property 'kode_umt' of non-object
+in APPPATH\Controllers\Maps.php on line 21.
+ 1 APPPATH\Controllers\Maps.php(21): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'kode_umt\' of non-object', 'APPPATH\\Controllers\\Maps.php', 21, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Maps->index()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maps))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-29 15:53:01 --> Call to a member function get() on array
+in APPPATH\Controllers\Maps.php on line 21.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Maps->index()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maps))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-29 15:56:37 --> Trying to get property 'kode_umt' of non-object
+in APPPATH\Controllers\Maps.php on line 21.
+ 1 APPPATH\Controllers\Maps.php(21): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'kode_umt\' of non-object', 'APPPATH\\Controllers\\Maps.php', 21, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Maps->index()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maps))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-29 16:00:14 --> Function name must be a string
+in APPPATH\Controllers\Maps.php on line 21.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Maps->index()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maps))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-29 16:01:54 --> Undefined index: kode_umt
+in APPPATH\Controllers\Maps.php on line 21.
+ 1 APPPATH\Controllers\Maps.php(21): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: kode_umt', 'APPPATH\\Controllers\\Maps.php', 21, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Maps->index()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maps))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-29 16:05:52 --> mysqli_sql_exception: Unknown column 'anak_petak' in 'where clause' in D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Model.php(250): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\BaseModel.php(623): CodeIgniter\Model->doFirst()
+#6 D:\XAMPP\htdocs\KHDTK - experimental\app\Controllers\Maps.php(18): CodeIgniter\BaseModel->first()
+#7 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Maps->index()
+#8 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maps))
+#9 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\XAMPP\htdocs\KHDTK - experimental\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('D:\\XAMPP\\htdocs...')
+#12 {main}
+CRITICAL - 2022-12-29 16:05:52 --> Unknown column 'anak_petak' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `umt_cucupetak`
+WHERE `anak_petak` = \'160B\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `umt_cucupetak`
+WHERE `anak_petak` = \'160B\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `umt_cucupetak`
+WHERE `anak_petak` = \'160B\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `umt_cucupetak`
+WHERE `anak_petak` = :anak_petak:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Model.php(250): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(623): CodeIgniter\Model->doFirst()
+ 7 APPPATH\Controllers\Maps.php(18): CodeIgniter\BaseModel->first()
+ 8 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Maps->index()
+ 9 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maps))
+10 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-29 16:06:37 --> mysqli_sql_exception: Unknown column 'anak_petak' in 'field list' in D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `anak_pe...', 0)
+#1 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `anak_pe...')
+#2 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `anak_pe...')
+#3 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `anak_pe...', Array, false)
+#4 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Model.php(250): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\BaseModel.php(623): CodeIgniter\Model->doFirst()
+#6 D:\XAMPP\htdocs\KHDTK - experimental\app\Controllers\Maps.php(19): CodeIgniter\BaseModel->first()
+#7 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Maps->index()
+#8 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maps))
+#9 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\XAMPP\htdocs\KHDTK - experimental\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('D:\\XAMPP\\htdocs...')
+#12 {main}
+CRITICAL - 2022-12-29 16:06:37 --> Unknown column 'anak_petak' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `anak_petak`
+FROM `umt_cucupetak`
+WHERE `anak_petak` = \'160B\'
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `anak_petak`
+FROM `umt_cucupetak`
+WHERE `anak_petak` = \'160B\'
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `anak_petak`
+FROM `umt_cucupetak`
+WHERE `anak_petak` = \'160B\'
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `anak_petak`
+FROM `umt_cucupetak`
+WHERE `anak_petak` = :anak_petak:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Model.php(250): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(623): CodeIgniter\Model->doFirst()
+ 7 APPPATH\Controllers\Maps.php(19): CodeIgniter\BaseModel->first()
+ 8 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Maps->index()
+ 9 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maps))
+10 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-29 16:08:20 --> mysqli_sql_exception: Unknown column 'anak_petak' in 'where clause' in D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Model.php(250): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\BaseModel.php(623): CodeIgniter\Model->doFirst()
+#6 D:\XAMPP\htdocs\KHDTK - experimental\app\Controllers\Maps.php(18): CodeIgniter\BaseModel->first()
+#7 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Maps->index()
+#8 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maps))
+#9 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\XAMPP\htdocs\KHDTK - experimental\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 D:\XAMPP\htdocs\KHDTK - experimental\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('D:\\XAMPP\\htdocs...')
+#12 {main}
+CRITICAL - 2022-12-29 16:08:20 --> Unknown column 'anak_petak' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `umt_cucupetak`
+WHERE `kode_anak_petak` = \'160B\'
+AND `anak_petak` = 1
+ LIMIT 1', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `umt_cucupetak`
+WHERE `kode_anak_petak` = \'160B\'
+AND `anak_petak` = 1
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `umt_cucupetak`
+WHERE `kode_anak_petak` = \'160B\'
+AND `anak_petak` = 1
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `umt_cucupetak`
+WHERE `kode_anak_petak` = :kode_anak_petak:
+AND `anak_petak` = :anak_petak:
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Model.php(250): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(623): CodeIgniter\Model->doFirst()
+ 7 APPPATH\Controllers\Maps.php(18): CodeIgniter\BaseModel->first()
+ 8 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Maps->index()
+ 9 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maps))
+10 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
