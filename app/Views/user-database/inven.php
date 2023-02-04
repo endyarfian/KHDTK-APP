@@ -580,7 +580,7 @@
                                         <th>No. </th>
                                         <th>Kode Inven UMT</th>
                                         <th>Kode Inventarisasi</th>
-                                        <th>Kode Tanaman Cucu Petak</th>
+                                        <th>Kode Tanaman Anak Petak</th>
                                         <th>Tanggal Inven UMT</th>
                                         <th>Penanggung Jawab</th>
                                     </tr>
@@ -592,7 +592,7 @@
                                             <td scope="row"> <?= $no++; ?> </td>
                                             <td><?= $var['kode_inven_umt']; ?></td>
                                             <td><?= $var['kode_inventarisasi']; ?></td>
-                                            <td><?= $var['kode_cupet_tnm']; ?></td>
+                                            <td><?= $var['kode_anakpetak_tnm']; ?></td>
                                             <td><?= $var['tanggal']; ?></td>
                                             <td><?= $var['pj']; ?></td>
                                         </tr>
@@ -622,7 +622,6 @@
                                         <th>No. </th>
                                         <th>Kode Inven UMT</th>
                                         <th>Kode Inven PU</th>
-                                        <th>No. PU</th>
                                         <th>Tanggal Inven</th>
                                         <th>Penanggung Jawab</th>
                                         <th>Luas PU (m²)</th>
@@ -646,7 +645,6 @@
                                             <td scope="row"> <?= $no++; ?> </td>
                                             <td><?= $var['kode_inven_umt']; ?></td>
                                             <td><?= $var['kode_inven_pu']; ?></td>
-                                            <td><?= $var['no_pu']; ?></td>
                                             <td><?= $var['tanggal']; ?></td>
                                             <td><?= $var['pj']; ?></td>
                                             <td><?= $var['luas_pu']; ?></td>

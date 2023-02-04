@@ -18,6 +18,6 @@ class AnakPetakModel extends Model
     }
 
     protected $allowedFields = [
-        'kode_anak_petak', 'master_anak_petak', 'anak_petak', 'kode_umt', 'luas', 'luas_ht', 'persentase'
+        'kode_anak_petak', 'master_anak_petak', 'anak_petak', 'kode_umt', 'luas', 'luas_ht'
     ];
 }

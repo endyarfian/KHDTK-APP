@@ -567,19 +567,19 @@
                                 <thead>
                                     <tr>
                                         <th>No. </th>
-                                        <th>Kode HWD pada Cucu Petak</th>
+                                        <th>Kode HWD pada Anak Petak</th>
                                         <th>Kode HWD</th>
-                                        <th>Kode Cucu Petak</th>
+                                        <th>Kode Anak PEtak</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <?php $no = 1; ?>
-                                    <?php foreach ($hwdcupet as $var) : ?>
+                                    <?php foreach ($hwdanakpetak as $var) : ?>
                                         <tr>
                                             <td scope="row"> <?= $no++; ?> </td>
-                                            <td><?= $var['kode_hwd_cupet']; ?></td>
+                                            <td><?= $var['kode_hwd_anakpetak']; ?></td>
                                             <td><?= $var['kode_hwd']; ?></td>
-                                            <td><?= $var['kode_cucu_petak']; ?></td>
+                                            <td><?= $var['kode_anak_petak']; ?></td>
                                         </tr>
                                     <?php endforeach; ?>
                                 </tbody>
@@ -606,7 +606,7 @@
                                     <tr>
                                         <th>No. </th>
                                         <th>Kode Andil</th>
-                                        <th>Kode Cucu Petak</th>
+                                        <th>Kode Anak Petak</th>
                                         <th>NIK Pesanggem</th>
                                         <th>Nama Pesanggem</th>
                                         <th>Desa</th>
@@ -625,7 +625,7 @@
                                         <tr>
                                             <td scope="row"> <?= $no++; ?> </td>
                                             <td><?= $var['andil']; ?></td>
-                                            <td><?= $var['kode_cucu_petak']; ?></td>
+                                            <td><?= $var['kode_anak_petak']; ?></td>
                                             <td><?= $var['nik_pesanggem']; ?></td>
                                             <td><?= $var['nama_pesanggem']; ?></td>
                                             <td><?= $var['desa']; ?></td>

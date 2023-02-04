@@ -530,11 +530,14 @@
                                 <thead>
                                     <tr>
                                         <th>No. </th>
+                                        <th>Kode Pohon</th>
                                         <th>No. Pohon</th>
                                         <th>Kode Inven PU</th>
                                         <th>Jenis Pohon</th>
                                         <th>DBH</th>
                                         <th>Tinggi Pohon</th>
+                                        <th>LBDS (m²)</th>
+                                        <th>Volume (m³)</th>
                                         <th>Fungsi Tinggi</th>
                                         <th class="dt-no-sorting">Aksi</th>
                                     </tr>
@@ -544,11 +547,14 @@
                                     <?php foreach ($kayu as $var) : ?>
                                         <tr>
                                             <td scope="row"> <?= $no++; ?> </td>
+                                            <td><?= $var['kode_pohon']; ?></td>
                                             <td><?= $var['no_pohon']; ?></td>
                                             <td><?= $var['kode_inven_pu']; ?></td>
                                             <td><?= $var['jenis_pohon']; ?></td>
                                             <td><?= $var['dbh']; ?></td>
                                             <td><?= $var['tinggi']; ?></td>
+                                            <td><?= $var['lbds']; ?></td>
+                                            <td><?= $var['volume']; ?></td>
                                             <td><?= $var['fungsi']; ?></td>
                                             <td>
                                                 <div class="btn-group">
@@ -602,11 +608,14 @@
                                 <thead>
                                     <tr>
                                         <th>No. </th>
+                                        <th>Kode Pohon</th>
                                         <th>No. Pohon</th>
                                         <th>Kode Inven PU</th>
                                         <th>Jenis Pohon</th>
                                         <th>DBH</th>
                                         <th>Tinggi Pohon</th>
+                                        <th>LBDS (m²)</th>
+                                        <th>Volume (m³)</th>
                                         <th>Fungsi Tinggi</th>
                                         <th class="dt-no-sorting">Aksi</th>
                                     </tr>
@@ -616,11 +625,14 @@
                                     <?php foreach ($nonkayu as $var) : ?>
                                         <tr>
                                             <td scope="row"> <?= $no++; ?> </td>
+                                            <td><?= $var['kode_pohon']; ?></td>
                                             <td><?= $var['no_pohon']; ?></td>
                                             <td><?= $var['kode_inven_pu']; ?></td>
                                             <td><?= $var['jenis_pohon']; ?></td>
                                             <td><?= $var['dbh']; ?></td>
                                             <td><?= $var['tinggi']; ?></td>
+                                            <td><?= $var['lbds']; ?></td>
+                                            <td><?= $var['volume']; ?></td>
                                             <td><?= $var['fungsi']; ?></td>
                                             <td>
                                                 <div class="btn-group">
@@ -655,7 +667,7 @@
             <div>
                 <!-- modal penaataan kawasan -->
                 <div id="inputpk" class="modal animated fadeInDown" role="dialog" tabindex="-1" aria-labelledby="inputpk" aria-hidden="false">
-                    <div class="modal-dialog">
+                    <div class="modal-dialog modal-lg">
                         <div class="modal-content">
                             <div class="modal-header">
                                 <h5 class="modal-title">INPUT DATA PENGUKURAN KAYU</h5>
@@ -668,51 +680,83 @@
                             </div>
                             <form action="ukur-pu/savekayu" method="post">
                                 <div class="modal-body">
-                                    <div class="form-group mb-4">
-                                        <label for="no">
-                                            <span class="badge outline-badge-dark"> Nomor Pohon </span></label>
-                                        <input type="text" class="form-control <?= ($validation2->hasError('no')) ? 'is-invalid' : ''; ?>" id="no" name="no" value="<?= old('no'); ?>">
-                                        <div class="invalid-feedback">
-                                            <?= $validation2->getError('no'); ?>
+                                    <div class="form-row mb-4">
+                                        <div class="col">
+                                            <label for="kode">
+                                                <span class="badge outline-badge-dark"> Kode Pohon </span></label>
+                                            <input type="text" class="form-control <?= ($validation2->hasError('kode')) ? 'is-invalid' : ''; ?>" id="kode" name="kode" value="<?= old('kode'); ?>">
+                                            <div class="invalid-feedback">
+                                                <?= $validation2->getError('kode'); ?>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <label for="no">
+                                                <span class="badge outline-badge-dark"> Nomor Pohon </span></label>
+                                            <input type="text" class="form-control <?= ($validation2->hasError('no')) ? 'is-invalid' : ''; ?>" id="no" name="no" value="<?= old('no'); ?>">
+                                            <div class="invalid-feedback">
+                                                <?= $validation2->getError('no'); ?>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="form-group mb-4">
-                                        <label for="kodepu">
-                                            <span class="badge outline-badge-dark"> Kode Inventarisasi Petak Ukur </span></label>
-                                        <select name="kodepu" class="form-control <?= ($validation2->hasError('kodepu')) ? 'is-invalid' : ''; ?>" id="kodepu" value="<?= old('kodepu'); ?>">
-                                            <?php foreach ($invenpu as $pk) : ?>
-                                                <option><?= $pk['kode_inven_pu']; ?></option>
-                                            <?php endforeach; ?>
-                                        </select>
-                                        <div class="invalid-feedback">
-                                            <?= $validation2->getError('kodepu'); ?>
+                                    <div class="form-row mb-4">
+                                        <div class="col">
+                                            <label for="kodepu">
+                                                <span class="badge outline-badge-dark"> Kode Inventarisasi Petak Ukur </span></label>
+                                            <select name="kodepu" class="form-control <?= ($validation2->hasError('kodepu')) ? 'is-invalid' : ''; ?>" id="kodepu" value="<?= old('kodepu'); ?>">
+                                                <?php foreach ($invenpu as $pk) : ?>
+                                                    <option><?= $pk['kode_inven_pu']; ?></option>
+                                                <?php endforeach; ?>
+                                            </select>
+                                            <div class="invalid-feedback">
+                                                <?= $validation2->getError('kodepu'); ?>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <label for="jenis">
+                                                <span class="badge outline-badge-dark"> Jenis Pohon </span></label>
+                                            <input type="text" class="form-control <?= ($validation2->hasError('jenis')) ? 'is-invalid' : ''; ?>" id="jenis" name="jenis" value="<?= old('jenis'); ?>">
+                                            <div class="invalid-feedback">
+                                                <?= $validation2->getError('jenis'); ?>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="form-group mb-4">
-                                        <label for="jenis">
-                                            <span class="badge outline-badge-dark"> Jenis Pohon </span></label>
-                                        <input type="text" class="form-control <?= ($validation2->hasError('jenis')) ? 'is-invalid' : ''; ?>" id="jenis" name="jenis" value="<?= old('jenis'); ?>">
-                                        <div class="invalid-feedback">
-                                            <?= $validation2->getError('jenis'); ?>
+                                    <div class="form-row mb-4">
+                                        <div class="col">
+                                            <label for="dbh">
+                                                <span class="badge outline-badge-dark"> DBH <i>(Diameter at Breast Height)</i> (m)</span></label>
+                                            <input type="text" class="form-control <?= ($validation2->hasError('dbh')) ? 'is-invalid' : ''; ?>" id="dbh" name="dbh" value="<?= old('dbh'); ?>">
+                                            <div class="invalid-feedback">
+                                                <?= $validation2->getError('dbh'); ?>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <label for="tinggi">
+                                                <span class="badge outline-badge-dark"> Tinggi Pohon (m) </span></label>
+                                            <input type="text" class="form-control <?= ($validation2->hasError('tinggi')) ? 'is-invalid' : ''; ?>" id="tinggi" name="tinggi" value="<?= old('tinggi'); ?>">
+                                            <div class="invalid-feedback">
+                                                <?= $validation2->getError('tinggi'); ?>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="form-group mb-4">
-                                        <label for="dbh">
-                                            <span class="badge outline-badge-dark"> DBH <i>(Diameter at Breast Height)</i> (m)</span></label>
-                                        <input type="text" class="form-control <?= ($validation2->hasError('dbh')) ? 'is-invalid' : ''; ?>" id="dbh" name="dbh" value="<?= old('dbh'); ?>">
-                                        <div class="invalid-feedback">
-                                            <?= $validation2->getError('dbh'); ?>
+                                    <div class="form-row mb-4">
+                                        <div class="col">
+                                            <label for="lbds">
+                                                <span class="badge outline-badge-dark"> LBDS (m²) </span></label>
+                                            <input type="text" class="form-control <?= ($validation2->hasError('lbds')) ? 'is-invalid' : ''; ?>" id="lbds" name="lbds" value="<?= old('lbds'); ?>">
+                                            <div class="invalid-feedback">
+                                                <?= $validation2->getError('lbds'); ?>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <label for="volume">
+                                                <span class="badge outline-badge-dark"> Volume (m³) </span></label>
+                                            <input type="text" class="form-control <?= ($validation2->hasError('volume')) ? 'is-invalid' : ''; ?>" id="volume" name="volume" value="<?= old('volume'); ?>">
+                                            <div class="invalid-feedback">
+                                                <?= $validation2->getError('volume'); ?>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="form-group mb-4">
-                                        <label for="tinggi">
-                                            <span class="badge outline-badge-dark"> Tinggi Pohon (m) </span></label>
-                                        <input type="text" class="form-control <?= ($validation2->hasError('tinggi')) ? 'is-invalid' : ''; ?>" id="tinggi" name="tinggi" value="<?= old('tinggi'); ?>">
-                                        <div class="invalid-feedback">
-                                            <?= $validation2->getError('tinggi'); ?>
-                                        </div>
-                                    </div>
-                                    <div class="form-group mb-4">
+                                    <div class="form-row mb-4">
                                         <label for="fungsi">
                                             <span class="badge outline-badge-dark"> Fungsi Tinggi </span></label>
                                         <input type="text" class="form-control <?= ($validation2->hasError('fungsi')) ? 'is-invalid' : ''; ?>" id="fungsi" name="fungsi" value="<?= old('fungsi'); ?>">
@@ -720,10 +764,10 @@
                                             <?= $validation2->getError('fungsi'); ?>
                                         </div>
                                     </div>
-                                    <div class="modal-footer">
-                                        <button class="btn" data-dismiss="modal"><i class="flaticon-cancel-12"></i> Tutup</button>
-                                        <button type="submit" class="btn btn-success" id="simpanpk">Simpan</button>
-                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button class="btn" data-dismiss="modal"><i class="flaticon-cancel-12"></i> Tutup</button>
+                                    <button type="submit" class="btn btn-success">Simpan</button>
                                 </div>
                             </form>
                         </div>
@@ -732,7 +776,7 @@
 
                 <?php foreach ($kayu as $var) : ?>
                     <div id="editpk<?= $var['id'] ?>" class="modal animated fadeInDown" role="dialog" tabindex="-1" aria-labelledby="editpk" aria-hidden="true">
-                        <div class="modal-dialog">
+                        <div class="modal-dialog modal-lg">
                             <div class="modal-content">
                                 <div class="modal-header">
                                     <h5 class="modal-title">UPDATE DATA PENGUKURAN KAYU</h5>
@@ -756,35 +800,58 @@
                                             </svg>
                                             <strong>Penting!</strong> Data dibawah ini akan diperbarui.
                                         </div>
-                                        <div class="form-group mb-4">
-                                            <label for="editno">
-                                                <span class="badge outline-badge-dark"> Nomor Pohon </span></label>
-                                            <input type="text" class="form-control" id="editno" name="editno" value="<?= $var['no_pohon']; ?>">
+                                        <div class="form-ro mb-4">
+                                            <div class="col">
+                                                <label for="editkode">
+                                                    <span class="badge outline-badge-dark"> Nomor Pohon </span></label>
+                                                <input type="text" class="form-control" id="editkode" name="editkode" value="<?= $var['kode_pohon']; ?>">
+                                            </div>
+                                            <div class="col">
+                                                <label for="editno">
+                                                    <span class="badge outline-badge-dark"> Nomor Pohon </span></label>
+                                                <input type="text" class="form-control" id="editno" name="editno" value="<?= $var['no_pohon']; ?>">
+                                            </div>
                                         </div>
-                                        <div class="form-group mb-4">
-                                            <label for="editkodepu">
-                                                <span class="badge outline-badge-dark"> Kode Inven Petak Ukur</span></label>
-                                            <select class="form-control" id="editkodepu" name="editkodepu">
-                                                <option selected=""><?= $var['kode_inven_pu']; ?></option>
-                                                <?php foreach ($invenpu as $pk) : ?>
-                                                    <option><?= $pk['kode_inven_pu']; ?></option>
-                                                <?php endforeach; ?>
-                                            </select>
+                                        <div class="form-row mb-4">
+                                            <div class="col">
+                                                <label for="editkodepu">
+                                                    <span class="badge outline-badge-dark"> Kode Inven Petak Ukur</span></label>
+                                                <select class="form-control" id="editkodepu" name="editkodepu">
+                                                    <option selected=""><?= $var['kode_inven_pu']; ?></option>
+                                                    <?php foreach ($invenpu as $pk) : ?>
+                                                        <option><?= $pk['kode_inven_pu']; ?></option>
+                                                    <?php endforeach; ?>
+                                                </select>
+                                            </div>
+                                            <div class="col">
+                                                <label for="editjenis">
+                                                    <span class="badge outline-badge-dark"> Jenis Pohon </span></label>
+                                                <input type="text" class="form-control" id="editjenis" name="editjenis" value="<?= $var['jenis_pohon']; ?>">
+                                            </div>
                                         </div>
-                                        <div class="form-group mb-4">
-                                            <label for="editjenis">
-                                                <span class="badge outline-badge-dark"> Jenis Pohon </span></label>
-                                            <input type="text" class="form-control" id="editjenis" name="editjenis" value="<?= $var['jenis_pohon']; ?>">
+                                        <div class="form-row mb-4">
+                                            <div class="col">
+                                                <label for="editdbh">
+                                                    <span class="badge outline-badge-dark"> DBH <i>(Diameter at Breast Height)</i> (m) </span></label>
+                                                <input id="editdbh" name="editdbh" class="form-control" type="text" value="<?= $var['dbh']; ?>">
+                                            </div>
+                                            <div class="col">
+                                                <label for="edittinggi">
+                                                    <span class="badge outline-badge-dark"> Tinggi Pohon (m) </span></label>
+                                                <input id="edittinggi" name="edittinggi" class="form-control" type="text" value="<?= $var['tinggi']; ?>">
+                                            </div>
                                         </div>
-                                        <div class="form-group mb-4">
-                                            <label for="editdbh">
-                                                <span class="badge outline-badge-dark"> DBH <i>(Diameter at Breast Height)</i> (m) </span></label>
-                                            <input id="editdbh" name="editdbh" class="form-control" type="text" value="<?= $var['dbh']; ?>">
-                                        </div>
-                                        <div class="form-group mb-4">
-                                            <label for="edittinggi">
-                                                <span class="badge outline-badge-dark"> Tinggi Pohon (m) </span></label>
-                                            <input id="edittinggi" name="edittinggi" class="form-control" type="text" value="<?= $var['tinggi']; ?>">
+                                        <div class="form-row mb-4">
+                                            <div class="col">
+                                                <label for="editlbds">
+                                                    <span class="badge outline-badge-dark"> Tinggi Pohon (m) </span></label>
+                                                <input id="editlbds" name="editlbds" class="form-control" type="text" value="<?= $var['lbds']; ?>">
+                                            </div>
+                                            <div class="col">
+                                                <label for="editvolume">
+                                                    <span class="badge outline-badge-dark"> Tinggi Pohon (m) </span></label>
+                                                <input id="editvolume" name="editvolume" class="form-control" type="text" value="<?= $var['volume']; ?>">
+                                            </div>
                                         </div>
                                         <div class="form-group mb-4">
                                             <label for="editfungsi">
@@ -828,11 +895,14 @@
                                     </div>
                                     <form action="ukur-pu/hapuskayu/<?= $var['id']; ?>" class="form-vertical" method="post">
                                         <ul class="list-group ">
+                                            <li class="list-group-item"><strong>Nomor Pohon =</strong> <?= $var['kode_pohon']; ?></li>
                                             <li class="list-group-item"><strong>Nomor Pohon =</strong> <?= $var['no_pohon']; ?></li>
                                             <li class="list-group-item"><strong>Kode Inven Petak Ukur =</strong> <?= $var['kode_inven_pu']; ?></li>
                                             <li class="list-group-item"><strong>Jenis Pohon =</strong> <?= $var['jenis_pohon']; ?></li>
                                             <li class="list-group-item"><strong>DBH <i>(Diameter at Breast Height)</i> (m) =</strong> <?= $var['dbh']; ?></li>
                                             <li class="list-group-item"><strong>Tinggi Pohon (m) =</strong> <?= $var['tinggi']; ?></li>
+                                            <li class="list-group-item"><strong>LBDS (m²) =</strong> <?= $var['tinggi']; ?></li>
+                                            <li class="list-group-item"><strong>Volume (m³) =</strong> <?= $var['tinggi']; ?></li>
                                             <li class="list-group-item"><strong>Fungsi Tinggi =</strong> <?= $var['fungsi']; ?></li>
                                         </ul>
                                         <div class="form-group mb-4">
@@ -852,7 +922,7 @@
 
                 <!-- modal umt -->
                 <div id="inputumt" class="modal animated fadeInDown" role="dialog" tabindex="-1" aria-labelledby="inputumt" aria-hidden="true">
-                    <div class="modal-dialog">
+                    <div class="modal-dialog modal-lg">
                         <div class="modal-content">
                             <div class="modal-header">
                                 <h5 class="modal-title">INPUT DATA <br>PENGUKURAN NON KAYU</h5>
@@ -865,48 +935,80 @@
                             </div>
                             <form action="ukur-pu/savenonkayu" method="post">
                                 <div class="modal-body">
-                                    <div class="form-group mb-4">
-                                        <label for="no1">
-                                            <span class="badge outline-badge-dark"> Nomor Pohon </span></label>
-                                        <input type="text" class="form-control <?= ($validation2->hasError('no1')) ? 'is-invalid' : ''; ?>" id="no1" name="no1" value="<?= old('no1'); ?>">
-                                        <div class="invalid-feedback">
-                                            <?= $validation2->getError('no1'); ?>
+                                    <div class="form-row mb-4">
+                                        <div class="col">
+                                            <label for="kode1">
+                                                <span class="badge outline-badge-dark"> Kode Pohon </span></label>
+                                            <input type="text" class="form-control <?= ($validation2->hasError('kode1')) ? 'is-invalid' : ''; ?>" id="kode1" name="kode1" value="<?= old('kode1'); ?>">
+                                            <div class="invalid-feedback">
+                                                <?= $validation2->getError('kode1'); ?>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <label for="no1">
+                                                <span class="badge outline-badge-dark"> Nomor Pohon </span></label>
+                                            <input type="text" class="form-control <?= ($validation2->hasError('no1')) ? 'is-invalid' : ''; ?>" id="no1" name="no1" value="<?= old('no1'); ?>">
+                                            <div class="invalid-feedback">
+                                                <?= $validation2->getError('no1'); ?>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="form-group mb-4">
-                                        <label for="kodepu1">
-                                            <span class="badge outline-badge-dark"> Kode Inventarisasi Petak Ukur </span></label>
-                                        <select name="kodepu1" class="form-control <?= ($validation2->hasError('kodepu1')) ? 'is-invalid' : ''; ?>" id="kodepu1" value="<?= old('kodepu1'); ?>">
-                                            <?php foreach ($invenpu as $pk) : ?>
-                                                <option><?= $pk['kode_inven_pu']; ?></option>
-                                            <?php endforeach; ?>
-                                        </select>
-                                        <div class="invalid-feedback">
-                                            <?= $validation2->getError('kodepu1'); ?>
+                                    <div class="form-row mb-4">
+                                        <div class="col">
+                                            <label for="kodepu1">
+                                                <span class="badge outline-badge-dark"> Kode Inventarisasi Petak Ukur </span></label>
+                                            <select name="kodepu1" class="form-control <?= ($validation2->hasError('kodepu1')) ? 'is-invalid' : ''; ?>" id="kodepu1" value="<?= old('kodepu1'); ?>">
+                                                <?php foreach ($invenpu as $pk) : ?>
+                                                    <option><?= $pk['kode_inven_pu']; ?></option>
+                                                <?php endforeach; ?>
+                                            </select>
+                                            <div class="invalid-feedback">
+                                                <?= $validation2->getError('kodepu1'); ?>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <label for="jenis1">
+                                                <span class="badge outline-badge-dark"> Jenis Pohon </span></label>
+                                            <input type="text" class="form-control <?= ($validation2->hasError('jenis1')) ? 'is-invalid' : ''; ?>" id="jenis1" name="jenis1" value="<?= old('jenis1'); ?>">
+                                            <div class="invalid-feedback">
+                                                <?= $validation2->getError('jenis1'); ?>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="form-group mb-4">
-                                        <label for="jenis1">
-                                            <span class="badge outline-badge-dark"> Jenis Pohon </span></label>
-                                        <input type="text" class="form-control <?= ($validation2->hasError('jenis1')) ? 'is-invalid' : ''; ?>" id="jenis1" name="jenis1" value="<?= old('jenis1'); ?>">
-                                        <div class="invalid-feedback">
-                                            <?= $validation2->getError('jenis1'); ?>
+                                    <div class="form-row mb-4">
+                                        <div class="col">
+                                            <label for="dbh1">
+                                                <span class="badge outline-badge-dark"> DBH <i>(Diameter at Breast Height)</i> (m)</span></label>
+                                            <input type="text" class="form-control <?= ($validation2->hasError('dbh1')) ? 'is-invalid' : ''; ?>" id="dbh1" name="dbh1" value="<?= old('dbh1'); ?>">
+                                            <div class="invalid-feedback">
+                                                <?= $validation2->getError('dbh1'); ?>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <label for="tinggi1">
+                                                <span class="badge outline-badge-dark"> Tinggi Pohon (m) </span></label>
+                                            <input type="text" class="form-control <?= ($validation2->hasError('tinggi1')) ? 'is-invalid' : ''; ?>" id="tinggi1" name="tinggi1" value="<?= old('tinggi1'); ?>">
+                                            <div class="invalid-feedback">
+                                                <?= $validation2->getError('tinggi1'); ?>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="form-group mb-4">
-                                        <label for="dbh1">
-                                            <span class="badge outline-badge-dark"> DBH <i>(Diameter at Breast Height)</i> (m)</span></label>
-                                        <input type="text" class="form-control <?= ($validation2->hasError('dbh1')) ? 'is-invalid' : ''; ?>" id="dbh1" name="dbh1" value="<?= old('dbh1'); ?>">
-                                        <div class="invalid-feedback">
-                                            <?= $validation2->getError('dbh1'); ?>
+                                    <div class="form-row mb-4">
+                                        <div class="col">
+                                            <label for="lbds1">
+                                                <span class="badge outline-badge-dark"> Tinggi Pohon (m) </span></label>
+                                            <input type="text" class="form-control <?= ($validation2->hasError('lbds1')) ? 'is-invalid' : ''; ?>" id="lbds1" name="lbds1" value="<?= old('lbds1'); ?>">
+                                            <div class="invalid-feedback">
+                                                <?= $validation2->getError('lbds1'); ?>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="form-group mb-4">
-                                        <label for="tinggi1">
-                                            <span class="badge outline-badge-dark"> Tinggi Pohon (m) </span></label>
-                                        <input type="text" class="form-control <?= ($validation2->hasError('tinggi1')) ? 'is-invalid' : ''; ?>" id="tinggi1" name="tinggi1" value="<?= old('tinggi1'); ?>">
-                                        <div class="invalid-feedback">
-                                            <?= $validation2->getError('tinggi1'); ?>
+                                        <div class="col">
+                                            <label for="volume1">
+                                                <span class="badge outline-badge-dark"> Tinggi Pohon (m) </span></label>
+                                            <input type="text" class="form-control <?= ($validation2->hasError('volume1')) ? 'is-invalid' : ''; ?>" id="volume1" name="volume1" value="<?= old('volume1'); ?>">
+                                            <div class="invalid-feedback">
+                                                <?= $validation2->getError('volume1'); ?>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="form-group mb-4">
@@ -930,7 +1032,7 @@
                 <?php foreach ($nonkayu as $var) : ?>
 
                     <div id="editumt<?= $var['id'] ?>" class="modal animated fadeInDown" role="dialog" tabindex="-1" aria-labelledby="editumt" aria-hidden="true">
-                        <div class="modal-dialog">
+                        <div class="modal-dialog modal-lg">
                             <div class="modal-content">
                                 <div class="modal-header">
                                     <h5 class="modal-title">UPDATE DATA <br> PENGUKURAN NON KAYU</h5>
@@ -941,7 +1043,7 @@
                                         </svg>
                                     </button>
                                 </div>
-                                <form action="ukur-pu/nonkayu/<?= $var['id']; ?>" method="post" id="form1">
+                                <form action="ukur-pu/editnonkayu/<?= $var['id']; ?>" method="post" id="form1">
                                     <div class="modal-body">
                                         <div class="alert alert-icon-left alert-light-info mb-4" role="alert">
                                             <button type="button" class="close" data-dismiss="alert" aria-label="Close"><svg xmlns="http://www.w3.org/2000/svg" data-dismiss="alert" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x close">
@@ -954,40 +1056,63 @@
                                             </svg>
                                             <strong>Penting!</strong> Data dibawah ini akan diperbarui.
                                         </div>
-                                        <div class="form-group mb-4">
-                                            <label for="editno">
-                                                <span class="badge outline-badge-dark"> Nomor Pohon </span></label>
-                                            <input type="text" class="form-control" id="editno" name="editno" value="<?= $var['no_pohon']; ?>">
+                                        <div class="form-row mb-4">
+                                            <div class="col">
+                                                <label for="editkode1">
+                                                    <span class="badge outline-badge-dark"> Nomor Pohon </span></label>
+                                                <input type="text" class="form-control" id="editkode1" name="editkode1" value="<?= $var['kode_pohon']; ?>">
+                                            </div>
+                                            <div class="col">
+                                                <label for="editno1">
+                                                    <span class="badge outline-badge-dark"> Nomor Pohon </span></label>
+                                                <input type="text" class="form-control" id="editno1" name="editno1" value="<?= $var['no_pohon']; ?>">
+                                            </div>
+                                        </div>
+                                        <div class="form-row mb-4">
+                                            <div class="col">
+                                                <label for="editkodepu1">
+                                                    <span class="badge outline-badge-dark"> Kode Inven Petak Ukur</span></label>
+                                                <select class="form-control" id="editkodepu1" name="editkodepu1">
+                                                    <option selected=""><?= $var['kode_inven_pu']; ?></option>
+                                                    <?php foreach ($invenpu as $pk) : ?>
+                                                        <option><?= $pk['kode_inven_pu']; ?></option>
+                                                    <?php endforeach; ?>
+                                                </select>
+                                            </div>
+                                            <div class="col">
+                                                <label for="editjenis1">
+                                                    <span class="badge outline-badge-dark"> Jenis Pohon </span></label>
+                                                <input type="text" class="form-control" id="editjenis1" name="editjenis1" value="<?= $var['jenis_pohon']; ?>">
+                                            </div>
+                                        </div>
+                                        <div class="form-row mb-4">
+                                            <div class="col">
+                                                <label for="editdbh1">
+                                                    <span class="badge outline-badge-dark"> DBH <i>(Diameter at Breast Height)</i> (m) </span></label>
+                                                <input id="editdbh1" name="editdbh1" class="form-control" type="text" value="<?= $var['dbh']; ?>">
+                                            </div>
+                                            <div class="col">
+                                                <label for="edittinggi1">
+                                                    <span class="badge outline-badge-dark"> Tinggi Pohon (m) </span></label>
+                                                <input id="edittinggi1" name="edittinggi1" class="form-control" type="text" value="<?= $var['tinggi']; ?>">
+                                            </div>
+                                        </div>
+                                        <div class="form-row mb-4">
+                                            <div class="col">
+                                                <label for="editlbds1">
+                                                    <span class="badge outline-badge-dark"> Tinggi Pohon (m) </span></label>
+                                                <input id="editlbds1" name="editlbds1" class="form-control" type="text" value="<?= $var['lbds']; ?>">
+                                            </div>
+                                            <div class="col">
+                                                <label for="editvolume1">
+                                                    <span class="badge outline-badge-dark"> Tinggi Pohon (m) </span></label>
+                                                <input id="editvolume1" name="editvolume1" class="form-control" type="text" value="<?= $var['volume']; ?>">
+                                            </div>
                                         </div>
                                         <div class="form-group mb-4">
-                                            <label for="editkodepu">
-                                                <span class="badge outline-badge-dark"> Kode Inven Petak Ukur</span></label>
-                                            <select class="form-control" id="editkodepu" name="editkodepu">
-                                                <option selected=""><?= $var['kode_inven_pu']; ?></option>
-                                                <?php foreach ($invenpu as $pk) : ?>
-                                                    <option><?= $pk['kode_inven_pu']; ?></option>
-                                                <?php endforeach; ?>
-                                            </select>
-                                        </div>
-                                        <div class="form-group mb-4">
-                                            <label for="editjenis">
-                                                <span class="badge outline-badge-dark"> Jenis Pohon </span></label>
-                                            <input type="text" class="form-control" id="editjenis" name="editjenis" value="<?= $var['jenis_pohon']; ?>">
-                                        </div>
-                                        <div class="form-group mb-4">
-                                            <label for="editdbh">
-                                                <span class="badge outline-badge-dark"> DBH <i>(Diameter at Breast Height)</i> (m) </span></label>
-                                            <input id="editdbh" name="editdbh" class="form-control" type="text" value="<?= $var['dbh']; ?>">
-                                        </div>
-                                        <div class="form-group mb-4">
-                                            <label for="edittinggi">
-                                                <span class="badge outline-badge-dark"> Tinggi Pohon (m) </span></label>
-                                            <input id="edittinggi" name="edittinggi" class="form-control" type="text" value="<?= $var['tinggi']; ?>">
-                                        </div>
-                                        <div class="form-group mb-4">
-                                            <label for="editfungsi">
+                                            <label for="editfungsi1">
                                                 <span class="badge outline-badge-dark"> Fungsi Tinggi </span></label>
-                                            <input type="text" class="form-control" id="editfungsi" name="editfungsi" value="<?= $var['fungsi']; ?>">
+                                            <input type="text" class="form-control" id="editfungsi1" name="editfungsi1" value="<?= $var['fungsi']; ?>">
                                         </div>
                                     </div>
                                     <div class="modal-footer">
@@ -1024,13 +1149,16 @@
                                         </svg>
                                         <strong>Penting!</strong> Data dibawah ini akan dihapus.
                                     </div>
-                                    <form action="ukur-pu/hapuskayu/<?= $var['id']; ?>" class="form-vertical" method="post">
+                                    <form action="ukur-pu/hapusnonkayu/<?= $var['id']; ?>" class="form-vertical" method="post">
                                         <ul class="list-group ">
+                                            <li class="list-group-item"><strong>Nomor Pohon =</strong> <?= $var['kode_pohon']; ?></li>
                                             <li class="list-group-item"><strong>Nomor Pohon =</strong> <?= $var['no_pohon']; ?></li>
                                             <li class="list-group-item"><strong>Kode Inven Petak Ukur =</strong> <?= $var['kode_inven_pu']; ?></li>
                                             <li class="list-group-item"><strong>Jenis Pohon =</strong> <?= $var['jenis_pohon']; ?></li>
                                             <li class="list-group-item"><strong>DBH <i>(Diameter at Breast Height)</i> (m) =</strong> <?= $var['dbh']; ?></li>
                                             <li class="list-group-item"><strong>Tinggi Pohon (m) =</strong> <?= $var['tinggi']; ?></li>
+                                            <li class="list-group-item"><strong>LBDS (m²) =</strong> <?= $var['tinggi']; ?></li>
+                                            <li class="list-group-item"><strong>Volume (m³) =</strong> <?= $var['tinggi']; ?></li>
                                             <li class="list-group-item"><strong>Fungsi Tinggi =</strong> <?= $var['fungsi']; ?></li>
                                         </ul>
                                         <div class="form-group mb-4">
@@ -1116,7 +1244,9 @@
 <div>
     <script>
         let inputpk;
-        if ('<?= ($validation2->hasError('no')) ?>') {
+        if ('<?= ($validation2->hasError('kode')) ?>') {
+            inputpk = $('#inputpk').modal('show');
+        } else if ('<?= ($validation2->hasError('no')) ?>') {
             inputpk = $('#inputpk').modal('show');
         } else if ('<?= ($validation2->hasError('kodepu')) ?>') {
             inputpk = $('#inputpk').modal('show');
@@ -1126,6 +1256,10 @@
             inputpk = $('#inputpk').modal('show');
         } else if ('<?= ($validation2->hasError('tinggi')) ?>') {
             inputpk = $('#inputpk').modal('show');
+        } else if ('<?= ($validation2->hasError('lbds')) ?>') {
+            inputpk = $('#inputpk').modal('show');
+        } else if ('<?= ($validation2->hasError('volume')) ?>') {
+            inputpk = $('#inputpk').modal('show');
         } else if ('<?= ($validation2->hasError('fungsi')) ?>') {
             inputpk = $('#inputpk').modal('show');
         } else {
@@ -1134,7 +1268,9 @@
     </script>
     <script>
         let inputumt;
-        if ('<?= ($validation2->hasError('no1')) ?>') {
+        if ('<?= ($validation2->hasError('kode1')) ?>') {
+            inputumt = $('#inputumt').modal('show');
+        } else if ('<?= ($validation2->hasError('no1')) ?>') {
             inputumt = $('#inputumt').modal('show');
         } else if ('<?= ($validation2->hasError('kodepu1')) ?>') {
             inputumt = $('#inputumt').modal('show');
@@ -1143,6 +1279,10 @@
         } else if ('<?= ($validation2->hasError('dbh1')) ?>') {
             inputumt = $('#inputumt').modal('show');
         } else if ('<?= ($validation2->hasError('tinggi1')) ?>') {
+            inputumt = $('#inputumt').modal('show');
+        } else if ('<?= ($validation2->hasError('lbds1')) ?>') {
+            inputumt = $('#inputumt').modal('show');
+        } else if ('<?= ($validation2->hasError('volume1')) ?>') {
             inputumt = $('#inputumt').modal('show');
         } else if ('<?= ($validation2->hasError('fungsi1')) ?>') {
             inputumt = $('#inputumt').modal('show');

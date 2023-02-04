@@ -3,11 +3,11 @@
 namespace App\Controllers;
 
 use \App\Models\DesaHwdModel;
-use \App\Models\HwdCupetModel;
+use \App\Models\HwdAnakPetakModel;
 use \App\Models\AndilModel;
 use \App\Models\DesaModel;
 use \App\Models\LemdesModel;
-use \App\Models\CucuPetakModel;
+use \App\Models\AnakPetakModel;
 
 class UserHwd extends BaseController
 {
@@ -15,28 +15,28 @@ class UserHwd extends BaseController
     public function __construct()
     {
         $this->DesaHwdModel = new DesaHwdModel();
-        $this->HwdCupetModel = new HwdCupetModel();
+        $this->HwdAnakPetakModel = new HwdAnakPetakModel();
         $this->AndilModel = new AndilModel();
         $this->DesaModel = new DesaModel();
         $this->LemdesModel = new LemdesModel();
-        $this->CucuPetakModel = new CucuPetakModel();
+        $this->AnakPetakModel = new AnakPetakModel();
     }
     public function index()
     {
 
         $desahwd = $this->DesaHwdModel->findAll();
-        $hwdcupet = $this->HwdCupetModel->findAll();
+        $hwdanakpetak = $this->HwdAnakPetakModel->findAll();
         $desa = $this->DesaModel->findAll();
         $andil = $this->AndilModel->findAll();
         $lemdes = $this->LemdesModel->findAll();
-        $cupet = $this->CucuPetakModel->findAll();
+        $anakpetak = $this->AnakPetakModel->findAll();
         $data = [
             'desahwd' => $desahwd,
-            'hwdcupet' => $hwdcupet,
+            'hwdanakpetak' => $hwdanakpetak,
             'desa' => $desa,
             'andil' => $andil,
             'lemdes' => $lemdes,
-            'cupet' => $cupet,
+            'anakpetak' => $anakpetak,
             'title' => 'KHDTK APPS - Pengelolaan Kawasan Hutan Wengkon Desa',
             'validation2' => \Config\Services::validation(),
             'footer' => 'KHDTK WEB APPS Ver. 2. 0.',

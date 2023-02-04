@@ -149,9 +149,9 @@ $routes->delete('/database/struktur-umt/hapuscupet/(:num)', 'StrukturUmt::delete
 //tanaman umt
 $routes->get('/database/tanaman-umt', 'TanamanUmt::tanaman_umt', ['filter' => 'role:admin,developer']);
 
-$routes->post('/database/tanaman-umt/savetnmcupet', 'TanamanUmt::savetnmcupet');
-$routes->post('/database/tanaman-umt/edittnmcupet/(:num)', 'TanamanUmt::edittnmcupet/$1');
-$routes->delete('/database/tanaman-umt/hapustnmcupet/(:num)', 'TanamanUmt::deletetnmcupet/$1');
+$routes->post('/database/tanaman-umt/savetnmanakpetak', 'TanamanUmt::savetnmanakpetak');
+$routes->post('/database/tanaman-umt/edittnmanakpetak/(:num)', 'TanamanUmt::edittnmanakpetak/$1');
+$routes->delete('/database/tanaman-umt/hapustnmanakpetak/(:num)', 'TanamanUmt::deletetnmanakpetak/$1');
 
 //inven-sdh
 $routes->get('/database/inven-sdh', 'Inven::inven', ['filter' => 'role:admin,developer']);
@@ -197,9 +197,9 @@ $routes->post('/database/hwd/savedesahwd', 'Hwd::savedesahwd');
 $routes->post('/database/hwd/editdesahwd/(:num)', 'Hwd::editdesahwd/$1');
 $routes->delete('/database/hwd/hapusdesahwd/(:num)', 'Hwd::deletedesahwd/$1');
 
-$routes->post('/database/hwd/savehwdcupet', 'Hwd::savehwdcupet');
-$routes->post('/database/hwd/edithwdcupet/(:num)', 'Hwd::edithwdcupet/$1');
-$routes->delete('/database/hwd/hapushwdcupet/(:num)', 'Hwd::deletehwdcupet/$1');
+$routes->post('/database/hwd/savehwdanakpetak', 'Hwd::savehwdanakpetak');
+$routes->post('/database/hwd/edithwdanakpetak/(:num)', 'Hwd::edithwdanakpetak/$1');
+$routes->delete('/database/hwd/hapushwdanakpetak/(:num)', 'Hwd::deletehwdanakpetak/$1');
 
 $routes->post('/database/hwd/saveandil', 'Hwd::saveandil');
 $routes->post('/database/hwd/editandil/(:num)', 'Hwd::editandil/$1');

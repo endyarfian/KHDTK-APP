@@ -1,0 +1,1160 @@
+CRITICAL - 2023-01-12 06:16:25 --> Illegal string offset 'anak_petak'
+in APPPATH\Views\apps\maps_detail.php on line 521.
+ 1 APPPATH\Views\apps\maps_detail.php(521): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Illegal string offset \'anak_petak\'', 'APPPATH\\Views\\apps\\maps_detail.php', 521, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\apps\\maps_detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/maps_detail', [], true)
+ 5 APPPATH\Controllers\DetailMaps.php(31): view('apps/maps_detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('2113')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-12 06:19:12 --> Illegal string offset 'anakpetak'
+in APPPATH\Views\apps\maps_detail.php on line 547.
+ 1 APPPATH\Views\apps\maps_detail.php(547): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Illegal string offset \'anakpetak\'', 'APPPATH\\Views\\apps\\maps_detail.php', 547, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\apps\\maps_detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/maps_detail', [], true)
+ 5 APPPATH\Controllers\DetailMaps.php(31): view('apps/maps_detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('2113')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-12 06:20:28 --> Trying to get property 'anak_petak' of non-object
+in APPPATH\Views\apps\maps_detail.php on line 521.
+ 1 APPPATH\Views\apps\maps_detail.php(521): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'anak_petak\' of non-object', 'APPPATH\\Views\\apps\\maps_detail.php', 521, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\apps\\maps_detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/maps_detail', [], true)
+ 5 APPPATH\Controllers\DetailMaps.php(31): view('apps/maps_detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('2113')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-12 06:27:06 --> Cannot use object of type stdClass as array
+in APPPATH\Views\apps\maps_detail.php on line 521.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/maps_detail', [], true)
+ 4 APPPATH\Controllers\DetailMaps.php(33): view('apps/maps_detail', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('2113')
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-12 06:30:45 --> Call to undefined function 44-E()
+in APPPATH\Views\apps\maps_detail.php on line 521.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/maps_detail', [], true)
+ 4 APPPATH\Controllers\DetailMaps.php(33): view('apps/maps_detail', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('2113')
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-12 06:32:28 --> Cannot use object of type stdClass as array
+in APPPATH\Views\apps\maps_detail.php on line 521.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/maps_detail', [], true)
+ 4 APPPATH\Controllers\DetailMaps.php(33): view('apps/maps_detail', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('2113')
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-12 06:37:33 --> Trying to get property 'anak_petak' of non-object
+in APPPATH\Views\apps\maps_detail.php on line 521.
+ 1 APPPATH\Views\apps\maps_detail.php(521): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'anak_petak\' of non-object', 'APPPATH\\Views\\apps\\maps_detail.php', 521, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\apps\\maps_detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/maps_detail', [], true)
+ 5 APPPATH\Controllers\DetailMaps.php(33): view('apps/maps_detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('2113')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-12 06:38:47 --> Undefined index: anak_petak
+in APPPATH\Views\apps\maps_detail.php on line 521.
+ 1 APPPATH\Views\apps\maps_detail.php(521): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: anak_petak', 'APPPATH\\Views\\apps\\maps_detail.php', 521, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\apps\\maps_detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/maps_detail', [], true)
+ 5 APPPATH\Controllers\DetailMaps.php(33): view('apps/maps_detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('2113')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-12 06:39:01 --> Undefined index: anakpetak
+in APPPATH\Views\apps\maps_detail.php on line 521.
+ 1 APPPATH\Views\apps\maps_detail.php(521): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: anakpetak', 'APPPATH\\Views\\apps\\maps_detail.php', 521, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\apps\\maps_detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/maps_detail', [], true)
+ 5 APPPATH\Controllers\DetailMaps.php(33): view('apps/maps_detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('2113')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-12 06:40:47 --> Trying to get property 'anak_petak' of non-object
+in APPPATH\Views\apps\maps_detail.php on line 521.
+ 1 APPPATH\Views\apps\maps_detail.php(521): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'anak_petak\' of non-object', 'APPPATH\\Views\\apps\\maps_detail.php', 521, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\apps\\maps_detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/maps_detail', [], true)
+ 5 APPPATH\Controllers\DetailMaps.php(33): view('apps/maps_detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('2113')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-12 06:56:18 --> array_sum() expects parameter 1 to be array, string given
+in APPPATH\Views\apps\maps_detail.php on line 552.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'array_sum() expects parameter 1 to be array, string given', 'APPPATH\\Views\\apps\\maps_detail.php', 552, [...])
+ 2 APPPATH\Views\apps\maps_detail.php(552): array_sum('20')
+ 3 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\apps\\maps_detail.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/maps_detail', [], true)
+ 6 APPPATH\Controllers\DetailMaps.php(33): view('apps/maps_detail', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('2113')
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-12 06:56:56 --> Trying to get property 'kodeinvenpu' of non-object
+in APPPATH\Views\apps\maps_detail.php on line 547.
+ 1 APPPATH\Views\apps\maps_detail.php(547): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'kodeinvenpu\' of non-object', 'APPPATH\\Views\\apps\\maps_detail.php', 547, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\apps\\maps_detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/maps_detail', [], true)
+ 5 APPPATH\Controllers\DetailMaps.php(33): view('apps/maps_detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('2113')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-12 06:58:08 --> array_sum() expects parameter 1 to be array, string given
+in APPPATH\Views\apps\maps_detail.php on line 552.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'array_sum() expects parameter 1 to be array, string given', 'APPPATH\\Views\\apps\\maps_detail.php', 552, [...])
+ 2 APPPATH\Views\apps\maps_detail.php(552): array_sum('20')
+ 3 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\apps\\maps_detail.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/maps_detail', [], true)
+ 6 APPPATH\Controllers\DetailMaps.php(33): view('apps/maps_detail', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('2113')
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-12 06:59:54 --> Undefined variable: var
+in APPPATH\Views\apps\maps_detail.php on line 544.
+ 1 APPPATH\Views\apps\maps_detail.php(544): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: var', 'APPPATH\\Views\\apps\\maps_detail.php', 544, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\apps\\maps_detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/maps_detail', [], true)
+ 5 APPPATH\Controllers\DetailMaps.php(33): view('apps/maps_detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('2113')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-12 07:00:18 --> array_sum() expects parameter 1 to be array, string given
+in APPPATH\Views\apps\maps_detail.php on line 553.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'array_sum() expects parameter 1 to be array, string given', 'APPPATH\\Views\\apps\\maps_detail.php', 553, [...])
+ 2 APPPATH\Views\apps\maps_detail.php(553): array_sum('20')
+ 3 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\apps\\maps_detail.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/maps_detail', [], true)
+ 6 APPPATH\Controllers\DetailMaps.php(33): view('apps/maps_detail', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('2113')
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-12 07:04:20 --> count(): Parameter must be an array or an object that implements Countable
+in APPPATH\Views\apps\maps_detail.php on line 550.
+ 1 APPPATH\Views\apps\maps_detail.php(550): CodeIgniter\Debug\Exceptions->errorHandler(2, 'count(): Parameter must be an array or an object that implements Countable', 'APPPATH\\Views\\apps\\maps_detail.php', 550, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\apps\\maps_detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/maps_detail', [], true)
+ 5 APPPATH\Controllers\DetailMaps.php(33): view('apps/maps_detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('2113')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-12 07:20:41 --> Illegal string offset 'kodeinvenpu'
+in APPPATH\Views\apps\maps_detail.php on line 541.
+ 1 APPPATH\Views\apps\maps_detail.php(541): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Illegal string offset \'kodeinvenpu\'', 'APPPATH\\Views\\apps\\maps_detail.php', 541, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\apps\\maps_detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/maps_detail', [], true)
+ 5 APPPATH\Controllers\DetailMaps.php(33): view('apps/maps_detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('2113')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-12 07:21:11 --> Trying to get property 'kodeinvenpu' of non-object
+in APPPATH\Views\apps\maps_detail.php on line 541.
+ 1 APPPATH\Views\apps\maps_detail.php(541): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'kodeinvenpu\' of non-object', 'APPPATH\\Views\\apps\\maps_detail.php', 541, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\apps\\maps_detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/maps_detail', [], true)
+ 5 APPPATH\Controllers\DetailMaps.php(33): view('apps/maps_detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('2113')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-12 07:21:29 --> Illegal string offset 'kodeinvenpu'
+in APPPATH\Views\apps\maps_detail.php on line 541.
+ 1 APPPATH\Views\apps\maps_detail.php(541): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Illegal string offset \'kodeinvenpu\'', 'APPPATH\\Views\\apps\\maps_detail.php', 541, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\apps\\maps_detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/maps_detail', [], true)
+ 5 APPPATH\Controllers\DetailMaps.php(33): view('apps/maps_detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('2113')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-12 07:23:51 --> Cannot use object of type stdClass as array
+in APPPATH\Views\apps\maps_detail.php on line 541.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/maps_detail', [], true)
+ 4 APPPATH\Controllers\DetailMaps.php(33): view('apps/maps_detail', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('2113')
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-12 08:46:11 --> Undefined index: persentase
+in APPPATH\Controllers\Maps.php on line 38.
+ 1 APPPATH\Controllers\Maps.php(38): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: persentase', 'APPPATH\\Controllers\\Maps.php', 38, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Maps->index()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maps))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-12 08:47:39 --> Undefined index: persentase
+in APPPATH\Controllers\Maps.php on line 38.
+ 1 APPPATH\Controllers\Maps.php(38): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: persentase', 'APPPATH\\Controllers\\Maps.php', 38, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Maps->index()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maps))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-01-12 09:11:18 --> mysqli_sql_exception: Unknown column 'no_pohon' in 'field list' in D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `umt_ana...', 0)
+#1 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `umt_ana...')
+#2 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `umt_ana...')
+#3 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `umt_ana...', Array, false)
+#4 D:\xampp\htdocs\KHDTK-APP\app\Controllers\DetailMaps.php(33): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\DetailMaps->index('2113')
+#6 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+#7 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\KHDTK-APP\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('D:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2023-01-12 09:11:18 --> Unknown column 'no_pohon' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `umt_anakpetak`.`kode_anak_petak` as `anakpetak`, `anak_petak`, `umt_cucupetak`.`kode_cucu_petak` as `cupet`, `umt_cupet_tnm`.`kode_cupet_tnm` as `cupettnm`, `jenis_lokal`, `inventarisasi_umt`.`kode_inven_umt` as `invenumt`, `inventarisasi_pu`.`kode_inven_pu` as `kodeinvenpu`, `luas_pu`, `bentuk_pu`, `no_pohon`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `umt_cupet_tnm`.`kode_cucu_petak` = `umt_cucupetak`.`kode_cucu_petak`
+JOIN `inventarisasi_umt` ON `inventarisasi_umt`.`kode_cupet_tnm`  = `umt_cupet_tnm`.`kode_cupet_tnm`
+JOIN `inventarisasi_pu` ON `inventarisasi_pu`.`kode_inven_umt`  = `inventarisasi_umt`.`kode_inven_umt`
+WHERE `umt_anakpetak`.`id` = \'2113\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `umt_anakpetak`.`kode_anak_petak` as `anakpetak`, `anak_petak`, `umt_cucupetak`.`kode_cucu_petak` as `cupet`, `umt_cupet_tnm`.`kode_cupet_tnm` as `cupettnm`, `jenis_lokal`, `inventarisasi_umt`.`kode_inven_umt` as `invenumt`, `inventarisasi_pu`.`kode_inven_pu` as `kodeinvenpu`, `luas_pu`, `bentuk_pu`, `no_pohon`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `umt_cupet_tnm`.`kode_cucu_petak` = `umt_cucupetak`.`kode_cucu_petak`
+JOIN `inventarisasi_umt` ON `inventarisasi_umt`.`kode_cupet_tnm`  = `umt_cupet_tnm`.`kode_cupet_tnm`
+JOIN `inventarisasi_pu` ON `inventarisasi_pu`.`kode_inven_umt`  = `inventarisasi_umt`.`kode_inven_umt`
+WHERE `umt_anakpetak`.`id` = \'2113\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `umt_anakpetak`.`kode_anak_petak` as `anakpetak`, `anak_petak`, `umt_cucupetak`.`kode_cucu_petak` as `cupet`, `umt_cupet_tnm`.`kode_cupet_tnm` as `cupettnm`, `jenis_lokal`, `inventarisasi_umt`.`kode_inven_umt` as `invenumt`, `inventarisasi_pu`.`kode_inven_pu` as `kodeinvenpu`, `luas_pu`, `bentuk_pu`, `no_pohon`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `umt_cupet_tnm`.`kode_cucu_petak` = `umt_cucupetak`.`kode_cucu_petak`
+JOIN `inventarisasi_umt` ON `inventarisasi_umt`.`kode_cupet_tnm`  = `umt_cupet_tnm`.`kode_cupet_tnm`
+JOIN `inventarisasi_pu` ON `inventarisasi_pu`.`kode_inven_umt`  = `inventarisasi_umt`.`kode_inven_umt`
+WHERE `umt_anakpetak`.`id` = \'2113\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `umt_anakpetak`.`kode_anak_petak` as `anakpetak`, `anak_petak`, `umt_cucupetak`.`kode_cucu_petak` as `cupet`, `umt_cupet_tnm`.`kode_cupet_tnm` as `cupettnm`, `jenis_lokal`, `inventarisasi_umt`.`kode_inven_umt` as `invenumt`, `inventarisasi_pu`.`kode_inven_pu` as `kodeinvenpu`, `luas_pu`, `bentuk_pu`, `no_pohon`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `umt_cupet_tnm`.`kode_cucu_petak` = `umt_cucupetak`.`kode_cucu_petak`
+JOIN `inventarisasi_umt` ON `inventarisasi_umt`.`kode_cupet_tnm`  = `umt_cupet_tnm`.`kode_cupet_tnm`
+JOIN `inventarisasi_pu` ON `inventarisasi_pu`.`kode_inven_umt`  = `inventarisasi_umt`.`kode_inven_umt`
+WHERE `umt_anakpetak`.`id` = :umt_anakpetak.id:', [...], false)
+ 5 APPPATH\Controllers\DetailMaps.php(33): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('2113')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-01-12 09:12:07 --> mysqli_sql_exception: Unknown column 'no_pohon' in 'field list' in D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `umt_ana...', 0)
+#1 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `umt_ana...')
+#2 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `umt_ana...')
+#3 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `umt_ana...', Array, false)
+#4 D:\xampp\htdocs\KHDTK-APP\app\Controllers\DetailMaps.php(33): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\DetailMaps->index('2113')
+#6 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+#7 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\KHDTK-APP\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('D:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2023-01-12 09:12:07 --> Unknown column 'no_pohon' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `umt_anakpetak`.`kode_anak_petak` as `anakpetak`, `anak_petak`, `umt_cucupetak`.`kode_cucu_petak` as `cupet`, `umt_cupet_tnm`.`kode_cupet_tnm` as `cupettnm`, `jenis_lokal`, `inventarisasi_umt`.`kode_inven_umt` as `invenumt`, `inventarisasi_pu`.`kode_inven_pu` as `kodeinvenpu`, `luas_pu`, `bentuk_pu`, `no_pohon`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `umt_cupet_tnm`.`kode_cucu_petak` = `umt_cucupetak`.`kode_cucu_petak`
+JOIN `inventarisasi_umt` ON `inventarisasi_umt`.`kode_cupet_tnm`  = `umt_cupet_tnm`.`kode_cupet_tnm`
+JOIN `inventarisasi_pu` ON `inventarisasi_pu`.`kode_inven_umt`  = `inventarisasi_umt`.`kode_inven_umt`
+WHERE `umt_anakpetak`.`id` = \'2113\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `umt_anakpetak`.`kode_anak_petak` as `anakpetak`, `anak_petak`, `umt_cucupetak`.`kode_cucu_petak` as `cupet`, `umt_cupet_tnm`.`kode_cupet_tnm` as `cupettnm`, `jenis_lokal`, `inventarisasi_umt`.`kode_inven_umt` as `invenumt`, `inventarisasi_pu`.`kode_inven_pu` as `kodeinvenpu`, `luas_pu`, `bentuk_pu`, `no_pohon`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `umt_cupet_tnm`.`kode_cucu_petak` = `umt_cucupetak`.`kode_cucu_petak`
+JOIN `inventarisasi_umt` ON `inventarisasi_umt`.`kode_cupet_tnm`  = `umt_cupet_tnm`.`kode_cupet_tnm`
+JOIN `inventarisasi_pu` ON `inventarisasi_pu`.`kode_inven_umt`  = `inventarisasi_umt`.`kode_inven_umt`
+WHERE `umt_anakpetak`.`id` = \'2113\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `umt_anakpetak`.`kode_anak_petak` as `anakpetak`, `anak_petak`, `umt_cucupetak`.`kode_cucu_petak` as `cupet`, `umt_cupet_tnm`.`kode_cupet_tnm` as `cupettnm`, `jenis_lokal`, `inventarisasi_umt`.`kode_inven_umt` as `invenumt`, `inventarisasi_pu`.`kode_inven_pu` as `kodeinvenpu`, `luas_pu`, `bentuk_pu`, `no_pohon`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `umt_cupet_tnm`.`kode_cucu_petak` = `umt_cucupetak`.`kode_cucu_petak`
+JOIN `inventarisasi_umt` ON `inventarisasi_umt`.`kode_cupet_tnm`  = `umt_cupet_tnm`.`kode_cupet_tnm`
+JOIN `inventarisasi_pu` ON `inventarisasi_pu`.`kode_inven_umt`  = `inventarisasi_umt`.`kode_inven_umt`
+WHERE `umt_anakpetak`.`id` = \'2113\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `umt_anakpetak`.`kode_anak_petak` as `anakpetak`, `anak_petak`, `umt_cucupetak`.`kode_cucu_petak` as `cupet`, `umt_cupet_tnm`.`kode_cupet_tnm` as `cupettnm`, `jenis_lokal`, `inventarisasi_umt`.`kode_inven_umt` as `invenumt`, `inventarisasi_pu`.`kode_inven_pu` as `kodeinvenpu`, `luas_pu`, `bentuk_pu`, `no_pohon`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `umt_cupet_tnm`.`kode_cucu_petak` = `umt_cucupetak`.`kode_cucu_petak`
+JOIN `inventarisasi_umt` ON `inventarisasi_umt`.`kode_cupet_tnm`  = `umt_cupet_tnm`.`kode_cupet_tnm`
+JOIN `inventarisasi_pu` ON `inventarisasi_pu`.`kode_inven_umt`  = `inventarisasi_umt`.`kode_inven_umt`
+WHERE `umt_anakpetak`.`id` = :umt_anakpetak.id:', [...], false)
+ 5 APPPATH\Controllers\DetailMaps.php(33): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('2113')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-01-12 09:12:08 --> mysqli_sql_exception: Unknown column 'no_pohon' in 'field list' in D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `umt_ana...', 0)
+#1 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `umt_ana...')
+#2 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `umt_ana...')
+#3 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `umt_ana...', Array, false)
+#4 D:\xampp\htdocs\KHDTK-APP\app\Controllers\DetailMaps.php(33): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\DetailMaps->index('2113')
+#6 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+#7 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\KHDTK-APP\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('D:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2023-01-12 09:12:08 --> Unknown column 'no_pohon' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `umt_anakpetak`.`kode_anak_petak` as `anakpetak`, `anak_petak`, `umt_cucupetak`.`kode_cucu_petak` as `cupet`, `umt_cupet_tnm`.`kode_cupet_tnm` as `cupettnm`, `jenis_lokal`, `inventarisasi_umt`.`kode_inven_umt` as `invenumt`, `inventarisasi_pu`.`kode_inven_pu` as `kodeinvenpu`, `luas_pu`, `bentuk_pu`, `no_pohon`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `umt_cupet_tnm`.`kode_cucu_petak` = `umt_cucupetak`.`kode_cucu_petak`
+JOIN `inventarisasi_umt` ON `inventarisasi_umt`.`kode_cupet_tnm`  = `umt_cupet_tnm`.`kode_cupet_tnm`
+JOIN `inventarisasi_pu` ON `inventarisasi_pu`.`kode_inven_umt`  = `inventarisasi_umt`.`kode_inven_umt`
+WHERE `umt_anakpetak`.`id` = \'2113\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `umt_anakpetak`.`kode_anak_petak` as `anakpetak`, `anak_petak`, `umt_cucupetak`.`kode_cucu_petak` as `cupet`, `umt_cupet_tnm`.`kode_cupet_tnm` as `cupettnm`, `jenis_lokal`, `inventarisasi_umt`.`kode_inven_umt` as `invenumt`, `inventarisasi_pu`.`kode_inven_pu` as `kodeinvenpu`, `luas_pu`, `bentuk_pu`, `no_pohon`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `umt_cupet_tnm`.`kode_cucu_petak` = `umt_cucupetak`.`kode_cucu_petak`
+JOIN `inventarisasi_umt` ON `inventarisasi_umt`.`kode_cupet_tnm`  = `umt_cupet_tnm`.`kode_cupet_tnm`
+JOIN `inventarisasi_pu` ON `inventarisasi_pu`.`kode_inven_umt`  = `inventarisasi_umt`.`kode_inven_umt`
+WHERE `umt_anakpetak`.`id` = \'2113\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `umt_anakpetak`.`kode_anak_petak` as `anakpetak`, `anak_petak`, `umt_cucupetak`.`kode_cucu_petak` as `cupet`, `umt_cupet_tnm`.`kode_cupet_tnm` as `cupettnm`, `jenis_lokal`, `inventarisasi_umt`.`kode_inven_umt` as `invenumt`, `inventarisasi_pu`.`kode_inven_pu` as `kodeinvenpu`, `luas_pu`, `bentuk_pu`, `no_pohon`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `umt_cupet_tnm`.`kode_cucu_petak` = `umt_cucupetak`.`kode_cucu_petak`
+JOIN `inventarisasi_umt` ON `inventarisasi_umt`.`kode_cupet_tnm`  = `umt_cupet_tnm`.`kode_cupet_tnm`
+JOIN `inventarisasi_pu` ON `inventarisasi_pu`.`kode_inven_umt`  = `inventarisasi_umt`.`kode_inven_umt`
+WHERE `umt_anakpetak`.`id` = \'2113\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `umt_anakpetak`.`kode_anak_petak` as `anakpetak`, `anak_petak`, `umt_cucupetak`.`kode_cucu_petak` as `cupet`, `umt_cupet_tnm`.`kode_cupet_tnm` as `cupettnm`, `jenis_lokal`, `inventarisasi_umt`.`kode_inven_umt` as `invenumt`, `inventarisasi_pu`.`kode_inven_pu` as `kodeinvenpu`, `luas_pu`, `bentuk_pu`, `no_pohon`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `umt_cupet_tnm`.`kode_cucu_petak` = `umt_cucupetak`.`kode_cucu_petak`
+JOIN `inventarisasi_umt` ON `inventarisasi_umt`.`kode_cupet_tnm`  = `umt_cupet_tnm`.`kode_cupet_tnm`
+JOIN `inventarisasi_pu` ON `inventarisasi_pu`.`kode_inven_umt`  = `inventarisasi_umt`.`kode_inven_umt`
+WHERE `umt_anakpetak`.`id` = :umt_anakpetak.id:', [...], false)
+ 5 APPPATH\Controllers\DetailMaps.php(33): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('2113')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-01-12 09:12:08 --> mysqli_sql_exception: Unknown column 'no_pohon' in 'field list' in D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `umt_ana...', 0)
+#1 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `umt_ana...')
+#2 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `umt_ana...')
+#3 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `umt_ana...', Array, false)
+#4 D:\xampp\htdocs\KHDTK-APP\app\Controllers\DetailMaps.php(33): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\DetailMaps->index('2113')
+#6 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+#7 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\KHDTK-APP\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('D:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2023-01-12 09:12:08 --> Unknown column 'no_pohon' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `umt_anakpetak`.`kode_anak_petak` as `anakpetak`, `anak_petak`, `umt_cucupetak`.`kode_cucu_petak` as `cupet`, `umt_cupet_tnm`.`kode_cupet_tnm` as `cupettnm`, `jenis_lokal`, `inventarisasi_umt`.`kode_inven_umt` as `invenumt`, `inventarisasi_pu`.`kode_inven_pu` as `kodeinvenpu`, `luas_pu`, `bentuk_pu`, `no_pohon`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `umt_cupet_tnm`.`kode_cucu_petak` = `umt_cucupetak`.`kode_cucu_petak`
+JOIN `inventarisasi_umt` ON `inventarisasi_umt`.`kode_cupet_tnm`  = `umt_cupet_tnm`.`kode_cupet_tnm`
+JOIN `inventarisasi_pu` ON `inventarisasi_pu`.`kode_inven_umt`  = `inventarisasi_umt`.`kode_inven_umt`
+WHERE `umt_anakpetak`.`id` = \'2113\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `umt_anakpetak`.`kode_anak_petak` as `anakpetak`, `anak_petak`, `umt_cucupetak`.`kode_cucu_petak` as `cupet`, `umt_cupet_tnm`.`kode_cupet_tnm` as `cupettnm`, `jenis_lokal`, `inventarisasi_umt`.`kode_inven_umt` as `invenumt`, `inventarisasi_pu`.`kode_inven_pu` as `kodeinvenpu`, `luas_pu`, `bentuk_pu`, `no_pohon`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `umt_cupet_tnm`.`kode_cucu_petak` = `umt_cucupetak`.`kode_cucu_petak`
+JOIN `inventarisasi_umt` ON `inventarisasi_umt`.`kode_cupet_tnm`  = `umt_cupet_tnm`.`kode_cupet_tnm`
+JOIN `inventarisasi_pu` ON `inventarisasi_pu`.`kode_inven_umt`  = `inventarisasi_umt`.`kode_inven_umt`
+WHERE `umt_anakpetak`.`id` = \'2113\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `umt_anakpetak`.`kode_anak_petak` as `anakpetak`, `anak_petak`, `umt_cucupetak`.`kode_cucu_petak` as `cupet`, `umt_cupet_tnm`.`kode_cupet_tnm` as `cupettnm`, `jenis_lokal`, `inventarisasi_umt`.`kode_inven_umt` as `invenumt`, `inventarisasi_pu`.`kode_inven_pu` as `kodeinvenpu`, `luas_pu`, `bentuk_pu`, `no_pohon`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `umt_cupet_tnm`.`kode_cucu_petak` = `umt_cucupetak`.`kode_cucu_petak`
+JOIN `inventarisasi_umt` ON `inventarisasi_umt`.`kode_cupet_tnm`  = `umt_cupet_tnm`.`kode_cupet_tnm`
+JOIN `inventarisasi_pu` ON `inventarisasi_pu`.`kode_inven_umt`  = `inventarisasi_umt`.`kode_inven_umt`
+WHERE `umt_anakpetak`.`id` = \'2113\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `umt_anakpetak`.`kode_anak_petak` as `anakpetak`, `anak_petak`, `umt_cucupetak`.`kode_cucu_petak` as `cupet`, `umt_cupet_tnm`.`kode_cupet_tnm` as `cupettnm`, `jenis_lokal`, `inventarisasi_umt`.`kode_inven_umt` as `invenumt`, `inventarisasi_pu`.`kode_inven_pu` as `kodeinvenpu`, `luas_pu`, `bentuk_pu`, `no_pohon`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `umt_cupet_tnm`.`kode_cucu_petak` = `umt_cucupetak`.`kode_cucu_petak`
+JOIN `inventarisasi_umt` ON `inventarisasi_umt`.`kode_cupet_tnm`  = `umt_cupet_tnm`.`kode_cupet_tnm`
+JOIN `inventarisasi_pu` ON `inventarisasi_pu`.`kode_inven_umt`  = `inventarisasi_umt`.`kode_inven_umt`
+WHERE `umt_anakpetak`.`id` = :umt_anakpetak.id:', [...], false)
+ 5 APPPATH\Controllers\DetailMaps.php(33): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('2113')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-01-12 09:12:09 --> mysqli_sql_exception: Unknown column 'no_pohon' in 'field list' in D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `umt_ana...', 0)
+#1 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `umt_ana...')
+#2 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `umt_ana...')
+#3 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `umt_ana...', Array, false)
+#4 D:\xampp\htdocs\KHDTK-APP\app\Controllers\DetailMaps.php(33): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\DetailMaps->index('2113')
+#6 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+#7 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\KHDTK-APP\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('D:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2023-01-12 09:12:09 --> Unknown column 'no_pohon' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `umt_anakpetak`.`kode_anak_petak` as `anakpetak`, `anak_petak`, `umt_cucupetak`.`kode_cucu_petak` as `cupet`, `umt_cupet_tnm`.`kode_cupet_tnm` as `cupettnm`, `jenis_lokal`, `inventarisasi_umt`.`kode_inven_umt` as `invenumt`, `inventarisasi_pu`.`kode_inven_pu` as `kodeinvenpu`, `luas_pu`, `bentuk_pu`, `no_pohon`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `umt_cupet_tnm`.`kode_cucu_petak` = `umt_cucupetak`.`kode_cucu_petak`
+JOIN `inventarisasi_umt` ON `inventarisasi_umt`.`kode_cupet_tnm`  = `umt_cupet_tnm`.`kode_cupet_tnm`
+JOIN `inventarisasi_pu` ON `inventarisasi_pu`.`kode_inven_umt`  = `inventarisasi_umt`.`kode_inven_umt`
+WHERE `umt_anakpetak`.`id` = \'2113\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `umt_anakpetak`.`kode_anak_petak` as `anakpetak`, `anak_petak`, `umt_cucupetak`.`kode_cucu_petak` as `cupet`, `umt_cupet_tnm`.`kode_cupet_tnm` as `cupettnm`, `jenis_lokal`, `inventarisasi_umt`.`kode_inven_umt` as `invenumt`, `inventarisasi_pu`.`kode_inven_pu` as `kodeinvenpu`, `luas_pu`, `bentuk_pu`, `no_pohon`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `umt_cupet_tnm`.`kode_cucu_petak` = `umt_cucupetak`.`kode_cucu_petak`
+JOIN `inventarisasi_umt` ON `inventarisasi_umt`.`kode_cupet_tnm`  = `umt_cupet_tnm`.`kode_cupet_tnm`
+JOIN `inventarisasi_pu` ON `inventarisasi_pu`.`kode_inven_umt`  = `inventarisasi_umt`.`kode_inven_umt`
+WHERE `umt_anakpetak`.`id` = \'2113\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `umt_anakpetak`.`kode_anak_petak` as `anakpetak`, `anak_petak`, `umt_cucupetak`.`kode_cucu_petak` as `cupet`, `umt_cupet_tnm`.`kode_cupet_tnm` as `cupettnm`, `jenis_lokal`, `inventarisasi_umt`.`kode_inven_umt` as `invenumt`, `inventarisasi_pu`.`kode_inven_pu` as `kodeinvenpu`, `luas_pu`, `bentuk_pu`, `no_pohon`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `umt_cupet_tnm`.`kode_cucu_petak` = `umt_cucupetak`.`kode_cucu_petak`
+JOIN `inventarisasi_umt` ON `inventarisasi_umt`.`kode_cupet_tnm`  = `umt_cupet_tnm`.`kode_cupet_tnm`
+JOIN `inventarisasi_pu` ON `inventarisasi_pu`.`kode_inven_umt`  = `inventarisasi_umt`.`kode_inven_umt`
+WHERE `umt_anakpetak`.`id` = \'2113\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `umt_anakpetak`.`kode_anak_petak` as `anakpetak`, `anak_petak`, `umt_cucupetak`.`kode_cucu_petak` as `cupet`, `umt_cupet_tnm`.`kode_cupet_tnm` as `cupettnm`, `jenis_lokal`, `inventarisasi_umt`.`kode_inven_umt` as `invenumt`, `inventarisasi_pu`.`kode_inven_pu` as `kodeinvenpu`, `luas_pu`, `bentuk_pu`, `no_pohon`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `umt_cupet_tnm`.`kode_cucu_petak` = `umt_cucupetak`.`kode_cucu_petak`
+JOIN `inventarisasi_umt` ON `inventarisasi_umt`.`kode_cupet_tnm`  = `umt_cupet_tnm`.`kode_cupet_tnm`
+JOIN `inventarisasi_pu` ON `inventarisasi_pu`.`kode_inven_umt`  = `inventarisasi_umt`.`kode_inven_umt`
+WHERE `umt_anakpetak`.`id` = :umt_anakpetak.id:', [...], false)
+ 5 APPPATH\Controllers\DetailMaps.php(33): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('2113')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-01-12 09:12:09 --> mysqli_sql_exception: Unknown column 'no_pohon' in 'field list' in D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `umt_ana...', 0)
+#1 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `umt_ana...')
+#2 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `umt_ana...')
+#3 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `umt_ana...', Array, false)
+#4 D:\xampp\htdocs\KHDTK-APP\app\Controllers\DetailMaps.php(33): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\DetailMaps->index('2113')
+#6 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+#7 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\KHDTK-APP\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('D:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2023-01-12 09:12:09 --> Unknown column 'no_pohon' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `umt_anakpetak`.`kode_anak_petak` as `anakpetak`, `anak_petak`, `umt_cucupetak`.`kode_cucu_petak` as `cupet`, `umt_cupet_tnm`.`kode_cupet_tnm` as `cupettnm`, `jenis_lokal`, `inventarisasi_umt`.`kode_inven_umt` as `invenumt`, `inventarisasi_pu`.`kode_inven_pu` as `kodeinvenpu`, `luas_pu`, `bentuk_pu`, `no_pohon`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `umt_cupet_tnm`.`kode_cucu_petak` = `umt_cucupetak`.`kode_cucu_petak`
+JOIN `inventarisasi_umt` ON `inventarisasi_umt`.`kode_cupet_tnm`  = `umt_cupet_tnm`.`kode_cupet_tnm`
+JOIN `inventarisasi_pu` ON `inventarisasi_pu`.`kode_inven_umt`  = `inventarisasi_umt`.`kode_inven_umt`
+WHERE `umt_anakpetak`.`id` = \'2113\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `umt_anakpetak`.`kode_anak_petak` as `anakpetak`, `anak_petak`, `umt_cucupetak`.`kode_cucu_petak` as `cupet`, `umt_cupet_tnm`.`kode_cupet_tnm` as `cupettnm`, `jenis_lokal`, `inventarisasi_umt`.`kode_inven_umt` as `invenumt`, `inventarisasi_pu`.`kode_inven_pu` as `kodeinvenpu`, `luas_pu`, `bentuk_pu`, `no_pohon`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `umt_cupet_tnm`.`kode_cucu_petak` = `umt_cucupetak`.`kode_cucu_petak`
+JOIN `inventarisasi_umt` ON `inventarisasi_umt`.`kode_cupet_tnm`  = `umt_cupet_tnm`.`kode_cupet_tnm`
+JOIN `inventarisasi_pu` ON `inventarisasi_pu`.`kode_inven_umt`  = `inventarisasi_umt`.`kode_inven_umt`
+WHERE `umt_anakpetak`.`id` = \'2113\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `umt_anakpetak`.`kode_anak_petak` as `anakpetak`, `anak_petak`, `umt_cucupetak`.`kode_cucu_petak` as `cupet`, `umt_cupet_tnm`.`kode_cupet_tnm` as `cupettnm`, `jenis_lokal`, `inventarisasi_umt`.`kode_inven_umt` as `invenumt`, `inventarisasi_pu`.`kode_inven_pu` as `kodeinvenpu`, `luas_pu`, `bentuk_pu`, `no_pohon`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `umt_cupet_tnm`.`kode_cucu_petak` = `umt_cucupetak`.`kode_cucu_petak`
+JOIN `inventarisasi_umt` ON `inventarisasi_umt`.`kode_cupet_tnm`  = `umt_cupet_tnm`.`kode_cupet_tnm`
+JOIN `inventarisasi_pu` ON `inventarisasi_pu`.`kode_inven_umt`  = `inventarisasi_umt`.`kode_inven_umt`
+WHERE `umt_anakpetak`.`id` = \'2113\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `umt_anakpetak`.`kode_anak_petak` as `anakpetak`, `anak_petak`, `umt_cucupetak`.`kode_cucu_petak` as `cupet`, `umt_cupet_tnm`.`kode_cupet_tnm` as `cupettnm`, `jenis_lokal`, `inventarisasi_umt`.`kode_inven_umt` as `invenumt`, `inventarisasi_pu`.`kode_inven_pu` as `kodeinvenpu`, `luas_pu`, `bentuk_pu`, `no_pohon`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `umt_cupet_tnm`.`kode_cucu_petak` = `umt_cucupetak`.`kode_cucu_petak`
+JOIN `inventarisasi_umt` ON `inventarisasi_umt`.`kode_cupet_tnm`  = `umt_cupet_tnm`.`kode_cupet_tnm`
+JOIN `inventarisasi_pu` ON `inventarisasi_pu`.`kode_inven_umt`  = `inventarisasi_umt`.`kode_inven_umt`
+WHERE `umt_anakpetak`.`id` = :umt_anakpetak.id:', [...], false)
+ 5 APPPATH\Controllers\DetailMaps.php(33): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('2113')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-01-12 09:12:10 --> mysqli_sql_exception: Unknown column 'no_pohon' in 'field list' in D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `umt_ana...', 0)
+#1 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `umt_ana...')
+#2 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `umt_ana...')
+#3 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `umt_ana...', Array, false)
+#4 D:\xampp\htdocs\KHDTK-APP\app\Controllers\DetailMaps.php(33): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\DetailMaps->index('2113')
+#6 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+#7 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\KHDTK-APP\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('D:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2023-01-12 09:12:10 --> Unknown column 'no_pohon' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `umt_anakpetak`.`kode_anak_petak` as `anakpetak`, `anak_petak`, `umt_cucupetak`.`kode_cucu_petak` as `cupet`, `umt_cupet_tnm`.`kode_cupet_tnm` as `cupettnm`, `jenis_lokal`, `inventarisasi_umt`.`kode_inven_umt` as `invenumt`, `inventarisasi_pu`.`kode_inven_pu` as `kodeinvenpu`, `luas_pu`, `bentuk_pu`, `no_pohon`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `umt_cupet_tnm`.`kode_cucu_petak` = `umt_cucupetak`.`kode_cucu_petak`
+JOIN `inventarisasi_umt` ON `inventarisasi_umt`.`kode_cupet_tnm`  = `umt_cupet_tnm`.`kode_cupet_tnm`
+JOIN `inventarisasi_pu` ON `inventarisasi_pu`.`kode_inven_umt`  = `inventarisasi_umt`.`kode_inven_umt`
+WHERE `umt_anakpetak`.`id` = \'2113\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `umt_anakpetak`.`kode_anak_petak` as `anakpetak`, `anak_petak`, `umt_cucupetak`.`kode_cucu_petak` as `cupet`, `umt_cupet_tnm`.`kode_cupet_tnm` as `cupettnm`, `jenis_lokal`, `inventarisasi_umt`.`kode_inven_umt` as `invenumt`, `inventarisasi_pu`.`kode_inven_pu` as `kodeinvenpu`, `luas_pu`, `bentuk_pu`, `no_pohon`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `umt_cupet_tnm`.`kode_cucu_petak` = `umt_cucupetak`.`kode_cucu_petak`
+JOIN `inventarisasi_umt` ON `inventarisasi_umt`.`kode_cupet_tnm`  = `umt_cupet_tnm`.`kode_cupet_tnm`
+JOIN `inventarisasi_pu` ON `inventarisasi_pu`.`kode_inven_umt`  = `inventarisasi_umt`.`kode_inven_umt`
+WHERE `umt_anakpetak`.`id` = \'2113\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `umt_anakpetak`.`kode_anak_petak` as `anakpetak`, `anak_petak`, `umt_cucupetak`.`kode_cucu_petak` as `cupet`, `umt_cupet_tnm`.`kode_cupet_tnm` as `cupettnm`, `jenis_lokal`, `inventarisasi_umt`.`kode_inven_umt` as `invenumt`, `inventarisasi_pu`.`kode_inven_pu` as `kodeinvenpu`, `luas_pu`, `bentuk_pu`, `no_pohon`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `umt_cupet_tnm`.`kode_cucu_petak` = `umt_cucupetak`.`kode_cucu_petak`
+JOIN `inventarisasi_umt` ON `inventarisasi_umt`.`kode_cupet_tnm`  = `umt_cupet_tnm`.`kode_cupet_tnm`
+JOIN `inventarisasi_pu` ON `inventarisasi_pu`.`kode_inven_umt`  = `inventarisasi_umt`.`kode_inven_umt`
+WHERE `umt_anakpetak`.`id` = \'2113\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `umt_anakpetak`.`kode_anak_petak` as `anakpetak`, `anak_petak`, `umt_cucupetak`.`kode_cucu_petak` as `cupet`, `umt_cupet_tnm`.`kode_cupet_tnm` as `cupettnm`, `jenis_lokal`, `inventarisasi_umt`.`kode_inven_umt` as `invenumt`, `inventarisasi_pu`.`kode_inven_pu` as `kodeinvenpu`, `luas_pu`, `bentuk_pu`, `no_pohon`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `umt_cupet_tnm`.`kode_cucu_petak` = `umt_cucupetak`.`kode_cucu_petak`
+JOIN `inventarisasi_umt` ON `inventarisasi_umt`.`kode_cupet_tnm`  = `umt_cupet_tnm`.`kode_cupet_tnm`
+JOIN `inventarisasi_pu` ON `inventarisasi_pu`.`kode_inven_umt`  = `inventarisasi_umt`.`kode_inven_umt`
+WHERE `umt_anakpetak`.`id` = :umt_anakpetak.id:', [...], false)
+ 5 APPPATH\Controllers\DetailMaps.php(33): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('2113')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-12 09:12:25 --> Cannot use object of type CodeIgniter\Database\MySQLi\Builder as array
+in APPPATH\Views\apps\maps_detail.php on line 547.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/maps_detail', [], true)
+ 4 APPPATH\Controllers\DetailMaps.php(47): view('apps/maps_detail', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('2113')
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-12 09:14:18 --> Undefined index: no_pohon
+in APPPATH\Views\apps\maps_detail.php on line 548.
+ 1 APPPATH\Views\apps\maps_detail.php(548): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: no_pohon', 'APPPATH\\Views\\apps\\maps_detail.php', 548, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\apps\\maps_detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/maps_detail', [], true)
+ 5 APPPATH\Controllers\DetailMaps.php(47): view('apps/maps_detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('2113')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-12 09:18:21 --> Argument 1 passed to CodeIgniter\Database\BaseBuilder::get() must be of the type int or null, string given, called in D:\xampp\htdocs\KHDTK-APP\app\Controllers\DetailMaps.php on line 33
+in SYSTEMPATH\Database\BaseBuilder.php on line 1577.
+ 1 APPPATH\Controllers\DetailMaps.php(33): CodeIgniter\Database\BaseBuilder->get('no_pohon')
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('2113')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-12 09:20:57 --> Call to undefined method CodeIgniter\Database\MySQLi\Result::num_rows()
+in APPPATH\Controllers\DetailMaps.php on line 37.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('2113')
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-01-12 09:30:30 --> mysqli_sql_exception: Table 'inventarisasi_pu.kode_inven_umt' doesn't exist in D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT COUNT(*)...', 0)
+#1 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1669): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 D:\xampp\htdocs\KHDTK-APP\app\Controllers\DetailMaps.php(34): CodeIgniter\Database\BaseBuilder->countAllResults()
+#5 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\DetailMaps->index('2113')
+#6 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+#7 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\KHDTK-APP\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('D:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2023-01-12 09:30:30 --> Table 'inventarisasi_pu.kode_inven_umt' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT COUNT(*) AS `numrows`
+FROM (`umt_anakpetak`, `inventarisasi_pu`.`kode_inven_umt`)
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `umt_cupet_tnm`.`kode_cucu_petak` = `umt_cucupetak`.`kode_cucu_petak`
+JOIN `inventarisasi_umt` ON `inventarisasi_umt`.`kode_cupet_tnm`  = `umt_cupet_tnm`.`kode_cupet_tnm`
+JOIN `inventarisasi_pu` ON `inventarisasi_pu`.`kode_inven_umt`  = `inventarisasi_umt`.`kode_inven_umt`
+JOIN `inventarisasi_umt_ukurkayu` ON `inventarisasi_umt_ukurkayu`.`kode_inven_pu`  = `inventarisasi_pu`.`kode_inven_pu`
+WHERE `umt_anakpetak`.`id` = \'2113\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM (`umt_anakpetak`, `inventarisasi_pu`.`kode_inven_umt`)
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `umt_cupet_tnm`.`kode_cucu_petak` = `umt_cucupetak`.`kode_cucu_petak`
+JOIN `inventarisasi_umt` ON `inventarisasi_umt`.`kode_cupet_tnm`  = `umt_cupet_tnm`.`kode_cupet_tnm`
+JOIN `inventarisasi_pu` ON `inventarisasi_pu`.`kode_inven_umt`  = `inventarisasi_umt`.`kode_inven_umt`
+JOIN `inventarisasi_umt_ukurkayu` ON `inventarisasi_umt_ukurkayu`.`kode_inven_pu`  = `inventarisasi_pu`.`kode_inven_pu`
+WHERE `umt_anakpetak`.`id` = \'2113\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM (`umt_anakpetak`, `inventarisasi_pu`.`kode_inven_umt`)
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `umt_cupet_tnm`.`kode_cucu_petak` = `umt_cucupetak`.`kode_cucu_petak`
+JOIN `inventarisasi_umt` ON `inventarisasi_umt`.`kode_cupet_tnm`  = `umt_cupet_tnm`.`kode_cupet_tnm`
+JOIN `inventarisasi_pu` ON `inventarisasi_pu`.`kode_inven_umt`  = `inventarisasi_umt`.`kode_inven_umt`
+JOIN `inventarisasi_umt_ukurkayu` ON `inventarisasi_umt_ukurkayu`.`kode_inven_pu`  = `inventarisasi_pu`.`kode_inven_pu`
+WHERE `umt_anakpetak`.`id` = \'2113\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1669): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM (`umt_anakpetak`, `inventarisasi_pu`.`kode_inven_umt`)
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `umt_cupet_tnm`.`kode_cucu_petak` = `umt_cucupetak`.`kode_cucu_petak`
+JOIN `inventarisasi_umt` ON `inventarisasi_umt`.`kode_cupet_tnm`  = `umt_cupet_tnm`.`kode_cupet_tnm`
+JOIN `inventarisasi_pu` ON `inventarisasi_pu`.`kode_inven_umt`  = `inventarisasi_umt`.`kode_inven_umt`
+JOIN `inventarisasi_umt_ukurkayu` ON `inventarisasi_umt_ukurkayu`.`kode_inven_pu`  = `inventarisasi_pu`.`kode_inven_pu`
+WHERE `umt_anakpetak`.`id` = :umt_anakpetak.id:', [...], false)
+ 5 APPPATH\Controllers\DetailMaps.php(34): CodeIgniter\Database\BaseBuilder->countAllResults()
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('2113')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-01-12 09:31:02 --> mysqli_sql_exception: Table 'inventarisasi_pu.kode_inven_umt' doesn't exist in D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT COUNT(*)...', 0)
+#1 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1669): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 D:\xampp\htdocs\KHDTK-APP\app\Controllers\DetailMaps.php(34): CodeIgniter\Database\BaseBuilder->countAllResults()
+#5 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\DetailMaps->index('2113')
+#6 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+#7 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\KHDTK-APP\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('D:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2023-01-12 09:31:02 --> Table 'inventarisasi_pu.kode_inven_umt' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT COUNT(*) AS `numrows`
+FROM (`umt_anakpetak`, `inventarisasi_pu`.`kode_inven_umt`)
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `umt_cupet_tnm`.`kode_cucu_petak` = `umt_cucupetak`.`kode_cucu_petak`
+JOIN `inventarisasi_umt` ON `inventarisasi_umt`.`kode_cupet_tnm`  = `umt_cupet_tnm`.`kode_cupet_tnm`
+JOIN `inventarisasi_pu` ON `inventarisasi_pu`.`kode_inven_umt`  = `inventarisasi_umt`.`kode_inven_umt`
+JOIN `inventarisasi_umt_ukurkayu` ON `inventarisasi_umt_ukurkayu`.`kode_inven_pu`  = `inventarisasi_pu`.`kode_inven_pu`
+WHERE `umt_anakpetak`.`id` = \'2113\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM (`umt_anakpetak`, `inventarisasi_pu`.`kode_inven_umt`)
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `umt_cupet_tnm`.`kode_cucu_petak` = `umt_cucupetak`.`kode_cucu_petak`
+JOIN `inventarisasi_umt` ON `inventarisasi_umt`.`kode_cupet_tnm`  = `umt_cupet_tnm`.`kode_cupet_tnm`
+JOIN `inventarisasi_pu` ON `inventarisasi_pu`.`kode_inven_umt`  = `inventarisasi_umt`.`kode_inven_umt`
+JOIN `inventarisasi_umt_ukurkayu` ON `inventarisasi_umt_ukurkayu`.`kode_inven_pu`  = `inventarisasi_pu`.`kode_inven_pu`
+WHERE `umt_anakpetak`.`id` = \'2113\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM (`umt_anakpetak`, `inventarisasi_pu`.`kode_inven_umt`)
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `umt_cupet_tnm`.`kode_cucu_petak` = `umt_cucupetak`.`kode_cucu_petak`
+JOIN `inventarisasi_umt` ON `inventarisasi_umt`.`kode_cupet_tnm`  = `umt_cupet_tnm`.`kode_cupet_tnm`
+JOIN `inventarisasi_pu` ON `inventarisasi_pu`.`kode_inven_umt`  = `inventarisasi_umt`.`kode_inven_umt`
+JOIN `inventarisasi_umt_ukurkayu` ON `inventarisasi_umt_ukurkayu`.`kode_inven_pu`  = `inventarisasi_pu`.`kode_inven_pu`
+WHERE `umt_anakpetak`.`id` = \'2113\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1669): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM (`umt_anakpetak`, `inventarisasi_pu`.`kode_inven_umt`)
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `umt_cupet_tnm`.`kode_cucu_petak` = `umt_cucupetak`.`kode_cucu_petak`
+JOIN `inventarisasi_umt` ON `inventarisasi_umt`.`kode_cupet_tnm`  = `umt_cupet_tnm`.`kode_cupet_tnm`
+JOIN `inventarisasi_pu` ON `inventarisasi_pu`.`kode_inven_umt`  = `inventarisasi_umt`.`kode_inven_umt`
+JOIN `inventarisasi_umt_ukurkayu` ON `inventarisasi_umt_ukurkayu`.`kode_inven_pu`  = `inventarisasi_pu`.`kode_inven_pu`
+WHERE `umt_anakpetak`.`id` = :umt_anakpetak.id:', [...], false)
+ 5 APPPATH\Controllers\DetailMaps.php(34): CodeIgniter\Database\BaseBuilder->countAllResults()
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('2113')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-01-12 09:31:03 --> mysqli_sql_exception: Table 'inventarisasi_pu.kode_inven_umt' doesn't exist in D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT COUNT(*)...', 0)
+#1 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1669): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 D:\xampp\htdocs\KHDTK-APP\app\Controllers\DetailMaps.php(34): CodeIgniter\Database\BaseBuilder->countAllResults()
+#5 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\DetailMaps->index('2113')
+#6 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+#7 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\KHDTK-APP\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('D:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2023-01-12 09:31:03 --> Table 'inventarisasi_pu.kode_inven_umt' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT COUNT(*) AS `numrows`
+FROM (`umt_anakpetak`, `inventarisasi_pu`.`kode_inven_umt`)
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `umt_cupet_tnm`.`kode_cucu_petak` = `umt_cucupetak`.`kode_cucu_petak`
+JOIN `inventarisasi_umt` ON `inventarisasi_umt`.`kode_cupet_tnm`  = `umt_cupet_tnm`.`kode_cupet_tnm`
+JOIN `inventarisasi_pu` ON `inventarisasi_pu`.`kode_inven_umt`  = `inventarisasi_umt`.`kode_inven_umt`
+JOIN `inventarisasi_umt_ukurkayu` ON `inventarisasi_umt_ukurkayu`.`kode_inven_pu`  = `inventarisasi_pu`.`kode_inven_pu`
+WHERE `umt_anakpetak`.`id` = \'2113\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM (`umt_anakpetak`, `inventarisasi_pu`.`kode_inven_umt`)
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `umt_cupet_tnm`.`kode_cucu_petak` = `umt_cucupetak`.`kode_cucu_petak`
+JOIN `inventarisasi_umt` ON `inventarisasi_umt`.`kode_cupet_tnm`  = `umt_cupet_tnm`.`kode_cupet_tnm`
+JOIN `inventarisasi_pu` ON `inventarisasi_pu`.`kode_inven_umt`  = `inventarisasi_umt`.`kode_inven_umt`
+JOIN `inventarisasi_umt_ukurkayu` ON `inventarisasi_umt_ukurkayu`.`kode_inven_pu`  = `inventarisasi_pu`.`kode_inven_pu`
+WHERE `umt_anakpetak`.`id` = \'2113\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM (`umt_anakpetak`, `inventarisasi_pu`.`kode_inven_umt`)
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `umt_cupet_tnm`.`kode_cucu_petak` = `umt_cucupetak`.`kode_cucu_petak`
+JOIN `inventarisasi_umt` ON `inventarisasi_umt`.`kode_cupet_tnm`  = `umt_cupet_tnm`.`kode_cupet_tnm`
+JOIN `inventarisasi_pu` ON `inventarisasi_pu`.`kode_inven_umt`  = `inventarisasi_umt`.`kode_inven_umt`
+JOIN `inventarisasi_umt_ukurkayu` ON `inventarisasi_umt_ukurkayu`.`kode_inven_pu`  = `inventarisasi_pu`.`kode_inven_pu`
+WHERE `umt_anakpetak`.`id` = \'2113\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1669): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM (`umt_anakpetak`, `inventarisasi_pu`.`kode_inven_umt`)
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `umt_cupet_tnm`.`kode_cucu_petak` = `umt_cucupetak`.`kode_cucu_petak`
+JOIN `inventarisasi_umt` ON `inventarisasi_umt`.`kode_cupet_tnm`  = `umt_cupet_tnm`.`kode_cupet_tnm`
+JOIN `inventarisasi_pu` ON `inventarisasi_pu`.`kode_inven_umt`  = `inventarisasi_umt`.`kode_inven_umt`
+JOIN `inventarisasi_umt_ukurkayu` ON `inventarisasi_umt_ukurkayu`.`kode_inven_pu`  = `inventarisasi_pu`.`kode_inven_pu`
+WHERE `umt_anakpetak`.`id` = :umt_anakpetak.id:', [...], false)
+ 5 APPPATH\Controllers\DetailMaps.php(34): CodeIgniter\Database\BaseBuilder->countAllResults()
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('2113')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-01-12 09:31:08 --> mysqli_sql_exception: Table 'inventarisasi_pu.kodeinvenpu' doesn't exist in D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT COUNT(*)...', 0)
+#1 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1669): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 D:\xampp\htdocs\KHDTK-APP\app\Controllers\DetailMaps.php(34): CodeIgniter\Database\BaseBuilder->countAllResults()
+#5 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\DetailMaps->index('2113')
+#6 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+#7 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\KHDTK-APP\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('D:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2023-01-12 09:31:08 --> Table 'inventarisasi_pu.kodeinvenpu' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT COUNT(*) AS `numrows`
+FROM (`umt_anakpetak`, `inventarisasi_pu`.`kodeinvenpu`)
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `umt_cupet_tnm`.`kode_cucu_petak` = `umt_cucupetak`.`kode_cucu_petak`
+JOIN `inventarisasi_umt` ON `inventarisasi_umt`.`kode_cupet_tnm`  = `umt_cupet_tnm`.`kode_cupet_tnm`
+JOIN `inventarisasi_pu` ON `inventarisasi_pu`.`kode_inven_umt`  = `inventarisasi_umt`.`kode_inven_umt`
+JOIN `inventarisasi_umt_ukurkayu` ON `inventarisasi_umt_ukurkayu`.`kode_inven_pu`  = `inventarisasi_pu`.`kode_inven_pu`
+WHERE `umt_anakpetak`.`id` = \'2113\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM (`umt_anakpetak`, `inventarisasi_pu`.`kodeinvenpu`)
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `umt_cupet_tnm`.`kode_cucu_petak` = `umt_cucupetak`.`kode_cucu_petak`
+JOIN `inventarisasi_umt` ON `inventarisasi_umt`.`kode_cupet_tnm`  = `umt_cupet_tnm`.`kode_cupet_tnm`
+JOIN `inventarisasi_pu` ON `inventarisasi_pu`.`kode_inven_umt`  = `inventarisasi_umt`.`kode_inven_umt`
+JOIN `inventarisasi_umt_ukurkayu` ON `inventarisasi_umt_ukurkayu`.`kode_inven_pu`  = `inventarisasi_pu`.`kode_inven_pu`
+WHERE `umt_anakpetak`.`id` = \'2113\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM (`umt_anakpetak`, `inventarisasi_pu`.`kodeinvenpu`)
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `umt_cupet_tnm`.`kode_cucu_petak` = `umt_cucupetak`.`kode_cucu_petak`
+JOIN `inventarisasi_umt` ON `inventarisasi_umt`.`kode_cupet_tnm`  = `umt_cupet_tnm`.`kode_cupet_tnm`
+JOIN `inventarisasi_pu` ON `inventarisasi_pu`.`kode_inven_umt`  = `inventarisasi_umt`.`kode_inven_umt`
+JOIN `inventarisasi_umt_ukurkayu` ON `inventarisasi_umt_ukurkayu`.`kode_inven_pu`  = `inventarisasi_pu`.`kode_inven_pu`
+WHERE `umt_anakpetak`.`id` = \'2113\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1669): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM (`umt_anakpetak`, `inventarisasi_pu`.`kodeinvenpu`)
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `umt_cupet_tnm`.`kode_cucu_petak` = `umt_cucupetak`.`kode_cucu_petak`
+JOIN `inventarisasi_umt` ON `inventarisasi_umt`.`kode_cupet_tnm`  = `umt_cupet_tnm`.`kode_cupet_tnm`
+JOIN `inventarisasi_pu` ON `inventarisasi_pu`.`kode_inven_umt`  = `inventarisasi_umt`.`kode_inven_umt`
+JOIN `inventarisasi_umt_ukurkayu` ON `inventarisasi_umt_ukurkayu`.`kode_inven_pu`  = `inventarisasi_pu`.`kode_inven_pu`
+WHERE `umt_anakpetak`.`id` = :umt_anakpetak.id:', [...], false)
+ 5 APPPATH\Controllers\DetailMaps.php(34): CodeIgniter\Database\BaseBuilder->countAllResults()
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('2113')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-01-12 09:31:17 --> mysqli_sql_exception: Table 'khdtk.kodeinvenpu' doesn't exist in D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT COUNT(*)...', 0)
+#1 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1669): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 D:\xampp\htdocs\KHDTK-APP\app\Controllers\DetailMaps.php(34): CodeIgniter\Database\BaseBuilder->countAllResults()
+#5 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\DetailMaps->index('2113')
+#6 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+#7 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\KHDTK-APP\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('D:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2023-01-12 09:31:17 --> Table 'khdtk.kodeinvenpu' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT COUNT(*) AS `numrows`
+FROM (`umt_anakpetak`, `kodeinvenpu`)
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `umt_cupet_tnm`.`kode_cucu_petak` = `umt_cucupetak`.`kode_cucu_petak`
+JOIN `inventarisasi_umt` ON `inventarisasi_umt`.`kode_cupet_tnm`  = `umt_cupet_tnm`.`kode_cupet_tnm`
+JOIN `inventarisasi_pu` ON `inventarisasi_pu`.`kode_inven_umt`  = `inventarisasi_umt`.`kode_inven_umt`
+JOIN `inventarisasi_umt_ukurkayu` ON `inventarisasi_umt_ukurkayu`.`kode_inven_pu`  = `inventarisasi_pu`.`kode_inven_pu`
+WHERE `umt_anakpetak`.`id` = \'2113\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM (`umt_anakpetak`, `kodeinvenpu`)
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `umt_cupet_tnm`.`kode_cucu_petak` = `umt_cucupetak`.`kode_cucu_petak`
+JOIN `inventarisasi_umt` ON `inventarisasi_umt`.`kode_cupet_tnm`  = `umt_cupet_tnm`.`kode_cupet_tnm`
+JOIN `inventarisasi_pu` ON `inventarisasi_pu`.`kode_inven_umt`  = `inventarisasi_umt`.`kode_inven_umt`
+JOIN `inventarisasi_umt_ukurkayu` ON `inventarisasi_umt_ukurkayu`.`kode_inven_pu`  = `inventarisasi_pu`.`kode_inven_pu`
+WHERE `umt_anakpetak`.`id` = \'2113\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM (`umt_anakpetak`, `kodeinvenpu`)
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `umt_cupet_tnm`.`kode_cucu_petak` = `umt_cucupetak`.`kode_cucu_petak`
+JOIN `inventarisasi_umt` ON `inventarisasi_umt`.`kode_cupet_tnm`  = `umt_cupet_tnm`.`kode_cupet_tnm`
+JOIN `inventarisasi_pu` ON `inventarisasi_pu`.`kode_inven_umt`  = `inventarisasi_umt`.`kode_inven_umt`
+JOIN `inventarisasi_umt_ukurkayu` ON `inventarisasi_umt_ukurkayu`.`kode_inven_pu`  = `inventarisasi_pu`.`kode_inven_pu`
+WHERE `umt_anakpetak`.`id` = \'2113\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1669): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM (`umt_anakpetak`, `kodeinvenpu`)
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `umt_cupet_tnm`.`kode_cucu_petak` = `umt_cucupetak`.`kode_cucu_petak`
+JOIN `inventarisasi_umt` ON `inventarisasi_umt`.`kode_cupet_tnm`  = `umt_cupet_tnm`.`kode_cupet_tnm`
+JOIN `inventarisasi_pu` ON `inventarisasi_pu`.`kode_inven_umt`  = `inventarisasi_umt`.`kode_inven_umt`
+JOIN `inventarisasi_umt_ukurkayu` ON `inventarisasi_umt_ukurkayu`.`kode_inven_pu`  = `inventarisasi_pu`.`kode_inven_pu`
+WHERE `umt_anakpetak`.`id` = :umt_anakpetak.id:', [...], false)
+ 5 APPPATH\Controllers\DetailMaps.php(34): CodeIgniter\Database\BaseBuilder->countAllResults()
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('2113')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-01-12 09:35:12 --> mysqli_sql_exception: Unknown column 'inventarisasi_pu.id' in 'where clause' in D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\xampp\htdocs\KHDTK-APP\app\Controllers\DetailMaps.php(35): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\DetailMaps->index('2113')
+#6 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+#7 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\KHDTK-APP\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('D:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2023-01-12 09:35:12 --> Unknown column 'inventarisasi_pu.id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `umt_anakpetak`
+WHERE `inventarisasi_pu`.`id` IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `umt_anakpetak`
+WHERE `inventarisasi_pu`.`id` IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `umt_anakpetak`
+WHERE `inventarisasi_pu`.`id` IS NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `umt_anakpetak`
+WHERE `inventarisasi_pu`.`id` IS NULL', [...], false)
+ 5 APPPATH\Controllers\DetailMaps.php(35): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('2113')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-01-12 09:45:22 --> mysqli_sql_exception: Unknown column 'inventarisasi_pu.id' in 'where clause' in D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT COUNT(*)...', 0)
+#1 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1669): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 D:\xampp\htdocs\KHDTK-APP\app\Controllers\DetailMaps.php(27): CodeIgniter\Database\BaseBuilder->countAllResults()
+#5 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\DetailMaps->index('2113')
+#6 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+#7 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\KHDTK-APP\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('D:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2023-01-12 09:45:22 --> Unknown column 'inventarisasi_pu.id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT COUNT(*) AS `numrows`
+FROM `umt_anakpetak`
+JOIN `inventarisasi_umt_ukurkayu` ON `inventarisasi_umt_ukurkayu`.`kode_inven_pu`  = `inventarisasi_pu`.`kode_inven_pu`
+WHERE `inventarisasi_pu`.`id` IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `umt_anakpetak`
+JOIN `inventarisasi_umt_ukurkayu` ON `inventarisasi_umt_ukurkayu`.`kode_inven_pu`  = `inventarisasi_pu`.`kode_inven_pu`
+WHERE `inventarisasi_pu`.`id` IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `umt_anakpetak`
+JOIN `inventarisasi_umt_ukurkayu` ON `inventarisasi_umt_ukurkayu`.`kode_inven_pu`  = `inventarisasi_pu`.`kode_inven_pu`
+WHERE `inventarisasi_pu`.`id` IS NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1669): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `umt_anakpetak`
+JOIN `inventarisasi_umt_ukurkayu` ON `inventarisasi_umt_ukurkayu`.`kode_inven_pu`  = `inventarisasi_pu`.`kode_inven_pu`
+WHERE `inventarisasi_pu`.`id` IS NULL', [], false)
+ 5 APPPATH\Controllers\DetailMaps.php(27): CodeIgniter\Database\BaseBuilder->countAllResults()
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('2113')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-01-12 09:49:46 --> mysqli_sql_exception: Unknown column 'inventarisasi_pu.id' in 'where clause' in D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT COUNT(*)...', 0)
+#1 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1669): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 D:\xampp\htdocs\KHDTK-APP\app\Controllers\DetailMaps.php(27): CodeIgniter\Database\BaseBuilder->countAllResults()
+#5 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\DetailMaps->index('2113')
+#6 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+#7 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\KHDTK-APP\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('D:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2023-01-12 09:49:46 --> Unknown column 'inventarisasi_pu.id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT COUNT(*) AS `numrows`
+FROM `umt_anakpetak`
+JOIN `inventarisasi_umt_ukurkayu` ON `inventarisasi_umt_ukurkayu`.`kode_inven_pu`  = `inventarisasi_pu`.`kode_inven_pu`
+WHERE `inventarisasi_pu`.`id` IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `umt_anakpetak`
+JOIN `inventarisasi_umt_ukurkayu` ON `inventarisasi_umt_ukurkayu`.`kode_inven_pu`  = `inventarisasi_pu`.`kode_inven_pu`
+WHERE `inventarisasi_pu`.`id` IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `umt_anakpetak`
+JOIN `inventarisasi_umt_ukurkayu` ON `inventarisasi_umt_ukurkayu`.`kode_inven_pu`  = `inventarisasi_pu`.`kode_inven_pu`
+WHERE `inventarisasi_pu`.`id` IS NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1669): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `umt_anakpetak`
+JOIN `inventarisasi_umt_ukurkayu` ON `inventarisasi_umt_ukurkayu`.`kode_inven_pu`  = `inventarisasi_pu`.`kode_inven_pu`
+WHERE `inventarisasi_pu`.`id` IS NULL', [], false)
+ 5 APPPATH\Controllers\DetailMaps.php(27): CodeIgniter\Database\BaseBuilder->countAllResults()
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('2113')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-01-12 09:49:47 --> mysqli_sql_exception: Unknown column 'inventarisasi_pu.id' in 'where clause' in D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT COUNT(*)...', 0)
+#1 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1669): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 D:\xampp\htdocs\KHDTK-APP\app\Controllers\DetailMaps.php(27): CodeIgniter\Database\BaseBuilder->countAllResults()
+#5 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\DetailMaps->index('2113')
+#6 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+#7 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\KHDTK-APP\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('D:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2023-01-12 09:49:47 --> Unknown column 'inventarisasi_pu.id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT COUNT(*) AS `numrows`
+FROM `umt_anakpetak`
+JOIN `inventarisasi_umt_ukurkayu` ON `inventarisasi_umt_ukurkayu`.`kode_inven_pu`  = `inventarisasi_pu`.`kode_inven_pu`
+WHERE `inventarisasi_pu`.`id` IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `umt_anakpetak`
+JOIN `inventarisasi_umt_ukurkayu` ON `inventarisasi_umt_ukurkayu`.`kode_inven_pu`  = `inventarisasi_pu`.`kode_inven_pu`
+WHERE `inventarisasi_pu`.`id` IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `umt_anakpetak`
+JOIN `inventarisasi_umt_ukurkayu` ON `inventarisasi_umt_ukurkayu`.`kode_inven_pu`  = `inventarisasi_pu`.`kode_inven_pu`
+WHERE `inventarisasi_pu`.`id` IS NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1669): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `umt_anakpetak`
+JOIN `inventarisasi_umt_ukurkayu` ON `inventarisasi_umt_ukurkayu`.`kode_inven_pu`  = `inventarisasi_pu`.`kode_inven_pu`
+WHERE `inventarisasi_pu`.`id` IS NULL', [], false)
+ 5 APPPATH\Controllers\DetailMaps.php(27): CodeIgniter\Database\BaseBuilder->countAllResults()
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('2113')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-01-12 09:52:08 --> mysqli_sql_exception: Unknown column 'inventarisasi_pu.id' in 'where clause' in D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT COUNT(*)...', 0)
+#1 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1669): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#4 D:\xampp\htdocs\KHDTK-APP\app\Controllers\DetailMaps.php(27): CodeIgniter\Database\BaseBuilder->countAllResults()
+#5 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\DetailMaps->index('2113')
+#6 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+#7 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\KHDTK-APP\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('D:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2023-01-12 09:52:08 --> Unknown column 'inventarisasi_pu.id' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT COUNT(*) AS `numrows`
+FROM `umt_anakpetak`
+JOIN `inventarisasi_umt_ukurkayu` ON `inventarisasi_umt_ukurkayu`.`kode_inven_pu`  = `inventarisasi_pu`.`kode_inven_pu`
+WHERE `inventarisasi_pu`.`id` IS NULL', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows`
+FROM `umt_anakpetak`
+JOIN `inventarisasi_umt_ukurkayu` ON `inventarisasi_umt_ukurkayu`.`kode_inven_pu`  = `inventarisasi_pu`.`kode_inven_pu`
+WHERE `inventarisasi_pu`.`id` IS NULL')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows`
+FROM `umt_anakpetak`
+JOIN `inventarisasi_umt_ukurkayu` ON `inventarisasi_umt_ukurkayu`.`kode_inven_pu`  = `inventarisasi_pu`.`kode_inven_pu`
+WHERE `inventarisasi_pu`.`id` IS NULL')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1669): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows`
+FROM `umt_anakpetak`
+JOIN `inventarisasi_umt_ukurkayu` ON `inventarisasi_umt_ukurkayu`.`kode_inven_pu`  = `inventarisasi_pu`.`kode_inven_pu`
+WHERE `inventarisasi_pu`.`id` IS NULL', [], false)
+ 5 APPPATH\Controllers\DetailMaps.php(27): CodeIgniter\Database\BaseBuilder->countAllResults()
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('2113')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-12 10:05:24 --> Object of class CodeIgniter\Database\MySQLi\Builder could not be converted to string
+in APPPATH\Views\apps\maps_detail.php on line 556.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/maps_detail', [], true)
+ 4 APPPATH\Controllers\DetailMaps.php(47): view('apps/maps_detail', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('2113')
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-12 10:10:28 --> You must provide a valid column name not separated by comma.
+in SYSTEMPATH\Database\BaseBuilder.php on line 491.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(491): CodeIgniter\Database\Exceptions\DataException::forInvalidArgument('column name not separated by comma')
+ 2 SYSTEMPATH\Database\BaseBuilder.php(448): CodeIgniter\Database\BaseBuilder->maxMinAvgSum('umt_anakpetak.kode_anak_petak as anakpetak,anak_petak, umt_cucupetak.kode_cucu_petak as cupet, umt_cupet_tnm.kode_cupet_tnm as cupettnm, jenis_lokal, inventarisasi_umt.kode_inven_umt as invenumt, inventarisasi_pu.kode_inven_pu as kodeinvenpu, luas_pu, bentuk_pu', 'ROOTPATH\\public', 'SUM')
+ 3 APPPATH\Controllers\DetailMaps.php(41): CodeIgniter\Database\BaseBuilder->selectSum('umt_anakpetak.kode_anak_petak as anakpetak,anak_petak, umt_cucupetak.kode_cucu_petak as cupet, umt_cupet_tnm.kode_cupet_tnm as cupettnm, jenis_lokal, inventarisasi_umt.kode_inven_umt as invenumt, inventarisasi_pu.kode_inven_pu as kodeinvenpu, luas_pu, bentuk_pu')
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('2113')
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-12 10:12:40 --> Argument 1 passed to CodeIgniter\Database\BaseBuilder::get() must be of the type int or null, string given, called in D:\xampp\htdocs\KHDTK-APP\app\Controllers\DetailMaps.php on line 48
+in SYSTEMPATH\Database\BaseBuilder.php on line 1577.
+ 1 APPPATH\Controllers\DetailMaps.php(48): CodeIgniter\Database\BaseBuilder->get('inventarisasi_pu')
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('2113')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-12 10:17:23 --> array_sum() expects parameter 1 to be array, string given
+in APPPATH\Views\apps\maps_detail.php on line 557.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'array_sum() expects parameter 1 to be array, string given', 'APPPATH\\Views\\apps\\maps_detail.php', 557, [...])
+ 2 APPPATH\Views\apps\maps_detail.php(557): array_sum('3')
+ 3 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\apps\\maps_detail.php')
+ 4 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 5 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/maps_detail', [], true)
+ 6 APPPATH\Controllers\DetailMaps.php(47): view('apps/maps_detail', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('2113')
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-12 10:23:55 --> count(): Parameter must be an array or an object that implements Countable
+in APPPATH\Views\apps\maps_detail.php on line 558.
+ 1 APPPATH\Views\apps\maps_detail.php(558): CodeIgniter\Debug\Exceptions->errorHandler(2, 'count(): Parameter must be an array or an object that implements Countable', 'APPPATH\\Views\\apps\\maps_detail.php', 558, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\apps\\maps_detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/maps_detail', [], true)
+ 5 APPPATH\Controllers\DetailMaps.php(47): view('apps/maps_detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('2113')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-12 10:24:37 --> count(): Parameter must be an array or an object that implements Countable
+in APPPATH\Views\apps\maps_detail.php on line 558.
+ 1 APPPATH\Views\apps\maps_detail.php(558): CodeIgniter\Debug\Exceptions->errorHandler(2, 'count(): Parameter must be an array or an object that implements Countable', 'APPPATH\\Views\\apps\\maps_detail.php', 558, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\apps\\maps_detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/maps_detail', [], true)
+ 5 APPPATH\Controllers\DetailMaps.php(47): view('apps/maps_detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('2113')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-12 10:24:38 --> count(): Parameter must be an array or an object that implements Countable
+in APPPATH\Views\apps\maps_detail.php on line 558.
+ 1 APPPATH\Views\apps\maps_detail.php(558): CodeIgniter\Debug\Exceptions->errorHandler(2, 'count(): Parameter must be an array or an object that implements Countable', 'APPPATH\\Views\\apps\\maps_detail.php', 558, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\apps\\maps_detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/maps_detail', [], true)
+ 5 APPPATH\Controllers\DetailMaps.php(47): view('apps/maps_detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('2113')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')

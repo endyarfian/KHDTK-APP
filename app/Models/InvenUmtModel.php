@@ -18,6 +18,6 @@ class InvenUmtModel extends Model
     }
 
     protected $allowedFields = [
-        'kode_inven_umt', 'kode_inventarisasi', 'kode_cupet_tnm', 'tanggal', 'pj'
+        'kode_inven_umt', 'kode_inventarisasi', 'kode_anakpetak_tnm', 'tanggal', 'pj'
     ];
 }

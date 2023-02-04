@@ -1,0 +1,540 @@
+ERROR - 2023-02-04 04:32:54 --> mysqli_sql_exception: Table 'khdtk.umt_cupet_tnm' doesn't exist in D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\xampp\htdocs\KHDTK-APP\app\Controllers\StrukturUmt.php(29): CodeIgniter\BaseModel->findAll()
+#7 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\StrukturUmt->struktur_umt()
+#8 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StrukturUmt))
+#9 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\xampp\htdocs\KHDTK-APP\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('D:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2023-02-04 04:32:54 --> Table 'khdtk.umt_cupet_tnm' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `umt_cupet_tnm`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `umt_cupet_tnm`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `umt_cupet_tnm`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `umt_cupet_tnm`', [], false)
+ 5 SYSTEMPATH\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\StrukturUmt.php(29): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\StrukturUmt->struktur_umt()
+ 9 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StrukturUmt))
+10 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-02-04 04:37:58 --> mysqli_sql_exception: Table 'khdtk.umt_cupet_tnm' doesn't exist in D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\xampp\htdocs\KHDTK-APP\app\Controllers\StrukturUmt.php(27): CodeIgniter\BaseModel->findAll()
+#7 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\StrukturUmt->struktur_umt()
+#8 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StrukturUmt))
+#9 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\xampp\htdocs\KHDTK-APP\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('D:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2023-02-04 04:37:58 --> Table 'khdtk.umt_cupet_tnm' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `umt_cupet_tnm`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `umt_cupet_tnm`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `umt_cupet_tnm`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `umt_cupet_tnm`', [], false)
+ 5 SYSTEMPATH\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\StrukturUmt.php(27): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\StrukturUmt->struktur_umt()
+ 9 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StrukturUmt))
+10 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-02-04 04:38:00 --> mysqli_sql_exception: Table 'khdtk.umt_cupet_tnm' doesn't exist in D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\xampp\htdocs\KHDTK-APP\app\Controllers\StrukturUmt.php(27): CodeIgniter\BaseModel->findAll()
+#7 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\StrukturUmt->struktur_umt()
+#8 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StrukturUmt))
+#9 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\xampp\htdocs\KHDTK-APP\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('D:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2023-02-04 04:38:00 --> Table 'khdtk.umt_cupet_tnm' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `umt_cupet_tnm`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `umt_cupet_tnm`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `umt_cupet_tnm`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `umt_cupet_tnm`', [], false)
+ 5 SYSTEMPATH\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\StrukturUmt.php(27): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\StrukturUmt->struktur_umt()
+ 9 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StrukturUmt))
+10 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-02-04 04:38:52 --> mysqli_sql_exception: Table 'khdtk.umt_cupet_tnm' doesn't exist in D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\xampp\htdocs\KHDTK-APP\app\Controllers\StrukturUmt.php(27): CodeIgniter\BaseModel->findAll()
+#7 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\StrukturUmt->struktur_umt()
+#8 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StrukturUmt))
+#9 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\xampp\htdocs\KHDTK-APP\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('D:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2023-02-04 04:38:52 --> Table 'khdtk.umt_cupet_tnm' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `umt_cupet_tnm`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `umt_cupet_tnm`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `umt_cupet_tnm`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `umt_cupet_tnm`', [], false)
+ 5 SYSTEMPATH\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\StrukturUmt.php(27): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\StrukturUmt->struktur_umt()
+ 9 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StrukturUmt))
+10 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-02-04 04:42:02 --> mysqli_sql_exception: Table 'khdtk.umt_cucupetak' doesn't exist in D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\xampp\htdocs\KHDTK-APP\app\Controllers\TanamanUmt.php(30): CodeIgniter\BaseModel->findAll()
+#7 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\TanamanUmt->tanaman_umt()
+#8 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TanamanUmt))
+#9 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\xampp\htdocs\KHDTK-APP\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('D:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2023-02-04 04:42:02 --> Table 'khdtk.umt_cucupetak' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `umt_cucupetak`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `umt_cucupetak`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `umt_cucupetak`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `umt_cucupetak`', [], false)
+ 5 SYSTEMPATH\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\TanamanUmt.php(30): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\TanamanUmt->tanaman_umt()
+ 9 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TanamanUmt))
+10 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-02-04 04:49:46 --> mysqli_sql_exception: Table 'khdtk.umt_cucupetak' doesn't exist in D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\xampp\htdocs\KHDTK-APP\app\Controllers\TanamanUmt.php(30): CodeIgniter\BaseModel->findAll()
+#7 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\TanamanUmt->tanaman_umt()
+#8 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TanamanUmt))
+#9 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\xampp\htdocs\KHDTK-APP\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('D:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2023-02-04 04:49:46 --> Table 'khdtk.umt_cucupetak' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `umt_cucupetak`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `umt_cucupetak`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `umt_cucupetak`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `umt_cucupetak`', [], false)
+ 5 SYSTEMPATH\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\TanamanUmt.php(30): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\TanamanUmt->tanaman_umt()
+ 9 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TanamanUmt))
+10 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-02-04 04:49:47 --> mysqli_sql_exception: Table 'khdtk.umt_cucupetak' doesn't exist in D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\xampp\htdocs\KHDTK-APP\app\Controllers\TanamanUmt.php(30): CodeIgniter\BaseModel->findAll()
+#7 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\TanamanUmt->tanaman_umt()
+#8 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TanamanUmt))
+#9 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\xampp\htdocs\KHDTK-APP\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('D:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2023-02-04 04:49:47 --> Table 'khdtk.umt_cucupetak' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `umt_cucupetak`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `umt_cucupetak`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `umt_cucupetak`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `umt_cucupetak`', [], false)
+ 5 SYSTEMPATH\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\TanamanUmt.php(30): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\TanamanUmt->tanaman_umt()
+ 9 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TanamanUmt))
+10 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-04 04:50:15 --> Undefined property: App\Controllers\TanamanUmt::$CucuPetakModel
+in APPPATH\Controllers\TanamanUmt.php on line 28.
+ 1 APPPATH\Controllers\TanamanUmt.php(28): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined property: App\\Controllers\\TanamanUmt::$CucuPetakModel', 'APPPATH\\Controllers\\TanamanUmt.php', 28, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\TanamanUmt->tanaman_umt()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TanamanUmt))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-04 04:54:07 --> Undefined index: kode_cucu_petak
+in APPPATH\Views\database\tanaman_umt.php on line 618.
+ 1 APPPATH\Views\database\tanaman_umt.php(618): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: kode_cucu_petak', 'APPPATH\\Views\\database\\tanaman_umt.php', 618, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\database\\tanaman_umt.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('database/tanaman_umt', [], true)
+ 5 APPPATH\Controllers\TanamanUmt.php(40): view('database/tanaman_umt', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\TanamanUmt->tanaman_umt()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\TanamanUmt))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-04 05:02:38 --> Class 'App\Models\TanamanCupetModel' not found
+in APPPATH\Controllers\Inven.php on line 19.
+ 1 SYSTEMPATH\CodeIgniter.php(889): App\Controllers\Inven->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-04 05:03:49 --> Undefined variable: tnmcupet
+in APPPATH\Views\database\inven.php on line 1083.
+ 1 APPPATH\Views\database\inven.php(1083): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: tnmcupet', 'APPPATH\\Views\\database\\inven.php', 1083, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\database\\inven.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('database/inven', [], true)
+ 5 APPPATH\Controllers\Inven.php(42): view('database/inven', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Inven->inven()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inven))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-04 05:05:58 --> Undefined index: kode_anakpetak_tnm
+in APPPATH\Views\database\inven.php on line 630.
+ 1 APPPATH\Views\database\inven.php(630): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: kode_anakpetak_tnm', 'APPPATH\\Views\\database\\inven.php', 630, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\database\\inven.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('database/inven', [], true)
+ 5 APPPATH\Controllers\Inven.php(42): view('database/inven', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Inven->inven()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inven))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-04 05:07:16 --> Undefined index: kode_anakpetak_tnm
+in APPPATH\Views\database\inven.php on line 630.
+ 1 APPPATH\Views\database\inven.php(630): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: kode_anakpetak_tnm', 'APPPATH\\Views\\database\\inven.php', 630, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\database\\inven.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('database/inven', [], true)
+ 5 APPPATH\Controllers\Inven.php(42): view('database/inven', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Inven->inven()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inven))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-04 05:07:18 --> Undefined index: kode_anakpetak_tnm
+in APPPATH\Views\database\inven.php on line 630.
+ 1 APPPATH\Views\database\inven.php(630): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: kode_anakpetak_tnm', 'APPPATH\\Views\\database\\inven.php', 630, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\database\\inven.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('database/inven', [], true)
+ 5 APPPATH\Controllers\Inven.php(42): view('database/inven', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Inven->inven()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inven))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-04 05:07:19 --> Undefined index: kode_anakpetak_tnm
+in APPPATH\Views\database\inven.php on line 630.
+ 1 APPPATH\Views\database\inven.php(630): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: kode_anakpetak_tnm', 'APPPATH\\Views\\database\\inven.php', 630, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\database\\inven.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('database/inven', [], true)
+ 5 APPPATH\Controllers\Inven.php(42): view('database/inven', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Inven->inven()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inven))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-04 05:07:20 --> Undefined index: kode_anakpetak_tnm
+in APPPATH\Views\database\inven.php on line 630.
+ 1 APPPATH\Views\database\inven.php(630): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: kode_anakpetak_tnm', 'APPPATH\\Views\\database\\inven.php', 630, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\database\\inven.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('database/inven', [], true)
+ 5 APPPATH\Controllers\Inven.php(42): view('database/inven', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Inven->inven()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inven))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-04 05:17:05 --> Undefined index: kode_anakpetak_tnm
+in APPPATH\Views\database\inven.php on line 630.
+ 1 APPPATH\Views\database\inven.php(630): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: kode_anakpetak_tnm', 'APPPATH\\Views\\database\\inven.php', 630, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\database\\inven.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('database/inven', [], true)
+ 5 APPPATH\Controllers\Inven.php(42): view('database/inven', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Inven->inven()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inven))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-04 05:17:09 --> Undefined index: kode_anakpetak_tnm
+in APPPATH\Views\database\inven.php on line 630.
+ 1 APPPATH\Views\database\inven.php(630): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: kode_anakpetak_tnm', 'APPPATH\\Views\\database\\inven.php', 630, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\database\\inven.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('database/inven', [], true)
+ 5 APPPATH\Controllers\Inven.php(42): view('database/inven', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Inven->inven()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inven))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-04 05:17:09 --> Undefined index: kode_anakpetak_tnm
+in APPPATH\Views\database\inven.php on line 630.
+ 1 APPPATH\Views\database\inven.php(630): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: kode_anakpetak_tnm', 'APPPATH\\Views\\database\\inven.php', 630, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\database\\inven.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('database/inven', [], true)
+ 5 APPPATH\Controllers\Inven.php(42): view('database/inven', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Inven->inven()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Inven))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-02-04 05:34:23 --> mysqli_sql_exception: Table 'khdtk.umt_cucupetak' doesn't exist in D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\xampp\htdocs\KHDTK-APP\app\Controllers\Dashboard.php(41): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Dashboard->index()
+#6 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+#7 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\KHDTK-APP\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('D:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2023-02-04 05:34:23 --> Table 'khdtk.umt_cucupetak' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `umt_cucupetak`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `umt_cucupetak`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `umt_cucupetak`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `umt_cucupetak`', [], false)
+ 5 APPPATH\Controllers\Dashboard.php(41): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Dashboard->index()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-02-04 05:39:47 --> mysqli_sql_exception: Table 'khdtk.umt_cucupetak' doesn't exist in D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\xampp\htdocs\KHDTK-APP\app\Controllers\AlokasiRealisasi.php(28): CodeIgniter\BaseModel->findAll()
+#7 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\AlokasiRealisasi->alokasi_realisasi()
+#8 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AlokasiRealisasi))
+#9 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\xampp\htdocs\KHDTK-APP\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('D:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2023-02-04 05:39:47 --> Table 'khdtk.umt_cucupetak' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `umt_cucupetak`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `umt_cucupetak`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `umt_cucupetak`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `umt_cucupetak`', [], false)
+ 5 SYSTEMPATH\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\AlokasiRealisasi.php(28): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\AlokasiRealisasi->alokasi_realisasi()
+ 9 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AlokasiRealisasi))
+10 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-04 05:40:35 --> Undefined variable: cupet
+in APPPATH\Views\database\alokasi_realisasi.php on line 727.
+ 1 APPPATH\Views\database\alokasi_realisasi.php(727): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: cupet', 'APPPATH\\Views\\database\\alokasi_realisasi.php', 727, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\database\\alokasi_realisasi.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('database/alokasi_realisasi', [], true)
+ 5 APPPATH\Controllers\AlokasiRealisasi.php(39): view('database/alokasi_realisasi', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\AlokasiRealisasi->alokasi_realisasi()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AlokasiRealisasi))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-04 05:41:14 --> Undefined index: kode_cucu_petak
+in APPPATH\Views\database\alokasi_realisasi.php on line 728.
+ 1 APPPATH\Views\database\alokasi_realisasi.php(728): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: kode_cucu_petak', 'APPPATH\\Views\\database\\alokasi_realisasi.php', 728, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\database\\alokasi_realisasi.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('database/alokasi_realisasi', [], true)
+ 5 APPPATH\Controllers\AlokasiRealisasi.php(43): view('database/alokasi_realisasi', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\AlokasiRealisasi->alokasi_realisasi()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AlokasiRealisasi))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-04 05:41:46 --> Undefined index: kode_cucu_petak
+in APPPATH\Views\database\alokasi_realisasi.php on line 728.
+ 1 APPPATH\Views\database\alokasi_realisasi.php(728): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: kode_cucu_petak', 'APPPATH\\Views\\database\\alokasi_realisasi.php', 728, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\database\\alokasi_realisasi.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('database/alokasi_realisasi', [], true)
+ 5 APPPATH\Controllers\AlokasiRealisasi.php(43): view('database/alokasi_realisasi', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\AlokasiRealisasi->alokasi_realisasi()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AlokasiRealisasi))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-02-04 05:45:30 --> mysqli_sql_exception: Unknown column 'kode_cucu_petak' in 'field list' in D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `rt...', 0)
+#1 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `rt...')
+#2 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `rt...')
+#3 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `rt...', Array, false)
+#4 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#5 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\BaseModel.php(749): CodeIgniter\Model->doInsert(Array)
+#6 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Model.php(667): CodeIgniter\BaseModel->insert(Array, false)
+#7 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\BaseModel.php(659): CodeIgniter\Model->insert(Array, false)
+#8 D:\xampp\htdocs\KHDTK-APP\app\Controllers\AlokasiRealisasi.php(125): CodeIgniter\BaseModel->save(Array)
+#9 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\AlokasiRealisasi->savertka()
+#10 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AlokasiRealisasi))
+#11 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 D:\xampp\htdocs\KHDTK-APP\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('D:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2023-02-04 05:45:30 --> Unknown column 'kode_cucu_petak' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `rttahunankegalokasi` (`kode_rencana_tahunan_alokasi`, `kode_rencana_tahunan_kegiatan`, `tanggal_berlaku`, `tanggal_berakhir`, `kode_cucu_petak`, `kode_hwd`, `satuan`, `volume`, `deskripsi`, `pj`) VALUES (\'1111\', \'222\', \'2023-02-24\', \'2023-03-11\', \'111\', \'111\', \'111\', \'111\', \'wqeasdknlkahdbas,d ;ahsd;kajsd;jsa;k kjalskdj;asudsuad khjhdalhsdasd aljhhuliwwb laijslkhdlaks\', \'qqq\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `rttahunankegalokasi` (`kode_rencana_tahunan_alokasi`, `kode_rencana_tahunan_kegiatan`, `tanggal_berlaku`, `tanggal_berakhir`, `kode_cucu_petak`, `kode_hwd`, `satuan`, `volume`, `deskripsi`, `pj`) VALUES (\'1111\', \'222\', \'2023-02-24\', \'2023-03-11\', \'111\', \'111\', \'111\', \'111\', \'wqeasdknlkahdbas,d ;ahsd;kajsd;jsa;k kjalskdj;asudsuad khjhdalhsdasd aljhhuliwwb laijslkhdlaks\', \'qqq\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `rttahunankegalokasi` (`kode_rencana_tahunan_alokasi`, `kode_rencana_tahunan_kegiatan`, `tanggal_berlaku`, `tanggal_berakhir`, `kode_cucu_petak`, `kode_hwd`, `satuan`, `volume`, `deskripsi`, `pj`) VALUES (\'1111\', \'222\', \'2023-02-24\', \'2023-03-11\', \'111\', \'111\', \'111\', \'111\', \'wqeasdknlkahdbas,d ;ahsd;kajsd;jsa;k kjalskdj;asudsuad khjhdalhsdasd aljhhuliwwb laijslkhdlaks\', \'qqq\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `rttahunankegalokasi` (`kode_rencana_tahunan_alokasi`, `kode_rencana_tahunan_kegiatan`, `tanggal_berlaku`, `tanggal_berakhir`, `kode_cucu_petak`, `kode_hwd`, `satuan`, `volume`, `deskripsi`, `pj`) VALUES (:kode_rencana_tahunan_alokasi:, :kode_rencana_tahunan_kegiatan:, :tanggal_berlaku:, :tanggal_berakhir:, :kode_cucu_petak:, :kode_hwd:, :satuan:, :volume:, :deskripsi:, :pj:)', [...], false)
+ 5 SYSTEMPATH\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(749): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(667): CodeIgniter\BaseModel->insert([...], false)
+ 8 SYSTEMPATH\BaseModel.php(659): CodeIgniter\Model->insert([...], false)
+ 9 APPPATH\Controllers\AlokasiRealisasi.php(125): CodeIgniter\BaseModel->save([...])
+10 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\AlokasiRealisasi->savertka()
+11 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AlokasiRealisasi))
+12 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+14 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-04 09:08:29 --> Class 'App\Models\TanamanCupetModel' not found
+in APPPATH\Controllers\UserStrukturUmt.php on line 20.
+ 1 SYSTEMPATH\CodeIgniter.php(889): App\Controllers\UserStrukturUmt->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-04 09:12:53 --> Undefined variable: tnmanakpetak
+in APPPATH\Views\user-database\tanaman_umt.php on line 540.
+ 1 APPPATH\Views\user-database\tanaman_umt.php(540): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: tnmanakpetak', 'APPPATH\\Views\\user-database\\tanaman_umt.php', 540, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user-database\\tanaman_umt.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user-database/tanaman_umt', [], true)
+ 5 APPPATH\Controllers\UserTanamanUmt.php(40): view('user-database/tanaman_umt', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\UserTanamanUmt->index()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserTanamanUmt))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-04 09:14:02 --> Undefined index: no_pu
+in APPPATH\Views\user-database\inven.php on line 649.
+ 1 APPPATH\Views\user-database\inven.php(649): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: no_pu', 'APPPATH\\Views\\user-database\\inven.php', 649, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user-database\\inven.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user-database/inven', [], true)
+ 5 APPPATH\Controllers\UserInven.php(42): view('user-database/inven', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\UserInven->index()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserInven))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-04 09:17:57 --> Undefined variable: hwdcupet
+in APPPATH\Views\user-database\hwd.php on line 577.
+ 1 APPPATH\Views\user-database\hwd.php(577): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: hwdcupet', 'APPPATH\\Views\\user-database\\hwd.php', 577, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user-database\\hwd.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user-database/hwd', [], true)
+ 5 APPPATH\Controllers\UserHwd.php(46): view('user-database/hwd', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\UserHwd->index()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserHwd))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')

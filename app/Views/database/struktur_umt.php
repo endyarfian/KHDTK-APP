@@ -534,8 +534,8 @@
                                         <th>Anak Petak</th>
                                         <th>Kode UMT</th>
                                         <th>Luas (Ha)</th>
-                                        <th>Luas Hutan (Ha)</th>
-                                        <th>Persentase (%)</th>
+                                        <th><i>Net Planting Area</i> (Ha)</th>
+                                        <th>Persentase NPA (%)</th>
                                         <th class="dt-no-sorting">Aksi</th>
                                     </tr>
                                 </thead>
@@ -549,7 +549,7 @@
                                             <td><?= $var['kode_umt']; ?></td>
                                             <td><?= $var['luas']; ?></td>
                                             <td><?= $var['luas_ht']; ?></td>
-                                            <td><?= $var['persentase']; ?></td>
+                                            <td><?= number_format((float)$var['luas_ht'] / $var['luas'] * 100, 2, '.', ''); ?></td>
                                             <td>
                                                 <div class="btn-group">
                                                     <button type="button" class="btn btn-outline-dark btn-sm bs-tooltip" title="edit" data-toggle="modal" data-target="#editpk<?= $var['id']; ?>">
@@ -578,78 +578,6 @@
                 </div>
             </div>
             <!-- end tabel penataan kawasan -->
-
-            <!-- begin tabel umt -->
-            <div>
-                <div class="seperator-header">
-                    <h4 class=""><b>DATA CUCU PETAK</b></h4>
-                </div>
-
-                <div>
-                    <!-- Input -->
-                    <button class="btn btn-outline-info mb-2 mr-2" data-toggle="modal" data-target="#inputumt">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 -1 30 30" ffill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-activity">
-                            <line x1="12" y1="5" x2="12" y2="19"></line>
-                            <line x1="5" y1="12" x2="19" y2="12"></line>
-                        </svg>INPUT DATA</button>
-                </div>
-
-                <div class="row" id="cancel-row">
-
-                    <div class="col-xl-12 col-lg-12 col-sm-12  layout-spacing">
-                        <div class="widget-content widget-content-area br-6">
-                            <table id="table-1" class="table table-hover style-3" style="width:100%">
-                                <thead>
-                                    <tr>
-                                        <th>No. </th>
-                                        <th>Kode Anak Petak</th>
-                                        <th>Kode Cucu Petak</th>
-                                        <th>Kode Zonasi LMU</th>
-                                        <th>Luas</th>
-                                        <th>Koordinat X</th>
-                                        <th>Koordinat Y</th>
-                                        <th class="dt-no-sorting">Aksi</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <?php $no = 1; ?>
-                                    <?php foreach ($cupet as $var) : ?>
-                                        <tr>
-                                            <td scope="row"> <?= $no++; ?> </td>
-                                            <td><?= $var['kode_anak_petak']; ?></td>
-                                            <td><?= $var['kode_cucu_petak']; ?></td>
-                                            <td><?= $var['kode_zonasi_lmu']; ?></td>
-                                            <td><?= $var['luas']; ?></td>
-                                            <td><?= $var['koordinat_x']; ?></td>
-                                            <td><?= $var['koordinat_y']; ?></td>
-                                            <td>
-                                                <div class="btn-group">
-                                                    <button type="button" class="btn btn-outline-dark btn-sm bs-tooltip" title="edit" data-toggle="modal" data-target="#editumt<?= $var['id']; ?>">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-activity">
-                                                            <path d="M5 17H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-1"></path>
-                                                            <polygon points="12 15 17 21 7 21 12 15"></polygon>
-                                                        </svg>
-                                                    </button>
-                                                    <button type="button" class="btn btn-outline-dark btn-sm bs-tooltip" title="hapus" data-toggle="modal" data-target="#hapusumt<?= $var['id']; ?>">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-activity">
-                                                            <polyline points="3 6 5 6 21 6"></polyline>
-                                                            <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
-                                                            <line x1="10" y1="11" x2="10" y2="17"></line>
-                                                            <line x1="14" y1="11" x2="14" y2="17"></line>
-                                                        </svg>
-                                                    </button>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                    <?php endforeach; ?>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-            <!-- end tabel umt -->
 
             <!-- BEGIN MODAL -->
             <div>
@@ -714,17 +642,6 @@
                                             <?= $validation2->getError('luasht'); ?>
                                         </div>
                                     </div>
-
-                                    <div class="form-group mb-4">
-                                        <label for="persentase">
-                                            <span class="badge outline-badge-dark"> Persentase (%)</span></label>
-                                        <input type="text" class="form-control <?= ($validation2->hasError('persentase')) ? 'is-invalid' : ''; ?>" id="persentase" name="persentase" value="<?= old('persentase'); ?>">
-                                        <div class="invalid-feedback">
-                                            <?= $validation2->getError('persentase'); ?>
-                                        </div>
-                                    </div>
-
-
                                 </div>
                                 <div class="modal-footer">
                                     <button class="btn" data-dismiss="modal"><i class="flaticon-cancel-12"></i> Tutup</button>
@@ -791,11 +708,6 @@
                                                 <span class="badge outline-badge-dark"> Luas Hutan (Ha) </span></label>
                                             <input type="text" class="form-control" id="editluasht" name="editluasht" value="<?= $var['luas_ht']; ?>">
                                         </div>
-                                        <div class="form-group mb-4">
-                                            <label for="editpersentase">
-                                                <span class="badge outline-badge-dark"> Persentase (%) </span></label>
-                                            <input type="text" class="form-control" id="editpersentase" name="editpersentase" value="<?= $var['persentase']; ?>">
-                                        </div>
                                     </div>
                                     <div class="modal-footer">
                                         <button class="btn" data-dismiss="modal"><i class="flaticon-cancel-12"></i> Tutup</button>
@@ -838,7 +750,6 @@
                                             <li class="list-group-item"><strong> Kode UMT = </strong><?= $var['kode_umt']; ?></li>
                                             <li class="list-group-item"><strong> Luas (Ha) = </strong><?= $var['luas']; ?></li>
                                             <li class="list-group-item"><strong> Luas Hutan (Ha) = </strong><?= $var['luas_ht']; ?></li>
-                                            <li class="list-group-item"><strong> Persentase (%) = </strong><?= $var['persentase']; ?></li>
                                         </ul>
                                         <div class="form-group mb-4">
                                             <input type="hidden" value="DELETE" name="_method">
@@ -855,213 +766,6 @@
                 <?php endforeach; ?>
                 <!-- end modal penaataan kawasan -->
 
-                <!-- modal umt -->
-                <div id="inputumt" class="modal animated fadeInDown" role="dialog" tabindex="-1" aria-labelledby="inputumt" aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title">INPUT DATA CUCU PETAK</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x">
-                                        <line x1="18" y1="6" x2="6" y2="18"></line>
-                                        <line x1="6" y1="6" x2="18" y2="18"></line>
-                                    </svg>
-                                </button>
-                            </div>
-                            <form action="struktur-umt/savecupet" method="post">
-                                <div class="modal-body">
-                                    <div class="form-group mb-4">
-                                        <label for="kodeap1">
-                                            <span class="badge outline-badge-dark"> Kode Anak Petak </span></label>
-                                        <select class="form-control <?= ($validation2->hasError('kodeap1')) ? 'is-invalid' : ''; ?>" id="kodeap1" name="kodeap1">
-                                            <?php foreach ($anakpetak as $pk) : ?>
-                                                <option><?= $pk['kode_anak_petak']; ?></option>
-                                            <?php endforeach; ?>
-                                        </select>
-                                        <div class="invalid-feedback">
-                                            <?= $validation2->getError('kodeap1'); ?>
-                                        </div>
-                                    </div>
-                                    <div class="form-group mb-4">
-                                        <label for="kodecupet">
-                                            <span class="badge outline-badge-dark"> Kode Cucu Petak</span></label>
-                                        <input type="text" class="form-control <?= ($validation2->hasError('kodecupet')) ? 'is-invalid' : ''; ?>" id="kodecupet" name="kodecupet" value="<?= old('kodecupet'); ?>">
-                                        <div class="invalid-feedback">
-                                            <?= $validation2->getError('kodecupet'); ?>
-                                        </div>
-                                    </div>
-                                    <div class="form-group mb-4">
-                                        <label for="kodezonlmu">
-                                            <span class="badge outline-badge-dark"> Kode Zonasi LMU </span></label>
-                                        <select class="form-control <?= ($validation2->hasError('kodezonlmu')) ? 'is-invalid' : ''; ?>" id="kodezonlmu" name="kodezonlmu">
-                                            <?php foreach ($zonlmu as $pk) : ?>
-                                                <option><?= $pk['kode_zonasi_lmu']; ?></option>
-                                            <?php endforeach; ?>
-                                        </select>
-                                        <div class="invalid-feedback">
-                                            <?= $validation2->getError('kodezonlmu'); ?>
-                                        </div>
-                                    </div>
-                                    <div class="form-group mb-4">
-                                        <label for="luas">
-                                            <span class="badge outline-badge-dark"> Luas Cucu Petak </span></label>
-                                        <input type="text" class="form-control <?= ($validation2->hasError('luas')) ? 'is-invalid' : ''; ?>" id="luas" name="luas" value="<?= old('luas'); ?>">
-                                        <div class="invalid-feedback">
-                                            <?= $validation2->getError('luas'); ?>
-                                        </div>
-                                    </div>
-                                    <div class="form-group mb-4">
-                                        <label for="x">
-                                            <span class="badge outline-badge-dark"> Koordinat X </span></label>
-                                        <input type="text" class="form-control <?= ($validation2->hasError('x')) ? 'is-invalid' : ''; ?>" id="x" name="x" value="<?= old('x'); ?>">
-                                        <div class="invalid-feedback">
-                                            <?= $validation2->getError('x'); ?>
-                                        </div>
-                                    </div>
-                                    <div class="form-group mb-4">
-                                        <label for="y">
-                                            <span class="badge outline-badge-dark"> Koordinat Y </span></label>
-                                        <input id="y" name="y" class="form-control <?= ($validation2->hasError('y')) ? 'is-invalid' : ''; ?>" type="text" value="<?= old('y'); ?>">
-                                        <div class="invalid-feedback">
-                                            <?= $validation2->getError('y'); ?>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="modal-footer">
-                                    <button class="btn" data-dismiss="modal"><i class="flaticon-cancel-12"></i> Tutup</button>
-                                    <button type="submit" class="btn btn-success">Simpan</button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-
-                <?php foreach ($cupet as $var) : ?>
-
-                    <div id="editumt<?= $var['id'] ?>" class="modal animated fadeInDown" role="dialog" tabindex="-1" aria-labelledby="editumt" aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title">UPDATE DATA CUCU PETAK</h5>
-                                    <button type="button" class="close " data-dismiss="modal" aria-label="Close">
-                                        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x">
-                                            <line x1="18" y1="6" x2="6" y2="18"></line>
-                                            <line x1="6" y1="6" x2="18" y2="18"></line>
-                                        </svg>
-                                    </button>
-                                </div>
-                                <form action="struktur-umt/editcupet/<?= $var['id']; ?>" method="post">
-                                    <div class="modal-body">
-                                        <div class="alert alert-icon-left alert-light-info mb-4" role="alert">
-                                            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><svg xmlns="http://www.w3.org/2000/svg" data-dismiss="alert" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x close">
-                                                    <line x1="18" y1="6" x2="6" y2="18"></line>
-                                                    <line x1="6" y1="6" x2="18" y2="18"></line>
-                                                </svg></button>
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-activity">
-                                                <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
-                                                <rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect>
-                                            </svg>
-                                            <strong>Penting!</strong> Data dibawah ini akan diperbarui.
-                                        </div>
-                                        <div class="form-group mb-4">
-                                            <label for="editkodeap1">
-                                                <span class="badge outline-badge-dark"> Kode Anak Petak </span></label>
-                                            <select class="form-control" id="editkodeap1" name="editkodeap1">
-                                                <option selected=""><?= $var['kode_anak_petak']; ?></option>
-                                                <?php foreach ($anakpetak as $pk) : ?>
-                                                    <option><?= $pk['kode_anak_petak']; ?></option>
-                                                <?php endforeach; ?>
-                                            </select>
-                                        </div>
-                                        <div class="form-group mb-4">
-                                            <label for="editkodecupet">
-                                                <span class="badge outline-badge-dark"> Kode Cucu Petak</span></label>
-                                            <input type="text" class="form-control" id="editkodecupet" name="editkodecupet" value="<?= $var['kode_cucu_petak']; ?>">
-                                        </div>
-                                        <div class="form-group mb-4">
-                                            <label for="editkodezonlmu">
-                                                <span class="badge outline-badge-dark"> Kode Zonasi LMU </span></label>
-                                            <select class="form-control" id="editkodezonlmu" name="editkodezonlmu">
-                                                <option selected=""><?= $var['kode_zonasi_lmu']; ?></option>
-                                                <?php foreach ($zonlmu as $pk) : ?>
-                                                    <option><?= $pk['kode_zonasi_lmu']; ?></option>
-                                                <?php endforeach; ?>
-                                            </select>
-                                        </div>
-                                        <div class="form-group mb-4">
-                                            <label for="editluas">
-                                                <span class="badge outline-badge-dark"> Luas Cucu Petak </span></label>
-                                            <input type="text" class="form-control" id="editluas" name="editluas" value="<?= $var['luas']; ?>">
-                                        </div>
-                                        <div class="form-group mb-4">
-                                            <label for="editx">
-                                                <span class="badge outline-badge-dark"> Koordinat X </span></label>
-                                            <input type="text" class="form-control" id="editx" name="editx" value="<?= $var['koordinat_x']; ?>">
-                                        </div>
-                                        <div class="form-group mb-4">
-                                            <label for="edity">
-                                                <span class="badge outline-badge-dark"> Koordinat Y </span></label>
-                                            <input id="edity" name="edity" class="form-control" type="text" value="<?= $var['koordinat_y']; ?>">
-                                        </div>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button class="btn" data-dismiss="modal"><i class="flaticon-cancel-12"></i> Tutup</button>
-                                        <button type="submit" class="btn btn-info" id="editumt">Perbarui</button>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div id="hapusumt<?= $var['id'] ?>" class="modal animated fadeInDown" role="dialog" aria-labelledby="hapusumt" aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title">HAPUS DATA CUCU PETAK</h5>
-                                    <button type="button" class="close " data-dismiss="modal" aria-label="Close">
-                                        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x">
-                                            <line x1="18" y1="6" x2="6" y2="18"></line>
-                                            <line x1="6" y1="6" x2="18" y2="18"></line>
-                                        </svg>
-                                    </button>
-                                </div>
-                                <div class="modal-body">
-                                    <div class="alert alert-icon-left alert-light-danger mb-4" role="alert">
-                                        <button type="button" class="close" data-dismiss="alert" aria-label="Close"><svg xmlns="http://www.w3.org/2000/svg" data-dismiss="alert" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x close">
-                                                <line x1="18" y1="6" x2="6" y2="18"></line>
-                                                <line x1="6" y1="6" x2="18" y2="18"></line>
-                                            </svg></button>
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-activity">
-                                            <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
-                                            <line x1="12" y1="9" x2="12" y2="13"></line>
-                                            <line x1="12" y1="17" x2="12" y2="17"></line>
-                                        </svg>
-                                        <strong>Penting!</strong> Data dibawah ini akan dihapus.
-                                    </div>
-                                    <form action="struktur-umt/hapuscupet/<?= $var['id']; ?>" class="form-vertical" method="post">
-                                        <ul class="list-group ">
-                                            <li class="list-group-item"><strong> Kode Anak Petak =</strong> <?= $var['kode_anak_petak']; ?></li>
-                                            <li class="list-group-item"><strong> Kode Cucu Petak =</strong> <?= $var['kode_cucu_petak']; ?></li>
-                                            <li class="list-group-item"><strong> Kode Zonasi LMU = </strong><?= $var['kode_zonasi_lmu']; ?></li>
-                                            <li class="list-group-item"><strong> Luas Cucu Petak = </strong><?= $var['luas']; ?></li>
-                                            <li class="list-group-item"><strong> Koordinat X = </strong><?= $var['koordinat_x']; ?></li>
-                                            <li class="list-group-item"><strong> Koordinat Y = </strong><?= $var['koordinat_y']; ?></li>
-                                        </ul>
-                                        <div class="form-group mb-4">
-                                            <input type="hidden" value="DELETE" name="_method">
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button class="btn" data-dismiss="modal"><i class="flaticon-cancel-12"></i>Batal</button>
-                                            <button type="submit" class="btn btn-danger" id="hapusumt">Hapus</button>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                <?php endforeach; ?>
-                <!-- end modal UMT -->
 
             </div>
             <!--  BEGIN FOOTER  -->
@@ -1189,7 +893,4 @@
 <script src="<?= base_url('dashboard/plugins/table/datatable/tabledata.js') ?>"></script>
 
 <!-- END PAGE LEVEL CUSTOM SCRIPTS  -->
-</body>
-
-</html>
 <?= $this->endSection(); ?>

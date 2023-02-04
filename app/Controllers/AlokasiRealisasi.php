@@ -4,7 +4,7 @@ namespace App\Controllers;
 
 use \App\Models\RTKAlokasiModel;
 use \App\Models\RTKRealisasiModel;
-use \App\Models\CucuPetakModel;
+use \App\Models\AnakPetakModel;
 use \App\Models\DesaHwdModel;
 use \App\Models\RTKegiatanModel;
 
@@ -15,7 +15,7 @@ class AlokasiRealisasi extends BaseController
     {
         $this->RTKAlokasiModel = new RTKAlokasiModel();
         $this->RTKRealisasiModel = new RTKRealisasiModel();
-        $this->CucuPetakModel = new CucuPetakModel();
+        $this->AnakPetakModel = new AnakPetakModel();
         $this->DesaHwdModel = new DesaHwdModel();
         $this->RTKegiatanModel = new RTKegiatanModel();
     }
@@ -25,13 +25,13 @@ class AlokasiRealisasi extends BaseController
 
         $rtka = $this->RTKAlokasiModel->findAll();
         $rtkr = $this->RTKRealisasiModel->findAll();
-        $cupet = $this->CucuPetakModel->findAll();
+        $anakpetak = $this->AnakPetakModel->findAll();
         $hwd = $this->DesaHwdModel->findAll();
         $rtk = $this->RTKegiatanModel->findAll();
         $data = [
             'rtka' => $rtka,
             'rtkr' => $rtkr,
-            'cupet' => $cupet,
+            'anakpetak' => $anakpetak,
             'hwd' => $hwd,
             'rtk' => $rtk,
             'title' => 'KHDTK APPS - Alokasi dan Realisasi',
@@ -49,8 +49,8 @@ class AlokasiRealisasi extends BaseController
             'kodertka' => [
                 'rules' => 'required|is_unique[rttahunankegalokasi.kode_rencana_tahunan_alokasi]',
                 'errors' => [
-                    'required' => 'data harus diisi.',
-                    'is_unique' => 'data sudah ada di database.'
+                    'required' => 'Data harus diisi.',
+                    'is_unique' => 'Data sudah ada di database.'
                 ]
             ],
             'kodertk' => [
@@ -71,7 +71,7 @@ class AlokasiRealisasi extends BaseController
                     'required' => 'Data harus diisi.',
                 ]
             ],
-            'kodecupet' => [
+            'kodeanakpetak' => [
                 'rules' => 'required',
                 'errors' => [
                     'required' => 'Data harus diisi.',
@@ -117,7 +117,7 @@ class AlokasiRealisasi extends BaseController
             'kode_rencana_tahunan_kegiatan' => $this->request->getVar('kodertk'),
             'tanggal_berlaku' => $this->request->getVar('berlaku'),
             'tanggal_berakhir' => $this->request->getVar('berakhir'),
-            'kode_cucu_petak' => $this->request->getVar('kodecupet'),
+            'kode_anak_petak' => $this->request->getVar('kodeanakpetak'),
             'kode_hwd' => $this->request->getVar('kodehwd'),
             'satuan' => $this->request->getVar('satuan'),
             'volume' => $this->request->getVar('volume'),
@@ -145,7 +145,7 @@ class AlokasiRealisasi extends BaseController
             'kode_rencana_tahunan_kegiatan' => $this->request->getVar('editkodertk'),
             'tanggal_berlaku' => $this->request->getVar('editberlaku'),
             'tanggal_berakhir' => $this->request->getVar('editberakhir'),
-            'kode_cucu_petak' => $this->request->getVar('editkodecupet'),
+            'kode_anak_petak' => $this->request->getVar('editkodeanakpetak'),
             'kode_hwd' => $this->request->getVar('editkodehwd'),
             'satuan' => $this->request->getVar('editsatuan'),
             'volume' => $this->request->getVar('editvolume'),

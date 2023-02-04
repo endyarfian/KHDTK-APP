@@ -526,7 +526,7 @@
                                         <th>Kode Rencana Tahunan Kegiatan</th>
                                         <th>Tanggal Berlaku</th>
                                         <th>Tanggal Berakhir</th>
-                                        <th>Kode Cucu Petak</th>
+                                        <th>Kode Anak Petak</th>
                                         <th>Kode HWD</th>
                                         <th>Satuan</th>
                                         <th>Volume</th>
@@ -543,7 +543,7 @@
                                             <td><?= $var['kode_rencana_tahunan_kegiatan']; ?></td>
                                             <td><?= $var['tanggal_berlaku']; ?></td>
                                             <td><?= $var['tanggal_berakhir']; ?></td>
-                                            <td><?= $var['kode_cucu_petak']; ?></td>
+                                            <td><?= $var['kode_anak_petak']; ?></td>
                                             <td><?= $var['kode_hwd']; ?></td>
                                             <td><?= $var['satuan']; ?></td>
                                             <td><?= $var['volume']; ?></td>

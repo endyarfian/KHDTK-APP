@@ -1,0 +1,270 @@
+ERROR - 2023-01-16 06:47:48 --> mysqli_sql_exception: Table 'khdtk.pl_anakpetak' doesn't exist in D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\xampp\htdocs\KHDTK-APP\app\Controllers\StrukturUmt.php(34): CodeIgniter\BaseModel->findAll()
+#7 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\StrukturUmt->struktur_umt()
+#8 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StrukturUmt))
+#9 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\xampp\htdocs\KHDTK-APP\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('D:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2023-01-16 06:47:48 --> Table 'khdtk.pl_anakpetak' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `pl_anakpetak`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `pl_anakpetak`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `pl_anakpetak`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `pl_anakpetak`', [], false)
+ 5 SYSTEMPATH\Model.php(223): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(585): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\StrukturUmt.php(34): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\StrukturUmt->struktur_umt()
+ 9 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StrukturUmt))
+10 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-16 06:48:47 --> Undefined variable: pl
+in APPPATH\Controllers\StrukturUmt.php on line 38.
+ 1 APPPATH\Controllers\StrukturUmt.php(38): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: pl', 'APPPATH\\Controllers\\StrukturUmt.php', 38, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\StrukturUmt->struktur_umt()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StrukturUmt))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-16 07:56:13 --> file_get_contents(./dashboard/mapdata/khdtk.geojson): failed to open stream: No such file or directory
+in APPPATH\Controllers\Maps.php on line 24.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_get_contents(./dashboard/mapdata/khdtk.geojson): failed to open stream: No such file or directory', 'APPPATH\\Controllers\\Maps.php', 24, [...])
+ 2 APPPATH\Controllers\Maps.php(24): file_get_contents('./dashboard/mapdata/khdtk.geojson')
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Maps->index()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maps))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-16 07:59:05 --> file_get_contents(./dashboard/mapdata/khdtk.geojson): failed to open stream: No such file or directory
+in APPPATH\Controllers\Maps.php on line 24.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_get_contents(./dashboard/mapdata/khdtk.geojson): failed to open stream: No such file or directory', 'APPPATH\\Controllers\\Maps.php', 24, [...])
+ 2 APPPATH\Controllers\Maps.php(24): file_get_contents('./dashboard/mapdata/khdtk.geojson')
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Maps->index()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maps))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-16 07:59:06 --> file_get_contents(./dashboard/mapdata/khdtk.geojson): failed to open stream: No such file or directory
+in APPPATH\Controllers\Maps.php on line 24.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_get_contents(./dashboard/mapdata/khdtk.geojson): failed to open stream: No such file or directory', 'APPPATH\\Controllers\\Maps.php', 24, [...])
+ 2 APPPATH\Controllers\Maps.php(24): file_get_contents('./dashboard/mapdata/khdtk.geojson')
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Maps->index()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maps))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-16 07:59:06 --> file_get_contents(./dashboard/mapdata/khdtk.geojson): failed to open stream: No such file or directory
+in APPPATH\Controllers\Maps.php on line 24.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_get_contents(./dashboard/mapdata/khdtk.geojson): failed to open stream: No such file or directory', 'APPPATH\\Controllers\\Maps.php', 24, [...])
+ 2 APPPATH\Controllers\Maps.php(24): file_get_contents('./dashboard/mapdata/khdtk.geojson')
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Maps->index()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maps))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-16 07:59:07 --> file_get_contents(./dashboard/mapdata/khdtk.geojson): failed to open stream: No such file or directory
+in APPPATH\Controllers\Maps.php on line 24.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_get_contents(./dashboard/mapdata/khdtk.geojson): failed to open stream: No such file or directory', 'APPPATH\\Controllers\\Maps.php', 24, [...])
+ 2 APPPATH\Controllers\Maps.php(24): file_get_contents('./dashboard/mapdata/khdtk.geojson')
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Maps->index()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maps))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-16 07:59:48 --> file_get_contents(./dashboard/mapdata/khdtk.geojson): failed to open stream: No such file or directory
+in APPPATH\Controllers\Maps.php on line 24.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_get_contents(./dashboard/mapdata/khdtk.geojson): failed to open stream: No such file or directory', 'APPPATH\\Controllers\\Maps.php', 24, [...])
+ 2 APPPATH\Controllers\Maps.php(24): file_get_contents('./dashboard/mapdata/khdtk.geojson')
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Maps->index()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maps))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-16 07:59:49 --> file_get_contents(./dashboard/mapdata/khdtk.geojson): failed to open stream: No such file or directory
+in APPPATH\Controllers\Maps.php on line 24.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_get_contents(./dashboard/mapdata/khdtk.geojson): failed to open stream: No such file or directory', 'APPPATH\\Controllers\\Maps.php', 24, [...])
+ 2 APPPATH\Controllers\Maps.php(24): file_get_contents('./dashboard/mapdata/khdtk.geojson')
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Maps->index()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maps))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-16 07:59:49 --> file_get_contents(./dashboard/mapdata/khdtk.geojson): failed to open stream: No such file or directory
+in APPPATH\Controllers\Maps.php on line 24.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_get_contents(./dashboard/mapdata/khdtk.geojson): failed to open stream: No such file or directory', 'APPPATH\\Controllers\\Maps.php', 24, [...])
+ 2 APPPATH\Controllers\Maps.php(24): file_get_contents('./dashboard/mapdata/khdtk.geojson')
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Maps->index()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maps))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-16 07:59:50 --> file_get_contents(./dashboard/mapdata/khdtk.geojson): failed to open stream: No such file or directory
+in APPPATH\Controllers\Maps.php on line 24.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_get_contents(./dashboard/mapdata/khdtk.geojson): failed to open stream: No such file or directory', 'APPPATH\\Controllers\\Maps.php', 24, [...])
+ 2 APPPATH\Controllers\Maps.php(24): file_get_contents('./dashboard/mapdata/khdtk.geojson')
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Maps->index()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maps))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-16 08:00:29 --> file_get_contents(./dashboard/mapdata/khdtk.geojson): failed to open stream: No such file or directory
+in APPPATH\Controllers\Maps.php on line 24.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_get_contents(./dashboard/mapdata/khdtk.geojson): failed to open stream: No such file or directory', 'APPPATH\\Controllers\\Maps.php', 24, [...])
+ 2 APPPATH\Controllers\Maps.php(24): file_get_contents('./dashboard/mapdata/khdtk.geojson')
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Maps->index()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maps))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-16 08:01:09 --> file_get_contents(./dashboard/mapdata/khdtk.geojson): failed to open stream: No such file or directory
+in APPPATH\Controllers\Maps.php on line 24.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_get_contents(./dashboard/mapdata/khdtk.geojson): failed to open stream: No such file or directory', 'APPPATH\\Controllers\\Maps.php', 24, [...])
+ 2 APPPATH\Controllers\Maps.php(24): file_get_contents('./dashboard/mapdata/khdtk.geojson')
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Maps->index()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maps))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-16 08:01:10 --> file_get_contents(./dashboard/mapdata/khdtk.geojson): failed to open stream: No such file or directory
+in APPPATH\Controllers\Maps.php on line 24.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_get_contents(./dashboard/mapdata/khdtk.geojson): failed to open stream: No such file or directory', 'APPPATH\\Controllers\\Maps.php', 24, [...])
+ 2 APPPATH\Controllers\Maps.php(24): file_get_contents('./dashboard/mapdata/khdtk.geojson')
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Maps->index()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maps))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-16 08:01:10 --> file_get_contents(./dashboard/mapdata/khdtk.geojson): failed to open stream: No such file or directory
+in APPPATH\Controllers\Maps.php on line 24.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_get_contents(./dashboard/mapdata/khdtk.geojson): failed to open stream: No such file or directory', 'APPPATH\\Controllers\\Maps.php', 24, [...])
+ 2 APPPATH\Controllers\Maps.php(24): file_get_contents('./dashboard/mapdata/khdtk.geojson')
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Maps->index()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maps))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-16 08:01:10 --> file_get_contents(./dashboard/mapdata/khdtk.geojson): failed to open stream: No such file or directory
+in APPPATH\Controllers\Maps.php on line 24.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_get_contents(./dashboard/mapdata/khdtk.geojson): failed to open stream: No such file or directory', 'APPPATH\\Controllers\\Maps.php', 24, [...])
+ 2 APPPATH\Controllers\Maps.php(24): file_get_contents('./dashboard/mapdata/khdtk.geojson')
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Maps->index()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maps))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-16 08:01:11 --> file_get_contents(./dashboard/mapdata/khdtk.geojson): failed to open stream: No such file or directory
+in APPPATH\Controllers\Maps.php on line 24.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_get_contents(./dashboard/mapdata/khdtk.geojson): failed to open stream: No such file or directory', 'APPPATH\\Controllers\\Maps.php', 24, [...])
+ 2 APPPATH\Controllers\Maps.php(24): file_get_contents('./dashboard/mapdata/khdtk.geojson')
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Maps->index()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maps))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-16 08:02:34 --> file_get_contents(/dashboard/mapdata/khdtk.geojson): failed to open stream: No such file or directory
+in APPPATH\Controllers\Maps.php on line 24.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_get_contents(/dashboard/mapdata/khdtk.geojson): failed to open stream: No such file or directory', 'APPPATH\\Controllers\\Maps.php', 24, [...])
+ 2 APPPATH\Controllers\Maps.php(24): file_get_contents('/dashboard/mapdata/khdtk.geojson')
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Maps->index()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maps))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-16 08:02:35 --> file_get_contents(/dashboard/mapdata/khdtk.geojson): failed to open stream: No such file or directory
+in APPPATH\Controllers\Maps.php on line 24.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_get_contents(/dashboard/mapdata/khdtk.geojson): failed to open stream: No such file or directory', 'APPPATH\\Controllers\\Maps.php', 24, [...])
+ 2 APPPATH\Controllers\Maps.php(24): file_get_contents('/dashboard/mapdata/khdtk.geojson')
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Maps->index()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maps))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-16 08:02:41 --> file_get_contents(dashboard/mapdata/khdtk.geojson): failed to open stream: No such file or directory
+in APPPATH\Controllers\Maps.php on line 24.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_get_contents(dashboard/mapdata/khdtk.geojson): failed to open stream: No such file or directory', 'APPPATH\\Controllers\\Maps.php', 24, [...])
+ 2 APPPATH\Controllers\Maps.php(24): file_get_contents('dashboard/mapdata/khdtk.geojson')
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Maps->index()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maps))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-16 08:02:57 --> file_get_contents(:/dashboard/mapdata/khdtk.geojson): failed to open stream: No such file or directory
+in APPPATH\Controllers\Maps.php on line 24.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'file_get_contents(:/dashboard/mapdata/khdtk.geojson): failed to open stream: No such file or directory', 'APPPATH\\Controllers\\Maps.php', 24, [...])
+ 2 APPPATH\Controllers\Maps.php(24): file_get_contents(':/dashboard/mapdata/khdtk.geojson')
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Maps->index()
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Maps))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-16 08:05:02 --> Trying to access array offset on value of type null
+in APPPATH\Views\apps\maps_detail.php on line 624.
+ 1 APPPATH\Views\apps\maps_detail.php(624): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\apps\\maps_detail.php', 624, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\apps\\maps_detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/maps_detail', [], true)
+ 5 APPPATH\Controllers\DetailMaps.php(50): view('apps/maps_detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('803')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-16 08:05:14 --> Trying to access array offset on value of type null
+in APPPATH\Views\apps\maps_detail.php on line 624.
+ 1 APPPATH\Views\apps\maps_detail.php(624): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\apps\\maps_detail.php', 624, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\apps\\maps_detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/maps_detail', [], true)
+ 5 APPPATH\Controllers\DetailMaps.php(50): view('apps/maps_detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('803')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-16 08:05:28 --> Trying to access array offset on value of type null
+in APPPATH\Views\apps\maps_detail.php on line 624.
+ 1 APPPATH\Views\apps\maps_detail.php(624): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\apps\\maps_detail.php', 624, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\apps\\maps_detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/maps_detail', [], true)
+ 5 APPPATH\Controllers\DetailMaps.php(50): view('apps/maps_detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('794')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-16 08:45:43 --> Invalid file: apps/maps-pl-2022.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('apps/maps-pl-2022.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/maps-pl-2022', [], true)
+ 3 APPPATH\Controllers\MapsPl.php(47): view('apps/maps-pl-2022', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\MapsPl->pl2022()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MapsPl))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-16 09:49:29 --> Undefined variable: anakpetak
+in APPPATH\Views\apps\maps-pl2022.php on line 749.
+ 1 APPPATH\Views\apps\maps-pl2022.php(749): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: anakpetak', 'APPPATH\\Views\\apps\\maps-pl2022.php', 749, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\apps\\maps-pl2022.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/maps-pl2022', [], true)
+ 5 APPPATH\Controllers\MapsPl.php(47): view('apps/maps-pl2022', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\MapsPl->pl2022()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\MapsPl))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')

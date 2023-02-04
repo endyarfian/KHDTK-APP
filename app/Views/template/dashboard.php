@@ -28,6 +28,10 @@
     <link href="<?= base_url('dashboard/assets/css/pages/faq/faq.css'); ?>" rel="stylesheet" type="text/css" />
     <link href="<?= base_url('dashboard/assets/css/pages/faq/faq2.css'); ?>" rel="stylesheet" type="text/css" />
     <link href="<?= base_url('dashboard/assets/css/pages/helpdesk.css'); ?>" rel="stylesheet" type="text/css" />
+    <script src="<?= base_url('dashboard/plugins/apex/apexcharts.min.js') ?>"></script>
+    <script src="<?= base_url('dashboard/assets/js/dashboard/dash_1.js') ?>"></script>
+    <script src="<?= base_url('dashboard/assets/js/dashboard/dash_2.js') ?>"></script>
+    <link rel="stylesheet" type="text/css" href="<?= base_url('dashboard/assets/css/widgets/modules-widgets.css') ?>">
     <!-- END PAGE LEVEL PLUGINS/CUSTOM STYLES -->
 
 </head>
@@ -146,16 +150,17 @@
     <!-- END GLOBAL MANDATORY SCRIPTS -->
 
     <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->
-    <script src="<?= base_url('dashboard/plugins/apex/apexcharts.min.js') ?>"></script>
-    <script src="<?= base_url('dashboard/assets/js/dashboard/dash_1.js') ?>"></script>
-    <script src="<?= base_url('dashboard/assets/js/dashboard/dash_2.js') ?>"></script>
+
     <script src="<?= base_url('dashboard/plugins/sweetalerts/sweetalert.js') ?>"></script>
     <script src="<?= base_url('dashboard/plugins/sweetalerts/sweetalert2.min.js'); ?>"></script>
     <script src="<?= base_url('dashboard/assets/js/pages/faq/faq.js'); ?>"></script>
     <script src="<?= base_url('dashboard/assets/js/pages/faq/faq2.js'); ?>"></script>
     <script src="<?= base_url('dashboard/assets/js/pages/helpdesk.js'); ?>"></script>
 
+    <script src="<?= base_url('dashboard/assets/js/widgets/modules-widgets.js'); ?>"></script>
+
     <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->
+
 
 </body>
 

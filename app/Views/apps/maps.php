@@ -735,7 +735,11 @@
         <!-- maps -->
         <script>
             var data = <?= json_encode($anakpetak) ?>;
-            var map = L.map('basic-map').setView([-7.318437, 111.4304215], 13);
+            var map = L.map('basic-map', {
+                center: [-7.318437, 111.40],
+                zoom: 13,
+                scrollWhellZoom: false,
+            });
 
             var lyrOSM = L.tileLayer.provider('OpenStreetMap.Mapnik');
             var lyrOpenTopoMap = L.tileLayer.provider('OpenTopoMap');
@@ -758,8 +762,7 @@
                         '</b> | Anak Petak : <b>' + props.Toponimi_1 +
                         '</b> | Petak : <b>' + props.Petak +
                         '</b><br> Luas Total : <b>' + props.luas +
-                        '</b> Ha | Luas Hutan: <b>' + props.luasht +
-                        '</b> Ha <br> Persentase: <b>' + props.persentase + '</b> %' :
+                        '</b> Ha | Luas Hutan: <b>' + props.luasht :
                         '</b> <br>atau layangkan cursor pada petak');
             };
 
@@ -811,7 +814,7 @@
 
             function onEachFeature(feature, layer) {
                 layer.on('click', function(ev) {
-                    window.open("maps/detail/" + feature.properties.id)
+                    window.open("/apps/maps/detail/" + feature.properties.id)
                 });
                 layer.on({
                     mouseover: highlightFeature,
@@ -826,7 +829,7 @@
             }).addTo(map);
 
             // get name
-            var petak = L.geoJSON(point, {
+            var petak = L.geoJSON(data, {
                 pointToLayer: function(feature, latlng) {
                     label = String(feature.properties.Petak)
                     return new L.CircleMarker(latlng, {
@@ -844,7 +847,8 @@
             var baseLayers = {
                 "Open Street Map (Default)": lyrOSM,
                 "Open Topo Map (Topography)": lyrOpenTopoMap,
-                "Esri World Imagery (Satellite)": lyrWorldImagery
+                "Esri World Imagery (Satellite)": lyrWorldImagery,
+
 
             };
 

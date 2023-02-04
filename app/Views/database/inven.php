@@ -614,7 +614,7 @@
                                         <th>No. </th>
                                         <th>Kode Inven UMT</th>
                                         <th>Kode Inventarisasi</th>
-                                        <th>Kode Tanaman Cucu Petak</th>
+                                        <th>Kode Tanaman Anak Petak</th>
                                         <th>Tanggal Inven UMT</th>
                                         <th>Penanggung Jawab</th>
                                         <th class="dt-no-sorting">Aksi</th>
@@ -627,7 +627,7 @@
                                             <td scope="row"> <?= $no++; ?> </td>
                                             <td><?= $var['kode_inven_umt']; ?></td>
                                             <td><?= $var['kode_inventarisasi']; ?></td>
-                                            <td><?= $var['kode_cupet_tnm']; ?></td>
+                                            <td><?= $var['kode_anakpetak_tnm']; ?></td>
                                             <td><?= $var['tanggal']; ?></td>
                                             <td><?= $var['pj']; ?></td>
                                             <td>
@@ -684,8 +684,7 @@
                                     <tr>
                                         <th>No. </th>
                                         <th>Kode Inven UMT</th>
-                                        <th>Kode Inven PU</th>
-                                        <th>No. PU</th>
+                                        <th>Kode Inven PU (No. PU)</th>
                                         <th>Tanggal Inven</th>
                                         <th>Penanggung Jawab</th>
                                         <th>Luas PU (m²)</th>
@@ -710,7 +709,6 @@
                                             <td scope="row"> <?= $no++; ?> </td>
                                             <td><?= $var['kode_inven_umt']; ?></td>
                                             <td><?= $var['kode_inven_pu']; ?></td>
-                                            <td><?= $var['no_pu']; ?></td>
                                             <td><?= $var['tanggal']; ?></td>
                                             <td><?= $var['pj']; ?></td>
                                             <td><?= $var['luas_pu']; ?></td>
@@ -1079,15 +1077,15 @@
                                         </div>
                                     </div>
                                     <div class="form-group mb-4">
-                                        <label for="kodetnmcupet">
-                                            <span class="badge outline-badge-dark"> Kode Tanaman Cucu Petak </span></label>
-                                        <select class="form-control <?= ($validation2->hasError('kodetnmcupet')) ? 'is-invalid' : ''; ?>" id="kodetnmcupet" name="kodetnmcupet">
-                                            <?php foreach ($tnmcupet as $pk) : ?>
-                                                <option><?= $pk['kode_cupet_tnm']; ?></option>
+                                        <label for="kodetnmanakpetak">
+                                            <span class="badge outline-badge-dark"> Kode Tanaman Anak Petak </span></label>
+                                        <select class="form-control <?= ($validation2->hasError('kodetnmanakpetak')) ? 'is-invalid' : ''; ?>" id="kodetnmanakpetak" name="kodetnmanakpetak">
+                                            <?php foreach ($tnmanakpetak as $pk) : ?>
+                                                <option><?= $pk['kode_anakpetak_tnm']; ?></option>
                                             <?php endforeach; ?>
                                         </select>
                                         <div class="invalid-feedback">
-                                            <?= $validation2->getError('kodetnmcupet'); ?>
+                                            <?= $validation2->getError('kodetnmanakpetak'); ?>
                                         </div>
                                     </div>
                                     <div class="form-group mb-4">
@@ -1159,12 +1157,12 @@
                                             </select>
                                         </div>
                                         <div class="form-group mb-4">
-                                            <label for="editkodetnmcupet">
-                                                <span class="badge outline-badge-dark"> Kode Tanaman Cucu Petak </span></label>
-                                            <select class="form-control" id="editkodetnmcupet" name="editkodetnmcupet">
-                                                <option selected=""><?= $var['kode_cupet_tnm']; ?></option>
-                                                <?php foreach ($tnmcupet as $pk) : ?>
-                                                    <option><?= $pk['kode_cupet_tnm']; ?></option>
+                                            <label for="editkodetnmanakpetak">
+                                                <span class="badge outline-badge-dark"> Kode Tanaman Anak Petak </span></label>
+                                            <select class="form-control" id="editkodetnmanakpetak" name="editkodetnmanakpetak">
+                                                <option selected=""><?= $var['kode_anakpetak_tnm']; ?></option>
+                                                <?php foreach ($tnmanakpetak as $pk) : ?>
+                                                    <option><?= $pk['kode_anakpetak_tnm']; ?></option>
                                                 <?php endforeach; ?>
                                             </select>
                                         </div>
@@ -1217,7 +1215,7 @@
                                         <ul class="list-group ">
                                             <li class="list-group-item"><strong> Kode Inventarisasi Unit Menejemen Terkecil =</strong> <?= $var['kode_inven_umt']; ?></li>
                                             <li class="list-group-item"><strong> Kode Inventarisasi =</strong> <?= $var['kode_inventarisasi']; ?></li>
-                                            <li class="list-group-item"><strong> Kode Tanaman Cucu Petak =</strong> <?= $var['kode_cupet_tnm']; ?></li>
+                                            <li class="list-group-item"><strong> Kode Tanaman Anak Petak =</strong> <?= $var['kode_anakpetak_tnm']; ?></li>
                                             <li class="list-group-item"><strong> Tanggal Inventarisasi =</strong> <?= $var['tanggal']; ?></li>
                                             <li class="list-group-item"><strong> Penanggung Jawab =</strong> <?= $var['pj']; ?></li>
                                         </ul>
@@ -1267,18 +1265,10 @@
                                         </div>
                                         <div class="col">
                                             <label for="kodeinvenpu">
-                                                <span class="badge outline-badge-dark"> Kode Inventarisasi Petak Ukur </span></label>
+                                                <span class="badge outline-badge-dark"> Kode Inventarisasi Petak Ukur (No. PU)</span></label>
                                             <input type="text" class="form-control <?= ($validation2->hasError('kodeinvenpu')) ? 'is-invalid' : ''; ?>" id="kodeinvenpu" name="kodeinvenpu" value="<?= old('kodeinvenpu'); ?>">
                                             <div class="invalid-feedback">
                                                 <?= $validation2->getError('kodeinvenpu'); ?>
-                                            </div>
-                                        </div>
-                                        <div class="col">
-                                            <label for="nopu">
-                                                <span class="badge outline-badge-dark"> No. Petak Ukur </span></label>
-                                            <input type="text" class="form-control <?= ($validation2->hasError('nopu')) ? 'is-invalid' : ''; ?>" id="nopu" name="nopu" value="<?= old('nopu'); ?>">
-                                            <div class="invalid-feedback">
-                                                <?= $validation2->getError('nopu'); ?>
                                             </div>
                                         </div>
                                     </div>
@@ -1454,13 +1444,8 @@
                                             </div>
                                             <div class="col">
                                                 <label for="editkodeinvenpu">
-                                                    <span class="badge outline-badge-dark"> Kode Inventarisasi Petak Ukur </span></label>
+                                                    <span class="badge outline-badge-dark"> Kode Inventarisasi Petak Ukur (No. PU)</span></label>
                                                 <input type="text" class="form-control" id="editkodeinvenpu" name="editkodeinvenpu" value="<?= $var['kode_inven_pu']; ?>">
-                                            </div>
-                                            <div class="col">
-                                                <label for="editnopu">
-                                                    <span class="badge outline-badge-dark"> No. Petak Ukur </span></label>
-                                                <input type="text" class="form-control" id="editnopu" name="editnopu" value="<?= $var['no_pu']; ?>">
                                             </div>
                                         </div>
                                         <div class="form-row mb-4">
@@ -1583,7 +1568,6 @@
                                         <ul class="list-group ">
                                             <li class="list-group-item"><strong> Kode Inventarisasi UMT =</strong> <?= $var['kode_inven_umt']; ?></li>
                                             <li class="list-group-item"><strong> Kode Inventarisasi Petak Ukur =</strong> <?= $var['kode_inven_pu']; ?></li>
-                                            <li class="list-group-item"><strong> No. Petak Ukur =</strong> <?= $var['no_pu']; ?></li>
                                             <li class="list-group-item"><strong> Tanggal Inventarisasi =</strong> <?= $var['tanggal']; ?></li>
                                             <li class="list-group-item"><strong> Penanggung Jawab =</strong> <?= $var['pj']; ?></li>
                                             <li class="list-group-item"><strong> Luas Petak Ukur (m²) =</strong> <?= $var['luas_pu']; ?></li>
@@ -1714,7 +1698,7 @@
             inputumt = $('#inputumt').modal('show');
         } else if ('<?= ($validation2->hasError('kodeinven1')) ?>') {
             inputumt = $('#inputumt').modal('show');
-        } else if ('<?= ($validation2->hasError('kodetnmcupet')) ?>') {
+        } else if ('<?= ($validation2->hasError('kodetnmanakpetak')) ?>') {
             inputumt = $('#inputumt').modal('show');
         } else if ('<?= ($validation2->hasError('tglinvenumt')) ?>') {
             inputumt = $('#inputumt').modal('show');
@@ -1726,21 +1710,21 @@
     </script>
     <script>
         let inputzonasi;
-        if ('<?= ($validation2->hasError('kode_inven_umt')) ?>') {
+        if ('<?= ($validation2->hasError('kodeinvenumt1')) ?>') {
             inputzonasi = $('#inputzonasi').modal('show');
-        } else if ('<?= ($validation2->hasError('kode_inven_pu')) ?>') {
+        } else if ('<?= ($validation2->hasError('kodeinvenpu')) ?>') {
             inputzonasi = $('#inputzonasi').modal('show');
-        } else if ('<?= ($validation2->hasError('no_pu')) ?>') {
+        } else if ('<?= ($validation2->hasError('tglinvenpu')) ?>') {
             inputzonasi = $('#inputzonasi').modal('show');
-        } else if ('<?= ($validation2->hasError('pj')) ?>') {
+        } else if ('<?= ($validation2->hasError('pjinvenpu')) ?>') {
             inputzonasi = $('#inputzonasi').modal('show');
-        } else if ('<?= ($validation2->hasError('luas_pu')) ?>') {
+        } else if ('<?= ($validation2->hasError('luasinvenpu')) ?>') {
             inputzonasi = $('#inputzonasi').modal('show');
-        } else if ('<?= ($validation2->hasError('bentuk_pu')) ?>') {
+        } else if ('<?= ($validation2->hasError('bentukinvenpu')) ?>') {
             inputzonasi = $('#inputzonasi').modal('show');
-        } else if ('<?= ($validation2->hasError('koordinat_x')) ?>') {
+        } else if ('<?= ($validation2->hasError('x')) ?>') {
             inputzonasi = $('#inputzonasi').modal('show');
-        } else if ('<?= ($validation2->hasError('koordinat_y')) ?>') {
+        } else if ('<?= ($validation2->hasError('y')) ?>') {
             inputzonasi = $('#inputzonasi').modal('show');
         } else if ('<?= ($validation2->hasError('ndvi')) ?>') {
             inputzonasi = $('#inputzonasi').modal('show');
@@ -1752,9 +1736,9 @@
             inputzonasi = $('#inputzonasi').modal('show');
         } else if ('<?= ($validation2->hasError('n')) ?>') {
             inputzonasi = $('#inputzonasi').modal('show');
-        } else if ('<?= ($validation2->hasError('jenis_tanah')) ?>') {
+        } else if ('<?= ($validation2->hasError('jenistanah')) ?>') {
             inputzonasi = $('#inputzonasi').modal('show');
-        } else if ('<?= ($validation2->hasError('kelerengan')) ?>') {
+        } else if ('<?= ($validation2->hasError('slope')) ?>') {
             inputzonasi = $('#inputzonasi').modal('show');
         } else if ('<?= ($validation2->hasError('altitude')) ?>') {
             inputzonasi = $('#inputzonasi').modal('show');

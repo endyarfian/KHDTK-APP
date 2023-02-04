@@ -20,6 +20,8 @@
     <!-- END PAGE LEVEL PLUGINS -->
 
     <!-- BEGIN THEME GLOBAL STYLES -->
+    <link href="<?= base_url('dashboard/plugins/apex/apexcharts.css') ?>" rel="stylesheet" type="text/css">
+    <link href="<?= base_url('dashboard/assets/css/dashboard/dash_2.css') ?>" rel="stylesheet" type="text/css" />
     <!-- END THEME GLOBAL STYLES -->
 
     <!-- BEGIN PAGE LEVEL CUSTOM STYLES -->
@@ -169,6 +171,8 @@
     <script src="<?= base_url('dashboard/plugins/table/datatable/button-ext/buttons.html5.min.js') ?>"></script>
     <script src="<?= base_url('dashboard/plugins/table/datatable/button-ext/buttons.print.min.js') ?>"></script>
     <script src="<?= base_url('dashboard/plugins/table/datatable/tabledata.js') ?>"></script>
+    <script src="<?= base_url('dashboard/plugins/apex/apexcharts.min.js') ?>"></script>
+    <script src="<?= base_url('dashboard/assets/js/dashboard/dash_2.js') ?>"></script>
 
     <!-- END PAGE LEVEL CUSTOM SCRIPTS  -->
 </body>

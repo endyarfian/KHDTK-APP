@@ -479,7 +479,7 @@
 			options: {
 				maxZoom: 19,
 				attribution: 'Map data &copy; <a href="http://openweathermap.org">OpenWeatherMap</a>',
-				apiKey: '<insert your api key here>',
+				apiKey: 'a7d2bb99190c759f05d0a172c0273ffc',
 				opacity: 0.5
 			},
 			variants: {
@@ -851,12 +851,12 @@
 				attribution:
 					'Imagery provided by services from the Global Imagery Browse Services (GIBS), operated by the NASA/GSFC/Earth Science Data and Information System ' +
 					'(<a href="https://earthdata.nasa.gov">ESDIS</a>) with funding provided by NASA/HQ.',
-				bounds: [[-85.0511287776, -179.999999975], [85.0511287776, 179.999999975]],
+				// bounds: [[-85.0511287776, -179.999999975], [85.0511287776, 179.999999975]],
 				minZoom: 1,
 				maxZoom: 9,
 				format: 'jpg',
 				time: '',
-				tilematrixset: 'GoogleMapsCompatible_Level'
+				// tilematrixset: 'GoogleMapsCompatible_Level'
 			},
 			variants: {
 				ModisTerraTrueColorCR: 'MODIS_Terra_CorrectedReflectance_TrueColor',

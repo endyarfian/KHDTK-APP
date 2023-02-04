@@ -4,8 +4,7 @@ namespace App\Controllers;
 
 use \App\Models\UmtModel;
 use \App\Models\AnakPetakModel;
-use \App\Models\CucuPetakModel;
-use \App\Models\TanamanCupetModel;
+use \App\Models\TanamanAnakPetakModel;
 use \App\Models\ZonasiLmuModel;
 
 
@@ -16,8 +15,7 @@ class TanamanUmt extends BaseController
     {
         $this->AnakPetakModel = new AnakPetakModel();
         $this->UmtModel = new UmtModel();
-        $this->CucuPetakModel = new CucuPetakModel();
-        $this->TanamanCupetModel = new TanamanCupetModel();
+        $this->TanamanAnakPetakModel = new TanamanAnakPetakModel();
         $this->ZonasiLmuModel = new ZonasiLmuModel();
     }
 
@@ -26,14 +24,12 @@ class TanamanUmt extends BaseController
 
         $anakpetak = $this->AnakPetakModel->findAll();
         $umt = $this->UmtModel->findAll();
-        $tnmcupet = $this->TanamanCupetModel->findAll();
-        $cupet = $this->CucuPetakModel->findAll();
+        $tnmanakpetak = $this->TanamanAnakPetakModel->findAll();
         $zonlmu = $this->ZonasiLmuModel->findAll();
         $data = [
             'anakpetak' => $anakpetak,
             'umt' => $umt,
-            'tnmcupet' => $tnmcupet,
-            'cupet' => $cupet,
+            'tnmanakpetak' => $tnmanakpetak,
             'zonlmu' => $zonlmu,
             'title' => 'KHDTK APPS - Jenis Tanaman Pada UMT',
             'validation2' => \Config\Services::validation(),
@@ -44,17 +40,17 @@ class TanamanUmt extends BaseController
         return view('database/tanaman_umt', $data);
     }
 
-    public function savetnmcupet()
+    public function savetnmanakpetak()
     {
         if (!$this->validate([
-            'kodetnmcupet' => [
-                'rules' => 'required|is_unique[umt_cupet_tnm.kode_cupet_tnm]',
+            'kodetnmanakpetak' => [
+                'rules' => 'required|is_unique[umt_anakpetak_tnm.kode_anakpetak_tnm]',
                 'errors' => [
                     'required' => 'Data harus diisi.',
                     'is_unique' => 'Data sudah ada di database.'
                 ]
             ],
-            'kodecupet1' => [
+            'kodeanakpetak1' => [
                 'rules' => 'required',
                 'errors' => [
                     'required' => 'Data harus diisi.',
@@ -96,9 +92,9 @@ class TanamanUmt extends BaseController
             $validation2 = $this->validator->getErrors();
             return redirect()->to('database/tanaman-umt')->withInput()->with('validation2', $validation2);
         }
-        $this->TanamanCupetModel->save([
-            'kode_cupet_tnm' => $this->request->getVar('kodetnmcupet'),
-            'kode_cucu_petak' => $this->request->getVar('kodecupet1'),
+        $this->TanamanAnakPetakModel->save([
+            'kode_anakpetak_tnm' => $this->request->getVar('kodetnmanakpetak'),
+            'kode_anak_petak' => $this->request->getVar('kodeanakpetak1'),
             'tgl_tnm' => $this->request->getVar('tgl'),
             'jenis_ilmiah' => $this->request->getVar('ilmiah'),
             'jenis_lokal' => $this->request->getVar('lokal'),
@@ -109,20 +105,20 @@ class TanamanUmt extends BaseController
         return redirect()->to('database/tanaman-umt');
     }
 
-    public function deletetnmcupet($id)
+    public function deletetnmanakpetak($id)
     {
-        $this->TanamanCupetModel->delete($id);
+        $this->TanamanAnakPetakModel->delete($id);
         session()->setFlashdata(['info' => 'error', 'judul' => 'SAYANG SEKALI 😞', 'pesan' => 'Data sudah terhapus.']);
         return redirect()->to('database/tanaman-umt');
     }
 
-    public function edittnmcupet($id)
+    public function edittnmanakpetak($id)
     {
 
-        $this->TanamanCupetModel->save([
+        $this->TanamanAnakPetakModel->save([
             'id' => $id,
-            'kode_cupet_tnm' => $this->request->getVar('editkodetnmcupet'),
-            'kode_cucu_petak' => $this->request->getVar('editkodecupet1'),
+            'kode_anakpetak_tnm' => $this->request->getVar('editkodetnmanakpetak'),
+            'kode_anak_petak' => $this->request->getVar('editkodeanakpetak1'),
             'tgl_tnm' => $this->request->getVar('edittgl'),
             'jenis_ilmiah' => $this->request->getVar('editilmiah'),
             'jenis_lokal' => $this->request->getVar('editlokal'),

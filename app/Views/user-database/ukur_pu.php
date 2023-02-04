@@ -524,12 +524,16 @@
                                 <thead>
                                     <tr>
                                         <th>No. </th>
+                                        <th>Kode Pohon</th>
                                         <th>No. Pohon</th>
                                         <th>Kode Inven PU</th>
                                         <th>Jenis Pohon</th>
                                         <th>DBH</th>
                                         <th>Tinggi Pohon</th>
+                                        <th>LBDS (m²)</th>
+                                        <th>Volume (m³)</th>
                                         <th>Fungsi Tinggi</th>
+                                        <th class="dt-no-sorting">Aksi</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -537,11 +541,14 @@
                                     <?php foreach ($kayu as $var) : ?>
                                         <tr>
                                             <td scope="row"> <?= $no++; ?> </td>
+                                            <td><?= $var['kode_pohon']; ?></td>
                                             <td><?= $var['no_pohon']; ?></td>
                                             <td><?= $var['kode_inven_pu']; ?></td>
                                             <td><?= $var['jenis_pohon']; ?></td>
                                             <td><?= $var['dbh']; ?></td>
                                             <td><?= $var['tinggi']; ?></td>
+                                            <td><?= $var['lbds']; ?></td>
+                                            <td><?= $var['volume']; ?></td>
                                             <td><?= $var['fungsi']; ?></td>
                                         </tr>
                                     <?php endforeach; ?>
@@ -567,12 +574,16 @@
                                 <thead>
                                     <tr>
                                         <th>No. </th>
+                                        <th>Kode Pohon</th>
                                         <th>No. Pohon</th>
                                         <th>Kode Inven PU</th>
                                         <th>Jenis Pohon</th>
                                         <th>DBH</th>
                                         <th>Tinggi Pohon</th>
+                                        <th>LBDS (m²)</th>
+                                        <th>Volume (m³)</th>
                                         <th>Fungsi Tinggi</th>
+                                        <th class="dt-no-sorting">Aksi</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -580,11 +591,14 @@
                                     <?php foreach ($nonkayu as $var) : ?>
                                         <tr>
                                             <td scope="row"> <?= $no++; ?> </td>
+                                            <td><?= $var['kode_pohon']; ?></td>
                                             <td><?= $var['no_pohon']; ?></td>
                                             <td><?= $var['kode_inven_pu']; ?></td>
                                             <td><?= $var['jenis_pohon']; ?></td>
                                             <td><?= $var['dbh']; ?></td>
                                             <td><?= $var['tinggi']; ?></td>
+                                            <td><?= $var['lbds']; ?></td>
+                                            <td><?= $var['volume']; ?></td>
                                             <td><?= $var['fungsi']; ?></td>
                                         </tr>
                                     <?php endforeach; ?>

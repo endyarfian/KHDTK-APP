@@ -5,7 +5,7 @@ namespace App\Controllers;
 use \App\Models\InvenModel;
 use \App\Models\InvenUmtModel;
 use \App\Models\InvenPuModel;
-use \App\Models\TanamanCupetModel;
+use \App\Models\TanamanAnakPetakModel;
 use \App\Models\RTKegiatanModel;
 
 class UserInven extends BaseController
@@ -16,7 +16,7 @@ class UserInven extends BaseController
         $this->InvenModel = new InvenModel();
         $this->InvenUmtModel = new InvenUmtModel();
         $this->InvenPuModel = new InvenPuModel();
-        $this->TanamanCupetModel = new TanamanCupetModel();
+        $this->TanamanAnakPetakModel = new TanamanAnakPetakModel();
         $this->RTKegiatanModel = new RTKegiatanModel();
     }
     public function index()
@@ -25,13 +25,13 @@ class UserInven extends BaseController
         $inven = $this->InvenModel->findAll();
         $invenumt = $this->InvenUmtModel->findAll();
         $invenpu = $this->InvenPuModel->findAll();
-        $tnmcupet = $this->TanamanCupetModel->findAll();
+        $tnmanakpetak = $this->TanamanAnakPetakModel->findAll();
         $rtk = $this->RTKegiatanModel->findAll();
         $data = [
             'inven' => $inven,
             'invenumt' => $invenumt,
             'invenpu' => $invenpu,
-            'tnmcupet' => $tnmcupet,
+            'tnmanakpetak' => $tnmanakpetak,
             'rtk' => $rtk,
             'title' => 'KHDTK APPS - Inventarisasi Sumberdaya Hutan',
             'validation2' => \Config\Services::validation(),

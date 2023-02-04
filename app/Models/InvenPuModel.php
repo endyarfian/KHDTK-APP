@@ -18,6 +18,6 @@ class InvenPuModel extends Model
     }
 
     protected $allowedFields = [
-        'kode_inven_umt', 'kode_inven_pu', 'no_pu', 'tanggal', 'pj', 'luas_pu', 'bentuk_pu', 'koordinat_x', 'koordinat_y', 'ndvi', 'msavi', 'c', 'd', 'n', 'jenis_tanah', 'kelerengan', 'altitude'
+        'kode_inven_umt', 'kode_inven_pu', 'tanggal', 'pj', 'luas_pu', 'bentuk_pu', 'koordinat_x', 'koordinat_y', 'ndvi', 'msavi', 'c', 'd', 'n', 'jenis_tanah', 'kelerengan', 'altitude'
     ];
 }

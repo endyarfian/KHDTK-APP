@@ -1,0 +1,1358 @@
+CRITICAL - 2023-01-17 09:19:32 --> Undefined index: dbh
+in APPPATH\Views\database\ukur_pu.php on line 792.
+ 1 APPPATH\Views\database\ukur_pu.php(792): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: dbh', 'APPPATH\\Views\\database\\ukur_pu.php', 792, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\database\\ukur_pu.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('database/ukur_pu', [], true)
+ 5 APPPATH\Controllers\Ukur.php(34): view('database/ukur_pu', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Ukur->ukur()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Ukur))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-01-17 09:52:59 --> mysqli_sql_exception: Column 'luas' in field list is ambiguous in D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `umt_ana...', 0)
+#1 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `umt_ana...')
+#2 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `umt_ana...')
+#3 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `umt_ana...', Array, false)
+#4 D:\xampp\htdocs\KHDTK-APP\app\Controllers\DetailMaps.php(20): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\DetailMaps->index('969')
+#6 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+#7 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\KHDTK-APP\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('D:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2023-01-17 09:52:59 --> Column 'luas' in field list is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `umt_anakpetak`.`kode_anak_petak` as `anakpetak`, `anak_petak`, `luas`, `umt_cucupetak`.`kode_cucu_petak` as `cupet`, `umt_cupet_tnm`.`kode_cupet_tnm` as `cupettnm`, `jenis_lokal`, `inventarisasi_umt`.`kode_inven_umt` as `invenumt`, `inventarisasi_pu`.`kode_inven_pu` as `kodeinvenpu`, `jumlah_pohon`, `lbds`, `volume`, `c`, `d`, `n`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `umt_cupet_tnm`.`kode_cucu_petak` = `umt_cucupetak`.`kode_cucu_petak`
+JOIN `inventarisasi_umt` ON `inventarisasi_umt`.`kode_cupet_tnm`  = `umt_cupet_tnm`.`kode_cupet_tnm`
+JOIN `inventarisasi_pu` ON `inventarisasi_pu`.`kode_inven_umt`  = `inventarisasi_umt`.`kode_inven_umt`
+JOIN `inventarisasi_umt_ukurkayu` ON `inventarisasi_umt_ukurkayu`.`kode_inven_pu`  = `inventarisasi_pu`.`kode_inven_pu`
+WHERE `umt_anakpetak`.`id` = \'969\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `umt_anakpetak`.`kode_anak_petak` as `anakpetak`, `anak_petak`, `luas`, `umt_cucupetak`.`kode_cucu_petak` as `cupet`, `umt_cupet_tnm`.`kode_cupet_tnm` as `cupettnm`, `jenis_lokal`, `inventarisasi_umt`.`kode_inven_umt` as `invenumt`, `inventarisasi_pu`.`kode_inven_pu` as `kodeinvenpu`, `jumlah_pohon`, `lbds`, `volume`, `c`, `d`, `n`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `umt_cupet_tnm`.`kode_cucu_petak` = `umt_cucupetak`.`kode_cucu_petak`
+JOIN `inventarisasi_umt` ON `inventarisasi_umt`.`kode_cupet_tnm`  = `umt_cupet_tnm`.`kode_cupet_tnm`
+JOIN `inventarisasi_pu` ON `inventarisasi_pu`.`kode_inven_umt`  = `inventarisasi_umt`.`kode_inven_umt`
+JOIN `inventarisasi_umt_ukurkayu` ON `inventarisasi_umt_ukurkayu`.`kode_inven_pu`  = `inventarisasi_pu`.`kode_inven_pu`
+WHERE `umt_anakpetak`.`id` = \'969\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `umt_anakpetak`.`kode_anak_petak` as `anakpetak`, `anak_petak`, `luas`, `umt_cucupetak`.`kode_cucu_petak` as `cupet`, `umt_cupet_tnm`.`kode_cupet_tnm` as `cupettnm`, `jenis_lokal`, `inventarisasi_umt`.`kode_inven_umt` as `invenumt`, `inventarisasi_pu`.`kode_inven_pu` as `kodeinvenpu`, `jumlah_pohon`, `lbds`, `volume`, `c`, `d`, `n`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `umt_cupet_tnm`.`kode_cucu_petak` = `umt_cucupetak`.`kode_cucu_petak`
+JOIN `inventarisasi_umt` ON `inventarisasi_umt`.`kode_cupet_tnm`  = `umt_cupet_tnm`.`kode_cupet_tnm`
+JOIN `inventarisasi_pu` ON `inventarisasi_pu`.`kode_inven_umt`  = `inventarisasi_umt`.`kode_inven_umt`
+JOIN `inventarisasi_umt_ukurkayu` ON `inventarisasi_umt_ukurkayu`.`kode_inven_pu`  = `inventarisasi_pu`.`kode_inven_pu`
+WHERE `umt_anakpetak`.`id` = \'969\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `umt_anakpetak`.`kode_anak_petak` as `anakpetak`, `anak_petak`, `luas`, `umt_cucupetak`.`kode_cucu_petak` as `cupet`, `umt_cupet_tnm`.`kode_cupet_tnm` as `cupettnm`, `jenis_lokal`, `inventarisasi_umt`.`kode_inven_umt` as `invenumt`, `inventarisasi_pu`.`kode_inven_pu` as `kodeinvenpu`, `jumlah_pohon`, `lbds`, `volume`, `c`, `d`, `n`
+FROM `umt_anakpetak`
+JOIN `umt_cucupetak` ON `umt_cucupetak`.`kode_anak_petak` = `umt_anakpetak`.`kode_anak_petak`
+JOIN `umt_cupet_tnm` ON `umt_cupet_tnm`.`kode_cucu_petak` = `umt_cucupetak`.`kode_cucu_petak`
+JOIN `inventarisasi_umt` ON `inventarisasi_umt`.`kode_cupet_tnm`  = `umt_cupet_tnm`.`kode_cupet_tnm`
+JOIN `inventarisasi_pu` ON `inventarisasi_pu`.`kode_inven_umt`  = `inventarisasi_umt`.`kode_inven_umt`
+JOIN `inventarisasi_umt_ukurkayu` ON `inventarisasi_umt_ukurkayu`.`kode_inven_pu`  = `inventarisasi_pu`.`kode_inven_pu`
+WHERE `umt_anakpetak`.`id` = :umt_anakpetak.id:', [...], false)
+ 5 APPPATH\Controllers\DetailMaps.php(20): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('969')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-17 10:26:43 --> count(): Parameter must be an array or an object that implements Countable
+in APPPATH\Views\apps\maps_detail.php on line 873.
+ 1 APPPATH\Views\apps\maps_detail.php(873): CodeIgniter\Debug\Exceptions->errorHandler(2, 'count(): Parameter must be an array or an object that implements Countable', 'APPPATH\\Views\\apps\\maps_detail.php', 873, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\apps\\maps_detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/maps_detail', [], true)
+ 5 APPPATH\Controllers\DetailMaps.php(52): view('apps/maps_detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('969')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-17 10:28:09 --> Illegal string offset 'kodeinvenpu'
+in APPPATH\Views\apps\maps_detail.php on line 873.
+ 1 APPPATH\Views\apps\maps_detail.php(873): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Illegal string offset \'kodeinvenpu\'', 'APPPATH\\Views\\apps\\maps_detail.php', 873, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\apps\\maps_detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/maps_detail', [], true)
+ 5 APPPATH\Controllers\DetailMaps.php(54): view('apps/maps_detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('969')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-17 10:31:22 --> Illegal string offset 'kodeinvenpu'
+in APPPATH\Views\apps\maps_detail.php on line 870.
+ 1 APPPATH\Views\apps\maps_detail.php(870): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Illegal string offset \'kodeinvenpu\'', 'APPPATH\\Views\\apps\\maps_detail.php', 870, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\apps\\maps_detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/maps_detail', [], true)
+ 5 APPPATH\Controllers\DetailMaps.php(55): view('apps/maps_detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('969')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-17 10:32:21 --> Illegal string offset 'kodeinvenpu'
+in APPPATH\Views\apps\maps_detail.php on line 873.
+ 1 APPPATH\Views\apps\maps_detail.php(873): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Illegal string offset \'kodeinvenpu\'', 'APPPATH\\Views\\apps\\maps_detail.php', 873, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\apps\\maps_detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/maps_detail', [], true)
+ 5 APPPATH\Controllers\DetailMaps.php(55): view('apps/maps_detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('969')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-17 10:35:00 --> count(): Parameter must be an array or an object that implements Countable
+in APPPATH\Views\apps\maps_detail.php on line 872.
+ 1 APPPATH\Views\apps\maps_detail.php(872): CodeIgniter\Debug\Exceptions->errorHandler(2, 'count(): Parameter must be an array or an object that implements Countable', 'APPPATH\\Views\\apps\\maps_detail.php', 872, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\apps\\maps_detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/maps_detail', [], true)
+ 5 APPPATH\Controllers\DetailMaps.php(55): view('apps/maps_detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('969')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-17 10:35:18 --> Undefined index: kodeinvenpu
+in APPPATH\Views\apps\maps_detail.php on line 872.
+ 1 APPPATH\Views\apps\maps_detail.php(872): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: kodeinvenpu', 'APPPATH\\Views\\apps\\maps_detail.php', 872, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\apps\\maps_detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/maps_detail', [], true)
+ 5 APPPATH\Controllers\DetailMaps.php(55): view('apps/maps_detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('969')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-17 10:35:44 --> syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ')'
+in APPPATH\Views\apps\maps_detail.php on line 872.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/maps_detail', [], true)
+ 3 APPPATH\Controllers\DetailMaps.php(55): view('apps/maps_detail', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('969')
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-17 10:36:11 --> Undefined index: kodeinvenpu
+in APPPATH\Views\apps\maps_detail.php on line 872.
+ 1 APPPATH\Views\apps\maps_detail.php(872): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: kodeinvenpu', 'APPPATH\\Views\\apps\\maps_detail.php', 872, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\apps\\maps_detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/maps_detail', [], true)
+ 5 APPPATH\Controllers\DetailMaps.php(55): view('apps/maps_detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('969')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-17 10:36:59 --> syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ')'
+in APPPATH\Views\apps\maps_detail.php on line 872.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/maps_detail', [], true)
+ 3 APPPATH\Controllers\DetailMaps.php(55): view('apps/maps_detail', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('969')
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-17 10:37:48 --> Undefined index: kodeinvenpu
+in APPPATH\Views\apps\maps_detail.php on line 872.
+ 1 APPPATH\Views\apps\maps_detail.php(872): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: kodeinvenpu', 'APPPATH\\Views\\apps\\maps_detail.php', 872, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\apps\\maps_detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/maps_detail', [], true)
+ 5 APPPATH\Controllers\DetailMaps.php(55): view('apps/maps_detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('969')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-17 10:39:00 --> Undefined index: kodeinvenpu
+in APPPATH\Views\apps\maps_detail.php on line 872.
+ 1 APPPATH\Views\apps\maps_detail.php(872): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: kodeinvenpu', 'APPPATH\\Views\\apps\\maps_detail.php', 872, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\apps\\maps_detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/maps_detail', [], true)
+ 5 APPPATH\Controllers\DetailMaps.php(55): view('apps/maps_detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('969')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-17 10:39:36 --> Undefined index: kodeinvenpu
+in APPPATH\Views\apps\maps_detail.php on line 872.
+ 1 APPPATH\Views\apps\maps_detail.php(872): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: kodeinvenpu', 'APPPATH\\Views\\apps\\maps_detail.php', 872, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\apps\\maps_detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/maps_detail', [], true)
+ 5 APPPATH\Controllers\DetailMaps.php(55): view('apps/maps_detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('969')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-17 10:39:38 --> Undefined index: kodeinvenpu
+in APPPATH\Views\apps\maps_detail.php on line 872.
+ 1 APPPATH\Views\apps\maps_detail.php(872): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: kodeinvenpu', 'APPPATH\\Views\\apps\\maps_detail.php', 872, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\apps\\maps_detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/maps_detail', [], true)
+ 5 APPPATH\Controllers\DetailMaps.php(55): view('apps/maps_detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('969')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-17 10:39:38 --> Undefined index: kodeinvenpu
+in APPPATH\Views\apps\maps_detail.php on line 872.
+ 1 APPPATH\Views\apps\maps_detail.php(872): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: kodeinvenpu', 'APPPATH\\Views\\apps\\maps_detail.php', 872, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\apps\\maps_detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/maps_detail', [], true)
+ 5 APPPATH\Controllers\DetailMaps.php(55): view('apps/maps_detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('969')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-17 10:39:39 --> Undefined index: kodeinvenpu
+in APPPATH\Views\apps\maps_detail.php on line 872.
+ 1 APPPATH\Views\apps\maps_detail.php(872): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: kodeinvenpu', 'APPPATH\\Views\\apps\\maps_detail.php', 872, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\apps\\maps_detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/maps_detail', [], true)
+ 5 APPPATH\Controllers\DetailMaps.php(55): view('apps/maps_detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('969')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-17 10:40:36 --> count(): Parameter must be an array or an object that implements Countable
+in APPPATH\Views\apps\maps_detail.php on line 874.
+ 1 APPPATH\Views\apps\maps_detail.php(874): CodeIgniter\Debug\Exceptions->errorHandler(2, 'count(): Parameter must be an array or an object that implements Countable', 'APPPATH\\Views\\apps\\maps_detail.php', 874, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\apps\\maps_detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/maps_detail', [], true)
+ 5 APPPATH\Controllers\DetailMaps.php(55): view('apps/maps_detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('969')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-17 10:40:48 --> Cannot use object of type stdClass as array
+in APPPATH\Views\apps\maps_detail.php on line 873.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/maps_detail', [], true)
+ 4 APPPATH\Controllers\DetailMaps.php(55): view('apps/maps_detail', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('969')
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-17 10:42:19 --> Cannot use object of type stdClass as array
+in APPPATH\Views\apps\maps_detail.php on line 873.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/maps_detail', [], true)
+ 4 APPPATH\Controllers\DetailMaps.php(55): view('apps/maps_detail', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('969')
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-17 10:42:53 --> Cannot use object of type stdClass as array
+in APPPATH\Views\apps\maps_detail.php on line 873.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/maps_detail', [], true)
+ 4 APPPATH\Controllers\DetailMaps.php(55): view('apps/maps_detail', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('969')
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-17 10:43:54 --> Cannot use object of type stdClass as array
+in APPPATH\Views\apps\maps_detail.php on line 873.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/maps_detail', [], true)
+ 4 APPPATH\Controllers\DetailMaps.php(55): view('apps/maps_detail', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('969')
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-17 10:44:19 --> Cannot use object of type stdClass as array
+in APPPATH\Views\apps\maps_detail.php on line 873.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/maps_detail', [], true)
+ 4 APPPATH\Controllers\DetailMaps.php(55): view('apps/maps_detail', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('969')
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-17 10:44:50 --> Cannot use object of type stdClass as array
+in APPPATH\Views\apps\maps_detail.php on line 873.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/maps_detail', [], true)
+ 4 APPPATH\Controllers\DetailMaps.php(55): view('apps/maps_detail', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('969')
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-17 10:44:52 --> Cannot use object of type stdClass as array
+in APPPATH\Views\apps\maps_detail.php on line 873.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/maps_detail', [], true)
+ 4 APPPATH\Controllers\DetailMaps.php(55): view('apps/maps_detail', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('969')
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-17 10:44:53 --> Cannot use object of type stdClass as array
+in APPPATH\Views\apps\maps_detail.php on line 873.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/maps_detail', [], true)
+ 4 APPPATH\Controllers\DetailMaps.php(55): view('apps/maps_detail', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('969')
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-17 10:45:41 --> count(): Parameter must be an array or an object that implements Countable
+in APPPATH\Views\apps\maps_detail.php on line 873.
+ 1 APPPATH\Views\apps\maps_detail.php(873): CodeIgniter\Debug\Exceptions->errorHandler(2, 'count(): Parameter must be an array or an object that implements Countable', 'APPPATH\\Views\\apps\\maps_detail.php', 873, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\apps\\maps_detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/maps_detail', [], true)
+ 5 APPPATH\Controllers\DetailMaps.php(55): view('apps/maps_detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('969')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-17 10:45:56 --> Trying to get property 'kodeinvenpu' of non-object
+in APPPATH\Views\apps\maps_detail.php on line 873.
+ 1 APPPATH\Views\apps\maps_detail.php(873): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'kodeinvenpu\' of non-object', 'APPPATH\\Views\\apps\\maps_detail.php', 873, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\apps\\maps_detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/maps_detail', [], true)
+ 5 APPPATH\Controllers\DetailMaps.php(55): view('apps/maps_detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('969')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-17 10:46:08 --> count(): Parameter must be an array or an object that implements Countable
+in APPPATH\Views\apps\maps_detail.php on line 873.
+ 1 APPPATH\Views\apps\maps_detail.php(873): CodeIgniter\Debug\Exceptions->errorHandler(2, 'count(): Parameter must be an array or an object that implements Countable', 'APPPATH\\Views\\apps\\maps_detail.php', 873, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\apps\\maps_detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/maps_detail', [], true)
+ 5 APPPATH\Controllers\DetailMaps.php(55): view('apps/maps_detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('969')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-17 10:46:40 --> Trying to get property 'kodeinvenpu' of non-object
+in APPPATH\Views\apps\maps_detail.php on line 873.
+ 1 APPPATH\Views\apps\maps_detail.php(873): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'kodeinvenpu\' of non-object', 'APPPATH\\Views\\apps\\maps_detail.php', 873, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\apps\\maps_detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/maps_detail', [], true)
+ 5 APPPATH\Controllers\DetailMaps.php(55): view('apps/maps_detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('969')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-17 10:47:18 --> Illegal string offset 'kodeinvenpu'
+in APPPATH\Views\apps\maps_detail.php on line 873.
+ 1 APPPATH\Views\apps\maps_detail.php(873): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Illegal string offset \'kodeinvenpu\'', 'APPPATH\\Views\\apps\\maps_detail.php', 873, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\apps\\maps_detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/maps_detail', [], true)
+ 5 APPPATH\Controllers\DetailMaps.php(55): view('apps/maps_detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('969')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-17 10:48:22 --> Cannot use object of type stdClass as array
+in APPPATH\Views\apps\maps_detail.php on line 873.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/maps_detail', [], true)
+ 4 APPPATH\Controllers\DetailMaps.php(55): view('apps/maps_detail', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('969')
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-17 10:49:12 --> count(): Parameter must be an array or an object that implements Countable
+in APPPATH\Views\apps\maps_detail.php on line 873.
+ 1 APPPATH\Views\apps\maps_detail.php(873): CodeIgniter\Debug\Exceptions->errorHandler(2, 'count(): Parameter must be an array or an object that implements Countable', 'APPPATH\\Views\\apps\\maps_detail.php', 873, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\apps\\maps_detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/maps_detail', [], true)
+ 5 APPPATH\Controllers\DetailMaps.php(55): view('apps/maps_detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('969')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-17 10:50:41 --> Trying to get property 'kodeinvenpu' of non-object
+in APPPATH\Views\apps\maps_detail.php on line 872.
+ 1 APPPATH\Views\apps\maps_detail.php(872): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'kodeinvenpu\' of non-object', 'APPPATH\\Views\\apps\\maps_detail.php', 872, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\apps\\maps_detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/maps_detail', [], true)
+ 5 APPPATH\Controllers\DetailMaps.php(55): view('apps/maps_detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('969')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-17 10:51:15 --> Undefined variable: var
+in APPPATH\Views\apps\maps_detail.php on line 872.
+ 1 APPPATH\Views\apps\maps_detail.php(872): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: var', 'APPPATH\\Views\\apps\\maps_detail.php', 872, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\apps\\maps_detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/maps_detail', [], true)
+ 5 APPPATH\Controllers\DetailMaps.php(55): view('apps/maps_detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('969')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-17 10:51:32 --> Undefined variable: var
+in APPPATH\Views\apps\maps_detail.php on line 872.
+ 1 APPPATH\Views\apps\maps_detail.php(872): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: var', 'APPPATH\\Views\\apps\\maps_detail.php', 872, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\apps\\maps_detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/maps_detail', [], true)
+ 5 APPPATH\Controllers\DetailMaps.php(55): view('apps/maps_detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('969')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-17 10:51:41 --> Undefined index: kodeinvenpu
+in APPPATH\Views\apps\maps_detail.php on line 872.
+ 1 APPPATH\Views\apps\maps_detail.php(872): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: kodeinvenpu', 'APPPATH\\Views\\apps\\maps_detail.php', 872, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\apps\\maps_detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/maps_detail', [], true)
+ 5 APPPATH\Controllers\DetailMaps.php(55): view('apps/maps_detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('969')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-17 10:52:09 --> Undefined index: kodeinvenpu
+in APPPATH\Views\apps\maps_detail.php on line 872.
+ 1 APPPATH\Views\apps\maps_detail.php(872): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: kodeinvenpu', 'APPPATH\\Views\\apps\\maps_detail.php', 872, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\apps\\maps_detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/maps_detail', [], true)
+ 5 APPPATH\Controllers\DetailMaps.php(55): view('apps/maps_detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('969')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-17 10:55:25 --> Undefined index: kodeinvenpu
+in APPPATH\Views\apps\maps_detail.php on line 872.
+ 1 APPPATH\Views\apps\maps_detail.php(872): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: kodeinvenpu', 'APPPATH\\Views\\apps\\maps_detail.php', 872, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\apps\\maps_detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/maps_detail', [], true)
+ 5 APPPATH\Controllers\DetailMaps.php(55): view('apps/maps_detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('969')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-17 10:58:27 --> Trying to get property 'kodeinvenpu' of non-object
+in APPPATH\Views\apps\maps_detail.php on line 872.
+ 1 APPPATH\Views\apps\maps_detail.php(872): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'kodeinvenpu\' of non-object', 'APPPATH\\Views\\apps\\maps_detail.php', 872, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\apps\\maps_detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/maps_detail', [], true)
+ 5 APPPATH\Controllers\DetailMaps.php(55): view('apps/maps_detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('969')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-17 10:58:46 --> Undefined index: kodeinvenpu
+in APPPATH\Views\apps\maps_detail.php on line 872.
+ 1 APPPATH\Views\apps\maps_detail.php(872): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: kodeinvenpu', 'APPPATH\\Views\\apps\\maps_detail.php', 872, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\apps\\maps_detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/maps_detail', [], true)
+ 5 APPPATH\Controllers\DetailMaps.php(55): view('apps/maps_detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('969')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-17 11:01:08 --> Undefined index: kodeinvenpu
+in APPPATH\Views\apps\maps_detail.php on line 872.
+ 1 APPPATH\Views\apps\maps_detail.php(872): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: kodeinvenpu', 'APPPATH\\Views\\apps\\maps_detail.php', 872, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\apps\\maps_detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/maps_detail', [], true)
+ 5 APPPATH\Controllers\DetailMaps.php(55): view('apps/maps_detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('969')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-17 11:06:48 --> count(): Parameter must be an array or an object that implements Countable
+in APPPATH\Controllers\DetailMaps.php on line 27.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'count(): Parameter must be an array or an object that implements Countable', 'APPPATH\\Controllers\\DetailMaps.php', 27, [...])
+ 2 APPPATH\Controllers\DetailMaps.php(27): count('M325')
+ 3 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('969')
+ 4 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-17 11:07:29 --> Undefined index: kodeinvenpu
+in APPPATH\Controllers\DetailMaps.php on line 27.
+ 1 APPPATH\Controllers\DetailMaps.php(27): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: kodeinvenpu', 'APPPATH\\Controllers\\DetailMaps.php', 27, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('969')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-17 11:08:00 --> Cannot use object of type stdClass as array
+in APPPATH\Controllers\DetailMaps.php on line 27.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('969')
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-17 11:08:14 --> Cannot use object of type stdClass as array
+in APPPATH\Controllers\DetailMaps.php on line 27.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('969')
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-17 11:08:27 --> Cannot use object of type stdClass as array
+in APPPATH\Controllers\DetailMaps.php on line 27.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('969')
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-17 11:09:29 --> Undefined index: kodeinvenpu
+in APPPATH\Controllers\DetailMaps.php on line 27.
+ 1 APPPATH\Controllers\DetailMaps.php(27): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: kodeinvenpu', 'APPPATH\\Controllers\\DetailMaps.php', 27, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('969')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-17 11:11:26 --> Undefined index: kodeinvenpu
+in APPPATH\Controllers\DetailMaps.php on line 27.
+ 1 APPPATH\Controllers\DetailMaps.php(27): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: kodeinvenpu', 'APPPATH\\Controllers\\DetailMaps.php', 27, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('969')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-17 11:12:24 --> Undefined index: kodeinvenpu
+in APPPATH\Controllers\DetailMaps.php on line 27.
+ 1 APPPATH\Controllers\DetailMaps.php(27): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: kodeinvenpu', 'APPPATH\\Controllers\\DetailMaps.php', 27, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('969')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-17 11:12:26 --> Undefined index: kodeinvenpu
+in APPPATH\Controllers\DetailMaps.php on line 27.
+ 1 APPPATH\Controllers\DetailMaps.php(27): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: kodeinvenpu', 'APPPATH\\Controllers\\DetailMaps.php', 27, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('969')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-17 11:12:28 --> Undefined index: kodeinvenpu
+in APPPATH\Controllers\DetailMaps.php on line 27.
+ 1 APPPATH\Controllers\DetailMaps.php(27): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: kodeinvenpu', 'APPPATH\\Controllers\\DetailMaps.php', 27, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('969')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-17 11:18:04 --> Undefined index: kodeinvenpu
+in APPPATH\Controllers\DetailMaps.php on line 27.
+ 1 APPPATH\Controllers\DetailMaps.php(27): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: kodeinvenpu', 'APPPATH\\Controllers\\DetailMaps.php', 27, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('969')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-17 11:18:32 --> Trying to get property 'kodeinvenpu' of non-object
+in APPPATH\Controllers\DetailMaps.php on line 27.
+ 1 APPPATH\Controllers\DetailMaps.php(27): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'kodeinvenpu\' of non-object', 'APPPATH\\Controllers\\DetailMaps.php', 27, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('969')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-17 11:18:44 --> Trying to get property 'kodeinvenpu' of non-object
+in APPPATH\Controllers\DetailMaps.php on line 27.
+ 1 APPPATH\Controllers\DetailMaps.php(27): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'kodeinvenpu\' of non-object', 'APPPATH\\Controllers\\DetailMaps.php', 27, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('969')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-17 11:18:57 --> Undefined index: kodeinvenpu
+in APPPATH\Controllers\DetailMaps.php on line 27.
+ 1 APPPATH\Controllers\DetailMaps.php(27): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: kodeinvenpu', 'APPPATH\\Controllers\\DetailMaps.php', 27, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('969')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-17 11:19:43 --> Cannot use object of type CodeIgniter\Database\MySQLi\Result as array
+in APPPATH\Controllers\DetailMaps.php on line 27.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('969')
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-17 11:21:47 --> Array to string conversion
+in APPPATH\Views\apps\maps_detail.php on line 872.
+ 1 APPPATH\Views\apps\maps_detail.php(872): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Array to string conversion', 'APPPATH\\Views\\apps\\maps_detail.php', 872, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\apps\\maps_detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/maps_detail', [], true)
+ 5 APPPATH\Controllers\DetailMaps.php(59): view('apps/maps_detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('969')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-17 11:23:12 --> Undefined index: kodeinvenpu
+in APPPATH\Controllers\DetailMaps.php on line 27.
+ 1 APPPATH\Controllers\DetailMaps.php(27): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: kodeinvenpu', 'APPPATH\\Controllers\\DetailMaps.php', 27, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('969')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-17 11:26:35 --> Cannot use object of type stdClass as array
+in APPPATH\Controllers\DetailMaps.php on line 27.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('969')
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-17 11:27:54 --> Cannot use object of type stdClass as array
+in APPPATH\Controllers\DetailMaps.php on line 28.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('969')
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-17 11:28:55 --> Cannot use object of type stdClass as array
+in APPPATH\Controllers\DetailMaps.php on line 28.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('969')
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-17 11:29:30 --> Cannot use object of type stdClass as array
+in APPPATH\Controllers\DetailMaps.php on line 28.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('969')
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-17 11:31:04 --> Undefined index: kodeinvenpu
+in APPPATH\Controllers\DetailMaps.php on line 28.
+ 1 APPPATH\Controllers\DetailMaps.php(28): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: kodeinvenpu', 'APPPATH\\Controllers\\DetailMaps.php', 28, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('969')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-17 11:34:31 --> Undefined index: kodeinvenpu
+in APPPATH\Controllers\DetailMaps.php on line 28.
+ 1 APPPATH\Controllers\DetailMaps.php(28): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: kodeinvenpu', 'APPPATH\\Controllers\\DetailMaps.php', 28, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('969')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-17 11:37:26 --> Undefined index: kodeinvenpu
+in APPPATH\Controllers\DetailMaps.php on line 28.
+ 1 APPPATH\Controllers\DetailMaps.php(28): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: kodeinvenpu', 'APPPATH\\Controllers\\DetailMaps.php', 28, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('969')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-17 18:42:04 --> Call to undefined method CodeIgniter\Database\MySQLi\Builder::num_rows()
+in APPPATH\Controllers\DetailMaps.php on line 21.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('969')
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-01-17 18:55:56 --> mysqli_sql_exception: Table 'khdtk.anakpetak' doesn't exist in D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT COUNT(*)...', 0)
+#1 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*)...')
+#2 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*)...')
+#3 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1614): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', NULL, false)
+#4 D:\xampp\htdocs\KHDTK-APP\app\Controllers\DetailMaps.php(22): CodeIgniter\Database\BaseBuilder->countAll()
+#5 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\DetailMaps->index('969')
+#6 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+#7 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\KHDTK-APP\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('D:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2023-01-17 18:55:56 --> Table 'khdtk.anakpetak' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT COUNT(*) AS `numrows` FROM `anakpetak`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT COUNT(*) AS `numrows` FROM `anakpetak`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT COUNT(*) AS `numrows` FROM `anakpetak`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1614): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows` FROM `anakpetak`', null, false)
+ 5 APPPATH\Controllers\DetailMaps.php(22): CodeIgniter\Database\BaseBuilder->countAll()
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('969')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-17 19:14:45 --> Cannot use object of type CodeIgniter\Database\MySQLi\Builder as array
+in APPPATH\Controllers\DetailMaps.php on line 28.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('969')
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-17 19:15:37 --> Cannot use object of type CodeIgniter\Database\MySQLi\Builder as array
+in APPPATH\Controllers\DetailMaps.php on line 28.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('969')
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-17 19:15:40 --> Cannot use object of type CodeIgniter\Database\MySQLi\Builder as array
+in APPPATH\Controllers\DetailMaps.php on line 28.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('969')
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-17 19:15:41 --> Cannot use object of type CodeIgniter\Database\MySQLi\Builder as array
+in APPPATH\Controllers\DetailMaps.php on line 28.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('969')
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-17 19:15:42 --> Cannot use object of type CodeIgniter\Database\MySQLi\Builder as array
+in APPPATH\Controllers\DetailMaps.php on line 28.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('969')
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-17 19:15:42 --> Cannot use object of type CodeIgniter\Database\MySQLi\Builder as array
+in APPPATH\Controllers\DetailMaps.php on line 28.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('969')
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-17 19:15:42 --> Cannot use object of type CodeIgniter\Database\MySQLi\Builder as array
+in APPPATH\Controllers\DetailMaps.php on line 28.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('969')
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-17 19:15:42 --> Cannot use object of type CodeIgniter\Database\MySQLi\Builder as array
+in APPPATH\Controllers\DetailMaps.php on line 28.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('969')
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-17 19:17:30 --> Call to a member function select() on null
+in APPPATH\Controllers\DetailMaps.php on line 27.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('671')
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-17 19:18:00 --> Function name must be a string
+in APPPATH\Controllers\DetailMaps.php on line 27.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('671')
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-17 19:18:02 --> Function name must be a string
+in APPPATH\Controllers\DetailMaps.php on line 27.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('671')
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-17 19:18:03 --> Function name must be a string
+in APPPATH\Controllers\DetailMaps.php on line 27.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('671')
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-17 19:18:18 --> Undefined index: jumlah_pohon
+in APPPATH\Controllers\DetailMaps.php on line 27.
+ 1 APPPATH\Controllers\DetailMaps.php(27): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: jumlah_pohon', 'APPPATH\\Controllers\\DetailMaps.php', 27, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('671')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-17 19:30:29 --> Object of class CodeIgniter\Database\MySQLi\Builder could not be converted to string
+in APPPATH\Controllers\DetailMaps.php on line 27.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('671')
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-17 19:32:09 --> Object of class CodeIgniter\Database\MySQLi\Builder could not be converted to string
+in APPPATH\Controllers\DetailMaps.php on line 27.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('671')
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-17 19:32:11 --> Object of class CodeIgniter\Database\MySQLi\Builder could not be converted to string
+in APPPATH\Controllers\DetailMaps.php on line 27.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('671')
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-17 19:32:58 --> Object of class CodeIgniter\Database\MySQLi\Builder could not be converted to string
+in APPPATH\Controllers\DetailMaps.php on line 27.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('671')
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-17 19:34:30 --> Object of class CodeIgniter\Database\MySQLi\Builder could not be converted to string
+in APPPATH\Controllers\DetailMaps.php on line 27.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('671')
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-17 19:39:04 --> Function name must be a string
+in APPPATH\Controllers\DetailMaps.php on line 27.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('671')
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-17 19:40:04 --> Function name must be a string
+in APPPATH\Controllers\DetailMaps.php on line 27.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('671')
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-17 19:40:05 --> Function name must be a string
+in APPPATH\Controllers\DetailMaps.php on line 27.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('671')
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-17 19:40:11 --> Object of class CodeIgniter\Database\MySQLi\Builder could not be converted to string
+in APPPATH\Controllers\DetailMaps.php on line 27.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('671')
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-17 19:40:52 --> syntax error, unexpected ']', expecting ')'
+in APPPATH\Controllers\DetailMaps.php on line 27.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(259): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\DetailMaps.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(237): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\DetailMaps')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\DetailMaps')
+ 4 [internal function]: spl_autoload_call('App\\Controllers\\DetailMaps')
+ 5 SYSTEMPATH\CodeIgniter.php(877): class_exists('\\App\\Controllers\\DetailMaps', true)
+ 6 SYSTEMPATH\CodeIgniter.php(469): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-17 20:00:23 --> Undefined index: jumlah_pohon
+in APPPATH\Controllers\DetailMaps.php on line 27.
+ 1 APPPATH\Controllers\DetailMaps.php(27): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: jumlah_pohon', 'APPPATH\\Controllers\\DetailMaps.php', 27, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('671')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-17 20:00:25 --> Undefined index: jumlah_pohon
+in APPPATH\Controllers\DetailMaps.php on line 27.
+ 1 APPPATH\Controllers\DetailMaps.php(27): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: jumlah_pohon', 'APPPATH\\Controllers\\DetailMaps.php', 27, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('671')
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-01-17 20:09:43 --> mysqli_sql_exception: Unknown column 'jumlah_pohon' in 'field list' in D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `jumlah_...', 0)
+#1 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `jumlah_...')
+#2 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `jumlah_...')
+#3 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `jumlah_...', Array, false)
+#4 D:\xampp\htdocs\KHDTK-APP\app\Controllers\DetailMaps.php(26): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\DetailMaps->index('671')
+#6 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+#7 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\KHDTK-APP\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('D:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2023-01-17 20:09:43 --> Unknown column 'jumlah_pohon' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `jumlah_pohon`
+FROM `umt_anakpetak`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `jumlah_pohon`
+FROM `umt_anakpetak`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `jumlah_pohon`
+FROM `umt_anakpetak`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `jumlah_pohon`
+FROM `umt_anakpetak`', [], false)
+ 5 APPPATH\Controllers\DetailMaps.php(26): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('671')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-17 20:17:08 --> Trying to access array offset on value of type null
+in APPPATH\Views\apps\maps_detail.php on line 624.
+ 1 APPPATH\Views\apps\maps_detail.php(624): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\apps\\maps_detail.php', 624, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\apps\\maps_detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/maps_detail', [], true)
+ 5 APPPATH\Controllers\DetailMaps.php(50): view('apps/maps_detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('671')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-17 20:17:37 --> Trying to access array offset on value of type null
+in APPPATH\Views\apps\maps_detail.php on line 624.
+ 1 APPPATH\Views\apps\maps_detail.php(624): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\apps\\maps_detail.php', 624, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\apps\\maps_detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/maps_detail', [], true)
+ 5 APPPATH\Controllers\DetailMaps.php(50): view('apps/maps_detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('671')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-17 20:17:39 --> Trying to access array offset on value of type null
+in APPPATH\Views\apps\maps_detail.php on line 624.
+ 1 APPPATH\Views\apps\maps_detail.php(624): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\apps\\maps_detail.php', 624, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\apps\\maps_detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/maps_detail', [], true)
+ 5 APPPATH\Controllers\DetailMaps.php(50): view('apps/maps_detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('671')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-17 20:18:42 --> Trying to access array offset on value of type null
+in APPPATH\Views\apps\maps_detail.php on line 624.
+ 1 APPPATH\Views\apps\maps_detail.php(624): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\apps\\maps_detail.php', 624, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\apps\\maps_detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/maps_detail', [], true)
+ 5 APPPATH\Controllers\DetailMaps.php(50): view('apps/maps_detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('671')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-17 20:18:43 --> Trying to access array offset on value of type null
+in APPPATH\Views\apps\maps_detail.php on line 624.
+ 1 APPPATH\Views\apps\maps_detail.php(624): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\apps\\maps_detail.php', 624, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\apps\\maps_detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/maps_detail', [], true)
+ 5 APPPATH\Controllers\DetailMaps.php(50): view('apps/maps_detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('671')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-17 20:18:44 --> Trying to access array offset on value of type null
+in APPPATH\Views\apps\maps_detail.php on line 624.
+ 1 APPPATH\Views\apps\maps_detail.php(624): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\apps\\maps_detail.php', 624, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\apps\\maps_detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/maps_detail', [], true)
+ 5 APPPATH\Controllers\DetailMaps.php(50): view('apps/maps_detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('671')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-17 20:19:18 --> Trying to access array offset on value of type null
+in APPPATH\Views\apps\maps_detail.php on line 624.
+ 1 APPPATH\Views\apps\maps_detail.php(624): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\apps\\maps_detail.php', 624, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\apps\\maps_detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/maps_detail', [], true)
+ 5 APPPATH\Controllers\DetailMaps.php(50): view('apps/maps_detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('671')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-17 20:20:50 --> Trying to access array offset on value of type null
+in APPPATH\Views\apps\maps_detail.php on line 624.
+ 1 APPPATH\Views\apps\maps_detail.php(624): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\apps\\maps_detail.php', 624, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\apps\\maps_detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/maps_detail', [], true)
+ 5 APPPATH\Controllers\DetailMaps.php(50): view('apps/maps_detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('671')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-17 20:20:51 --> Trying to access array offset on value of type null
+in APPPATH\Views\apps\maps_detail.php on line 624.
+ 1 APPPATH\Views\apps\maps_detail.php(624): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\apps\\maps_detail.php', 624, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\apps\\maps_detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/maps_detail', [], true)
+ 5 APPPATH\Controllers\DetailMaps.php(50): view('apps/maps_detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('671')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-17 20:20:52 --> Trying to access array offset on value of type null
+in APPPATH\Views\apps\maps_detail.php on line 624.
+ 1 APPPATH\Views\apps\maps_detail.php(624): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\apps\\maps_detail.php', 624, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\apps\\maps_detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/maps_detail', [], true)
+ 5 APPPATH\Controllers\DetailMaps.php(50): view('apps/maps_detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('671')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-17 20:20:53 --> Trying to access array offset on value of type null
+in APPPATH\Views\apps\maps_detail.php on line 624.
+ 1 APPPATH\Views\apps\maps_detail.php(624): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\apps\\maps_detail.php', 624, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\apps\\maps_detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/maps_detail', [], true)
+ 5 APPPATH\Controllers\DetailMaps.php(50): view('apps/maps_detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('671')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-17 20:20:53 --> Trying to access array offset on value of type null
+in APPPATH\Views\apps\maps_detail.php on line 624.
+ 1 APPPATH\Views\apps\maps_detail.php(624): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\apps\\maps_detail.php', 624, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\apps\\maps_detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/maps_detail', [], true)
+ 5 APPPATH\Controllers\DetailMaps.php(50): view('apps/maps_detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('671')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-17 20:20:54 --> Trying to access array offset on value of type null
+in APPPATH\Views\apps\maps_detail.php on line 624.
+ 1 APPPATH\Views\apps\maps_detail.php(624): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\apps\\maps_detail.php', 624, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\apps\\maps_detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/maps_detail', [], true)
+ 5 APPPATH\Controllers\DetailMaps.php(50): view('apps/maps_detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('671')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-17 20:21:27 --> Trying to get property 'anakpetak' of non-object
+in APPPATH\Views\apps\maps_detail.php on line 624.
+ 1 APPPATH\Views\apps\maps_detail.php(624): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'anakpetak\' of non-object', 'APPPATH\\Views\\apps\\maps_detail.php', 624, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\apps\\maps_detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/maps_detail', [], true)
+ 5 APPPATH\Controllers\DetailMaps.php(50): view('apps/maps_detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('671')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-17 20:21:30 --> Trying to get property 'anakpetak' of non-object
+in APPPATH\Views\apps\maps_detail.php on line 624.
+ 1 APPPATH\Views\apps\maps_detail.php(624): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'anakpetak\' of non-object', 'APPPATH\\Views\\apps\\maps_detail.php', 624, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\apps\\maps_detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/maps_detail', [], true)
+ 5 APPPATH\Controllers\DetailMaps.php(50): view('apps/maps_detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('671')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-17 20:21:31 --> Trying to get property 'anakpetak' of non-object
+in APPPATH\Views\apps\maps_detail.php on line 624.
+ 1 APPPATH\Views\apps\maps_detail.php(624): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'anakpetak\' of non-object', 'APPPATH\\Views\\apps\\maps_detail.php', 624, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\apps\\maps_detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/maps_detail', [], true)
+ 5 APPPATH\Controllers\DetailMaps.php(50): view('apps/maps_detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('671')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-17 20:26:43 --> Trying to get property 'luas_ht' of non-object
+in APPPATH\Views\apps\maps_detail.php on line 876.
+ 1 APPPATH\Views\apps\maps_detail.php(876): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Trying to get property \'luas_ht\' of non-object', 'APPPATH\\Views\\apps\\maps_detail.php', 876, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\apps\\maps_detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/maps_detail', [], true)
+ 5 APPPATH\Controllers\DetailMaps.php(49): view('apps/maps_detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('969')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-17 20:32:05 --> Undefined index: jumlah_pohon
+in APPPATH\Views\apps\maps_detail.php on line 876.
+ 1 APPPATH\Views\apps\maps_detail.php(876): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: jumlah_pohon', 'APPPATH\\Views\\apps\\maps_detail.php', 876, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\apps\\maps_detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/maps_detail', [], true)
+ 5 APPPATH\Controllers\DetailMaps.php(49): view('apps/maps_detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('969')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-17 20:33:15 --> Undefined index: jumlah_pohon
+in APPPATH\Views\apps\maps_detail.php on line 876.
+ 1 APPPATH\Views\apps\maps_detail.php(876): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: jumlah_pohon', 'APPPATH\\Views\\apps\\maps_detail.php', 876, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\apps\\maps_detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/maps_detail', [], true)
+ 5 APPPATH\Controllers\DetailMaps.php(49): view('apps/maps_detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('969')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-17 20:34:40 --> Undefined index: jumlah_pohon
+in APPPATH\Views\apps\maps_detail.php on line 876.
+ 1 APPPATH\Views\apps\maps_detail.php(876): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: jumlah_pohon', 'APPPATH\\Views\\apps\\maps_detail.php', 876, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\apps\\maps_detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/maps_detail', [], true)
+ 5 APPPATH\Controllers\DetailMaps.php(52): view('apps/maps_detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('969')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-17 20:35:42 --> Undefined variable: data3
+in APPPATH\Views\apps\maps_detail.php on line 876.
+ 1 APPPATH\Views\apps\maps_detail.php(876): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: data3', 'APPPATH\\Views\\apps\\maps_detail.php', 876, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\apps\\maps_detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/maps_detail', [], true)
+ 5 APPPATH\Controllers\DetailMaps.php(53): view('apps/maps_detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('969')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-17 20:36:08 --> Undefined index: jumlah_pohon
+in APPPATH\Views\apps\maps_detail.php on line 876.
+ 1 APPPATH\Views\apps\maps_detail.php(876): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: jumlah_pohon', 'APPPATH\\Views\\apps\\maps_detail.php', 876, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\apps\\maps_detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/maps_detail', [], true)
+ 5 APPPATH\Controllers\DetailMaps.php(54): view('apps/maps_detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('969')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-17 20:36:09 --> Undefined index: jumlah_pohon
+in APPPATH\Views\apps\maps_detail.php on line 876.
+ 1 APPPATH\Views\apps\maps_detail.php(876): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: jumlah_pohon', 'APPPATH\\Views\\apps\\maps_detail.php', 876, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\apps\\maps_detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/maps_detail', [], true)
+ 5 APPPATH\Controllers\DetailMaps.php(54): view('apps/maps_detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('969')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-17 20:36:10 --> Undefined index: jumlah_pohon
+in APPPATH\Views\apps\maps_detail.php on line 876.
+ 1 APPPATH\Views\apps\maps_detail.php(876): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: jumlah_pohon', 'APPPATH\\Views\\apps\\maps_detail.php', 876, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\apps\\maps_detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/maps_detail', [], true)
+ 5 APPPATH\Controllers\DetailMaps.php(54): view('apps/maps_detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('969')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-17 20:36:10 --> Undefined index: jumlah_pohon
+in APPPATH\Views\apps\maps_detail.php on line 876.
+ 1 APPPATH\Views\apps\maps_detail.php(876): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: jumlah_pohon', 'APPPATH\\Views\\apps\\maps_detail.php', 876, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\apps\\maps_detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/maps_detail', [], true)
+ 5 APPPATH\Controllers\DetailMaps.php(54): view('apps/maps_detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('969')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-17 20:36:11 --> Undefined index: jumlah_pohon
+in APPPATH\Views\apps\maps_detail.php on line 876.
+ 1 APPPATH\Views\apps\maps_detail.php(876): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: jumlah_pohon', 'APPPATH\\Views\\apps\\maps_detail.php', 876, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\apps\\maps_detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/maps_detail', [], true)
+ 5 APPPATH\Controllers\DetailMaps.php(54): view('apps/maps_detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('969')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-17 20:36:11 --> Undefined index: jumlah_pohon
+in APPPATH\Views\apps\maps_detail.php on line 876.
+ 1 APPPATH\Views\apps\maps_detail.php(876): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: jumlah_pohon', 'APPPATH\\Views\\apps\\maps_detail.php', 876, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\apps\\maps_detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/maps_detail', [], true)
+ 5 APPPATH\Controllers\DetailMaps.php(54): view('apps/maps_detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('969')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-17 20:39:06 --> Illegal string offset 'jumlah_pohon'
+in APPPATH\Views\apps\maps_detail.php on line 879.
+ 1 APPPATH\Views\apps\maps_detail.php(879): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Illegal string offset \'jumlah_pohon\'', 'APPPATH\\Views\\apps\\maps_detail.php', 879, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\apps\\maps_detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/maps_detail', [], true)
+ 5 APPPATH\Controllers\DetailMaps.php(54): view('apps/maps_detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('969')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-17 20:44:54 --> Invalid argument supplied for foreach()
+in APPPATH\Views\apps\maps_detail.php on line 878.
+ 1 APPPATH\Views\apps\maps_detail.php(878): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Invalid argument supplied for foreach()', 'APPPATH\\Views\\apps\\maps_detail.php', 878, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\apps\\maps_detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/maps_detail', [], true)
+ 5 APPPATH\Controllers\DetailMaps.php(54): view('apps/maps_detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('969')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-17 20:45:08 --> syntax error, unexpected 'as' (T_AS), expecting ';'
+in APPPATH\Views\apps\maps_detail.php on line 878.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/maps_detail', [], true)
+ 3 APPPATH\Controllers\DetailMaps.php(54): view('apps/maps_detail', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('969')
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-17 21:20:13 --> Illegal string offset 'dbh_rata'
+in APPPATH\Views\apps\maps_detail.php on line 902.
+ 1 APPPATH\Views\apps\maps_detail.php(902): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Illegal string offset \'dbh_rata\'', 'APPPATH\\Views\\apps\\maps_detail.php', 902, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\apps\\maps_detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/maps_detail', [], true)
+ 5 APPPATH\Controllers\DetailMaps.php(54): view('apps/maps_detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('969')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-17 21:22:03 --> Illegal string offset 'lbds'
+in APPPATH\Views\apps\maps_detail.php on line 858.
+ 1 APPPATH\Views\apps\maps_detail.php(858): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Illegal string offset \'lbds\'', 'APPPATH\\Views\\apps\\maps_detail.php', 858, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\apps\\maps_detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/maps_detail', [], true)
+ 5 APPPATH\Controllers\DetailMaps.php(54): view('apps/maps_detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('969')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-17 21:24:14 --> Illegal string offset 'jumlah_pohon'
+in APPPATH\Views\apps\maps_detail.php on line 892.
+ 1 APPPATH\Views\apps\maps_detail.php(892): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Illegal string offset \'jumlah_pohon\'', 'APPPATH\\Views\\apps\\maps_detail.php', 892, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\apps\\maps_detail.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('apps/maps_detail', [], true)
+ 5 APPPATH\Controllers\DetailMaps.php(54): view('apps/maps_detail', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\DetailMaps->index('969')
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\DetailMaps))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')

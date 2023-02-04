@@ -1,0 +1,12 @@
+CRITICAL - 2023-01-20 04:15:24 --> Undefined index: no_pohon
+in APPPATH\Views\user-database\ukur_pu.php on line 540.
+ 1 APPPATH\Views\user-database\ukur_pu.php(540): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined index: no_pohon', 'APPPATH\\Views\\user-database\\ukur_pu.php', 540, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\user-database\\ukur_pu.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('user-database/ukur_pu', [], true)
+ 5 APPPATH\Controllers\UserUkur.php(34): view('user-database/ukur_pu', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\UserUkur->index()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserUkur))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')

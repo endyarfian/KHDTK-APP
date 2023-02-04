@@ -21,7 +21,7 @@ class Maps extends BaseController
 
         $model = new \App\Models\AnakPetakModel();
 
-        $file = file_get_contents("./dashboard/plugins/leaflet/khdtk.geojson");
+        $file = file_get_contents("./dashboard/plugins/leaflet/khdtknew.geojson");
         $file = json_decode($file);
 
         $features = $file->features;
@@ -35,7 +35,7 @@ class Maps extends BaseController
                 $features[$index]->properties->id = $data['id'];
                 $features[$index]->properties->luas = $data['luas'];
                 $features[$index]->properties->luasht = $data['luas_ht'];
-                $features[$index]->properties->persentase = $data['persentase'];
+                // $features[$index]->properties->persentase = $data['persentase'];
             }
         }
 

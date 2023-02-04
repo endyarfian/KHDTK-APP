@@ -4,7 +4,7 @@ namespace App\Controllers;
 
 use \App\Models\RTKAlokasiModel;
 use \App\Models\RTKRealisasiModel;
-use \App\Models\CucuPetakModel;
+use \App\Models\AnakPetakModel;
 use \App\Models\DesaHwdModel;
 use \App\Models\RTKegiatanModel;
 
@@ -15,7 +15,7 @@ class UserAlokasiRealisasi extends BaseController
     {
         $this->RTKAlokasiModel = new RTKAlokasiModel();
         $this->RTKRealisasiModel = new RTKRealisasiModel();
-        $this->CucuPetakModel = new CucuPetakModel();
+        $this->AnakPetakModel = new AnakPetakModel();
         $this->DesaHwdModel = new DesaHwdModel();
         $this->RTKegiatanModel = new RTKegiatanModel();
     }
@@ -25,13 +25,13 @@ class UserAlokasiRealisasi extends BaseController
 
         $rtka = $this->RTKAlokasiModel->findAll();
         $rtkr = $this->RTKRealisasiModel->findAll();
-        $cupet = $this->CucuPetakModel->findAll();
+        $anakpetak = $this->AnakPetakModel->findAll();
         $hwd = $this->DesaHwdModel->findAll();
         $rtk = $this->RTKegiatanModel->findAll();
         $data = [
             'rtka' => $rtka,
             'rtkr' => $rtkr,
-            'cupet' => $cupet,
+            'anakpetak' => $anakpetak,
             'hwd' => $hwd,
             'rtk' => $rtk,
             'title' => 'KHDTK APPS - Alokasi dan Realisasi',

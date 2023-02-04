@@ -535,7 +535,7 @@
                                         <th>Kode Rencana Tahunan Kegiatan</th>
                                         <th>Tanggal Berlaku</th>
                                         <th>Tanggal Berakhir</th>
-                                        <th>Kode Cucu Petak</th>
+                                        <th>Kode Anak Petak</th>
                                         <th>Kode HWD</th>
                                         <th>Satuan</th>
                                         <th>Volume</th>
@@ -553,7 +553,7 @@
                                             <td><?= $var['kode_rencana_tahunan_kegiatan']; ?></td>
                                             <td><?= $var['tanggal_berlaku']; ?></td>
                                             <td><?= $var['tanggal_berakhir']; ?></td>
-                                            <td><?= $var['kode_cucu_petak']; ?></td>
+                                            <td><?= $var['kode_anak_petak']; ?></td>
                                             <td><?= $var['kode_hwd']; ?></td>
                                             <td><?= $var['satuan']; ?></td>
                                             <td><?= $var['volume']; ?></td>
@@ -721,15 +721,15 @@
                                     </div>
                                     <div class="form-row mb-4">
                                         <div class="col">
-                                            <label for="kodecupet">
-                                                <span class="badge outline-badge-dark"> Kode Cucu Petak </span></label>
-                                            <select class="form-control <?= ($validation->hasError('kodecupet')) ? 'is-invalid' : ''; ?>" id="kodecupet" name="kodecupet">
-                                                <?php foreach ($cupet as $pk) : ?>
-                                                    <option><?= $pk['kode_cucu_petak']; ?></option>
+                                            <label for="kodeanakpetak">
+                                                <span class="badge outline-badge-dark"> Kode Anak Petak </span></label>
+                                            <select class="form-control <?= ($validation->hasError('kodeanakpetak')) ? 'is-invalid' : ''; ?>" id="kodeanakpetak" name="kodeanakpetak">
+                                                <?php foreach ($anakpetak as $pk) : ?>
+                                                    <option><?= $pk['kode_anak_petak']; ?></option>
                                                 <?php endforeach; ?>
                                             </select>
                                             <div class="invalid-feedback">
-                                                <?= $validation->getError('kodecupet'); ?>
+                                                <?= $validation->getError('kodeanakpetak'); ?>
                                             </div>
                                         </div>
                                         <div class="col">
@@ -848,12 +848,12 @@
                                         </div>
                                         <div class="form-row mb-4">
                                             <div class="col">
-                                                <label for="editkodecupet">
-                                                    <span class="badge outline-badge-dark"> Kode Cucu Petak </span></label>
-                                                <select class="form-control" id="editkodecupet" name="editkodecupet">
-                                                    <option selected=""><?= $var['kode_cucu_petak']; ?></option>
-                                                    <?php foreach ($cupet as $pk) : ?>
-                                                        <option><?= $pk['kode_cucu_petak']; ?></option>
+                                                <label for="editkodeanakpetak">
+                                                    <span class="badge outline-badge-dark"> Kode Anak Petak </span></label>
+                                                <select class="form-control" id="editkodeanakpetak" name="editkodeanakpetak">
+                                                    <option selected=""><?= $var['kode_anak_petak']; ?></option>
+                                                    <?php foreach ($anakpetak as $pk) : ?>
+                                                        <option><?= $pk['kode_anak_petak']; ?></option>
                                                     <?php endforeach; ?>
                                                 </select>
                                             </div>
@@ -933,7 +933,7 @@
                                             <li class="list-group-item"><strong> Kode Rencana Kegiatan Tahunan = </strong><?= $var['kode_rencana_tahunan_kegiatan']; ?></li>
                                             <li class="list-group-item"><strong> Tanggal Berlaku = </strong><?= $var['tanggal_berlaku']; ?></li>
                                             <li class="list-group-item"><strong> Tanggal Berkahir = </strong><?= $var['tanggal_berakhir']; ?></li>
-                                            <li class="list-group-item"><strong> Kode Cucu Petak = </strong><?= $var['kode_cucu_petak']; ?></li>
+                                            <li class="list-group-item"><strong> Kode Anak Petak = </strong><?= $var['kode_anak_petak']; ?></li>
                                             <li class="list-group-item"><strong> Kode Hutan Wengkon desa = </strong><?= $var['kode_hwd']; ?></li>
                                             <li class="list-group-item"><strong> Satuan = </strong><?= $var['satuan']; ?></li>
                                             <li class="list-group-item"><strong> Volume = </strong><?= $var['volume']; ?></li>
@@ -1255,7 +1255,7 @@
             input1 = $('#inputpk').modal('show');
         } else if ('<?= ($validation->hasError('berakhir')) ?>') {
             input1 = $('#inputpk').modal('show');
-        } else if ('<?= ($validation->hasError('kodecupet')) ?>') {
+        } else if ('<?= ($validation->hasError('kodeanakpetak')) ?>') {
             input1 = $('#inputpk').modal('show');
         } else if ('<?= ($validation->hasError('kodehwd')) ?>') {
             input1 = $('#inputpk').modal('show');

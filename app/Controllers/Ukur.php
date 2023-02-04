@@ -37,12 +37,18 @@ class Ukur extends BaseController
     public function savekayu()
     {
         if (!$this->validate([
+            'kode' => [
+                'rules' => 'required|is_unique[inventarisasi_umt_ukurkayu.kode_pohon]',
+                'errors' => [
+                    'required' => 'Data harus diisi.',
+                    'is_unique' => 'Data sudah ada di database.'
+                ]
+            ],
             'no' => [
-                'rules' => 'required|decimal|is_unique[inventarisasi_umt_ukurkayu.no_pohon]',
+                'rules' => 'required|decimal',
                 'errors' => [
                     'required' => 'Data harus diisi.',
                     'decimal' => 'Data harus berupa angka',
-                    'is_unique' => 'Data sudah ada di database.'
                 ]
             ],
             'kodepu' => [
@@ -73,6 +79,22 @@ class Ukur extends BaseController
 
                 ]
             ],
+            'lbds' => [
+                'rules' => 'required|decimal',
+                'errors' => [
+                    'required' => 'Data harus diisi.',
+                    'decimal' => 'Data harus berupa angka',
+
+                ]
+            ],
+            'volume' => [
+                'rules' => 'required|decimal',
+                'errors' => [
+                    'required' => 'Data harus diisi.',
+                    'decimal' => 'Data harus berupa angka',
+
+                ]
+            ],
             'fungsi' => [
                 'rules' => 'required',
                 'errors' => [
@@ -85,11 +107,14 @@ class Ukur extends BaseController
             return redirect()->to('database/ukur-pu')->withInput()->with('validation2', $validation2);
         }
         $this->UkurKayuModel->save([
+            'kode_pohon' => $this->request->getVar('kode'),
             'no_pohon' => $this->request->getVar('no'),
             'kode_inven_pu' => $this->request->getVar('kodepu'),
             'jenis_pohon' => $this->request->getVar('jenis'),
             'dbh' => $this->request->getVar('dbh'),
             'tinggi' => $this->request->getVar('tinggi'),
+            'lbds' => $this->request->getVar('lbds'),
+            'volume' => $this->request->getVar('volume'),
             'fungsi' => $this->request->getVar('fungsi'),
 
         ]);
@@ -109,11 +134,14 @@ class Ukur extends BaseController
 
         $this->UkurKayuModel->save([
             'id' => $id,
+            'kode_pohon' => $this->request->getVar('editkode'),
             'no_pohon' => $this->request->getVar('editno'),
             'kode_inven_pu' => $this->request->getVar('editkodepu'),
             'jenis_pohon' => $this->request->getVar('editjenis'),
             'dbh' => $this->request->getVar('editdbh'),
             'tinggi' => $this->request->getVar('edittinggi'),
+            'lbds' => $this->request->getVar('editlbds'),
+            'volume' => $this->request->getVar('editvolume'),
             'fungsi' => $this->request->getVar('editfungsi'),
         ]);
 
@@ -125,12 +153,18 @@ class Ukur extends BaseController
     public function savenonkayu()
     {
         if (!$this->validate([
+            'kode1' => [
+                'rules' => 'required|is_unique[inventarisasi_umt_ukurnonkayu.kode_pohon]',
+                'errors' => [
+                    'required' => 'Data harus diisi.',
+                    'is_unique' => 'Data sudah ada di database.'
+                ]
+            ],
             'no1' => [
-                'rules' => 'required|decimal|is_unique[inventarisasi_umt_ukurnonkayu.no_pohon]',
+                'rules' => 'required|decimal',
                 'errors' => [
                     'required' => 'Data harus diisi.',
                     'decimal' => 'Data harus berupa angka',
-                    'is_unique' => 'Data sudah ada di database.'
                 ]
             ],
             'kodepu1' => [
@@ -161,6 +195,22 @@ class Ukur extends BaseController
 
                 ]
             ],
+            'lbds1' => [
+                'rules' => 'required|decimal',
+                'errors' => [
+                    'required' => 'Data harus diisi.',
+                    'decimal' => 'Data harus berupa angka',
+
+                ]
+            ],
+            'volume1' => [
+                'rules' => 'required|decimal',
+                'errors' => [
+                    'required' => 'Data harus diisi.',
+                    'decimal' => 'Data harus berupa angka',
+
+                ]
+            ],
             'fungsi1' => [
                 'rules' => 'required',
                 'errors' => [
@@ -173,11 +223,14 @@ class Ukur extends BaseController
         }
 
         $this->UkurNonKayuModel->save([
+            'kode_pohon' => $this->request->getVar('kode1'),
             'no_pohon' => $this->request->getVar('no1'),
             'kode_inven_pu' => $this->request->getVar('kodepu1'),
             'jenis_pohon' => $this->request->getVar('jenis1'),
             'dbh' => $this->request->getVar('dbh1'),
             'tinggi' => $this->request->getVar('tinggi1'),
+            'lbds' => $this->request->getVar('lbds1'),
+            'volume' => $this->request->getVar('volume1'),
             'fungsi' => $this->request->getVar('fungsi1'),
         ]);
         session()->setFlashdata(['info' => 'success', 'judul' => 'MANTAPPP!👍', 'pesan' => 'Data Berhasil Ditambahkan.']);
@@ -197,11 +250,14 @@ class Ukur extends BaseController
 
         $this->UkurNonKayuModel->save([
             'id' => $id,
+            'kode_pohon' => $this->request->getVar('editkode1'),
             'no_pohon' => $this->request->getVar('editno1'),
             'kode_inven_pu' => $this->request->getVar('editkodepu1'),
             'jenis_pohon' => $this->request->getVar('editjenis1'),
             'dbh' => $this->request->getVar('editdbh1'),
             'tinggi' => $this->request->getVar('edittinggi1'),
+            'lbds' => $this->request->getVar('editlbds1'),
+            'volume' => $this->request->getVar('editvolume1'),
             'fungsi' => $this->request->getVar('editfungsi1'),
         ]);
         session()->setFlashdata(['info' => 'success', 'judul' => 'MANTAPPP!👍', 'pesan' => 'Data berhasil diperbarui.']);

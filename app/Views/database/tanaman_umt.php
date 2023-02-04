@@ -512,7 +512,7 @@
             <!-- begin tabel zonasi -->
             <div>
                 <div class="seperator-header">
-                    <h4 class=""><b>DATA TANAMAN PADA CUCU PETAK</b></h4>
+                    <h4 class=""><b>DATA TANAMAN PADA ANAK PETAK</b></h4>
                 </div>
 
                 <div>
@@ -533,8 +533,8 @@
                                 <thead>
                                     <tr>
                                         <th>No. </th>
-                                        <th>Kode Tanaman Cucu Petak</th>
-                                        <th>Kode Cucu Petak</th>
+                                        <th>Kode Tanaman Anak Petak</th>
+                                        <th>Kode Anak Petak</th>
                                         <th>Tanggal Penanaman</th>
                                         <th>Jenis (Nama Ilmiah)</th>
                                         <th>Jenis (Nama Lokal)</th>
@@ -545,13 +545,13 @@
                                 </thead>
                                 <tbody>
                                     <?php $no = 1; ?>
-                                    <?php foreach ($tnmcupet as $var) : ?>
+                                    <?php foreach ($tnmanakpetak as $var) : ?>
                                         <tr>
                                             <td scope="row"> <?= $no++; ?> </td>
-                                            <td><?= $var['kode_cupet_tnm']; ?></td>
-                                            <td><?= $var['kode_cucu_petak']; ?></td>
+                                            <td><?= $var['kode_anakpetak_tnm']; ?></td>
+                                            <td><?= $var['kode_anak_petak']; ?></td>
                                             <td><?= $var['tgl_tnm']; ?></td>
-                                            <td><?= $var['jenis_ilmiah']; ?></td>
+                                            <td><i><?= $var['jenis_ilmiah']; ?></i></td>
                                             <td><?= $var['jenis_lokal']; ?></td>
                                             <td><?= $var['jarak_tnm_x']; ?></td>
                                             <td><?= $var['jarak_tnm_y']; ?></td>
@@ -591,7 +591,7 @@
                     <div class="modal-dialog modal-lg">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="modal-title">INPUT DATA TANAMAN PADA CUCU PETAK</h5>
+                                <h5 class="modal-title">INPUT DATA TANAMAN PADA ANAK PETAK</h5>
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x">
                                         <line x1="18" y1="6" x2="6" y2="18"></line>
@@ -599,27 +599,27 @@
                                     </svg>
                                 </button>
                             </div>
-                            <form action="tanaman-umt/savetnmcupet" method="post">
+                            <form action="tanaman-umt/savetnmanakpetak" method="post">
                                 <div class="modal-body">
                                     <div class="form-row mb-4">
                                         <div class="col">
-                                            <label for="kodetnmcupet">
-                                                <span class="badge outline-badge-dark"> Kode Tanaman Cucu Petak </span></label>
-                                            <input type="text" class="form-control <?= ($validation2->hasError('kodetnmcupet')) ? 'is-invalid' : ''; ?>" id="kodetnmcupet" name="kodetnmcupet" value="<?= old('kodetnmcupet'); ?>">
+                                            <label for="kodetnmanakpetak">
+                                                <span class="badge outline-badge-dark"> Kode Tanaman Anak Petak </span></label>
+                                            <input type="text" class="form-control <?= ($validation2->hasError('kodetnmanakpetak')) ? 'is-invalid' : ''; ?>" id="kodetnmanakpetak" name="kodetnmanakpetak" value="<?= old('kodetnmanakpetak'); ?>">
                                             <div class="invalid-feedback">
-                                                <?= $validation2->getError('kodetnmcupet'); ?>
+                                                <?= $validation2->getError('kodetnmanakpetak'); ?>
                                             </div>
                                         </div>
                                         <div class="col">
-                                            <label for="kodecupet1">
-                                                <span class="badge outline-badge-dark"> Kode Cucu Petak </span></label>
-                                            <select class="form-control <?= ($validation2->hasError('kodecupet1')) ? 'is-invalid' : ''; ?>" id="kodecupet1" name="kodecupet1">
-                                                <?php foreach ($cupet as $pk) : ?>
-                                                    <option><?= $pk['kode_cucu_petak']; ?></option>
+                                            <label for="kodeanakpetak1">
+                                                <span class="badge outline-badge-dark"> Kode Anak Petak </span></label>
+                                            <select class="form-control <?= ($validation2->hasError('kodeanakpetak1')) ? 'is-invalid' : ''; ?>" id="kodeanakpetak1" name="kodeanakpetak1">
+                                                <?php foreach ($anakpetak as $pk) : ?>
+                                                    <option><?= $pk['kode_anak_petak']; ?></option>
                                                 <?php endforeach; ?>
                                             </select>
                                             <div class="invalid-feedback">
-                                                <?= $validation2->getError('kodecupet1'); ?>
+                                                <?= $validation2->getError('kodeanakpetak1'); ?>
                                             </div>
                                         </div>
                                     </div>
@@ -677,13 +677,13 @@
                     </div>
                 </div>
 
-                <?php foreach ($tnmcupet as $var) : ?>
+                <?php foreach ($tnmanakpetak as $var) : ?>
 
                     <div id="editzonasi<?= $var['id'] ?>" class="modal animated fadeInDown" role="dialog" tabindex="-1" aria-labelledby="editzonasi" aria-hidden="true">
                         <div class="modal-dialog modal-lg">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h5 class="modal-title">UPDATE DATA TANAMAN PADA CUCU PETAK</h5>
+                                    <h5 class="modal-title">UPDATE DATA TANAMAN PADA ANAK PETAK</h5>
                                     <button type="button" class="close " data-dismiss="modal" aria-label="Close">
                                         <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x">
                                             <line x1="18" y1="6" x2="6" y2="18"></line>
@@ -691,7 +691,7 @@
                                         </svg>
                                     </button>
                                 </div>
-                                <form action="tanaman-umt/edittnmcupet/<?= $var['id']; ?>" method="post">
+                                <form action="tanaman-umt/edittnmanakpetak/<?= $var['id']; ?>" method="post">
                                     <div class="modal-body">
                                         <div class="alert alert-icon-left alert-light-info mb-4" role="alert">
                                             <button type="button" class="close" data-dismiss="alert" aria-label="Close"><svg xmlns="http://www.w3.org/2000/svg" data-dismiss="alert" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x close">
@@ -706,17 +706,17 @@
                                         </div>
                                         <div class="form-row mb-4">
                                             <div class="col">
-                                                <label for="editkodetnmcupet">
-                                                    <span class="badge outline-badge-dark"> Kode Tanaman Cucu Petak </span></label>
-                                                <input type="text" class="form-control" id="editkodetnmcupet" name="editkodetnmcupet" value="<?= $var['kode_cupet_tnm']; ?>">
+                                                <label for="editkodetnmanakpetak">
+                                                    <span class="badge outline-badge-dark"> Kode Tanaman Anak Petak </span></label>
+                                                <input type="text" class="form-control" id="editkodetnmanakpetak" name="editkodetnmanakpetak" value="<?= $var['kode_anakpetak_tnm']; ?>">
                                             </div>
                                             <div class="col">
-                                                <label for="editkodecupet1">
-                                                    <span class="badge outline-badge-dark"> Kode Cucu Petak </span></label>
-                                                <select class="form-control" id="editkodecupet1" name="editkodecupet1">
-                                                    <option selected=""><?= $var['kode_cucu_petak']; ?></option>
-                                                    <?php foreach ($cupet as $pk) : ?>
-                                                        <option><?= $pk['kode_cucu_petak']; ?></option>
+                                                <label for="editkodeanakpetak1">
+                                                    <span class="badge outline-badge-dark"> Kode Anak Petak </span></label>
+                                                <select class="form-control" id="editkodeanakpetak1" name="editkodeanakpetak1">
+                                                    <option selected=""><?= $var['kode_anak_petak']; ?></option>
+                                                    <?php foreach ($anakpetak as $pk) : ?>
+                                                        <option><?= $pk['kode_anak_petak']; ?></option>
                                                     <?php endforeach; ?>
                                                 </select>
                                             </div>
@@ -764,7 +764,7 @@
                         <div class="modal-dialog">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h5 class="modal-title">HAPUS DATA <br> TANAMAN PADA CUCU PETAK</h5>
+                                    <h5 class="modal-title">HAPUS DATA <br> TANAMAN PADA ANAK PETAK</h5>
                                     <button type="button" class="close " data-dismiss="modal" aria-label="Close">
                                         <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x">
                                             <line x1="18" y1="6" x2="6" y2="18"></line>
@@ -785,10 +785,10 @@
                                         </svg>
                                         <strong>Penting!</strong> Data dibawah ini akan dihapus.
                                     </div>
-                                    <form action="tanaman-umt/hapustnmcupet/<?= $var['id']; ?>" class="form-vertical" method="post">
+                                    <form action="tanaman-umt/hapustnmanakpetak/<?= $var['id']; ?>" class="form-vertical" method="post">
                                         <ul class="list-group ">
-                                            <li class="list-group-item"><strong> Kode Tanaman Cucu Petak =</strong> <?= $var['kode_cupet_tnm']; ?></li>
-                                            <li class="list-group-item"><strong> Kode Cucu Petak =</strong> <?= $var['kode_cucu_petak']; ?></li>
+                                            <li class="list-group-item"><strong> Kode Tanaman Anak Petak =</strong> <?= $var['kode_anakpetak_tnm']; ?></li>
+                                            <li class="list-group-item"><strong> Kode Anak Petak =</strong> <?= $var['kode_anak_petak']; ?></li>
                                             <li class="list-group-item"><strong> Tanggal Penanaman =</strong> <?= $var['tgl_tnm']; ?></li>
                                             <li class="list-group-item"><strong> Jenis Tanaman (Ilmiah) = </strong><?= $var['jenis_ilmiah']; ?></li>
                                             <li class="list-group-item"><strong> Jenis Tanaman (Lokal) = </strong><?= $var['jenis_lokal']; ?></li>
@@ -876,9 +876,9 @@
 
     <script>
         let inputzonasi;
-        if ('<?= ($validation2->hasError('kodetnmcupet')) ?>') {
+        if ('<?= ($validation2->hasError('kodetnmanakpetak')) ?>') {
             inputzonasi = $('#inputzonasi').modal('show');
-        } else if ('<?= ($validation2->hasError('kodecupet1')) ?>') {
+        } else if ('<?= ($validation2->hasError('kodeanakpetak1')) ?>') {
             inputzonasi = $('#inputzonasi').modal('show');
         } else if ('<?= ($validation2->hasError('tgl')) ?>') {
             inputzonasi = $('#inputzonasi').modal('show');

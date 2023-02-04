@@ -514,7 +514,7 @@
             <!-- begin tabel zonasi -->
             <div>
                 <div class="seperator-header">
-                    <h4 class=""><b>DATA TANAMAN PADA CUCU PETAK</b></h4>
+                    <h4 class=""><b>DATA TANAMAN PADA ANAK PETAK</b></h4>
                 </div>
 
 
@@ -526,8 +526,8 @@
                                 <thead>
                                     <tr>
                                         <th>No. </th>
-                                        <th>Kode Tanaman Cucu Petak</th>
-                                        <th>Kode Cucu Petak</th>
+                                        <th>Kode Tanaman Anak Petak</th>
+                                        <th>Kode Anak Petak</th>
                                         <th>Tanggal Penanaman</th>
                                         <th>Jenis (Nama Ilmiah)</th>
                                         <th>Jenis (Nama Lokal)</th>
@@ -537,11 +537,11 @@
                                 </thead>
                                 <tbody>
                                     <?php $no = 1; ?>
-                                    <?php foreach ($tnmcupet as $var) : ?>
+                                    <?php foreach ($tnmanakpetak as $var) : ?>
                                         <tr>
                                             <td scope="row"> <?= $no++; ?> </td>
-                                            <td><?= $var['kode_cupet_tnm']; ?></td>
-                                            <td><?= $var['kode_cucu_petak']; ?></td>
+                                            <td><?= $var['kode_anakpetak_tnm']; ?></td>
+                                            <td><?= $var['kode_anak_petak']; ?></td>
                                             <td><?= $var['tgl_tnm']; ?></td>
                                             <td><?= $var['jenis_ilmiah']; ?></td>
                                             <td><?= $var['jenis_lokal']; ?></td>

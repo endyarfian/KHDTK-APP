@@ -19,7 +19,7 @@ class AndilModel extends Model
 
     protected $allowedFields = [
         'andil',
-        'kode_cucu_petak',
+        'kode_anak_petak',
         'nik_pesanggem',
         'nama_pesanggem',
         'desa',

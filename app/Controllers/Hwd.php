@@ -3,11 +3,11 @@
 namespace App\Controllers;
 
 use \App\Models\DesaHwdModel;
-use \App\Models\HwdCupetModel;
+use \App\Models\HwdAnakPetakModel;
 use \App\Models\AndilModel;
 use \App\Models\DesaModel;
 use \App\Models\LemdesModel;
-use \App\Models\CucuPetakModel;
+use \App\Models\AnakPetakModel;
 
 class Hwd extends BaseController
 {
@@ -15,28 +15,28 @@ class Hwd extends BaseController
     public function __construct()
     {
         $this->DesaHwdModel = new DesaHwdModel();
-        $this->HwdCupetModel = new HwdCupetModel();
+        $this->HwdAnakPetakModel = new HwdAnakPetakModel();
         $this->AndilModel = new AndilModel();
         $this->DesaModel = new DesaModel();
         $this->LemdesModel = new LemdesModel();
-        $this->CucuPetakModel = new CucuPetakModel();
+        $this->AnakPetakModel = new AnakPetakModel();
     }
     public function hwd()
     {
 
         $desahwd = $this->DesaHwdModel->findAll();
-        $hwdcupet = $this->HwdCupetModel->findAll();
+        $hwdanakpetak = $this->HwdAnakPetakModel->findAll();
         $desa = $this->DesaModel->findAll();
         $andil = $this->AndilModel->findAll();
         $lemdes = $this->LemdesModel->findAll();
-        $cupet = $this->CucuPetakModel->findAll();
+        $anakpetak = $this->AnakPetakModel->findAll();
         $data = [
             'desahwd' => $desahwd,
-            'hwdcupet' => $hwdcupet,
+            'hwdanakpetak' => $hwdanakpetak,
             'desa' => $desa,
             'andil' => $andil,
             'lemdes' => $lemdes,
-            'cupet' => $cupet,
+            'anakpetak' => $anakpetak,
             'title' => 'KHDTK APPS - Pengelolaan Kawasan Hutan Wengkon Desa',
             'validation2' => \Config\Services::validation(),
             'footer' => 'KHDTK WEB APPS Ver. 2. 0.',
@@ -56,7 +56,7 @@ class Hwd extends BaseController
                 ]
             ],
             'kodehwd' => [
-                'rules' => 'required|is_unique[desahwd.kode_desa]',
+                'rules' => 'required|is_unique[desahwd.kode_hwd]',
                 'errors' => [
                     'required' => 'Data harus diisi.',
                     'is_unique' => 'Data sudah ada di database.'
@@ -120,23 +120,23 @@ class Hwd extends BaseController
         return redirect()->to('database/hwd');
     }
 
-    public function savehwdcupet()
+    public function savehwdanakpetak()
     {
         if (!$this->validate([
-            'kodehwdcupet' => [
-                'rules' => 'required|is_unique[desahwdcupet.kode_hwd_cupet]',
+            'kodehwdanakpetak' => [
+                'rules' => 'required|is_unique[desahwdanakpetak.kode_hwd_anakpetak]',
                 'errors' => [
                     'required' => 'Data harus diisi.',
                     'is_unique' => 'Data sudah ada di database.'
                 ]
             ],
-            'kodehwd' => [
+            'kodehwd1' => [
                 'rules' => 'required',
                 'errors' => [
                     'required' => 'Data harus diisi.',
                 ]
             ],
-            'kodecupet' => [
+            'kodeanakpetak' => [
                 'rules' => 'required',
                 'errors' => [
                     'required' => 'Data harus diisi.',
@@ -147,31 +147,31 @@ class Hwd extends BaseController
             return redirect()->to('database/hwd')->withInput()->with('validation2', $validation2);
         }
 
-        $this->HwdCupetModel->save([
-            'kode_hwd_cupet' => $this->request->getVar('kodehwdcupet'),
-            'kode_hwd' => $this->request->getVar('kodehwd'),
-            'kode_cucu_petak' => $this->request->getVar('kodecupet'),
+        $this->HwdAnakPetakModel->save([
+            'kode_hwd_anakpetak' => $this->request->getVar('kodehwdanakpetak'),
+            'kode_hwd' => $this->request->getVar('kodehwd1'),
+            'kode_anak_petak' => $this->request->getVar('kodeanakpetak'),
         ]);
         session()->setFlashdata(['info' => 'success', 'judul' => 'MANTAPPP!👍', 'pesan' => 'Data Berhasil Ditambahkan.']);
         return redirect()->to('database/hwd');
     }
 
-    public function deletehwdcupet($id)
+    public function deletehwdanakpetak($id)
     {
-        $this->HwdCupetModel->delete($id);
+        $this->HwdAnakPetakModel->delete($id);
         session()->setFlashdata(['info' => 'error', 'judul' => 'SAYANG SEKALI 😞', 'pesan' => 'Data sudah terhapus.']);
         return redirect()->to('database/hwd');
     }
 
-    public function edithwdcupet($id)
+    public function edithwdanakpetak($id)
     {
 
 
-        $this->HwdCupetModel->save([
+        $this->HwdAnakPetakModel->save([
             'id' => $id,
-            'kode_hwd_cupet' => $this->request->getVar('editkodehwdcupet'),
-            'kode_hwd' => $this->request->getVar('editkodehwd'),
-            'kode_cucu_petak' => $this->request->getVar('editkodecupet'),
+            'kode_hwd_anakpetak' => $this->request->getVar('editkodehwdanakpetak'),
+            'kode_hwd' => $this->request->getVar('editkodehwd1'),
+            'kode_anak_petak' => $this->request->getVar('editkodeanakpetak'),
         ]);
         session()->setFlashdata(['info' => 'success', 'judul' => 'MANTAPPP!👍', 'pesan' => 'Data berhasil diperbarui.']);
         return redirect()->to('database/hwd');
@@ -187,7 +187,7 @@ class Hwd extends BaseController
                     'is_unique' => 'Data sudah ada di database.'
                 ]
             ],
-            'kodecupet1' => [
+            'kodeanakpetak1' => [
                 'rules' => 'required',
                 'errors' => [
                     'required' => 'Data harus diisi.',
@@ -259,7 +259,7 @@ class Hwd extends BaseController
         }
         $this->AndilModel->save([
             'andil' => $this->request->getVar('andil'),
-            'kode_cucu_petak' => $this->request->getVar('kodecupet1'),
+            'kode_anak_petak' => $this->request->getVar('kodeanakpetak1'),
             'nik_pesanggem' => $this->request->getVar('nik'),
             'nama_pesanggem' => $this->request->getVar('nama'),
             'desa' => $this->request->getVar('desa'),
@@ -288,7 +288,7 @@ class Hwd extends BaseController
         $this->AndilModel->save([
             'id' => $id,
             'andil' => $this->request->getVar('editandil'),
-            'kode_cucu_petak' => $this->request->getVar('editkodecupet1'),
+            'kode_anak_petak' => $this->request->getVar('editkodeanakpetak1'),
             'nik_pesanggem' => $this->request->getVar('editnik'),
             'nama_pesanggem' => $this->request->getVar('editnama'),
             'desa' => $this->request->getVar('editdesa'),

@@ -5,7 +5,7 @@ namespace App\Controllers;
 use \App\Models\InvenModel;
 use \App\Models\InvenUmtModel;
 use \App\Models\InvenPuModel;
-use \App\Models\TanamanCupetModel;
+use \App\Models\TanamanAnakPetakModel;
 use \App\Models\RTKegiatanModel;
 
 class Inven extends BaseController
@@ -16,7 +16,7 @@ class Inven extends BaseController
         $this->InvenModel = new InvenModel();
         $this->InvenUmtModel = new InvenUmtModel();
         $this->InvenPuModel = new InvenPuModel();
-        $this->TanamanCupetModel = new TanamanCupetModel();
+        $this->TanamanAnakPetakModel = new TanamanAnakPetakModel();
         $this->RTKegiatanModel = new RTKegiatanModel();
     }
     public function inven()
@@ -25,13 +25,13 @@ class Inven extends BaseController
         $inven = $this->InvenModel->findAll();
         $invenumt = $this->InvenUmtModel->findAll();
         $invenpu = $this->InvenPuModel->findAll();
-        $tnmcupet = $this->TanamanCupetModel->findAll();
+        $tnmanakpetak = $this->TanamanAnakPetakModel->findAll();
         $rtk = $this->RTKegiatanModel->findAll();
         $data = [
             'inven' => $inven,
             'invenumt' => $invenumt,
             'invenpu' => $invenpu,
-            'tnmcupet' => $tnmcupet,
+            'tnmanakpetak' => $tnmanakpetak,
             'rtk' => $rtk,
             'title' => 'KHDTK APPS - Inventarisasi Sumberdaya Hutan',
             'validation2' => \Config\Services::validation(),
@@ -182,7 +182,7 @@ class Inven extends BaseController
                     'required' => 'Data harus diisi.',
                 ]
             ],
-            'kodetnmcupet' => [
+            'kodetnmanakpetak' => [
                 'rules' => 'required',
                 'errors' => [
                     'required' => 'Data harus diisi.',
@@ -208,7 +208,7 @@ class Inven extends BaseController
         $this->InvenUmtModel->save([
             'kode_inven_umt' => $this->request->getVar('kodeinvenumt'),
             'kode_inventarisasi' => $this->request->getVar('kodeinven1'),
-            'kode_cupet_tnm' => $this->request->getVar('kodetnmcupet'),
+            'kode_anakpetak_tnm' => $this->request->getVar('kodetnmanakpetak'),
             'tanggal' => $this->request->getVar('tglinvenumt'),
             'pj' => $this->request->getVar('pjinvenumt'),
         ]);
@@ -231,7 +231,7 @@ class Inven extends BaseController
             'id' => $id,
             'kode_inven_umt' => $this->request->getVar('editkodeinvenumt'),
             'kode_inventarisasi' => $this->request->getVar('editkodeinven1'),
-            'kode_cupet_tnm' => $this->request->getVar('editkodetnmcupet'),
+            'kode_anakpetak_tnm' => $this->request->getVar('editkodetnmanakpetak'),
             'tanggal' => $this->request->getVar('edittglinvenumt'),
             'pj' => $this->request->getVar('editpjinvenumt'),
         ]);
@@ -253,12 +253,6 @@ class Inven extends BaseController
                 'errors' => [
                     'required' => 'Data harus diisi.',
                     'is_unique' => 'Data sudah ada di database.'
-                ]
-            ],
-            'nopu' => [
-                'rules' => 'required',
-                'errors' => [
-                    'required' => 'Data harus diisi.',
                 ]
             ],
             'tglinvenpu' => [
@@ -362,7 +356,6 @@ class Inven extends BaseController
         $this->InvenPuModel->save([
             'kode_inven_umt' => $this->request->getVar('kodeinvenumt1'),
             'kode_inven_pu' => $this->request->getVar('kodeinvenpu'),
-            'no_pu' => $this->request->getVar('nopu'),
             'tanggal' => $this->request->getVar('tglinvenpu'),
             'pj' => $this->request->getVar('pjinvenpu'),
             'luas_pu' => $this->request->getVar('luasinvenpu'),
@@ -396,7 +389,6 @@ class Inven extends BaseController
             'id' => $id,
             'kode_inven_umt' => $this->request->getVar('editkodeinvenumt1'),
             'kode_inven_pu' => $this->request->getVar('editkodeinvenpu'),
-            'no_pu' => $this->request->getVar('editnopu'),
             'tanggal' => $this->request->getVar('edittglinvenpu'),
             'pj' => $this->request->getVar('editpjinvenpu'),
             'luas_pu' => $this->request->getVar('editluasinvenpu'),

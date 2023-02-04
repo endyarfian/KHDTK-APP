@@ -18,6 +18,6 @@ class RTKAlokasiModel extends Model
     }
 
     protected $allowedFields = [
-        'kode_rencana_tahunan_alokasi', 'kode_rencana_tahunan_kegiatan', 'tanggal_berlaku', 'tanggal_berakhir', 'kode_cucu_petak', 'kode_hwd', 'satuan', 'volume', 'deskripsi', 'pj'
+        'kode_rencana_tahunan_alokasi', 'kode_rencana_tahunan_kegiatan', 'tanggal_berlaku', 'tanggal_berakhir', 'kode_anak_petak', 'kode_hwd', 'satuan', 'volume', 'deskripsi', 'pj'
     ];
 }

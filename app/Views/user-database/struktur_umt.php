@@ -526,6 +526,9 @@
                                         <th>Kode Anak Petak</th>
                                         <th>Anak Petak</th>
                                         <th>Kode UMT</th>
+                                        <th>Luas (Ha)</th>
+                                        <th><i>Net Planting Area</i> (Ha)</th>
+                                        <th>Persentase NPA (%)</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -536,6 +539,9 @@
                                             <td><?= $var['kode_anak_petak']; ?></td>
                                             <td><?= $var['anak_petak']; ?></td>
                                             <td><?= $var['kode_umt']; ?></td>
+                                            <td><?= $var['luas']; ?></td>
+                                            <td><?= $var['luas_ht']; ?></td>
+                                            <td><?= number_format((float)$var['luas_ht'] / $var['luas'] * 100, 2, '.', ''); ?></td>
                                         </tr>
                                     <?php endforeach; ?>
                                 </tbody>
@@ -548,46 +554,6 @@
             <!-- end tabel penataan kawasan -->
 
             <!-- begin tabel umt -->
-            <div>
-                <div class="seperator-header">
-                    <h4 class=""><b>DATA CUCU PETAK</b></h4>
-                </div>
-                <div class="row" id="cancel-row">
-
-                    <div class="col-xl-12 col-lg-12 col-sm-12  layout-spacing">
-                        <div class="widget-content widget-content-area br-6">
-                            <table id="table-1" class="table table-hover style-3" style="width:100%">
-                                <thead>
-                                    <tr>
-                                        <th>No. </th>
-                                        <th>Kode Anak Petak</th>
-                                        <th>Kode Cucu Petak</th>
-                                        <th>Kode Zonasi LMU</th>
-                                        <th>Luas</th>
-                                        <th>Koordinat X</th>
-                                        <th>Koordinat Y</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <?php $no = 1; ?>
-                                    <?php foreach ($cupet as $var) : ?>
-                                        <tr>
-                                            <td scope="row"> <?= $no++; ?> </td>
-                                            <td><?= $var['kode_anak_petak']; ?></td>
-                                            <td><?= $var['kode_cucu_petak']; ?></td>
-                                            <td><?= $var['kode_zonasi_lmu']; ?></td>
-                                            <td><?= $var['luas']; ?></td>
-                                            <td><?= $var['koordinat_x']; ?></td>
-                                            <td><?= $var['koordinat_y']; ?></td>
-                                        </tr>
-                                    <?php endforeach; ?>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
             <!-- end tabel umt -->
 
             <?= $this->endSection(); ?>

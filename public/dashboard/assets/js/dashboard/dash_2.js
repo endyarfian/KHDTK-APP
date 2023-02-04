@@ -226,7 +226,7 @@ try {
       }
     },
     title: {
-      text: 'Total Profit',
+      text: 'Total Luas Kawasan',
       align: 'left',
       margin: 0,
       offsetX: -10,

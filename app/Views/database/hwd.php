@@ -580,7 +580,7 @@
             <!-- begin tabel umt -->
             <div>
                 <div class="seperator-header">
-                    <h4 class=""><b>DATA HUTAN WENGKON DESA PADA CUCU PETAK</b></h4>
+                    <h4 class=""><b>DATA HUTAN WENGKON DESA PADA ANAK PETAK</b></h4>
                 </div>
 
                 <div>
@@ -600,20 +600,20 @@
                                 <thead>
                                     <tr>
                                         <th>No. </th>
-                                        <th>Kode HWD pada Cucu Petak</th>
+                                        <th>Kode HWD pada Anak Petak</th>
                                         <th>Kode HWD</th>
-                                        <th>Kode Cucu Petak</th>
+                                        <th>Kode Anak Petak</th>
                                         <th class="dt-no-sorting">Aksi</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <?php $no = 1; ?>
-                                    <?php foreach ($hwdcupet as $var) : ?>
+                                    <?php foreach ($hwdanakpetak as $var) : ?>
                                         <tr>
                                             <td scope="row"> <?= $no++; ?> </td>
-                                            <td><?= $var['kode_hwd_cupet']; ?></td>
+                                            <td><?= $var['kode_hwd_anakpetak']; ?></td>
                                             <td><?= $var['kode_hwd']; ?></td>
-                                            <td><?= $var['kode_cucu_petak']; ?></td>
+                                            <td><?= $var['kode_anak_petak']; ?></td>
                                             <td>
                                                 <div class="btn-group">
                                                     <button type="button" class="btn btn-outline-dark btn-sm bs-tooltip" title="edit" data-toggle="modal" data-target="#editumt<?= $var['id']; ?>">
@@ -668,7 +668,7 @@
                                     <tr>
                                         <th>No. </th>
                                         <th>Kode Andil</th>
-                                        <th>Kode Cucu Petak</th>
+                                        <th>Kode Anak Petak</th>
                                         <th>NIK Pesanggem</th>
                                         <th>Nama Pesanggem</th>
                                         <th>Desa</th>
@@ -688,7 +688,7 @@
                                         <tr>
                                             <td scope="row"> <?= $no++; ?> </td>
                                             <td><?= $var['andil']; ?></td>
-                                            <td><?= $var['kode_cucu_petak']; ?></td>
+                                            <td><?= $var['kode_anak_petak']; ?></td>
                                             <td><?= $var['nik_pesanggem']; ?></td>
                                             <td><?= $var['nama_pesanggem']; ?></td>
                                             <td><?= $var['desa']; ?></td>
@@ -928,7 +928,7 @@
                     <div class="modal-dialog">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="modal-title">INPUT DATA <br>HUTAN WENGKON DESA PADA CUCU PETAK</h5>
+                                <h5 class="modal-title">INPUT DATA <br>HUTAN WENGKON DESA PADA ANAK PETAK</h5>
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x">
                                         <line x1="18" y1="6" x2="6" y2="18"></line>
@@ -936,38 +936,38 @@
                                     </svg>
                                 </button>
                             </div>
-                            <form action="hwd/savehwdcupet" method="post">
+                            <form action="hwd/savehwdanakpetak" method="post">
                                 <div class="modal-body">
                                     <div class="form-group mb-4">
-                                        <label for="kodehwdcupet">
-                                            <span class="badge outline-badge-dark"> Kode HWD pada Cucu Petak </span></label>
-                                        <input type="text" class="form-control <?= ($validation2->hasError('kodehwdcupet')) ? 'is-invalid' : ''; ?>" id="kodehwdcupet" name="kodehwdcupet" value="<?= old('kodehwdcupet'); ?>">
+                                        <label for="kodehwdanakpetak">
+                                            <span class="badge outline-badge-dark"> Kode HWD pada Anak Petak </span></label>
+                                        <input type="text" class="form-control <?= ($validation2->hasError('kodehwdanakpetak')) ? 'is-invalid' : ''; ?>" id="kodehwdanakpetak" name="kodehwdanakpetak" value="<?= old('kodehwdanakpetak'); ?>">
                                         <div class="invalid-feedback">
-                                            <?= $validation2->getError('kodehwdcupet'); ?>
+                                            <?= $validation2->getError('kodehwdanakpetak'); ?>
                                         </div>
                                     </div>
                                     <div class="form-group mb-4">
-                                        <label for="kodehwd">
+                                        <label for="kodehwd1">
                                             <span class="badge outline-badge-dark"> Kode Hutan Wengkon Desa </span></label>
-                                        <select class="form-control <?= ($validation2->hasError('kodehwd')) ? 'is-invalid' : ''; ?>" id="kodehwd" name="kodehwd">
+                                        <select class="form-control <?= ($validation2->hasError('kodehwd1')) ? 'is-invalid' : ''; ?>" id="kodehwd1" name="kodehwd1">
                                             <?php foreach ($desahwd as $pk) : ?>
                                                 <option><?= $pk['kode_hwd']; ?></option>
                                             <?php endforeach; ?>
                                         </select>
                                         <div class="invalid-feedback">
-                                            <?= $validation2->getError('kodehwd'); ?>
+                                            <?= $validation2->getError('kodehwd1'); ?>
                                         </div>
                                     </div>
                                     <div class="form-group mb-4">
-                                        <label for="kodecupet">
-                                            <span class="badge outline-badge-dark"> Kode Cucu Petak </span></label>
-                                        <select class="form-control <?= ($validation2->hasError('kodecupet')) ? 'is-invalid' : ''; ?>" id="kodecupet" name="kodecupet">
-                                            <?php foreach ($cupet as $pk) : ?>
-                                                <option><?= $pk['kode_cucu_petak']; ?></option>
+                                        <label for="kodeanakpetak">
+                                            <span class="badge outline-badge-dark"> Kode Anak Petak </span></label>
+                                        <select class="form-control <?= ($validation2->hasError('kodeanakpetak')) ? 'is-invalid' : ''; ?>" id="kodeanakpetak" name="kodeanakpetak">
+                                            <?php foreach ($anakpetak as $pk) : ?>
+                                                <option><?= $pk['kode_anak_petak']; ?></option>
                                             <?php endforeach; ?>
                                         </select>
                                         <div class="invalid-feedback">
-                                            <?= $validation2->getError('kodecupet'); ?>
+                                            <?= $validation2->getError('kodeanakpetak'); ?>
                                         </div>
                                     </div>
                                 </div>
@@ -980,13 +980,13 @@
                     </div>
                 </div>
 
-                <?php foreach ($hwdcupet as $var) : ?>
+                <?php foreach ($hwdanakpetak as $var) : ?>
 
                     <div id="editumt<?= $var['id'] ?>" class="modal animated fadeInDown" role="dialog" tabindex="-1" aria-labelledby="editumt" aria-hidden="true">
                         <div class="modal-dialog">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h5 class="modal-title">UPDATE DATA <br>HUTAN WENGKON DESA PADA CUCU PETAK</h5>
+                                    <h5 class="modal-title">UPDATE DATA <br>HUTAN WENGKON DESA PADA ANAK PETAK</h5>
                                     <button type="button" class="close " data-dismiss="modal" aria-label="Close">
                                         <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x">
                                             <line x1="18" y1="6" x2="6" y2="18"></line>
@@ -994,7 +994,7 @@
                                         </svg>
                                     </button>
                                 </div>
-                                <form action="hwd/hwdcupet/<?= $var['id']; ?>" method="post">
+                                <form action="hwd/hwdanakpetak/<?= $var['id']; ?>" method="post">
                                     <div class="modal-body">
                                         <div class="alert alert-icon-left alert-light-info mb-4" role="alert">
                                             <button type="button" class="close" data-dismiss="alert" aria-label="Close"><svg xmlns="http://www.w3.org/2000/svg" data-dismiss="alert" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x close">
@@ -1008,14 +1008,14 @@
                                             <strong>Penting!</strong> Data dibawah ini akan diperbarui.
                                         </div>
                                         <div class="form-group mb-4">
-                                            <label for="editkodehwdcupet">
-                                                <span class="badge outline-badge-dark"> Kode HWD dalam Cucu Petak </span></label>
-                                            <input type="text" class="form-control" id="editkodehwdcupet" name="editkodehwdcupet" value="<?= $var['kode_hwd_cupet']; ?>">
+                                            <label for="editkodehwdanakpetak">
+                                                <span class="badge outline-badge-dark"> Kode HWD dalam Anak Petak </span></label>
+                                            <input type="text" class="form-control" id="editkodehwdanakpetak" name="editkodehwdanakpetak" value="<?= $var['kode_hwd_anakpetak']; ?>">
                                         </div>
                                         <div class="form-group mb-4">
-                                            <label for="editkodehwd">
+                                            <label for="editkodehwd1">
                                                 <span class="badge outline-badge-dark"> Kode Hutan Wengkon Desa </span></label>
-                                            <select class="form-control" id="editkodehwd" name="editkodehwd">
+                                            <select class="form-control" id="editkodehwd1" name="editkodehwd1">
                                                 <option selected=""><?= $var['kode_hwd']; ?></option>
                                                 <?php foreach ($desahwd as $pk) : ?>
                                                     <option><?= $pk['kode_hwd']; ?></option>
@@ -1023,12 +1023,12 @@
                                             </select>
                                         </div>
                                         <div class="form-group mb-4">
-                                            <label for="editkodecupet">
-                                                <span class="badge outline-badge-dark"> Kode Cucu Petak </span></label>
-                                            <select class="form-control" id="editkodecupet" name="editkodecupet">
-                                                <option selected=""><?= $var['kode_cucu_petak']; ?></option>
-                                                <?php foreach ($cupet as $pk) : ?>
-                                                    <option><?= $pk['kode_cucu_petak']; ?></option>
+                                            <label for="editkodeanakpetak">
+                                                <span class="badge outline-badge-dark"> Kode Anak Petak </span></label>
+                                            <select class="form-control" id="editkodeanakpetak" name="editkodeanakpetak">
+                                                <option selected=""><?= $var['kode_anak_petak']; ?></option>
+                                                <?php foreach ($anakpetak as $pk) : ?>
+                                                    <option><?= $pk['kode_anak_petak']; ?></option>
                                                 <?php endforeach; ?>
                                             </select>
                                         </div>
@@ -1046,7 +1046,7 @@
                         <div class="modal-dialog">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h5 class="modal-title">HAPUS DATA <br>HUTAN WENGKON DESA PADA CUCU PETAK</h5>
+                                    <h5 class="modal-title">HAPUS DATA <br>HUTAN WENGKON DESA PADA ANAK PETAK</h5>
                                     <button type="button" class="close " data-dismiss="modal" aria-label="Close">
                                         <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x">
                                             <line x1="18" y1="6" x2="6" y2="18"></line>
@@ -1067,11 +1067,11 @@
                                         </svg>
                                         <strong>Penting!</strong> Data dibawah ini akan dihapus.
                                     </div>
-                                    <form action="hwd/hapushwdcupet/<?= $var['id']; ?>" class="form-vertical" method="post">
+                                    <form action="hwd/hapushwdanakpetak/<?= $var['id']; ?>" class="form-vertical" method="post">
                                         <ul class="list-group ">
-                                            <li class="list-group-item"><strong> Kode HWD pada Cucu Petak =</strong> <?= $var['kode_hwd_cupet']; ?></li>
+                                            <li class="list-group-item"><strong> Kode HWD pada Anak Petak =</strong> <?= $var['kode_hwd_anakpetak']; ?></li>
                                             <li class="list-group-item"><strong> Kode Hutan Wengkon Desa =</strong> <?= $var['kode_hwd']; ?></li>
-                                            <li class="list-group-item"><strong> Kode Cucu Petak = </strong><?= $var['kode_cucu_petak']; ?></li>
+                                            <li class="list-group-item"><strong> Kode Anak Petak = </strong><?= $var['kode_anak_petak']; ?></li>
                                         </ul>
                                         <div class="form-group mb-4">
                                             <input type="hidden" value="DELETE" name="_method">
@@ -1114,15 +1114,15 @@
                                             </div>
                                         </div>
                                         <div class="col">
-                                            <label for="kodecupet1">
-                                                <span class="badge outline-badge-dark"> Kode Cucu Petak </span></label>
-                                            <select class="form-control <?= ($validation2->hasError('kodecupet1')) ? 'is-invalid' : ''; ?>" id="kodecupet1" name="kodecupet1" value="<?= old('kodecupet1'); ?>">
-                                                <?php foreach ($cupet as $pk) : ?>
-                                                    <option><?= $pk['kode_cucu_petak']; ?></option>
+                                            <label for="kodeanakpetak1">
+                                                <span class="badge outline-badge-dark"> Kode Anak Petak </span></label>
+                                            <select class="form-control <?= ($validation2->hasError('kodeanakpetak1')) ? 'is-invalid' : ''; ?>" id="kodeanakpetak1" name="kodeanakpetak1" value="<?= old('kodeanakpetak1'); ?>">
+                                                <?php foreach ($anakpetak as $pk) : ?>
+                                                    <option><?= $pk['kode_anak_petak']; ?></option>
                                                 <?php endforeach; ?>
                                             </select>
                                             <div class="invalid-feedback">
-                                                <?= $validation2->getError('kodecupet1'); ?>
+                                                <?= $validation2->getError('kodeanakpetak1'); ?>
                                             </div>
                                         </div>
                                     </div>
@@ -1268,12 +1268,12 @@
                                                 <input type="text" class="form-control" id="editandil" name="editandil" value="<?= $var['andil']; ?>">
                                             </div>
                                             <div class="col">
-                                                <label for="editkodecupet1">
-                                                    <span class="badge outline-badge-dark"> Kode Cucu Petak </span></label>
-                                                <select class="form-control" id="editkodecupet1" name="editkodecupet1">
-                                                    <option selected=""><?= $var['kode_cucu_petak']; ?></option>
-                                                    <?php foreach ($cupet as $pk) : ?>
-                                                        <option value="<?= $pk['kode_cucu_petak']; ?>"><?= $pk['kode_cucu_petak']; ?></option>
+                                                <label for="editkodeanakpetak1">
+                                                    <span class="badge outline-badge-dark"> Kode Anak Petak </span></label>
+                                                <select class="form-control" id="editkodeanakpetak1" name="editkodeanakpetak1">
+                                                    <option selected=""><?= $var['kode_anak_petak']; ?></option>
+                                                    <?php foreach ($anakpetak as $pk) : ?>
+                                                        <option value="<?= $pk['kode_anak_petak']; ?>"><?= $pk['kode_anak_petak']; ?></option>
                                                     <?php endforeach; ?>
                                                 </select>
                                             </div>
@@ -1386,7 +1386,7 @@
                                     <form action="hwd/hapusandil/<?= $var['id']; ?>" class="form-vertical" method="post">
                                         <ul class="list-group ">
                                             <li class="list-group-item"><strong> Kode Andil =</strong> <?= $var['andil']; ?></li>
-                                            <li class="list-group-item"><strong> Kode Cucu Petak =</strong> <?= $var['kode_cucu_petak']; ?></li>
+                                            <li class="list-group-item"><strong> Kode Anak Petak =</strong> <?= $var['kode_anak_petak']; ?></li>
                                             <li class="list-group-item"><strong> NIK Pesanggem = </strong><?= $var['nik_pesanggem']; ?></li>
                                             <li class="list-group-item"><strong> Nama Pesanggem = </strong><?= $var['nama_pesanggem']; ?></li>
                                             <li class="list-group-item"><strong> Desa = </strong><?= $var['desa']; ?></li>
@@ -1496,11 +1496,11 @@
     </script>
     <script>
         let inputumt;
-        if ('<?= ($validation2->hasError('kodehwdcupet')) ?>') {
+        if ('<?= ($validation2->hasError('kodehwdanakpetak')) ?>') {
             inputumt = $('#inputumt').modal('show');
-        } else if ('<?= ($validation2->hasError('kodehwd')) ?>') {
+        } else if ('<?= ($validation2->hasError('kodehwd1')) ?>') {
             inputumt = $('#inputumt').modal('show');
-        } else if ('<?= ($validation2->hasError('kodecupet')) ?>') {
+        } else if ('<?= ($validation2->hasError('kodeanakpetak')) ?>') {
             inputumt = $('#inputumt').modal('show');
         } else {
             inputumt = $('#inputumt').modal('hide');
@@ -1510,7 +1510,7 @@
         let inputzonasi;
         if ('<?= ($validation2->hasError('andil')) ?>') {
             inputzonasi = $('#inputzonasi').modal('show');
-        } else if ('<?= ($validation2->hasError('kodecupet1')) ?>') {
+        } else if ('<?= ($validation2->hasError('kodeanakpetak1')) ?>') {
             inputzonasi = $('#inputzonasi').modal('show');
         } else if ('<?= ($validation2->hasError('nik')) ?>') {
             inputzonasi = $('#inputzonasi').modal('show');

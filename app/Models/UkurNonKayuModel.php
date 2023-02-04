@@ -18,6 +18,6 @@ class UkurNonKayuModel extends Model
     }
 
     protected $allowedFields = [
-        'no_pohon', 'kode_inven_pu', 'jenis_pohon', 'dbh', 'tinggi', 'fungsi'
+        'kode_pohon', 'no_pohon', 'kode_inven_pu', 'jenis_pohon', 'dbh', 'tinggi', 'lbds', 'volume', 'fungsi'
     ];
 }

@@ -19,32 +19,31 @@ class MapsPl extends BaseController
 
         // $model = $query->getResult();
 
-        $model = new \App\Models\AnakPetakModel();
+        // $model = new \App\Models\AnakPetakModel();
 
-        $file = file_get_contents("./dashboard/plugins/leaflet/khdtk.geojson");
+        $file = file_get_contents("./dashboard/plugins/leaflet/pl2022.geojson");
         $file = json_decode($file);
 
         $features = $file->features;
 
-        foreach ($features as $index => $feature) {
-            $anakpetak = $feature->properties->KodeAnakPe;
-            $data = $model->where('kode_anak_petak', $anakpetak)->first();
+        // foreach ($features as $index => $feature) {
+        //     $anakpetak = $feature->properties->KodeAnakPe;
+        //     $data = $model->where('kode_anak_petak', $anakpetak)->first();
 
-            if ($data) {
-                $features[$index]->properties->kodeumt = $data['kode_umt'];
-                $features[$index]->properties->id = $data['id'];
-                $features[$index]->properties->luas = $data['luas'];
-                $features[$index]->properties->luasht = $data['luas_ht'];
-                $features[$index]->properties->persentase = $data['persentase'];
-            }
-        }
+        //     if ($data) {
+        //         $features[$index]->properties->kodeumt = $data['kode_umt'];
+        //         $features[$index]->properties->id = $data['id'];
+        //         $features[$index]->properties->luas = $data['luas'];
+        //         $features[$index]->properties->luasht = $data['luas_ht'];
+        //     }
+        // }
 
         $data = [
-            'anakpetak' => $features,
+            'pl' => $features,
             'title' => 'KHDTK APPS - WEB GIS',
             'footer' => 'KHDTK WEB APPS Ver. 2. 0.',
             'credit' => ' Copyright © 2022, constructed by<a target="#" href="#"> enlisters studio/endyarfian</a>.',
         ];
-        return view('apps/maps-pl-2022', $data);
+        return view('apps/maps-pl2022', $data);
     }
 }
