@@ -35,12 +35,12 @@ class Dashboard extends BaseController
         $anakpetakcount = $anakpetakquery->getResultArray();
         $jumlahanakpetak = count($anakpetakcount);
 
-        $db5 = \Config\Database::connect();
-        $cucupetak = $db5->table('umt_cucupetak');
-        $cucupetak->select('*');
-        $cucupetakquery = $cucupetak->get();
-        $cucupetakcount = $cucupetakquery->getResultArray();
-        $jumlahcucupetak = count($cucupetakcount);
+        // $db5 = \Config\Database::connect();
+        // $cucupetak = $db5->table('umt_cucupetak');
+        // $cucupetak->select('*');
+        // $cucupetakquery = $cucupetak->get();
+        // $cucupetakcount = $cucupetakquery->getResultArray();
+        // $jumlahcucupetak = count($cucupetakcount);
 
         $desa = \Config\Database::connect();
         $desa = $desa->table('desa');
@@ -126,7 +126,7 @@ class Dashboard extends BaseController
             'pie' => $pie1,
             'umt' => $jumlahumt,
             'anakpetak' => $jumlahanakpetak,
-            'cucupetak' => $jumlahcucupetak,
+            // 'cucupetak' => $jumlahcucupetak,
             'desa' => $jumlahdesa,
             'lemdes' => $jumlahlemdes,
             'hwd' => $jumlahhwd,
