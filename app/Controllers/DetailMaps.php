@@ -30,11 +30,11 @@ class DetailMaps extends BaseController
         $db = \Config\Database::connect();
         $data = $db->table('umt_anakpetak');
         $data->select('umt_anakpetak.kode_anak_petak as anakpetak,anak_petak, umt_anakpetak.luas as luasanakpetak, 
-        luas_ht, umt_cucupetak.kode_cucu_petak as cupet, umt_cupet_tnm.kode_cupet_tnm as cupettnm, 
+        luas_ht, umt_anakpetak_tnm.kode_anakpetak_tnm as anakpetaktnm, 
         jenis_lokal, inventarisasi_umt.kode_inven_umt as invenumt, inventarisasi_pu.kode_inven_pu as kodeinvenpu, 
-        ndvi, msavi,jumlah_pohon,dbh_rata, tinggi_rata, lbds, volume, c, d, n');
-        $data->join('umt_cucupetak', 'umt_cucupetak.kode_anak_petak = umt_anakpetak.kode_anak_petak');
-        $data->join('umt_cupet_tnm', 'umt_cupet_tnm.kode_cucu_petak = umt_cucupetak.kode_cucu_petak');
+        ndvi, msavi,jumlah_pohon, dbh, tinggi, lbds, volume, c, d, n');
+        // $data->join('umt_cucupetak', 'umt_cucupetak.kode_anak_petak = umt_anakpetak.kode_anak_petak');
+        $data->join('umt_anakpetak_tnm', 'umt_anakpetak_tnm.kode_anak_petak = umt_anakpetak.kode_anakpetak_petak');
         $data->join('inventarisasi_umt', 'inventarisasi_umt.kode_cupet_tnm  = umt_cupet_tnm.kode_cupet_tnm');
         $data->join('inventarisasi_pu', 'inventarisasi_pu.kode_inven_umt  = inventarisasi_umt.kode_inven_umt');
         $data->join('inventarisasi_umt_ukurkayu', 'inventarisasi_umt_ukurkayu.kode_inven_pu  = inventarisasi_pu.kode_inven_pu');
