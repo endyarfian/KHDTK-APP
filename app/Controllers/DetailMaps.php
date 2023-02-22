@@ -32,7 +32,7 @@ class DetailMaps extends BaseController
         $data->select('umt_anakpetak.kode_anak_petak as anakpetak,anak_petak, umt_anakpetak.luas as luasanakpetak, 
         luas_ht, umt_anakpetak_tnm.kode_anakpetak_tnm as anakpetaktnm, 
         jenis_lokal, inventarisasi_umt.kode_inven_umt as invenumt, inventarisasi_pu.kode_inven_pu as kodeinvenpu, 
-        ndvi, msavi,jumlah_pohon, dbh, tinggi, lbds, volume, c, d, n');
+        ndvi, msavi, dbh, tinggi, lbds, volume, c, d, n');
         // $data->join('umt_cucupetak', 'umt_cucupetak.kode_anak_petak = umt_anakpetak.kode_anak_petak');
         $data->join('umt_anakpetak_tnm', 'umt_anakpetak_tnm.kode_anak_petak = umt_anakpetak.kode_anakpetak_petak');
         $data->join('inventarisasi_umt', 'inventarisasi_umt.kode_cupet_tnm  = umt_cupet_tnm.kode_cupet_tnm');

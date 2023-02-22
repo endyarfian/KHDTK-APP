@@ -525,7 +525,7 @@
                                                 </div>
                                                 <div id="fqcollapseOne" class="collapse show" aria-labelledby="fqheadingOne" data-parent="#simple_faq">
                                                     <div class="card-body">
-                                                        <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
+                                                        <p>This Database system need to be filled sequentially. You have to fill from first database to continue to the next database. This database has been set by its order, the uppermost database its mean the first database and so on. and if there is no data row on one database this could make error your data entry.</p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -533,7 +533,7 @@
                                             <div class="card">
                                                 <div class="card-header" id="fqheadingTwo">
                                                     <div class="mb-0" data-toggle="collapse" role="navigation" data-target="#fqcollapseTwo" aria-expanded="false" aria-controls="fqcollapseTwo">
-                                                        <span class="faq-q-title">How can I unzip porduct files</span>
+                                                        <span class="faq-q-title">How to entering single data?</span>
                                                         <div class="icons"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-up">
                                                                 <polyline points="18 15 12 9 6 15"></polyline>
                                                             </svg></div>
@@ -541,7 +541,7 @@
                                                 </div>
                                                 <div id="fqcollapseTwo" class="collapse" aria-labelledby="fqheadingTwo" data-parent="#simple_faq">
                                                     <div class="card-body">
-                                                        <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
+                                                        <p>Users are able to input data by click button on the top-left on each table database, and if there’re errors when you entering data, the system has its own validation by blocking red the input and there's further notification whenever an error occurs.</p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -549,7 +549,7 @@
                                             <div class="card">
                                                 <div class="card-header" id="fqheadingThree">
                                                     <div class="mb-0" data-toggle="collapse" role="navigation" data-target="#fqcollapseThree" aria-expanded="false" aria-controls="fqcollapseThree">
-                                                        <span class="faq-q-title">Sidebar not rendering CSS</span>
+                                                        <span class="faq-q-title">How to entering a bunch of data set?</span>
                                                         <div class="icons"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down">
                                                                 <polyline points="6 9 12 15 18 9"></polyline>
                                                             </svg></div>
@@ -557,7 +557,7 @@
                                                 </div>
                                                 <div id="fqcollapseThree" class="collapse" aria-labelledby="fqheadingThree" data-parent="#simple_faq">
                                                     <div class="card-body">
-                                                        <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
+                                                        <p>This system do not support bulk data entry feature yet, because of limitation on validating alot of data on a single entry. But if you want to input alot of data on a single data entry you can contact webmaster.</p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -565,7 +565,7 @@
                                             <div class="card">
                                                 <div class="card-header" id="fqheadingFour">
                                                     <div class="mb-0" data-toggle="collapse" role="navigation" data-target="#fqcollapseFour" aria-expanded="false" aria-controls="fqcollapseFour">
-                                                        <span class="faq-q-title">Production Level Built</span>
+                                                        <span class="faq-q-title">How to correcting entered data?</span>
                                                         <div class="icons"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down">
                                                                 <polyline points="6 9 12 15 18 9"></polyline>
                                                             </svg></div>
@@ -573,7 +573,7 @@
                                                 </div>
                                                 <div id="fqcollapseFour" class="collapse" aria-labelledby="fqheadingFour" data-parent="#simple_faq">
                                                     <div class="card-body">
-                                                        <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
+                                                        <p>All the data can be change or update as its need. User can activate update modal by clicking the rightmost icon or update icon on each data table row. This action should be have notification when update has done successfully. </p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -581,7 +581,7 @@
                                             <div class="card">
                                                 <div class="card-header" id="fqheadingFive">
                                                     <div class="mb-0" data-toggle="collapse" role="navigation" data-target="#fqcollapseFive" aria-expanded="false" aria-controls="fqcollapseFive">
-                                                        <span class="faq-q-title">Compilation Issue</span>
+                                                        <span class="faq-q-title">How to delete a lot of data row?</span>
                                                         <div class="icons"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down">
                                                                 <polyline points="6 9 12 15 18 9"></polyline>
                                                             </svg></div>
@@ -589,7 +589,7 @@
                                                 </div>
                                                 <div id="fqcollapseFive" class="collapse" aria-labelledby="fqheadingFive" data-parent="#simple_faq">
                                                     <div class="card-body">
-                                                        <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
+                                                        <p>This system do not have multiple delete feature. This limitation intended to prevent data failure or a lot of data loss, that might occurs error for the database queries. </p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -597,7 +597,7 @@
                                             <div class="card">
                                                 <div class="card-header" id="fqheadingSix">
                                                     <div class="mb-0" data-toggle="collapse" role="navigation" data-target="#fqcollapseSix" aria-expanded="false" aria-controls="fqcollapseSix">
-                                                        <span class="faq-q-title">Getting started with starter kits</span>
+                                                        <span class="faq-q-title">How to update my profile picture and profile information? </span>
                                                         <div class="icons"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down">
                                                                 <polyline points="6 9 12 15 18 9"></polyline>
                                                             </svg></div>
@@ -605,7 +605,7 @@
                                                 </div>
                                                 <div id="fqcollapseSix" class="collapse" aria-labelledby="fqheadingSix" data-parent="#simple_faq">
                                                     <div class="card-body">
-                                                        <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
+                                                        <p>Profile section is on progress on developing, be patient!</p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -618,7 +618,7 @@
                                             <div class="card">
                                                 <div class="card-header" id="fqheadingOne1">
                                                     <div class="mb-0" data-toggle="collapse" role="navigation" data-target="#fqcollapseOne1" aria-expanded="false" aria-controls="fqcollapseOne1">
-                                                        <span class="faq-q-title">Are images are provided in the download version?</span>
+                                                        <span class="faq-q-title">Can i download the database?</span>
                                                         <div class="icons"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down">
                                                                 <polyline points="6 9 12 15 18 9"></polyline>
                                                             </svg></div>
@@ -626,7 +626,7 @@
                                                 </div>
                                                 <div id="fqcollapseOne1" class="collapse" aria-labelledby="fqheadingOne1" data-parent="#simple_faq1">
                                                     <div class="card-body">
-                                                        <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
+                                                        <p>Yes you can, all the data we provide is open to everyone who needs.</p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -634,7 +634,7 @@
                                             <div class="card">
                                                 <div class="card-header" id="fqheadingTwo2">
                                                     <div class="mb-0" data-toggle="collapse" role="navigation" data-target="#fqcollapseTwo2" aria-expanded="false" aria-controls="fqcollapseTwo2">
-                                                        <span class="faq-q-title">How can I customize APPS sections?</span>
+                                                        <span class="faq-q-title">I have no access to edit the database?</span>
                                                         <div class="icons"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-up">
                                                                 <polyline points="18 15 12 9 6 15"></polyline>
                                                             </svg></div>
@@ -642,7 +642,7 @@
                                                 </div>
                                                 <div id="fqcollapseTwo2" class="collapse" aria-labelledby="fqheadingTwo2" data-parent="#simple_faq1">
                                                     <div class="card-body">
-                                                        <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
+                                                        <p>Make sure you have previlage to access the edit database, if you need an access contact the webmaster.</p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -650,7 +650,7 @@
                                             <div class="card">
                                                 <div class="card-header" id="fqheadingThree3">
                                                     <div class="mb-0" data-toggle="collapse" role="navigation" data-target="#fqcollapseThree3" aria-expanded="false" aria-controls="fqcollapseThree3">
-                                                        <span class="faq-q-title">Getting started with multiple layouts</span>
+                                                        <span class="faq-q-title">Can i download data from webgis?</span>
                                                         <div class="icons"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down">
                                                                 <polyline points="6 9 12 15 18 9"></polyline>
                                                             </svg></div>
@@ -658,7 +658,7 @@
                                                 </div>
                                                 <div id="fqcollapseThree3" class="collapse" aria-labelledby="fqheadingThree3" data-parent="#simple_faq1">
                                                     <div class="card-body">
-                                                        <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
+                                                        <p>yes you can, you can download all the geo data we provide from webgis section. </p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -666,7 +666,7 @@
                                             <div class="card">
                                                 <div class="card-header" id="fqheadingFour4">
                                                     <div class="mb-0" data-toggle="collapse" role="navigation" data-target="#fqcollapseFour4" aria-expanded="false" aria-controls="fqcollapseFour4">
-                                                        <span class="faq-q-title">How to use task managers?</span>
+                                                        <span class="faq-q-title">How to recover my password?</span>
                                                         <div class="icons"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down">
                                                                 <polyline points="6 9 12 15 18 9"></polyline>
                                                             </svg></div>
@@ -674,7 +674,7 @@
                                                 </div>
                                                 <div id="fqcollapseFour4" class="collapse" aria-labelledby="fqheadingFour4" data-parent="#simple_faq1">
                                                     <div class="card-body">
-                                                        <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
+                                                        <p>Sorry, authentification feature need more update, including email verification and recover password. we'll contact you when its fully ready. But when you forget your password you can register another account with new email address.</p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -682,7 +682,7 @@
                                             <div class="card">
                                                 <div class="card-header" id="fqheadingFive5">
                                                     <div class="mb-0" data-toggle="collapse" role="navigation" data-target="#fqcollapseFive5" aria-expanded="false" aria-controls="fqcollapseFive5">
-                                                        <span class="faq-q-title">How to setup a vpn?</span>
+                                                        <span class="faq-q-title">I found bugs and errors?</span>
                                                         <div class="icons"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down">
                                                                 <polyline points="6 9 12 15 18 9"></polyline>
                                                             </svg></div>
@@ -690,23 +690,23 @@
                                                 </div>
                                                 <div id="fqcollapseFive5" class="collapse" aria-labelledby="fqheadingFive5" data-parent="#simple_faq1">
                                                     <div class="card-body">
-                                                        <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
+                                                        <p>Because this system still under developing, you might find several bugs or error on this system. And when you find it, you can report it to webmaster to be repaired.</p>
                                                     </div>
                                                 </div>
                                             </div>
 
                                             <div class="card">
                                                 <div class="card-header" id="fqheadingSix6">
-                                                    <div class="mb-0" data-toggle="collapse" role="navigation" data-target="#fqcollapseSix6" aria-expanded="true" aria-controls="fqcollapseSix6">
-                                                        <span class="faq-q-title">Chrome vs Edge which is better!</span>
+                                                    <div class="mb-0" data-toggle="collapse" role="navigation" data-target="#fqcollapseSix6" aria-expanded="false" aria-controls="fqcollapseSix6">
+                                                        <span class="faq-q-title">Can i input data from my smartphone?</span>
                                                         <div class="icons"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down">
                                                                 <polyline points="6 9 12 15 18 9"></polyline>
                                                             </svg></div>
                                                     </div>
                                                 </div>
-                                                <div id="fqcollapseSix6" class="collapse show" aria-labelledby="fqheadingSix6" data-parent="#simple_faq1">
+                                                <div id="fqcollapseSix6" class="collapse" aria-labelledby="fqheadingSix6" data-parent="#simple_faq1">
                                                     <div class="card-body">
-                                                        <p>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</p>
+                                                        <p>Yes you can, this system made responsivelly, for all kind of devices. You can choose any device you want to use.</p>
                                                     </div>
                                                 </div>
                                             </div>

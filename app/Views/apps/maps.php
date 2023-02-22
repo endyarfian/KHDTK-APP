@@ -112,10 +112,10 @@
                     <div class="dropdown-menu position-absolute" aria-labelledby="userProfileDropdown">
                         <div class="user-profile-section">
                             <div class="media mx-auto">
-                                <img src="<?= base_url(); ?>/dashboard/assets/img/" class="img-fluid mr-2" alt="avatar">
+                                <img src="<?= base_url(); ?>\dashboard\assets\img\<?= user()->user_image; ?>" class="img-fluid mr-2" alt="avatar">
                                 <div class="media-body">
-                                    <h5></h5>
-                                    <p></p>
+                                    <h5><?= user()->username; ?></h5>
+                                    <p><?= user()->role; ?></p>
                                 </div>
                             </div>
                         </div>
