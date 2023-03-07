@@ -43,7 +43,7 @@
 
     .leaflet-map {
         border-radius: 8px;
-        height: 730px;
+        height: 710px;
     }
 
     .container-map {
@@ -724,7 +724,7 @@
 
         <!-- BEGIN PAGE LEVEL PLUGINS -->
         <script src="<?= base_url('dashboard/assets/js/scrollspyNav.js') ?>"></script>
-        <script src="<?= base_url('dashboard/plugins/leaflet/khdtk_point.js') ?>"></script>
+        <script src="<?= base_url('dashboard/json/khdtk_point.js') ?>"></script>
 
         <script src="<?= base_url('dashboard/plugins/leaflet/leaflet.js') ?>"></script>
         <script src="<?= base_url('dashboard/plugins/leaflet/jquery-3.5.1.js') ?>"></script>
@@ -758,11 +758,11 @@
             info.update = function(props) {
                 this._div.innerHTML = '<h4><b>Data KHTDK Fakultas Kehutanan UGM</b></h4>' + 'Pilih kawasan untuk melihat data lebih detail' +
                     (props ?
-                        '<br> Kode Anak Petak : <b>' + props.KodeAnakPe +
-                        '</b> | Anak Petak : <b>' + props.Toponimi_1 +
+                        '<br> Kode Anak Petak : <b>' + props.KODE +
+                        '</b> | Anak Petak : <b>' + props.TOPONIMI +
                         '</b> | Petak : <b>' + props.Petak +
                         '</b><br> Luas Total : <b>' + props.luas +
-                        '</b> Ha | Luas Hutan: <b>' + props.luasht :
+                        '</b> Ha | Luas Kawasan Hutan: <b>' + props.luasht + ' Ha' :
                         '</b> <br>atau layangkan cursor pada petak');
             };
 
@@ -829,9 +829,24 @@
             }).addTo(map);
 
             // get name
-            var petak = L.geoJSON(data, {
+            var point = <?= json_encode($point) ?>;
+            var petak = L.geoJSON(point, {
                 pointToLayer: function(feature, latlng) {
-                    label = String(feature.properties.Petak)
+                    label = String(feature.properties.TOPONIMI)
+                    return new L.CircleMarker(latlng, {
+                        radius: 1,
+                    }).bindTooltip(label, {
+                        permanent: true,
+                        direction: "center",
+                        className: "my-labels"
+                    }).openTooltip();
+                }
+            });
+            // get name
+            var inven = <?= json_encode($inven) ?>;
+            var inven = L.geoJSON(inven, {
+                pointToLayer: function(feature, latlng) {
+                    label = String(feature.properties.PU)
                     return new L.CircleMarker(latlng, {
                         radius: 1,
                     }).bindTooltip(label, {
@@ -855,6 +870,7 @@
             var overlays = {
                 "Batas Anak Petak": geojson,
                 "Nama Petak": petak,
+                "Data Inventarisasi": inven,
             };
 
             var layerControl = L.control.layers(baseLayers, overlays, {

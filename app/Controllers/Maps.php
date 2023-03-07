@@ -18,16 +18,25 @@ class Maps extends BaseController
         // $query = $builder->get();
 
         // $model = $query->getResult();
+        $file = file_get_contents("./dashboard/json/khdtk_inven.geojson");
+        $file = json_decode($file);
+
+        $inven = $file->features;
+
+        $file = file_get_contents("./dashboard/json/khdtk_point.geojson");
+        $file = json_decode($file);
+
+        $point = $file->features;
 
         $model = new \App\Models\AnakPetakModel();
 
-        $file = file_get_contents("./dashboard/plugins/leaflet/khdtknew.geojson");
+        $file = file_get_contents("./dashboard/json/khdtk.geojson");
         $file = json_decode($file);
 
         $features = $file->features;
 
         foreach ($features as $index => $feature) {
-            $anakpetak = $feature->properties->KodeAnakPe;
+            $anakpetak = $feature->properties->KODE;
             $data = $model->where('kode_anak_petak', $anakpetak)->first();
 
             if ($data) {
@@ -41,6 +50,8 @@ class Maps extends BaseController
 
         $data = [
             'anakpetak' => $features,
+            'point' => $point,
+            'inven' => $inven,
             'title' => 'KHDTK APPS - WEB GIS',
             'footer' => 'KHDTK WEB APPS Ver. 2. 0.',
             'credit' => ' Copyright © 2022, constructed by<a target="#" href="#"> enlisters studio/endyarfian</a>.',

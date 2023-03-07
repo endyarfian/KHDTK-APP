@@ -98,6 +98,15 @@
             background-color: #4361ee;
             background-image: linear-gradient(to right, #e74c3c 0%, #c0392b 100%);
         }
+
+        .leaflet-tooltip.my-labels {
+            background-color: transparent;
+            border: transparent;
+            box-shadow: none;
+            font-weight: bold;
+            font-size: 15px;
+            color: white;
+        }
     </style>
 
     <!--  END CUSTOM STYLE FILE  -->
@@ -800,64 +809,6 @@
                                     </div>
                                     <div class="summary-list">
                                         <div class="icon">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-credit-card">
-                                                <path d="M 21.40,16.85
-                                                        C 21.40,18.31 20.24,19.49 18.79,19.49
-                                                          17.35,19.49 16.18,18.31 16.18,16.85
-                                                          16.18,15.40 17.35,14.22 18.79,14.22
-                                                          20.24,14.22 21.40,15.40 21.40,16.85 Z
-                                                        M 7.82,16.85
-                                                        C 7.82,18.31 6.65,19.49 5.21,19.49
-                                                          3.76,19.49 2.60,18.31 2.60,16.85
-                                                          2.60,15.40 3.76,14.22 5.21,14.22
-                                                          6.65,14.22 7.82,15.40 7.82,16.85 Z
-                                                        M 16.18,5.79
-                                                        C 16.18,5.79 20.36,5.79 20.36,5.79
-                                                          20.36,5.79 23.50,8.95 23.50,8.95
-                                                          23.50,8.95 23.50,14.21 23.50,14.21
-                                                          23.50,14.21 16.18,14.21 16.18,14.21
-                                                          16.18,14.21 16.18,5.79 16.18,5.79 Z
-                                                        M 16.18,0.51
-                                                        C 16.18,0.51 16.18,14.22 16.18,14.22
-                                                          16.18,14.22 0.51,14.22 0.51,14.22
-                                                          0.51,14.22 0.51,0.51 0.51,0.51
-                                                          0.51,0.51 16.18,0.51 16.18,0.51 Z" />
-                                            </svg>
-                                        </div>
-                                        <div class="w-summary-details">
-                                            <div class="w-summary-info">
-                                                <h6>Jalan</h6>
-                                                <p class="summary-count"><?= $pie['jalan']; ?> Ha</p>
-                                            </div>
-
-                                            <div class="w-summary-stats">
-                                                <div class="progress">
-                                                    <div class="progress-bar bg-gradient-3" role="progressbar" style="width: <?= $pie['persen_jln']; ?>%" aria-valuenow="<?= $pie['persen_jln']; ?>" aria-valuemin="0" aria-valuemax="100"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="summary-list">
-                                        <div class="icon">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-activity">
-                                                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
-                                                <polyline points="9 22 9 12 15 12 15 22"></polyline>
-                                            </svg>
-                                        </div>
-                                        <div class="w-summary-details">
-                                            <div class="w-summary-info">
-                                                <h6>Permukiman</h6>
-                                                <p class="summary-count"><?= $pie['permukiman']; ?> Ha</p>
-                                            </div>
-                                            <div class="w-summary-stats">
-                                                <div class="progress">
-                                                    <div class="progress-bar bg-gradient-4" role="progressbar" style="width: <?= $pie['persen_pmk']; ?>%" aria-valuenow="<?= $pie['persen_pmk']; ?>" aria-valuemin="0" aria-valuemax="100"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="summary-list">
-                                        <div class="icon">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag">
                                                 <path d="M 12.54,7.58
            C 12.76,2.47 14.36,0.47 16.27,0.47
@@ -1185,12 +1136,10 @@
                                             <td><?= $var['anak_petak']; ?></td>
                                             <td><?= $var['luasanakpetak']; ?></td>
                                             <td><?= $var['luas_ht']; ?></td>
-                                            <td><?= $var['cupet']; ?></td>
-                                            <td><?= $var['cupettnm']; ?></td>
+                                            <td><?= $var['anakpetaktnm']; ?></td>
                                             <td><?= $var['jenis_lokal']; ?></td>
                                             <td><?= $var['invenumt']; ?></td>
                                             <td><?= $var['kodeinvenpu']; ?></td>
-                                            <td><?= $var['jumlah_pohon']; ?></td>
                                             <td><?= $var['c']; ?></td>
                                             <td><?= $var['d']; ?></td>
                                             <td><?= $var['n']; ?></td>
@@ -1276,20 +1225,18 @@
         var d_1options1 = {
 
             series: [{
-                name: 'Organic',
+                name: 'Luas (Ha)',
                 data: [
-                    <?= $chart['jagung']; ?>,
-                    <?= $chart['jalan']; ?>,
-                    <?= $chart['jati']; ?>,
-                    <?= $chart['jati_campur_semak']; ?>,
+                    <?= $chart['apl']; ?>,
                     <?= $chart['jpp']; ?>,
+                    <?= $chart['jati']; ?>,
+                    <?= $chart['jati_campur']; ?>,
                     <?= $chart['mahoni']; ?>,
-                    <?= $chart['makam']; ?>,
-                    <?= $chart['permukiman']; ?>,
+                    <?= $chart['jagung']; ?>,
                     <?= $chart['sawah']; ?>,
+                    <?= $chart['tebu']; ?>,
                     <?= $chart['semak']; ?>,
-                    <?= $chart['sungai']; ?>,
-                    <?= $chart['tebu']; ?>
+                    <?= $chart['sungai']; ?>
                 ]
             }],
             chart: {
@@ -1334,7 +1281,7 @@
             },
 
             xaxis: {
-                categories: ['Jagung', 'Jalan', 'Jati', 'Jati Campur', 'JPP', 'Mahoni', 'Makam', 'Permukiman', 'Sawah', 'Semak', 'Tubuh Air', 'Tebu'],
+                categories: ['APL', 'JPP', 'Jati', 'Jati Campur', 'Mahoni', 'Jagung', 'Sawah', 'Tebu', 'Semak', 'Tubuh Air'],
                 labels: {
                     style: {
                         fontSize: '10px'
@@ -1429,7 +1376,7 @@
                                 color: '20',
                                 offsetY: 16,
                                 formatter: function(val) {
-                                    return val
+                                    return val + " %";
                                 }
                             },
                             total: {
@@ -1438,9 +1385,9 @@
                                 label: 'Total',
                                 color: '#888ea8',
                                 formatter: function(w) {
-                                    return w.globals.seriesTotals.reduce(function(a, b) {
-                                        return a + b
-                                    }, 0, )
+                                    return w.globals.seriesTotals.reduce((a, b) => {
+                                        return (a + b)
+                                    }, 0).toFixed(1) + "  %"
                                 }
                             }
                         }
@@ -1454,14 +1401,12 @@
             series: [
                 <?= $pie['persen_apl']; ?>,
                 <?= $pie['persen_ht']; ?>,
-                <?= $pie['persen_jln']; ?>,
-                <?= $pie['persen_pmk']; ?>,
                 <?= $pie['persen_plk']; ?>,
                 <?= $pie['persen_sawah']; ?>,
                 <?= $pie['persen_semak']; ?>,
                 <?= $pie['persen_sungai']; ?>,
             ],
-            labels: ['APL', 'Hutan', 'Jalan', 'Permukiman', 'Pertanian Lahan Kering', 'Sawah', 'Semak', 'Tubuh Air'],
+            labels: ['APL', 'Hutan Tanaman', 'Pertanian Lahan Kering', 'Sawah', 'Semak', 'Tubuh Air'],
             responsive: [{
                 breakpoint: 1599,
                 options: {
@@ -1523,6 +1468,21 @@
 
         map.scrollWheelZoom.disable();
 
+        var point = <?= json_encode($point) ?>;
+        var petak = L.geoJSON(point, {
+            pointToLayer: function(feature, latlng) {
+                label = String(feature.properties.TOPONIMI)
+                return new L.CircleMarker(latlng, {
+                    radius: 0,
+                    color: 'black',
+                }).bindTooltip(label, {
+                    permanent: true,
+                    direction: "center",
+                    className: "my-labels"
+                }).openTooltip();
+            }
+        }).addTo(map);
+
         geojson = L.geoJson(data, {
             style: style,
         }).addTo(map);
@@ -1536,7 +1496,7 @@
 
 
         geojson.eachLayer(function(layer) {
-            if (layer.feature.properties.KodeAnakPe === "<?= $data2['anakpetak']; ?>") {
+            if (layer.feature.properties.KODE === "<?= $data2['anakpetak']; ?>") {
                 map.fitBounds(layer.getBounds());
             }
         });

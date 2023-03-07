@@ -913,41 +913,37 @@
                         name: 'Data PL 2022',
                         data: [
                             <?php
-                            $a = array_column($chart, 'jagung');
-                            $jagung = array_sum($a); ?>
-                            <?= $jagung; ?>,
-                            <?php
-                            $a = array_column($chart, 'jalan');
-                            $jalan = array_sum($a); ?>
-                            <?= $jalan; ?>,
-                            <?php
-                            $a = array_column($chart, 'jati');
-                            $jati = array_sum($a); ?>
-                            <?= $jati; ?>,
-                            <?php
-                            $a = array_column($chart, 'jati_campur_semak');
-                            $jtcampur = array_sum($a); ?>
-                            <?= $jtcampur; ?>,
+                            $a = array_column($chart, 'apl');
+                            $apl = array_sum($a); ?>
+                            <?= $apl; ?>,
                             <?php
                             $a = array_column($chart, 'jpp');
                             $jpp = array_sum($a); ?>
                             <?= $jpp; ?>,
                             <?php
+                            $a = array_column($chart, 'jati');
+                            $jati = array_sum($a); ?>
+                            <?= $jati; ?>,
+                            <?php
+                            $a = array_column($chart, 'jati_campur');
+                            $jtcampur = array_sum($a); ?>
+                            <?= $jtcampur; ?>,
+                            <?php
                             $a = array_column($chart, 'mahoni');
                             $mahoni = array_sum($a); ?>
                             <?= $mahoni; ?>,
                             <?php
-                            $a = array_column($chart, 'makam');
-                            $makam = array_sum($a); ?>
-                            <?= $makam; ?>,
-                            <?php
-                            $a = array_column($chart, 'permukiman');
-                            $lpermukiman = array_sum($a); ?>
-                            <?= $lpermukiman; ?>,
+                            $a = array_column($chart, 'jagung');
+                            $jagung = array_sum($a); ?>
+                            <?= $jagung; ?>,
                             <?php
                             $a = array_column($chart, 'sawah');
                             $lsawah = array_sum($a); ?>
                             <?= $lsawah; ?>,
+                            <?php
+                            $a = array_column($chart, 'tebu');
+                            $ltebu = array_sum($a); ?>
+                            <?= $ltebu; ?>,
                             <?php
                             $a = array_column($chart, 'semak');
                             $lsemak = array_sum($a); ?>
@@ -955,16 +951,12 @@
                             <?php
                             $a = array_column($chart, 'sungai');
                             $lsungai = array_sum($a); ?>
-                            <?= $lsungai; ?>,
-                            <?php
-                            $a = array_column($chart, 'tebu');
-                            $tebu = array_sum($a); ?>
-                            <?= $tebu; ?>
+                            <?= $lsungai; ?>
                         ]
                     }],
 
                     subtitle: {
-                        text: '<?= $jagung + $jalan + $jati + $jtcampur + $jpp + $mahoni + $makam + $lpermukiman + $lsawah + $lsemak + $lsungai + $tebu; ?> Ha',
+                        text: '<?= $apl + $jpp + $jati + $jtcampur + $mahoni + $jagung + $lsawah + $ltebu + $lsemak + $lsungai; ?> Ha',
                         align: 'left',
                         margin: 0,
                         offsetX: 95,
@@ -1030,7 +1022,7 @@
                     },
 
                     xaxis: {
-                        categories: ['Jagung', 'Jalan', 'Jati', 'Jati Campur', 'JPP', 'Mahoni', 'Makam', 'Permukiman', 'Sawah', 'Semak', 'Tubuh Air', 'Tebu'],
+                        categories: ['APL', 'JPP', 'Jati', 'Jati Campur', 'Mahoni', 'Jagung', 'Sawah', 'Tebu', 'Semak', 'Tubuh Air'],
                         labels: {
                             style: {
                                 fontSize: '10px'
@@ -1066,7 +1058,7 @@
                     tooltip: {
                         y: {
                             formatter: function(val) {
-                                return val
+                                return val + " Ha";
                             }
                         }
                     }
@@ -1125,7 +1117,7 @@
                                         color: '20',
                                         offsetY: 16,
                                         formatter: function(val) {
-                                            return val
+                                            return val + " %";
                                         }
                                     },
                                     total: {
@@ -1134,9 +1126,9 @@
                                         label: 'Total',
                                         color: '#888ea8',
                                         formatter: function(w) {
-                                            return w.globals.seriesTotals.reduce(function(a, b) {
-                                                return a + b
-                                            }, 0, )
+                                            return w.globals.seriesTotals.reduce((a, b) => {
+                                                return (a + b)
+                                            }, 0).toFixed(1) + "  %"
                                         }
                                     }
                                 }
@@ -1157,14 +1149,6 @@
                         $ht = array_sum($a); ?>
                         <?= round($ht / 10866.76 * 100, 2); ?>,
                         <?php
-                        $a = array_column($pie, 'jalan');
-                        $jln = array_sum($a); ?>
-                        <?= round($jln / 10866.76 * 100, 2); ?>,
-                        <?php
-                        $a = array_column($pie, 'permukiman');
-                        $pmk = array_sum($a); ?>
-                        <?= round($pmk / 10866.76 * 100, 2); ?>,
-                        <?php
                         $a = array_column($pie, 'pertanian_lk');
                         $plk = array_sum($a); ?>
                         <?= round($plk / 10866.76 * 100, 2); ?>,
@@ -1181,7 +1165,7 @@
                         $air = array_sum($a); ?>
                         <?= round($air / 10866.76 * 100, 2); ?>,
                     ],
-                    labels: ['APL', 'Hutan', 'Jalan', 'Permukiman', 'Pertanian Lahan Kering', 'Sawah', 'Semak', 'Tubuh Air'],
+                    labels: ['APL', 'Hutan', 'Pertanian Lahan Kering', 'Sawah', 'Semak', 'Tubuh Air'],
                     responsive: [{
                         breakpoint: 1599,
                         options: {

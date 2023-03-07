@@ -355,7 +355,7 @@
                     </a>
                     <ul class="collapse submenu recent-submenu mini-recent-submenu list-unstyled show" id="potensi-user" data-parent="#accordionExample">
                         <li>
-                            <a href="/database-user/ukur-pu"> Inventarisasi SDH </a>
+                            <a href="/database-user/inven-sdh"> Inventarisasi SDH </a>
                         </li>
                         <li class="active">
                             <a href="/database-user/ukur-pu"> Pengukuran dalam PU </a>
@@ -516,6 +516,7 @@
                 <div class="seperator-header">
                     <h4 class=""><b>DATA PENGUKURAN KAYU</b></h4>
                 </div>
+
                 <div class="row" id="cancel-row">
 
                     <div class="col-xl-12 col-lg-12 col-sm-12  layout-spacing">
@@ -533,7 +534,6 @@
                                         <th>LBDS (m²)</th>
                                         <th>Volume (m³)</th>
                                         <th>Fungsi Tinggi</th>
-                                        <th class="dt-no-sorting">Aksi</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -556,7 +556,6 @@
                             </table>
                         </div>
                     </div>
-
                 </div>
             </div>
             <!-- end tabel penataan kawasan -->
@@ -567,7 +566,6 @@
                     <h4 class=""><b>DATA PENGUKURAN NON KAYU</b></h4>
                 </div>
                 <div class="row" id="cancel-row">
-
                     <div class="col-xl-12 col-lg-12 col-sm-12  layout-spacing">
                         <div class="widget-content widget-content-area br-6">
                             <table id="table-1" class="table table-hover style-3" style="width:100%">
@@ -583,7 +581,6 @@
                                         <th>LBDS (m²)</th>
                                         <th>Volume (m³)</th>
                                         <th>Fungsi Tinggi</th>
-                                        <th class="dt-no-sorting">Aksi</th>
                                     </tr>
                                 </thead>
                                 <tbody>

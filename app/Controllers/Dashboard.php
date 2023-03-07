@@ -9,14 +9,14 @@ class Dashboard extends BaseController
 
         $db1 = \Config\Database::connect();
         $chart = $db1->table('pl_detail');
-        $chart->select('jagung, jalan, jati, jati_campur_semak, jpp, mahoni, makam, permukiman, sawah, semak, sungai, tebu');
+        $chart->select('apl, jpp, jati, jati_campur, mahoni, jagung, sawah, tebu, semak, sungai');
         $chartquery = $chart->get();
 
         $chart1 = $chartquery->getResult();
 
         $db2 = \Config\Database::connect();
         $pie = $db2->table('pl');
-        $pie->select(' apl, persen_apl, ht, persen_ht, jalan, persen_jln, permukiman, persen_pmk, pertanian_lk, persen_plk, sawah, persen_sawah, semak, persen_semak, sungai, persen_sungai');
+        $pie->select(' apl, persen_apl, ht, persen_ht, pertanian_lk, persen_plk, sawah, persen_sawah, semak, persen_semak, sungai, persen_sungai');
         $piequery = $pie->get();
 
         $pie1 = $piequery->getResult();
