@@ -737,7 +737,7 @@
                         </div>
                     </div>
 
-                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-6 col-12 layout-spacing">
+                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 col-12 layout-spacing">
                         <div class="widget widget-three">
                             <div class="widget-heading">
                                 <h5 class="">LUASAN KOMPOSISI KAWASAN</h5>
@@ -1021,7 +1021,7 @@
                                     $vol = array_sum($volume); ?>
                                     <p><?= round($vol * $data2['luas_ht'], 2) ?> m³</p>
                                 </div>
-                            </div></br></br>
+                            </div>
 
                             <div class="widget-content">
 
@@ -1034,66 +1034,65 @@
                                         <div class="info-detail-2">
                                             <p>Estimasi Jumlah Tegakan</p>
                                             <?php
-                                            $a = array_column($data3, 'jumlah_pohon');
-                                            $n = array_sum($a); ?>
-                                            <p><span class="bill-amount"><?= round($n * $data2['luas_ht'], 0) ?></span></p>
+                                            // $a = array_column($data3, 'kode_pohon');
+                                            // $n = array_sum($a);
+                                            $n = $jumlahpohon; ?>
+                                            <p><span class="bill-amount"><?= round($n / $jumlahpu * 100 * $data2['luas_ht'], 0) ?></span><span class="w-currency"> Pohon</span></p>
                                         </div>
                                         <div class="info-detail-2">
                                             <p>BDH Rata-rata</p>
                                             <?php
-                                            $a = array_column($data3, 'dbh_rata');
+                                            $a = array_column($data3, 'dbh');
                                             $dbh = array_sum($a); ?>
-                                            <p><span class="bill-amount"> <?= round($dbh / $jumlahpu, 2) ?></span> <span class="w-currency">cm</span> </p>
+                                            <p><span class="bill-amount"> <?= round($dbh / $jumlahpohon, 2) ?></span> <span class="w-currency">cm</span> </p>
                                         </div>
                                         <div class="info-detail-2">
                                             <p>Tinggi Rata-rata</p>
                                             <?php
-                                            $a = array_column($data3, 'tinggi_rata');
+                                            $a = array_column($data3, 'tinggi');
                                             $tinggi = array_sum($a); ?>
-                                            <p><span class="bill-amount"><?= round($tinggi / $jumlahpu, 2) ?></span></span> <span class="w-currency">m</span> </p>
+                                            <p><span class="bill-amount"><?= round($tinggi / $jumlahpohon, 2) ?></span></span> <span class="w-currency">m</span> </p>
                                         </div>
                                         <div class="info-detail-3">
                                             <p>C (<i>Crown Density</i>)</p>
                                             <?php
                                             $a = array_column($data3, 'c');
                                             $c = array_sum($a); ?>
-                                            <p> <span class="bill-amount"><?= round($c / $jumlahpu, 2) ?></span></p>
+                                            <p> <span class="bill-amount"><?= round($c / $jumlahpohon, 2) ?></span></p>
                                         </div>
                                         <div class="info-detail-3">
                                             <p>D (<i>Crown Diamater</i>)</p>
                                             <?php
                                             $a = array_column($data3, 'd');
                                             $d = array_sum($a); ?>
-                                            <p> <span class="bill-amount"><?= round($d / $jumlahpu, 2) ?></span></p>
+                                            <p> <span class="bill-amount"><?= round($d / $jumlahpohon, 2) ?></span></p>
                                         </div>
                                         <div class="info-detail-4">
                                             <p>N (<i>Number of Standing Stock</i>)</p>
                                             <?php
                                             $a = array_column($data3, 'n');
                                             $n = array_sum($a); ?>
-                                            <p> <span class="bill-amount"><?= round($n / $jumlahpu, 2) ?></span></p>
+                                            <p> <span class="bill-amount"><?= round($n / $jumlahpohon, 2) ?></span></p>
                                         </div>
                                         <div class="info-detail-4">
                                             <p>NDVI (<i>Normalize Difference Vegetation Index</i>)</p>
                                             <?php
                                             $a = array_column($data3, 'ndvi');
                                             $n = array_sum($a); ?>
-                                            <p> <span class="bill-amount"><?= round($n / $jumlahpu, 2) ?></span></p>
+                                            <p> <span class="bill-amount"><?= round($n / $jumlahpohon, 2) ?></span></p>
                                         </div>
                                         <div class="info-detail-4">
                                             <p>MSAVI (<i>Modified Soil Adjusted Vegetation Index</i>)</p>
                                             <?php
                                             $a = array_column($data3, 'msavi');
                                             $n = array_sum($a); ?>
-                                            <p> <span class="bill-amount"><?= round($n / $jumlahpu, 2) ?></span></p>
+                                            <p> <span class="bill-amount"><?= round($n / $jumlahpohon, 2) ?></span></p>
                                         </div>
                                     </div>
-                                    </br>
-                                    </br>
-                                    <div class="inv-action">
+                                    <!-- <div class="inv-action">
                                         <a href="javascript:void(0);" class="btn btn-outline-primary view-details">Data Inventarisasi</a>
                                         <a href="javascript:void(0);" class="btn btn-outline-primary pay-now">Data Petak Ukur</a>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
 
@@ -1113,19 +1112,19 @@
                                     <tr>
                                         <th>No. </th>
                                         <th>Anak Petak</th>
-                                        <th>Luas</th>
-                                        <th><i>Net Planted Area</i> (Ha)</th>
-                                        <th>Cucu Petak</th>
+                                        <th>Luas (Ha)</th>
+                                        <th>NPA (Ha)</th>
                                         <th>Kode Tanaman</th>
                                         <th>Jenis</th>
                                         <th>Kode Inven UMT</th>
                                         <th>No. PU</th>
-                                        <th>N/Ha</th>
+                                        <th>Avg. DBH</th>
+                                        <th>Avg. Height</th>
+                                        <th>Avg. LBDS</th>
+                                        <th>Avg. Volume</th>
                                         <th>C</th>
                                         <th>D</th>
                                         <th>N</th>
-                                        <th>LBDS (m²/Ha)</th>
-                                        <th>Volume (m³/Ha)</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -1140,11 +1139,13 @@
                                             <td><?= $var['jenis_lokal']; ?></td>
                                             <td><?= $var['invenumt']; ?></td>
                                             <td><?= $var['kodeinvenpu']; ?></td>
+                                            <td><?= $var['dbh']; ?></td>
+                                            <td><?= $var['tinggi']; ?></td>
+                                            <td><?= $var['lbds']; ?></td>
+                                            <td><?= $var['volume']; ?></td>
                                             <td><?= $var['c']; ?></td>
                                             <td><?= $var['d']; ?></td>
                                             <td><?= $var['n']; ?></td>
-                                            <td><?= $var['lbds']; ?></td>
-                                            <td><?= $var['volume']; ?></td>
 
                                         </tr>
                                     <?php endforeach; ?>
@@ -1336,7 +1337,7 @@
         var options = {
             chart: {
                 type: 'donut',
-                width: 560
+                width: 450
             },
             colors: ['#34495e', '#9b59b6', '#3498db', '#1abc9c', '#2ecc71', '#f1c40f', '#e67e22', '#e74c3c'],
             dataLabels: {
@@ -1453,6 +1454,7 @@
             center: [-7.318437, 111.40],
             zoom: 13,
             scrollWhellZoom: false,
+            zoomControl: false,
         });
 
         function style(feature) {

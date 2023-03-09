@@ -36,7 +36,7 @@ class DetailMaps extends BaseController
         $data->select('umt_anakpetak.kode_anak_petak as anakpetak, anak_petak, umt_anakpetak.luas as luasanakpetak, 
         luas_ht, umt_anakpetak_tnm.kode_anakpetak_tnm as anakpetaktnm, 
         jenis_lokal, inventarisasi_umt.kode_inven_umt as invenumt, inventarisasi_pu.kode_inven_pu as kodeinvenpu, 
-        ndvi, msavi, dbh, tinggi, lbds, volume, c, d, n
+        ndvi, msavi, c, d, n, kode_pohon, dbh, tinggi, lbds, volume
         ');
         // $data->join('umt_cucupetak', 'umt_cucupetak.kode_anak_petak = umt_anakpetak.kode_anak_petak');
         $data->join('umt_anakpetak_tnm', 'umt_anakpetak_tnm.kode_anak_petak = umt_anakpetak.kode_anak_petak');
@@ -50,7 +50,24 @@ class DetailMaps extends BaseController
         $data2 = $query->getRowArray();
         $data3 = $query->getResult();
 
-        $jumlahpu = count($data1);
+        $jumlahpohon = count($data1);
+
+        $db0 = \Config\Database::connect();
+        $countpu = $db0->table('umt_anakpetak');
+        $countpu->select('umt_anakpetak.kode_anak_petak as anakpetak, anak_petak, umt_anakpetak.luas as luasanakpetak, 
+        luas_ht, umt_anakpetak_tnm.kode_anakpetak_tnm as anakpetaktnm, 
+        jenis_lokal, inventarisasi_umt.kode_inven_umt as invenumt, inventarisasi_pu.kode_inven_pu as kodeinvenpu
+        ');
+        // $countpu->join('umt_cucupetak', 'umt_cucupetak.kode_anak_petak = umt_anakpetak.kode_anak_petak');
+        $countpu->join('umt_anakpetak_tnm', 'umt_anakpetak_tnm.kode_anak_petak = umt_anakpetak.kode_anak_petak');
+        $countpu->join('inventarisasi_umt', 'inventarisasi_umt.kode_anakpetak_tnm  = umt_anakpetak_tnm.kode_anakpetak_tnm');
+        $countpu->join('inventarisasi_pu', 'inventarisasi_pu.kode_inven_umt  = inventarisasi_umt.kode_inven_umt');
+        $countpu->where('umt_anakpetak.id', $id);
+        $query = $countpu->get();
+
+        $countpu = $query->getResultArray();
+
+        $jumlahpu = count($countpu);
 
         $db1 = \Config\Database::connect();
         $chart = $db1->table('umt_anakpetak');
@@ -85,6 +102,7 @@ class DetailMaps extends BaseController
             'data3' => $data3,
             'jumlahpu' => $jumlahpu,
             'anakpetak' => $features,
+            'jumlahpohon' => $jumlahpohon,
             'chart' => $chart1,
             'pie' => $pie1,
             'point' => $point,
