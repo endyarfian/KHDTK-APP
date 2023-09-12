@@ -1,0 +1,87 @@
+ERROR - 2023-08-11 00:38:10 --> mysqli_sql_exception: Table 'khdtk.pl_detail' doesn't exist in D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `apl`, `...', 0)
+#1 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `apl`, `...')
+#2 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `apl`, `...')
+#3 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `apl`, `...', Array, false)
+#4 D:\xampp\htdocs\KHDTK-APP\app\Controllers\Dashboard.php(13): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Dashboard->index()
+#6 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+#7 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\KHDTK-APP\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('D:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2023-08-11 00:38:10 --> Table 'khdtk.pl_detail' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `apl`, `jpp`, `jati`, `jati_campur`, `mahoni`, `jagung`, `sawah`, `tebu`, `semak`, `sungai`
+FROM `pl_detail`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `apl`, `jpp`, `jati`, `jati_campur`, `mahoni`, `jagung`, `sawah`, `tebu`, `semak`, `sungai`
+FROM `pl_detail`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `apl`, `jpp`, `jati`, `jati_campur`, `mahoni`, `jagung`, `sawah`, `tebu`, `semak`, `sungai`
+FROM `pl_detail`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `apl`, `jpp`, `jati`, `jati_campur`, `mahoni`, `jagung`, `sawah`, `tebu`, `semak`, `sungai`
+FROM `pl_detail`', [], false)
+ 5 APPPATH\Controllers\Dashboard.php(13): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Dashboard->index()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-08-11 00:39:04 --> mysqli_sql_exception: Table 'khdtk.pl_detail' doesn't exist in D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `apl`, `...', 0)
+#1 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `apl`, `...')
+#2 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `apl`, `...')
+#3 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `apl`, `...', Array, false)
+#4 D:\xampp\htdocs\KHDTK-APP\app\Controllers\Dashboard.php(13): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Dashboard->index()
+#6 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+#7 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\KHDTK-APP\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('D:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2023-08-11 00:39:04 --> Table 'khdtk.pl_detail' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `apl`, `jpp`, `jati`, `jati_campur`, `mahoni`, `jagung`, `sawah`, `tebu`, `semak`, `sungai`
+FROM `pl_detail`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `apl`, `jpp`, `jati`, `jati_campur`, `mahoni`, `jagung`, `sawah`, `tebu`, `semak`, `sungai`
+FROM `pl_detail`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `apl`, `jpp`, `jati`, `jati_campur`, `mahoni`, `jagung`, `sawah`, `tebu`, `semak`, `sungai`
+FROM `pl_detail`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `apl`, `jpp`, `jati`, `jati_campur`, `mahoni`, `jagung`, `sawah`, `tebu`, `semak`, `sungai`
+FROM `pl_detail`', [], false)
+ 5 APPPATH\Controllers\Dashboard.php(13): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Dashboard->index()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2023-08-11 01:05:15 --> mysqli_sql_exception: Table 'khdtk.pl_detail' doesn't exist in D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `apl`, `...', 0)
+#1 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `apl`, `...')
+#2 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `apl`, `...')
+#3 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `apl`, `...', Array, false)
+#4 D:\xampp\htdocs\KHDTK-APP\app\Controllers\Dashboard.php(13): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\CodeIgniter.php(927): App\Controllers\Dashboard->index()
+#6 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+#7 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\xampp\htdocs\KHDTK-APP\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\xampp\htdocs\KHDTK-APP\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(46): require_once('D:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2023-08-11 01:05:15 --> Table 'khdtk.pl_detail' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT `apl`, `jpp`, `jati`, `jati_campur`, `mahoni`, `jagung`, `sawah`, `tebu`, `semak`, `sungai`
+FROM `pl_detail`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `apl`, `jpp`, `jati`, `jati_campur`, `mahoni`, `jagung`, `sawah`, `tebu`, `semak`, `sungai`
+FROM `pl_detail`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `apl`, `jpp`, `jati`, `jati_campur`, `mahoni`, `jagung`, `sawah`, `tebu`, `semak`, `sungai`
+FROM `pl_detail`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT `apl`, `jpp`, `jati`, `jati_campur`, `mahoni`, `jagung`, `sawah`, `tebu`, `semak`, `sungai`
+FROM `pl_detail`', [], false)
+ 5 APPPATH\Controllers\Dashboard.php(13): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Dashboard->index()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
